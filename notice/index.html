@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BigValue Notice - 공지사항">
+    <title>Notice - BigValue</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__left">
+                <div class="header__logo">
+                    <a href="/">
+                        <img src="https://www.figma.com/api/mcp/asset/a54d4e2e-aacd-40f4-8130-d3937c1af719" alt="BigValue 로고" class="header__logo-img">
+                    </a>
+                </div>
+                <nav class="header__nav">
+                    <a href="https://docs.bigvalue.ai/" target="_blank" rel="noopener noreferrer" class="header__nav-link">Docs</a>
+                    <a href="/ai-use-case" class="header__nav-link">AI Use Case</a>
+                    <a href="/pricing" class="header__nav-link">Pricing</a>
+                </nav>
+            </div>
+            <div class="header__right">
+                <button class="btn btn--secondary">문의하기</button>
+                <button class="btn btn--primary">시작하기</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="newsroom-container">
+            <div class="newsroom-header">
+                <h1 class="newsroom-title">Notice</h1>
+                <p class="newsroom-subtitle">BigValue의 공지사항</p>
+            </div>
+
+            <!-- Loading State -->
+            <div id="notice-loading" class="newsroom-loading" style="display: none;">
+                <p>공지사항을 불러오는 중...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="notice-error" class="newsroom-error" style="display: none;">
+                <p>공지사항을 불러오는데 실패했습니다. 다시 시도해주세요.</p>
+            </div>
+
+            <!-- Articles List -->
+            <div id="notice-list" class="newsroom-list">
+                <!-- 공지사항이 동적으로 렌더링됩니다 -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" data-node-id="5:5365">
+        <div class="footer__container">
+            <div class="footer__top">
+                <!-- Left Column -->
+                <div class="footer__left">
+                    <div class="footer__logo">
+                        <img src="https://www.figma.com/api/mcp/asset/27d01ce8-55c9-4521-b87e-77394e2198f1" alt="BigValue" class="footer__logo-img">
+                    </div>
+                    <div class="footer__company-info">
+                        <p class="footer__company-name">주식회사 빅밸류</p>
+                        <p class="footer__address">서울특별시 중구 서소문로 138 대한일보빌딩 12층</p>
+                    </div>
+                    <div class="footer__legal-links">
+                        <a href="/privacy-policy" class="footer__legal-link">개인정보처리방침</a>
+                        <a href="/terms-of-service" class="footer__legal-link">이용약관</a>
+                    </div>
+                </div>
+                <!-- Right Column -->
+                <div class="footer__right">
+                    <nav class="footer__nav">
+                        <div class="footer__nav-section">
+                            <h4 class="footer__nav-title">회사소개</h4>
+                            <ul class="footer__nav-list">
+                                <li><a href="/about-us" class="footer__nav-link">About us</a></li>
+                                <li><a href="/newsroom" class="footer__nav-link">Newsroom</a></li>
+                                <li><a href="/notice" class="footer__nav-link">Notice</a></li>
+                                <li><a href="https://recruit.bigvalue.co.kr/" target="_blank" rel="noopener noreferrer" class="footer__nav-link">Careers</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="footer__divider"></div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">Copyright 2025 by BigValue Co., Ltd. All rights reserved.</p>
+                <div class="footer__certification">
+                    <img src="https://www.figma.com/api/mcp/asset/bfb6113e-b7b9-42b3-9e87-4b8fe77dfcd4" alt="혁신금융" class="footer__cert-img">
+                    <span class="footer__cert-text">혁신금융서비스사업자 선정기업</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="notice.js"></script>
+</body>
+</html>
