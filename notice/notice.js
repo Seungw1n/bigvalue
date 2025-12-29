@@ -75,7 +75,7 @@
 
         // Add click handler to navigate to detail page
         card.addEventListener('click', () => {
-            window.location.href = `/notice/detail.html?id=${notice.id}`;
+            window.location.href = `detail.html?id=${notice.id}`;
         });
 
         return card;
