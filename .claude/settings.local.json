@@ -6,7 +6,10 @@
       "mcp__figma__get_design_context",
       "mcp__figma__get_metadata",
       "Bash(dir:*)",
-      "Bash(move:*)"
+      "Bash(move:*)",
+      "WebFetch(domain:www.figma.com)",
+      "Bash(cat:*)",
+      "Bash(ls:*)"
     ],
     "deny": [],
     "ask": []

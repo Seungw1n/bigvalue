@@ -45,10 +45,18 @@
      * Get thumbnail image URL
      */
     function getThumbnailUrl(thumbnail) {
-        if (!thumbnail || !thumbnail.id) {
-            return 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect width="400" height="300" fill="%23f0f0f0"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="18" fill="%23999"%3ENo Image%3C/text%3E%3C/svg%3E';
+        // Priority 1: Use thumbnail.url if available (direct URL from API)
+        if (thumbnail && thumbnail.url) {
+            return thumbnail.url;
         }
-        return `${API_CONFIG.imageBaseUrl}/${thumbnail.id}`;
+
+        // Priority 2: Construct URL from thumbnail.id if available
+        if (thumbnail && thumbnail.id) {
+            return `${API_CONFIG.imageBaseUrl}/${thumbnail.id}`;
+        }
+
+        // Priority 3: Return placeholder if no thumbnail data
+        return 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect width="400" height="300" fill="%23f0f0f0"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="18" fill="%23999"%3ENo Image%3C/text%3E%3C/svg%3E';
     }
 
     /**

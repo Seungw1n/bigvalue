@@ -42,30 +42,16 @@
     }
 
     /**
-     * Get thumbnail image URL
-     */
-    function getThumbnailUrl(thumbnail) {
-        if (!thumbnail || !thumbnail.id) {
-            return 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect width="400" height="300" fill="%23f0f0f0"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="18" fill="%23999"%3ENo Image%3C/text%3E%3C/svg%3E';
-        }
-        return `${API_CONFIG.imageBaseUrl}/${thumbnail.id}`;
-    }
-
-    /**
-     * Create notice card element
+     * Create notice card element (text-only, no thumbnail)
      */
     function createNoticeCard(notice) {
         const card = document.createElement('article');
-        card.className = 'newsroom-card';
+        card.className = 'newsroom-card newsroom-card--text-only';
         card.style.cursor = 'pointer';
 
-        const thumbnailUrl = getThumbnailUrl(notice.thumbnail);
         const formattedDate = formatDate(notice.createAt);
 
         card.innerHTML = `
-            <div class="newsroom-card__image">
-                <img src="${thumbnailUrl}" alt="${notice.title}" loading="lazy">
-            </div>
             <div class="newsroom-card__content">
                 <time class="newsroom-card__date" datetime="${notice.createAt}">${formattedDate}</time>
                 <h3 class="newsroom-card__title">${notice.title}</h3>

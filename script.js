@@ -357,88 +357,140 @@
     }
 
     // ==========================================
-    // Button Click Handlers
+    // Inquiry Modal
     // ==========================================
-    class ButtonHandlers {
+    class InquiryModal {
         constructor() {
+            this.modal = document.getElementById('inquiry-modal');
+            this.form = document.getElementById('inquiry-form');
+            this.closeBtn = document.getElementById('modal-close');
+            this.overlay = this.modal?.querySelector('.modal__overlay');
+            this.inquiryButtons = document.querySelectorAll('.btn:not([href])');
+            this.apiEndpoint = 'https://rest.dev.bigvalue.ai/home/inquire';
             this.init();
         }
 
         init() {
-            // Add click handlers to all buttons
-            const buttons = document.querySelectorAll('.btn');
-            buttons.forEach(button => {
-                button.addEventListener('click', (e) => this.handleButtonClick(e));
+            if (!this.modal || !this.form) return;
+
+            // Add event listeners
+            this.inquiryButtons.forEach(button => {
+                const text = button.textContent.trim();
+                if (text.includes('문의')) {
+                    button.addEventListener('click', () => this.open());
+                }
+            });
+
+            this.closeBtn?.addEventListener('click', () => this.close());
+            this.overlay?.addEventListener('click', () => this.close());
+            this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+
+            // Close on ESC key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && this.modal.style.display !== 'none') {
+                    this.close();
+                }
             });
         }
 
-        handleButtonClick(e) {
-            const button = e.currentTarget;
-            const text = button.textContent.trim();
+        open() {
+            if (!this.modal) return;
+            this.modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
 
-            // Add ripple effect
-            this.createRipple(e, button);
-
-            // Log action (in production, this would trigger actual actions)
-            console.log(`Button clicked: ${text}`);
-
-            // Example actions based on button text
-            if (text.includes('문의') || text.includes('BigValue')) {
-                this.handleInquiry();
-            } else if (text.includes('시작') || text.includes('체험')) {
-                this.handleGetStarted();
+            // Focus first input
+            const firstInput = this.form.querySelector('input');
+            if (firstInput) {
+                setTimeout(() => firstInput.focus(), 100);
             }
         }
 
-        createRipple(e, button) {
-            const ripple = createElement('span', ['ripple']);
-            const rect = button.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-            const x = e.clientX - rect.left - size / 2;
-            const y = e.clientY - rect.top - size / 2;
+        close() {
+            if (!this.modal) return;
+            this.modal.style.display = 'none';
+            document.body.style.overflow = '';
+            this.form.reset();
+        }
 
-            ripple.style.cssText = `
-                position: absolute;
-                border-radius: 50%;
-                background: rgba(255, 255, 255, 0.6);
-                width: ${size}px;
-                height: ${size}px;
-                left: ${x}px;
-                top: ${y}px;
-                pointer-events: none;
-                transform: scale(0);
-                animation: ripple-animation 0.6s ease-out;
-            `;
+        async handleSubmit(e) {
+            e.preventDefault();
 
-            button.style.position = 'relative';
-            button.style.overflow = 'hidden';
-            button.appendChild(ripple);
+            // Get form data
+            const formData = new FormData(this.form);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                mobile: formData.get('mobile') || '',
+                affiliation: formData.get('affiliation') || '',
+                content: formData.get('content'),
+                agreePrivacyPolicy: formData.get('agreePrivacyPolicy') === 'on'
+            };
 
-            // Add ripple animation
-            if (!document.getElementById('ripple-animation')) {
-                const style = createElement('style', [], { id: 'ripple-animation' });
-                style.textContent = `
-                    @keyframes ripple-animation {
-                        to {
-                            transform: scale(2);
-                            opacity: 0;
-                        }
-                    }
-                `;
-                document.head.appendChild(style);
+            // Debug: Log form data
+            console.log('📤 Submitting inquiry data:', data);
+
+            // Validate required fields
+            if (!data.name || !data.email || !data.content || !data.agreePrivacyPolicy) {
+                alert('필수 항목을 모두 입력해주세요.');
+                return;
             }
 
-            setTimeout(() => ripple.remove(), 600);
-        }
+            // Disable submit button
+            const submitBtn = this.form.querySelector('.modal__submit');
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = '전송 중...';
+            }
 
-        handleInquiry() {
-            alert('문의하기 기능은 준비 중입니다.');
-            // In production: open contact form or modal
-        }
+            try {
+                console.log('📡 Sending request to:', this.apiEndpoint);
 
-        handleGetStarted() {
-            alert('회원가입/로그인 페이지로 이동합니다.');
-            // In production: redirect to signup/login page
+                const response = await fetch(this.apiEndpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                console.log('📥 Response status:', response.status);
+                console.log('📥 Response headers:', response.headers);
+
+                // Try to get response text first
+                const responseText = await response.text();
+                console.log('📥 Response text:', responseText);
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}, body: ${responseText}`);
+                }
+
+                // Parse JSON if response is ok
+                let result;
+                try {
+                    result = JSON.parse(responseText);
+                } catch (parseError) {
+                    console.error('❌ JSON parse error:', parseError);
+                    result = { message: responseText };
+                }
+
+                console.log('✅ Inquiry submitted successfully:', result);
+
+                alert('문의가 성공적으로 접수되었습니다.\n빠른 시일 내에 답변 드리겠습니다.');
+                this.close();
+            } catch (error) {
+                console.error('❌ Error submitting inquiry:', error);
+                console.error('❌ Error details:', {
+                    message: error.message,
+                    stack: error.stack
+                });
+                alert('문의 접수 중 오류가 발생했습니다.\n잠시 후 다시 시도해주세요.\n\n에러: ' + error.message);
+            } finally {
+                // Re-enable submit button
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = '문의하기';
+                }
+            }
         }
     }
 
@@ -542,7 +594,7 @@
             new DataCards();
             new FlowTabs();
             new ScrollAnimations();
-            new ButtonHandlers();
+            new InquiryModal();
             new PerformanceOptimization();
             new AutoScrollController();
 

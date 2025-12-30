@@ -24,8 +24,6 @@
         breadcrumbTitle: document.getElementById('article-breadcrumb-title'),
         title: document.getElementById('article-title'),
         date: document.getElementById('article-date'),
-        authorName: document.getElementById('article-author-name'),
-        thumbnail: document.getElementById('article-thumbnail'),
         summary: document.getElementById('article-summary'),
         body: document.getElementById('article-body')
     };
@@ -57,13 +55,18 @@
     }
 
     /**
-     * Get thumbnail image URL
+     * Format content to convert Challenges and Solutions to headers
      */
-    function getThumbnailUrl(thumbnail) {
-        if (!thumbnail || !thumbnail.id) {
-            return null;
-        }
-        return `${API_CONFIG.imageBaseUrl}/${thumbnail.id}`;
+    function formatContent(content) {
+        if (!content) return content;
+
+        // Convert "Challenges: ..." to <h2>Challenges</h2>
+        content = content.replace(/Challenges:\s*/gi, '<h2>Challenges</h2>');
+
+        // Convert "Solutions: ..." to <h2>Solutions</h2>
+        content = content.replace(/Solutions:\s*/gi, '<h2>Solutions</h2>');
+
+        return content;
     }
 
     // ==========================================
@@ -139,23 +142,6 @@
         elements.date.textContent = formattedDate;
         elements.date.setAttribute('datetime', article.createAt);
 
-        // Set author
-        if (article.creator) {
-            elements.authorName.textContent = article.creator.nickname || article.creator.username;
-        }
-
-        // Set thumbnail
-        const thumbnailUrl = getThumbnailUrl(article.thumbnail);
-        if (thumbnailUrl) {
-            const img = document.createElement('img');
-            img.src = thumbnailUrl;
-            img.alt = article.title;
-            img.className = 'article-detail__thumbnail-img';
-            elements.thumbnail.appendChild(img);
-        } else {
-            elements.thumbnail.style.display = 'none';
-        }
-
         // Set summary
         if (article.summary) {
             elements.summary.textContent = article.summary;
@@ -164,10 +150,11 @@
         }
 
         // Set body content (if available)
-        // Note: The API response shown doesn't include body content
-        // This is prepared for future API updates
+        // Format content to convert Challenges and Solutions to headers
         if (article.content || article.body) {
-            elements.body.innerHTML = article.content || article.body;
+            const rawContent = article.content || article.body;
+            const formattedContent = formatContent(rawContent);
+            elements.body.innerHTML = formattedContent;
         } else {
             elements.body.style.display = 'none';
         }

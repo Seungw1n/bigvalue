@@ -22,8 +22,8 @@
                 </nav>
             </div>
             <div class="header__right">
-                <button class="btn btn--secondary">문의하기</button>
-                <button class="btn btn--primary">시작하기</button>
+                <button class="btn btn--outline btn--medium">문의하기</button>
+                <a href="https://service.staging.bigvalue.ai/sign-in" target="_blank" rel="noopener noreferrer" class="btn btn--cta btn--medium">시작하기</a>
             </div>
         </div>
     </header>
@@ -48,8 +48,8 @@
                     <span class="hero__subtitle-text">!</span>
                 </p>
                 <div class="hero__buttons" data-node-id="5:6366">
-                    <button class="btn btn--outline btn--xlarge" data-node-id="5:6367">BigValue 시작하기</button>
-                    <button class="btn btn--primary btn--xlarge" data-node-id="5:6368">무료로 체험하기</button>
+                    <a href="https://service.staging.bigvalue.ai/sign-in" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--large" data-node-id="5:6367">BigValue 시작하기</a>
+                    <a href="https://service.bigvalue.ai/guest" target="_blank" rel="noopener noreferrer" class="btn btn--cta btn--large" data-node-id="5:6368">무료로 체험하기</a>
                 </div>
             </div>
         </section>
@@ -130,13 +130,63 @@
                     <h2 class="cta-section__title">지금 바로 BigValue를 경험해보세요!</h2>
                     <p class="cta-section__subtitle">하루동안 자유롭게 사용하세요.</p>
                     <div class="cta-section__buttons">
-                        <button class="btn btn--primary btn--large">무료 체험</button>
-                        <button class="btn btn--secondary btn--large">더 알아보기</button>
+                        <a href="https://service.bigvalue.ai/guest" target="_blank" rel="noopener noreferrer" class="btn btn--cta btn--medium">무료 체험</a>
+                        <button class="btn btn--outline btn--medium">더 알아보기</button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Inquiry Modal -->
+    <div id="inquiry-modal" class="modal" style="display: none;">
+        <div class="modal__overlay"></div>
+        <div class="modal__container">
+            <div class="modal__header">
+                <h2 class="modal__title">빅밸류에 문의하세요</h2>
+                <button class="modal__close" id="modal-close" aria-label="Close modal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="#9291A5" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            <form id="inquiry-form" class="modal__form">
+                <div class="modal__field">
+                    <label class="modal__label" for="inquiry-name">이름 *</label>
+                    <input type="text" id="inquiry-name" name="name" class="modal__input" placeholder="김밸류" required>
+                </div>
+                <div class="modal__field-group">
+                    <div class="modal__field modal__field--half">
+                        <label class="modal__label" for="inquiry-email">이메일 *</label>
+                        <input type="email" id="inquiry-email" name="email" class="modal__input" placeholder="name@company.com" required>
+                    </div>
+                    <div class="modal__field modal__field--half">
+                        <label class="modal__label" for="inquiry-mobile">전화번호</label>
+                        <input type="tel" id="inquiry-mobile" name="mobile" class="modal__input" placeholder="010-0000-0000">
+                    </div>
+                </div>
+                <div class="modal__field">
+                    <label class="modal__label" for="inquiry-affiliation">소속</label>
+                    <input type="text" id="inquiry-affiliation" name="affiliation" class="modal__input" placeholder="BigValue">
+                </div>
+                <div class="modal__field">
+                    <label class="modal__label" for="inquiry-content">내용 *</label>
+                    <textarea id="inquiry-content" name="content" class="modal__textarea" placeholder="자유롭게 작성해주세요" rows="5" required></textarea>
+                </div>
+                <div class="modal__privacy">
+                    <div class="modal__privacy-header">
+                        <span class="modal__privacy-title">개인정보처리방침</span>
+                        <a href="privacy-policy/" target="_blank" class="modal__privacy-link">전체보기</a>
+                    </div>
+                    <label class="modal__checkbox">
+                        <input type="checkbox" id="inquiry-agree" name="agreePrivacyPolicy" required>
+                        <span class="modal__checkbox-label">개인정보 제공에 동의합니다 *</span>
+                    </label>
+                </div>
+                <button type="submit" class="modal__submit">문의하기</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer" data-node-id="5:5365">
