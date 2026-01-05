@@ -17,13 +17,19 @@
                 </div>
                 <nav class="header__nav">
                     <a href="https://docs.bigvalue.ai/" target="_blank" rel="noopener noreferrer" class="header__nav-link">Docs</a>
-                    <a href="ai-use-case/" class="header__nav-link">AI Use Case</a>
+                    <div class="header__nav-dropdown">
+                        <span class="header__nav-link header__nav-link--dropdown">Use Case</span>
+                        <div class="header__dropdown-menu">
+                            <a href="customer-studies/" class="header__dropdown-link">Customer Studies</a>
+                            <a href="insight-feed/" class="header__dropdown-link">Insight Feed</a>
+                        </div>
+                    </div>
                     <a href="pricing/" class="header__nav-link">Pricing</a>
                 </nav>
             </div>
             <div class="header__right">
-                <button class="btn btn--outline btn--medium">문의하기</button>
-                <a href="https://service.staging.bigvalue.ai/sign-in" target="_blank" rel="noopener noreferrer" class="btn btn--cta btn--medium">시작하기</a>
+                <button class="btn btn--outline btn--small">문의하기</button>
+                <a href="https://service.staging.bigvalue.ai/sign-in" target="_blank" rel="noopener noreferrer" class="btn btn--cta btn--small">Sign in</a>
             </div>
         </div>
     </header>
@@ -31,10 +37,9 @@
     <!-- Main Content -->
     <main class="main">
         <!-- Hero Section -->
+        <div class="hero__background"></div>
         <section class="hero" data-node-id="5:6384">
-            <div class="hero__background">
-                <img src="images/hero-bg.png" alt="" class="hero__bg-img">
-            </div>
+            
             <div class="hero__content">
                 <h1 class="hero__title">
                     <span class="hero__title-main">Find Your </span>
@@ -47,10 +52,6 @@
                     <span class="hero__subtitle-emphasis">풍부하게</span>
                     <span class="hero__subtitle-text">!</span>
                 </p>
-                <div class="hero__buttons" data-node-id="5:6366">
-                    <a href="https://service.staging.bigvalue.ai/sign-in" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--large" data-node-id="5:6367">BigValue 시작하기</a>
-                    <a href="https://service.bigvalue.ai/guest" target="_blank" rel="noopener noreferrer" class="btn btn--cta btn--large" data-node-id="5:6368">무료로 체험하기</a>
-                </div>
             </div>
         </section>
 
@@ -67,8 +68,8 @@
         <section class="data-cards" data-node-id="5:5384">
             <div class="data-cards__container">
                 <div class="data-cards__header">
-                    <h2 class="data-cards__title">당신이 알고 싶은 모든 데이터</h2>
-                    <p class="data-cards__subtitle">최적화 된 Flow로 관심 분야를 분석하세요!</p>
+                    <p class="data-cards__badge">당신이 알고 싶은 모든 데이터</p>
+                    <h2 class="data-cards__title">최적화 된 Flow로 관심 분야를 분석하세요!</h2>
                 </div>
                 <div class="data-cards__scroll-wrapper">
                     <!-- Row 1 - Auto scroll left to right -->
