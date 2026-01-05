@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BigValue Data - 개발자를 위한 다양한 데이터 카탈로그와 API 접근 방법">
+    <title>Data - BigValue</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Global Navigation Bar -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__left">
+                <div class="header__logo">
+                    <a href="../">
+                        <img src="https://www.figma.com/api/mcp/asset/a54d4e2e-aacd-40f4-8130-d3937c1af719" alt="BigValue 로고" class="header__logo-img">
+                    </a>
+                </div>
+                <nav class="header__nav">
+                    <!-- Products Dropdown -->
+                    <div class="header__nav-dropdown">
+                        <span class="header__nav-link header__nav-link--dropdown">Products</span>
+                        <div class="header__dropdown-menu">
+                            <a href="../data-products/" class="header__dropdown-link">Data Products</a>
+                            <a href="../api/" class="header__dropdown-link">API</a>
+                            <a href="../platform/" class="header__dropdown-link">Platform</a>
+                            <a href="../ai-solutions/" class="header__dropdown-link">AI Solutions</a>
+                        </div>
+                    </div>
+                    <!-- Solutions Dropdown -->
+                    <div class="header__nav-dropdown">
+                        <span class="header__nav-link header__nav-link--dropdown">Solutions</span>
+                        <div class="header__dropdown-menu">
+                            <a href="../solutions/finance/" class="header__dropdown-link">금융</a>
+                            <a href="../solutions/logistics/" class="header__dropdown-link">물류</a>
+                            <a href="../solutions/healthcare/" class="header__dropdown-link">헬스케어</a>
+                            <a href="../solutions/government/" class="header__dropdown-link">정부/기관</a>
+                        </div>
+                    </div>
+                    <!-- Developers Dropdown -->
+                    <div class="header__nav-dropdown">
+                        <span class="header__nav-link header__nav-link--dropdown">Developers</span>
+                        <div class="header__dropdown-menu">
+                            <a href="../data/" class="header__dropdown-link">Data</a>
+                            <a href="https://docs.bigvalue.ai/" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">Docs</a>
+                        </div>
+                    </div>
+                    <div class="header__nav-dropdown">
+                        <span class="header__nav-link header__nav-link--dropdown">Use Case</span>
+                        <div class="header__dropdown-menu">
+                            <a href="../customer-studies/" class="header__dropdown-link">Customer Studies</a>
+                            <a href="../insight-feed/" class="header__dropdown-link">Insight Feed</a>
+                        </div>
+                    </div>
+                    <!-- Company Dropdown -->
+                    <div class="header__nav-dropdown">
+                        <span class="header__nav-link header__nav-link--dropdown">Company</span>
+                        <div class="header__dropdown-menu">
+                            <a href="../about-us/" class="header__dropdown-link">About us</a>
+                            <a href="../newsroom/" class="header__dropdown-link">Newsroom</a>
+                            <a href="../notice/" class="header__dropdown-link">Notice</a>
+                            <a href="https://recruit.bigvalue.co.kr/" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">Careers</a>
+                        </div>
+                    </div>
+                    <a href="../pricing/" class="header__nav-link">Pricing</a>
+                </nav>
+            </div>
+            <div class="header__right">
+                <button class="btn btn--text btn--small">문의하기</button>
+                <a href="https://service.staging.bigvalue.ai/sign-in" target="_blank" rel="noopener noreferrer" class="btn btn--cta btn--small">Sign in</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="newsroom-container" style="max-width: 1200px;">
+            <!-- Header Section -->
+            <div class="newsroom-header" style="margin-bottom: 80px;">
+                <h1 class="newsroom-title">Data Catalog</h1>
+                <p class="newsroom-subtitle">개발자를 위한 BigValue 데이터 카탈로그 - 다양한 데이터셋에 API로 쉽게 접근하세요</p>
+            </div>
+
+            <!-- Quick Start Section -->
+            <section style="margin-bottom: 80px;">
+                <div style="background: linear-gradient(135deg, #4434e2 0%, #6b5eff 100%); padding: 60px; border-radius: 20px; color: white;">
+                    <h2 style="font-size: 32px; font-weight: 600; margin-bottom: 24px;">빠른 시작</h2>
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 24px; border-radius: 12px; backdrop-filter: blur(10px); margin-bottom: 24px;">
+                        <p style="font-size: 16px; margin-bottom: 16px; opacity: 0.9;">1. API 키 발급을 위해 계정을 생성하세요</p>
+                        <p style="font-size: 16px; margin-bottom: 16px; opacity: 0.9;">2. 원하는 데이터 카탈로그를 선택하고 API 엔드포인트를 확인하세요</p>
+                        <p style="font-size: 16px; margin-bottom: 0; opacity: 0.9;">3. REST API 또는 Python SDK를 사용하여 데이터에 접근하세요</p>
+                    </div>
+                    <div style="display: flex; gap: 16px;">
+                        <a href="https://service.staging.bigvalue.ai/sign-in" target="_blank" class="btn btn--cta btn--large" style="background: white; color: #4434e2;">무료로 시작하기</a>
+                        <a href="https://docs.bigvalue.ai/" target="_blank" class="btn btn--outline btn--large" style="border-color: white; color: white;">API 문서 보기</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Data Categories -->
+            <section style="margin-bottom: 80px;">
+                <h2 style="font-size: 32px; font-weight: 600; margin-bottom: 40px; text-align: center; color: #1D1D1F;">데이터 카탈로그</h2>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
+                    <!-- Real Estate Data -->
+                    <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #E3E2E9;">
+                        <div style="display: flex; align-items: center; margin-bottom: 24px;">
+                            <div style="width: 56px; height: 56px; background: #F5F4FF; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-right: 16px;">
+                                🏠
+                            </div>
+                            <div>
+                                <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 4px; color: #1D1D1F;">부동산 데이터</h3>
+                                <span style="display: inline-block; padding: 4px 12px; background: #F5F4FF; color: #4434e2; border-radius: 6px; font-size: 13px; font-weight: 500;">300+ API endpoints</span>
+                            </div>
+                        </div>
+                        <p style="font-size: 16px; line-height: 1.6; color: #6E6D7A; margin-bottom: 20px;">
+                            아파트, 오피스텔, 토지 등 부동산 실거래가, 전월세 시세, 재개발 정보를 실시간으로 제공합니다.
+                        </p>
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="font-size: 14px; font-weight: 600; color: #6E6D7A; margin-bottom: 12px;">주요 엔드포인트</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: 6px 0; color: #424252; font-size: 14px; font-family: monospace;">GET /real-estate/transactions</li>
+                                <li style="padding: 6px 0; color: #424252; font-size: 14px; font-family: monospace;">GET /real-estate/rent-prices</li>
+                                <li style="padding: 6px 0; color: #424252; font-size: 14px; font-family: monospace;">GET /real-estate/redevelopment</li>
+                            </ul>
+                        </div>
+                        <a href="https://docs.bigvalue.ai/" target="_blank" style="color: #4434e2; font-size: 15px; font-weight: 500; text-decoration: none;">API 문서 →</a>
+                    </div>
+
+                    <!-- Commercial Area Data -->
+                    <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #E3E2E9;">
+                        <div style="display: flex; align-items: center; margin-bottom: 24px;">
+                            <div style="width: 56px; height: 56px; background: #F5F4FF; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-right: 16px;">
+                                🏪
+                            </div>
+                            <div>
+                                <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 4px; color: #1D1D1F;">상권 데이터</h3>
+                                <span style="display: inline-block; padding: 4px 12px; background: #F5F4FF; color: #4434e2; border-radius: 6px; font-size: 13px; font-weight: 500;">250+ API endpoints</span>
+                            </div>
+                        </div>
+                        <p style="font-size: 16px; line-height: 1.6; color: #6E6D7A; margin-bottom: 20px;">
+                            유동인구, 업종별 매출, 점포 개폐업 정보 등 상권 분석에 필요한 모든 데이터를 제공합니다.
+                        </p>
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="font-size: 14px; font-weight: 600; color: #6E6D7A; margin-bottom: 12px;">주요 엔드포인트</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: 6px 0; color: #424252; font-size: 14px; font-family: monospace;">GET /commercial/foot-traffic</li>
+                                <li style="padding: 6px 0; color: #424252; font-size: 14px; font-family: monospace;">GET /commercial/sales-by-industry</li>
+                                <li style="padding: 6px 0; color: #424252; font-size: 14px; font-family: monospace;">GET /commercial/store-openings</li>
+                            </ul>
+                        </div>
+                        <a href="https://docs.bigvalue.ai/" target="_blank" style="color: #4434e2; font-size: 15px; font-weight: 500; text-decoration: none;">API 문서 →</a>
+                    </div>
+
+                    <!-- Corporate Data -->
+                    <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #E3E2E9;">
+                        <div style="display: flex; align-items: center; margin-bottom: 24px;">
+                            <div style="width: 56px; height: 56px; background: #F5F4FF; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-right: 16px;">
+                                🏢
+                            </div>
+                            <div>
+                                <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 4px; color: #1D1D1F;">기업 데이터</h3>
+                                <span style="display: inline-block; padding: 4px 12px; background: #F5F4FF; color: #4434e2; border-radius: 6px; font-size: 13px; font-weight: 500;">200+ API endpoints</span>
+                            </div>
+                        </div>
+                        <p style="font-size: 16px; line-height: 1.6; color: #6E6D7A; margin-bottom: 20px;">
+                            사업자 등록 정보, 재무제표, 신용평가, 특허 정보 등 기업 분석 데이터를 제공합니다.
+                        </p>
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="font-size: 14px; font-weight: 600; color: #6E6D7A; margin-bottom: 12px;">주요 엔드포인트</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: 6px 0; color: #424252; font-size: 14px; font-family: monospace;">GET /corporate/business-info</li>
+                                <li style="padding: 6px 0; color: #424252; font-size: 14px; font-family: monospace;">GET /corporate/financial-statements</li>
+                                <li style="padding: 6px 0; color: #424252; font-size: 14px; font-family: monospace;">GET /corporate/credit-rating</li>
+                            </ul>
+                        </div>
+                        <a href="https://docs.bigvalue.ai/" target="_blank" style="color: #4434e2; font-size: 15px; font-weight: 500; text-decoration: none;">API 문서 →</a>
+                    </div>
+
+                    <!-- Financial Data -->
+                    <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #E3E2E9;">
+                        <div style="display: flex; align-items: center; margin-bottom: 24px;">
+                            <div style="width: 56px; height: 56px; background: #F5F4FF; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-right: 16px;">
+                                💰
+                            </div>
+                            <div>
+                                <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 4px; color: #1D1D1F;">금융 데이터</h3>
+                                <span style="display: inline-block; padding: 4px 12px; background: #F5F4FF; color: #4434e2; border-radius: 6px; font-size: 13px; font-weight: 500;">150+ API endpoints</span>
+                            </div>
+                        </div>
+                        <p style="font-size: 16px; line-height: 1.6; color: #6E6D7A; margin-bottom: 20px;">
+                            실시간 주가, 금리, 환율, 채권 정보 등 금융 시장 데이터를 실시간으로 제공합니다.
+                        </p>
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="font-size: 14px; font-weight: 600; color: #6E6D7A; margin-bottom: 12px;">주요 엔드포인트</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: 6px 0; color: #424252; font-size: 14px; font-family: monospace;">GET /financial/stock-prices</li>
+                                <li style="padding: 6px 0; color: #424252; font-size: 14px; font-family: monospace;">GET /financial/interest-rates</li>
+                                <li style="padding: 6px 0; color: #424252; font-size: 14px; font-family: monospace;">GET /financial/exchange-rates</li>
+                            </ul>
+                        </div>
+                        <a href="https://docs.bigvalue.ai/" target="_blank" style="color: #4434e2; font-size: 15px; font-weight: 500; text-decoration: none;">API 문서 →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Code Example Section -->
+            <section style="margin-bottom: 80px;">
+                <h2 style="font-size: 32px; font-weight: 600; margin-bottom: 40px; text-align: center; color: #1D1D1F;">빠르게 시작하는 코드 예제</h2>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
+                    <!-- Python Example -->
+                    <div style="background: #1D1D1F; padding: 32px; border-radius: 12px;">
+                        <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Python SDK</h3>
+                        <pre style="margin: 0; color: #E3E2E9; font-size: 14px; line-height: 1.6; overflow-x: auto;"><code>import bigvalue
+
+# API 키 설정
+client = bigvalue.Client(api_key='YOUR_API_KEY')
+
+# 부동산 실거래가 조회
+transactions = client.real_estate.transactions(
+    region='서울특별시 강남구',
+    start_date='2025-01-01',
+    end_date='2025-01-31'
+)
+
+for tx in transactions:
+    print(f"{tx.address}: {tx.price}원")</code></pre>
+                    </div>
+
+                    <!-- REST API Example -->
+                    <div style="background: #1D1D1F; padding: 32px; border-radius: 12px;">
+                        <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">REST API</h3>
+                        <pre style="margin: 0; color: #E3E2E9; font-size: 14px; line-height: 1.6; overflow-x: auto;"><code>curl -X GET \
+  'https://api.bigvalue.ai/v1/real-estate/transactions' \
+  -H 'Authorization: Bearer YOUR_API_KEY' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "region": "서울특별시 강남구",
+    "start_date": "2025-01-01",
+    "end_date": "2025-01-31"
+  }'</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <div style="text-align: center; padding: 60px 40px; background: linear-gradient(135deg, #4434e2 0%, #6b5eff 100%); border-radius: 20px;">
+                <h2 style="font-size: 32px; font-weight: 600; color: white; margin-bottom: 16px;">지금 바로 데이터에 접근하세요</h2>
+                <p style="font-size: 18px; color: rgba(255, 255, 255, 0.9); margin-bottom: 32px;">무료 계정으로 시작하여 BigValue의 모든 데이터를 탐색해보세요</p>
+                <a href="https://service.staging.bigvalue.ai/sign-in" target="_blank" class="btn btn--cta btn--large" style="background: white; color: #4434e2;">무료로 시작하기</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__top">
+                <div class="footer__left">
+                    <div class="footer__logo">
+                        <img src="https://www.figma.com/api/mcp/asset/27d01ce8-55c9-4521-b87e-77394e2198f1" alt="BigValue" class="footer__logo-img">
+                    </div>
+                    <div class="footer__company-info">
+                        <p class="footer__company-name">주식회사 빅밸류</p>
+                        <p class="footer__address">서울특별시 중구 서소문로 138 대한일보빌딩 12층</p>
+                    </div>
+                    <div class="footer__legal-links">
+                        <a href="../privacy-policy/" class="footer__legal-link">개인정보처리방침</a>
+                        <a href="../terms-of-service/" class="footer__legal-link">이용약관</a>
+                    </div>
+                </div>
+                <div class="footer__right">
+                    <nav class="footer__nav">
+                        <div class="footer__nav-section">
+                            <h4 class="footer__nav-title">회사소개</h4>
+                            <ul class="footer__nav-list">
+                                <li><a href="../about-us/" class="footer__nav-link">About us</a></li>
+                                <li><a href="../newsroom/" class="footer__nav-link">Newsroom</a></li>
+                                <li><a href="../notice/" class="footer__nav-link">Notice</a></li>
+                                <li><a href="https://recruit.bigvalue.co.kr/" target="_blank" rel="noopener noreferrer" class="footer__nav-link">Careers</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer__divider"></div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">Copyright 2025 by BigValue Co., Ltd. All rights reserved.</p>
+                <div class="footer__certification">
+                    <img src="https://www.figma.com/api/mcp/asset/bfb6113e-b7b9-42b3-9e87-4b8fe77dfcd4" alt="혁신금융" class="footer__cert-img">
+                    <span class="footer__cert-text">혁신금융서비스사업자 선정기업</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

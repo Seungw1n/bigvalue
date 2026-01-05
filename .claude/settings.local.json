@@ -9,7 +9,10 @@
       "Bash(move:*)",
       "WebFetch(domain:www.figma.com)",
       "Bash(cat:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(if [ ! -d \"C:\\\\Users\\\\BV-JEONGSEUNGWON\\\\Downloads\\\\작업실\\\\bv-homepage\\\\platform\" ])",
+      "Bash(then mkdir \"C:\\\\Users\\\\BV-JEONGSEUNGWON\\\\Downloads\\\\작업실\\\\bv-homepage\\\\platform\")",
+      "Bash(fi)"
     ],
     "deny": [],
     "ask": []
