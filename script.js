@@ -365,7 +365,6 @@
             this.form = document.getElementById('inquiry-form');
             this.closeBtn = document.getElementById('modal-close');
             this.overlay = this.modal?.querySelector('.modal__overlay');
-            this.inquiryButtons = document.querySelectorAll('.btn:not([href])');
             this.apiEndpoint = 'https://rest.dev.bigvalue.ai/home/inquire';
             this.init();
         }
@@ -373,11 +372,15 @@
         init() {
             if (!this.modal || !this.form) return;
 
-            // Add event listeners
-            this.inquiryButtons.forEach(button => {
-                const text = button.textContent.trim();
-                if (text.includes('문의')) {
-                    button.addEventListener('click', () => this.open());
+            // Use event delegation to handle dynamically added buttons
+            document.addEventListener('click', (e) => {
+                const button = e.target.closest('.btn:not([href])');
+                if (button) {
+                    const text = button.textContent.trim();
+                    if (text.includes('문의')) {
+                        e.preventDefault();
+                        this.open();
+                    }
                 }
             });
 
@@ -603,8 +606,177 @@
     }
 
     // ==========================================
+    // GNB (Global Navigation Bar) Component
+    // ==========================================
+    class GNBComponent {
+        constructor() {
+            this.init();
+        }
+
+        getHTML() {
+            return `
+                <!-- Global Navigation Bar -->
+                <header class="header">
+                    <div class="header__container">
+                        <div class="header__left">
+                            <div class="header__logo">
+                                <a href="/">
+                                    <img src="https://www.figma.com/api/mcp/asset/a54d4e2e-aacd-40f4-8130-d3937c1af719" alt="BigValue 로고" class="header__logo-img">
+                                </a>
+                            </div>
+                            <nav class="header__nav">
+                                <!-- Products Dropdown -->
+                                <div class="header__nav-dropdown">
+                                    <span class="header__nav-link header__nav-link--dropdown">Products</span>
+                                    <div class="header__dropdown-menu">
+                                        <a href="/data-products/" class="header__dropdown-link">Data Assets</a>
+                                        <a href="/api/" class="header__dropdown-link">Data API</a>
+                                        <a href="/platform/" class="header__dropdown-link">Flow</a>
+                                        <a href="/ai-solutions/" class="header__dropdown-link">AI Services</a>
+                                    </div>
+                                </div>
+                                <!-- Solutions Dropdown -->
+                                <div class="header__nav-dropdown">
+                                    <span class="header__nav-link header__nav-link--dropdown">Solutions</span>
+                                    <div class="header__dropdown-menu">
+                                        <a href="/solutions/finance/" class="header__dropdown-link">금융/리스크</a>
+                                        <a href="/solutions/logistics/" class="header__dropdown-link">부동산/건설</a>
+                                        <a href="/solutions/healthcare/" class="header__dropdown-link">유통/상권</a>
+                                        <a href="/solutions/government/" class="header__dropdown-link">공공/행정</a>
+                                        <a href="/solutions/government/" class="header__dropdown-link">의료/케어</a>
+                                        <a href="/solutions/government/" class="header__dropdown-link">농축산/방역</a>
+                                        <a href="/solutions/government/" class="header__dropdown-link">환경</a>
+                                    </div>
+                                </div>
+                                <!-- Developers Dropdown -->
+                                <div class="header__nav-dropdown">
+                                    <span class="header__nav-link header__nav-link--dropdown">Developers</span>
+                                    <div class="header__dropdown-menu">
+                                        <a href="" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">Data Assets</a>
+                                        <a href="" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">Data API</a>
+                                        <a href="" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">Flow</a>
+                                        <a href="" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">AI Agent</a>
+                                        <a href="https://docs.bigvalue.ai/" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">Docs</a>
+                                    </div>
+                                </div>
+                                <div class="header__nav-dropdown">
+                                    <span class="header__nav-link header__nav-link--dropdown">Use Case</span>
+                                    <div class="header__dropdown-menu">
+                                        <a href="/customer-studies/" class="header__dropdown-link">Customer Studies</a>
+                                        <a href="/insight-feed/" class="header__dropdown-link">Insight Feed</a>
+                                    </div>
+                                </div>
+                                <!-- Company Dropdown -->
+                                <div class="header__nav-dropdown">
+                                    <span class="header__nav-link header__nav-link--dropdown">Company</span>
+                                    <div class="header__dropdown-menu">
+                                        <a href="/about-us/" class="header__dropdown-link">About us</a>
+                                        <a href="/newsroom/" class="header__dropdown-link">Newsroom</a>
+                                        <a href="/notice/" class="header__dropdown-link">Notice</a>
+                                        <a href="https://recruit.bigvalue.co.kr/" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">Careers</a>
+                                    </div>
+                                </div>
+                                <a href="/pricing/" class="header__nav-link">Pricing</a>
+                            </nav>
+                        </div>
+                        <div class="header__right">
+                            <button class="btn btn--text btn--small">문의하기</button>
+                            <a href="https://service.staging.bigvalue.ai/sign-in" target="_blank" rel="noopener noreferrer" class="btn btn--cta btn--small">Sign in</a>
+                        </div>
+                    </div>
+                </header>
+            `;
+        }
+
+        init() {
+            // GNB를 페이지 시작 부분에 삽입
+            const gnbPlaceholder = document.getElementById('gnb-placeholder');
+            if (gnbPlaceholder) {
+                gnbPlaceholder.outerHTML = this.getHTML();
+            }
+        }
+    }
+
+    // ==========================================
+    // Footer Component
+    // ==========================================
+    class FooterComponent {
+        constructor() {
+            this.init();
+        }
+
+        getHTML() {
+            return `
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="footer__container">
+                        <div class="footer__top">
+                            <div class="footer__left">
+                                <div class="footer__logo">
+                                    <img src="https://www.figma.com/api/mcp/asset/27d01ce8-55c9-4521-b87e-77394e2198f1" alt="BigValue" class="footer__logo-img">
+                                </div>
+                                <div class="footer__company-info">
+                                    <p class="footer__company-name">주식회사 빅밸류</p>
+                                    <p class="footer__address">서울특별시 중구 서소문로 138 대한일보빌딩 12층</p>
+                                </div>
+                                <div class="footer__legal-links">
+                                    <a href="/privacy-policy/" class="footer__legal-link">개인정보처리방침</a>
+                                    <a href="/terms-of-service/" class="footer__legal-link">이용약관</a>
+                                </div>
+                            </div>
+                            <div class="footer__right">
+                                <nav class="footer__nav">
+                                    <div class="footer__nav-section">
+                                        <h4 class="footer__nav-title">회사소개</h4>
+                                        <ul class="footer__nav-list">
+                                            <li><a href="/about-us/" class="footer__nav-link">About us</a></li>
+                                            <li><a href="/newsroom/" class="footer__nav-link">Newsroom</a></li>
+                                            <li><a href="/notice/" class="footer__nav-link">Notice</a></li>
+                                            <li><a href="https://recruit.bigvalue.co.kr/" target="_blank" rel="noopener noreferrer" class="footer__nav-link">Careers</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="footer__divider"></div>
+                        <div class="footer__bottom">
+                            <p class="footer__copyright">Copyright 2025 by BigValue Co., Ltd. All rights reserved.</p>
+                            <div class="footer__certification">
+                                <img src="https://www.figma.com/api/mcp/asset/bfb6113e-b7b9-42b3-9e87-4b8fe77dfcd4" alt="혁신금융" class="footer__cert-img">
+                                <span class="footer__cert-text">혁신금융서비스사업자 선정기업</span>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            `;
+        }
+
+        init() {
+            // Footer를 페이지 끝 부분에 삽입
+            const footerPlaceholder = document.getElementById('footer-placeholder');
+            if (footerPlaceholder) {
+                footerPlaceholder.outerHTML = this.getHTML();
+            }
+        }
+    }
+
+    // ==========================================
     // Start Application
     // ==========================================
     new App();
+
+    // ==========================================
+    // Initialize GNB and Footer Components
+    // ==========================================
+    // GNB와 Footer는 App보다 먼저 로드되어야 Header 클래스가 제대로 작동함
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            new GNBComponent();
+            new FooterComponent();
+        });
+    } else {
+        new GNBComponent();
+        new FooterComponent();
+    }
 
 })();

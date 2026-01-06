@@ -12,7 +12,11 @@
       "Bash(ls:*)",
       "Bash(if [ ! -d \"C:\\\\Users\\\\BV-JEONGSEUNGWON\\\\Downloads\\\\작업실\\\\bv-homepage\\\\platform\" ])",
       "Bash(then mkdir \"C:\\\\Users\\\\BV-JEONGSEUNGWON\\\\Downloads\\\\작업실\\\\bv-homepage\\\\platform\")",
-      "Bash(fi)"
+      "Bash(fi)",
+      "Bash(node update-all-pages.js:*)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(copy:*)"
     ],
     "deny": [],
     "ask": []
