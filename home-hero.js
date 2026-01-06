@@ -31,6 +31,12 @@
         return;
     }
 
+    // Check if canvas is actually a canvas element
+    if (typeof canvas.getContext !== 'function') {
+        console.warn('Hero canvas is not a valid canvas element');
+        return;
+    }
+
     const ctx = canvas.getContext('2d');
     let particles = [];
     let mouse = { x: null, y: null, radius: CONFIG.mouseInfluenceRadius };

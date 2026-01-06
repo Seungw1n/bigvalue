@@ -83,6 +83,89 @@
         }
     ];
 
+    const INSIGHTS_DATA = [
+        {
+            id: 1,
+            icon: '🏢',
+            category: '부동산 인사이트',
+            title: '강남 팔아 도착한 곳에 원베일리 있다?!',
+            description: '강남 아파트를 매도하고 이주한 지역 분석',
+            link: 'use-case/insight-feed/'
+        },
+        {
+            id: 2,
+            icon: '💰',
+            category: '금융 인사이트',
+            title: '주담대 담보가액 기준이 되는 시세?!',
+            description: '주택담보대출 담보가액 산정 기준과 실거래가 시세의 차이',
+            link: 'use-case/insight-feed/'
+        },
+        {
+            id: 3,
+            icon: '📋',
+            category: '정책 인사이트',
+            title: '토허제, 대지지분에 따라 갈리는 규제대상',
+            description: '토지거래허가제 적용 시 대지지분 기준 규제 대상 분석',
+            link: 'use-case/insight-feed/'
+        },
+        {
+            id: 4,
+            icon: '📈',
+            category: '투자 인사이트',
+            title: '금리 인하 = 빌딩 투자 타이밍? RTI가 결정',
+            description: '금리 인하기 상업용 부동산 투자 타이밍 분석',
+            link: 'use-case/insight-feed/'
+        },
+        {
+            id: 5,
+            icon: '🏠',
+            category: '생활 인사이트',
+            title: '전세 4억으로 가능한 마용성 신혼집 Top3',
+            description: '마포·용산·성동 지역 전세 4억 이하 신혼부부 적합 아파트',
+            link: 'use-case/insight-feed/'
+        },
+        {
+            id: 6,
+            icon: '👨‍👩‍👧‍👦',
+            category: '인구 인사이트',
+            title: '3040·집값·교육정책 움직이는 학령인구',
+            description: '30-40대 인구 유입과 교육정책이 맞물린 학령인구 증가 지역',
+            link: 'use-case/insight-feed/'
+        },
+        {
+            id: 7,
+            icon: '🏗️',
+            category: '부동산 인사이트',
+            title: '김현아 가는 길 초대형 건물들의 정체?!',
+            description: '김현아 국토부 장관 행보 지역의 초대형 상업용 부동산 현황',
+            link: 'use-case/insight-feed/'
+        },
+        {
+            id: 8,
+            icon: '🏪',
+            category: '상권 인사이트',
+            title: '마곡 상권, 어디까지 확장될까?',
+            description: '마곡 지식산업센터와 주거단지 입주에 따른 상권 확장 예측',
+            link: 'use-case/insight-feed/'
+        },
+        {
+            id: 9,
+            icon: '🎬',
+            category: '엔터 인사이트',
+            title: '연예기획사 사옥, 건물 주인도 엔터사?',
+            description: '주요 연예기획사 사옥의 소유 구조와 임대차 현황 분석',
+            link: 'use-case/insight-feed/'
+        },
+        {
+            id: 10,
+            icon: '🏙️',
+            category: '개발 인사이트',
+            title: '현대차 GBC, 공사는 멈춰도 땅값은 달린다',
+            description: '현대차 GBC 사업 중단 이후에도 주변 지역 땅값 상승 분석',
+            link: 'use-case/insight-feed/'
+        }
+    ];
+
     // ==========================================
     // Utility Functions
     // ==========================================
@@ -149,6 +232,8 @@
         }
 
         handleScroll() {
+            if (!this.header) return; // Guard clause if header not found
+
             const currentScrollY = window.scrollY;
 
             // Add shadow on scroll
@@ -206,8 +291,13 @@
         }
 
         init() {
-            if (!this.row1 || !this.row2) return;
+            if (!this.row1 || !this.row2) {
+                console.log('⚠️ DataCards: Row elements not found');
+                return;
+            }
+            console.log('✅ DataCards: Initializing...');
             this.renderCards();
+            console.log('✅ DataCards: Cards rendered successfully');
         }
 
         renderCards() {
@@ -270,23 +360,30 @@
             this.tabs = document.querySelectorAll('.flow-tabs__item');
             this.flowImage = document.getElementById('flow-image');
             this.imageMap = {
-                '1': 'images/call-data.png',
-                '2': 'images/analysis-and-visualization.png',
-                '3': 'images/get-insight.png'
+                '1': '../../src/images/call-data.png',
+                '2': '../../src/images/analysis-and-visualization.png',
+                '3': '../../src/images/get-insight.png'
             };
             this.init();
         }
 
         init() {
-            if (this.tabs.length === 0) return;
+            if (this.tabs.length === 0) {
+                console.log('⚠️ FlowTabs: No tab elements found');
+                return;
+            }
+            console.log('✅ FlowTabs: Initializing with', this.tabs.length, 'tabs');
 
             this.tabs.forEach(tab => {
                 tab.addEventListener('click', (e) => this.handleTabClick(e));
             });
+            console.log('✅ FlowTabs: Event listeners attached');
         }
 
         handleTabClick(e) {
             const clickedTab = e.currentTarget;
+            const tabNumber = clickedTab.getAttribute('data-tab');
+            console.log('🖱️ FlowTabs: Tab clicked, data-tab =', tabNumber);
 
             // Remove active class from all tabs
             this.tabs.forEach(tab => {
@@ -297,11 +394,94 @@
             clickedTab.classList.add('flow-tabs__item--active');
 
             // Change image based on tab
-            const tabNumber = clickedTab.getAttribute('data-tab');
             if (this.flowImage && this.imageMap[tabNumber]) {
+                console.log('🖼️ FlowTabs: Changing image to', this.imageMap[tabNumber]);
                 this.flowImage.src = this.imageMap[tabNumber];
                 this.flowImage.alt = `Flow 화면 예시 - 탭 ${tabNumber}`;
+            } else {
+                console.warn('⚠️ FlowTabs: Image element or image path not found');
             }
+        }
+    }
+
+    // ==========================================
+    // Insight Cards Generator with Auto Scroll (Main Page)
+    // ==========================================
+    class InsightCards {
+        constructor() {
+            this.row1 = document.getElementById('insights-row-1');
+            this.row2 = document.getElementById('insights-row-2');
+            this.init();
+        }
+
+        init() {
+            if (!this.row1 || !this.row2) {
+                console.log('⚠️ InsightCards: Row elements not found (not on main page)');
+                return;
+            }
+            console.log('✅ InsightCards: Initializing...');
+            this.renderCards();
+            console.log('✅ InsightCards: Cards rendered successfully');
+        }
+
+        renderCards() {
+            console.log('📊 InsightCards: INSIGHTS_DATA length:', INSIGHTS_DATA.length);
+
+            // Row 1: First 5 cards (duplicated for infinite scroll)
+            const row1Cards = INSIGHTS_DATA.slice(0, 5);
+            console.log('📊 InsightCards: Row 1 cards:', row1Cards.length);
+            [...row1Cards, ...row1Cards].forEach((cardData, index) => {
+                const card = this.createCard(cardData);
+                this.row1.appendChild(card);
+                console.log(`✅ InsightCards: Card ${index + 1} added to row 1`);
+            });
+
+            // Row 2: Next 5 cards (duplicated for infinite scroll)
+            const row2Cards = INSIGHTS_DATA.slice(5, 10);
+            console.log('📊 InsightCards: Row 2 cards:', row2Cards.length);
+            [...row2Cards, ...row2Cards].forEach((cardData, index) => {
+                const card = this.createCard(cardData);
+                this.row2.appendChild(card);
+                console.log(`✅ InsightCards: Card ${index + 1} added to row 2`);
+            });
+
+            console.log('📊 InsightCards: Total cards in row1:', this.row1.children.length);
+            console.log('📊 InsightCards: Total cards in row2:', this.row2.children.length);
+        }
+
+        createCard(data) {
+            // Create card wrapper
+            const card = createElement('div', ['insight-highlight-card']);
+
+            // Create icon container
+            const iconContainer = createElement('div', ['insight-highlight-card__icon']);
+            iconContainer.textContent = data.icon;
+
+            // Create content container
+            const content = createElement('div', ['insight-highlight-card__content']);
+
+            // Create category
+            if (data.category) {
+                const category = createElement('span', ['insight-highlight-card__category']);
+                category.textContent = data.category;
+                content.appendChild(category);
+            }
+
+            // Create title
+            const title = createElement('h3', ['insight-highlight-card__title']);
+            title.textContent = data.title;
+
+            // Create description
+            const description = createElement('p', ['insight-highlight-card__description']);
+            description.textContent = data.description;
+
+            // Assemble card
+            content.appendChild(title);
+            content.appendChild(description);
+            card.appendChild(iconContainer);
+            card.appendChild(content);
+
+            return card;
         }
     }
 
@@ -551,7 +731,7 @@
     // ==========================================
     class AutoScrollController {
         constructor() {
-            this.scrollElements = document.querySelectorAll('.data-cards__row');
+            this.scrollElements = document.querySelectorAll('.data-cards__row, .insight-highlights__row');
             this.init();
         }
 
@@ -596,6 +776,7 @@
             new SmoothScroll();
             new DataCards();
             new FlowTabs();
+            new InsightCards();
             new ScrollAnimations();
             new InquiryModal();
             new PerformanceOptimization();
@@ -627,53 +808,63 @@
                             <nav class="header__nav">
                                 <!-- Products Dropdown -->
                                 <div class="header__nav-dropdown">
-                                    <span class="header__nav-link header__nav-link--dropdown">Products</span>
+                                    <a href="/products/" class="header__nav-link header__nav-link--dropdown">Products</a>
                                     <div class="header__dropdown-menu">
-                                        <a href="/data-products/" class="header__dropdown-link">Data Assets</a>
-                                        <a href="/api/" class="header__dropdown-link">Data API</a>
-                                        <a href="/platform/" class="header__dropdown-link">Flow</a>
-                                        <a href="/ai-solutions/" class="header__dropdown-link">AI Services</a>
+                                        <div class="header__dropdown-menu-container">
+                                            <a href="/products/data-product/" class="header__dropdown-link">Data Product</a>
+                                            <a href="/products/data-api/" class="header__dropdown-link">Data API</a>
+                                            <a href="/products/flow/" class="header__dropdown-link">Flow</a>
+                                            <a href="/products/ai-solution/" class="header__dropdown-link">AI Solution</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- Solutions Dropdown -->
                                 <div class="header__nav-dropdown">
                                     <span class="header__nav-link header__nav-link--dropdown">Solutions</span>
                                     <div class="header__dropdown-menu">
-                                        <a href="/solutions/finance/" class="header__dropdown-link">금융/리스크</a>
-                                        <a href="/solutions/logistics/" class="header__dropdown-link">부동산/건설</a>
-                                        <a href="/solutions/healthcare/" class="header__dropdown-link">유통/상권</a>
-                                        <a href="/solutions/government/" class="header__dropdown-link">공공/행정</a>
-                                        <a href="/solutions/government/" class="header__dropdown-link">의료/케어</a>
-                                        <a href="/solutions/government/" class="header__dropdown-link">농축산/방역</a>
-                                        <a href="/solutions/government/" class="header__dropdown-link">환경</a>
+                                        <div class="header__dropdown-menu-container">
+                                            <a href="/solutions/finance/" class="header__dropdown-link">금융/리스크</a>
+                                            <a href="/solutions/logistics/" class="header__dropdown-link">부동산/건설</a>
+                                            <a href="/solutions/healthcare/" class="header__dropdown-link">유통/상권</a>
+                                            <a href="/solutions/government/" class="header__dropdown-link">공공/행정</a>
+                                            <a href="/solutions/government/" class="header__dropdown-link">의료/케어</a>
+                                            <a href="/solutions/government/" class="header__dropdown-link">농축산/방역</a>
+                                            <a href="/solutions/government/" class="header__dropdown-link">환경</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- Developers Dropdown -->
                                 <div class="header__nav-dropdown">
                                     <span class="header__nav-link header__nav-link--dropdown">Developers</span>
                                     <div class="header__dropdown-menu">
-                                        <a href="" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">Data Assets</a>
-                                        <a href="" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">Data API</a>
-                                        <a href="" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">Flow</a>
-                                        <a href="" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">AI Agent</a>
-                                        <a href="https://docs.bigvalue.ai/" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">Docs</a>
+                                        <div class="header__dropdown-menu-container">
+                                            <a href="/developers/data-product/" class="header__dropdown-link">Data Product</a>
+                                            <a href="/developers/data-api/" class="header__dropdown-link">Data API</a>
+                                            <a href="/developers/flow/" class="header__dropdown-link">Flow</a>
+                                            <a href="/developers/ai-agent/" class="header__dropdown-link">AI Agent</a>
+                                            <a href="https://docs.bigvalue.ai/" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">Docs</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="header__nav-dropdown">
                                     <span class="header__nav-link header__nav-link--dropdown">Use Case</span>
                                     <div class="header__dropdown-menu">
-                                        <a href="/customer-studies/" class="header__dropdown-link">Customer Studies</a>
-                                        <a href="/insight-feed/" class="header__dropdown-link">Insight Feed</a>
+                                        <div class="header__dropdown-menu-container">
+                                            <a href="/use-case/customer-studies/" class="header__dropdown-link">Customer Studies</a>
+                                            <a href="/use-case/insight-feed/" class="header__dropdown-link">Insight Feed</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- Company Dropdown -->
                                 <div class="header__nav-dropdown">
                                     <span class="header__nav-link header__nav-link--dropdown">Company</span>
                                     <div class="header__dropdown-menu">
-                                        <a href="/about-us/" class="header__dropdown-link">About us</a>
-                                        <a href="/newsroom/" class="header__dropdown-link">Newsroom</a>
-                                        <a href="/notice/" class="header__dropdown-link">Notice</a>
-                                        <a href="https://recruit.bigvalue.co.kr/" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">Careers</a>
+                                        <div class="header__dropdown-menu-container">
+                                            <a href="/company/about-us/" class="header__dropdown-link">About us</a>
+                                            <a href="/company/newsroom/" class="header__dropdown-link">Newsroom</a>
+                                            <a href="/company/notice/" class="header__dropdown-link">Notice</a>
+                                            <a href="https://recruit.bigvalue.co.kr/" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">Careers</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <a href="/pricing/" class="header__nav-link">Pricing</a>

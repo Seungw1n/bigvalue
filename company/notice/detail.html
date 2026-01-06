@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BigValue Notice - 상세">
+    <title>Notice Detail - BigValue</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <!-- GNB Placeholder (will be replaced by JavaScript) -->
+    <div id="gnb-placeholder"></div>
+
+    <main class="main">
+        <div class="article-detail-container">
+            <!-- Loading State -->
+            <div id="detail-loading" class="newsroom-loading" style="display: none;">
+                <p>공지사항을 불러오는 중...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="detail-error" class="newsroom-error" style="display: none;">
+                <p>공지사항을 불러오는데 실패했습니다. 다시 시도해주세요.</p>
+            </div>
+
+            <!-- Article Detail Content -->
+            <article id="article-detail" class="article-detail" style="display: none;">
+                <div class="article-detail__header">
+                    <div class="article-detail__breadcrumb">
+                        <a href="./" class="article-detail__breadcrumb-link">Notice</a>
+                        <span class="article-detail__breadcrumb-separator">/</span>
+                        <span id="article-breadcrumb-title" class="article-detail__breadcrumb-current"></span>
+                    </div>
+                    <h1 id="article-title" class="article-detail__title"></h1>
+                    <div class="article-detail__meta">
+                        <time id="article-date" class="article-detail__date" datetime=""></time>
+                        <div class="article-detail__author">
+                            <span id="article-author-name" class="article-detail__author-name"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="article-thumbnail" class="article-detail__thumbnail">
+                    <!-- Thumbnail image will be inserted here -->
+                </div>
+
+                <div class="article-detail__content">
+                    <div id="article-summary" class="article-detail__summary"></div>
+                    <div id="article-body" class="article-detail__body">
+                        <!-- Article content will be inserted here -->
+                    </div>
+                </div>
+
+                <div class="article-detail__footer">
+                    <a href="./" class="btn btn--outline">목록으로 돌아가기</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer Placeholder (will be replaced by JavaScript) -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../../script.js"></script>
+    <script src="detail.js"></script>
+</body>
+</html>

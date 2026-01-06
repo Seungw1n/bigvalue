@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BigValue Data API - 아이디어를 현실로, 몇 달이 아닌 몇 주 만에">
+    <title>Data API - BigValue</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        /* ==========================================
+           Data API Custom Styles
+           ========================================== */
+
+        /* Monospace font for code elements */
+        code, .code, .api-term {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        }
+
+        /* Hero Section - Dark Theme with Neon */
+        .api-hero {
+            position: relative;
+            padding: 120px var(--spacing-3xl) 80px;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: var(--color-neutral-white);
+            overflow: hidden;
+        }
+
+        .api-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                linear-gradient(45deg, transparent 48%, rgba(0, 255, 157, 0.03) 50%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, rgba(0, 191, 255, 0.03) 50%, transparent 52%);
+            background-size: 60px 60px;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .api-hero__content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .api-hero__headline {
+            font-size: 56px;
+            font-weight: bold;
+            margin-bottom: var(--spacing-l);
+            line-height: 1.2;
+            background: linear-gradient(135deg, #00ff9d 0%, #00bfff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .api-hero__subcopy {
+            font-size: var(--font-size-l);
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .api-hero__emphasis {
+            color: #00ff9d;
+            font-weight: 600;
+        }
+
+        /* Problem Section - Bottleneck */
+        .api-problem {
+            padding: 80px var(--spacing-3xl);
+            background-color: #fafafa;
+        }
+
+        .api-problem__container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+        }
+
+        .api-problem__title {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--color-neutral-black);
+        }
+
+        .api-problem__visual {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius-l);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .api-problem__bar {
+            width: 100%;
+            height: 60px;
+            background: #e3e2e9;
+            border-radius: var(--radius-m);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .api-problem__bar-fill {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 80%;
+            background: linear-gradient(90deg, #ff6b6b 0%, #ee5a52 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: var(--font-size-l);
+        }
+
+        .api-problem__bar-rest {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: var(--font-size-m);
+        }
+
+        .api-problem__points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: 40px;
+        }
+
+        .api-problem__point {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-m);
+        }
+
+        .api-problem__icon {
+            width: 24px;
+            height: 24px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .api-problem__text {
+            font-size: var(--font-size-m);
+            color: #666;
+        }
+
+        /* Solution Section - Liberation */
+        .api-solution {
+            padding: 80px var(--spacing-3xl);
+            background: linear-gradient(135deg, #e0f7fa 0%, #e1f5fe 100%);
+        }
+
+        .api-solution__container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+        }
+
+        .api-solution__title {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--color-neutral-black);
+        }
+
+        .api-solution__comparison {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: var(--spacing-2xl);
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto 40px;
+        }
+
+        .api-solution__old,
+        .api-solution__new {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius-l);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .api-solution__old {
+            opacity: 0.7;
+        }
+
+        .api-solution__label {
+            font-size: var(--font-size-s);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-m);
+            color: #999;
+        }
+
+        .api-solution__steps {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .api-solution__step {
+            font-size: var(--font-size-m);
+            padding: var(--spacing-s) 0;
+            color: #666;
+        }
+
+        .api-solution__step--old {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .api-solution__step--new {
+            color: #00897b;
+            font-weight: 600;
+        }
+
+        .api-solution__arrow {
+            font-size: 48px;
+            color: #00897b;
+        }
+
+        .api-solution__conclusion {
+            text-align: center;
+            font-size: var(--font-size-l);
+            font-weight: 600;
+            color: #00695c;
+        }
+
+        /* Core Values Section */
+        .api-value {
+            padding: 80px var(--spacing-3xl);
+        }
+
+        .api-value:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .api-value__container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+        }
+
+        .api-value__title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: var(--spacing-l);
+            color: var(--color-neutral-black);
+        }
+
+        .api-value__keywords {
+            display: flex;
+            gap: var(--spacing-m);
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .api-value__keyword {
+            padding: 8px 16px;
+            background: var(--color-brand-primary-lighter);
+            border-radius: var(--radius-m);
+            font-size: var(--font-size-m);
+            font-weight: 600;
+            color: var(--color-brand-primary-dark);
+        }
+
+        .api-value__message {
+            font-size: var(--font-size-l);
+            line-height: 1.8;
+            color: #666;
+        }
+
+        /* Code Block Styles */
+        .api-code {
+            background: #1e1e1e;
+            border-radius: var(--radius-l);
+            padding: 32px;
+            overflow-x: auto;
+            margin: var(--spacing-xl) 0;
+        }
+
+        .api-code__header {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .api-code__dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .api-code__dot--red { background: #ff5f56; }
+        .api-code__dot--yellow { background: #ffbd2e; }
+        .api-code__dot--green { background: #27c93f; }
+
+        .api-code__content {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #d4d4d4;
+        }
+
+        .api-code__line {
+            display: block;
+        }
+
+        .api-code__key {
+            color: #9cdcfe;
+        }
+
+        .api-code__string {
+            color: #ce9178;
+        }
+
+        .api-code__number {
+            color: #b5cea8;
+        }
+
+        .api-code__punctuation {
+            color: #d4d4d4;
+        }
+
+        /* Use Case Cards */
+        .api-usecase {
+            padding: 80px var(--spacing-3xl);
+            background-color: #fafafa;
+        }
+
+        .api-usecase__container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+        }
+
+        .api-usecase__title {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--color-neutral-black);
+        }
+
+        .api-usecase__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: 40px;
+        }
+
+        .api-usecase__card {
+            background: white;
+            padding: 40px 32px;
+            border-radius: var(--radius-l);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .api-usecase__card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .api-usecase__time {
+            font-size: 64px;
+            font-weight: bold;
+            color: var(--color-brand-primary);
+            margin-bottom: var(--spacing-m);
+            line-height: 1;
+        }
+
+        .api-usecase__client {
+            font-size: var(--font-size-l);
+            font-weight: 600;
+            color: var(--color-neutral-black);
+            margin-bottom: var(--spacing-s);
+        }
+
+        .api-usecase__detail {
+            font-size: var(--font-size-m);
+            color: #666;
+        }
+
+        .api-usecase__summary {
+            text-align: center;
+            font-size: var(--font-size-l);
+            font-weight: 600;
+            color: var(--color-brand-primary-dark);
+        }
+
+        /* Business Offering */
+        .api-offering {
+            padding: 80px var(--spacing-3xl);
+        }
+
+        .api-offering__container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+        }
+
+        .api-offering__title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 60px;
+            text-align: center;
+            color: var(--color-neutral-black);
+        }
+
+        .api-offering__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-2xl);
+        }
+
+        .api-offering__item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-m);
+        }
+
+        .api-offering__icon {
+            width: 48px;
+            height: 48px;
+            background: var(--color-brand-primary-lighter);
+            border-radius: var(--radius-m);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .api-offering__text {
+            flex: 1;
+        }
+
+        .api-offering__label {
+            font-size: var(--font-size-l);
+            font-weight: 600;
+            color: var(--color-neutral-black);
+            margin-bottom: 4px;
+        }
+
+        .api-offering__desc {
+            font-size: var(--font-size-m);
+            color: #666;
+        }
+
+        /* Getting Started CTA */
+        .api-cta {
+            padding: 80px var(--spacing-3xl);
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: white;
+        }
+
+        .api-cta__container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .api-cta__title {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .api-cta__steps {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-2xl);
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .api-cta__step {
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+        }
+
+        .api-cta__step-number {
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 255, 157, 0.2);
+            border: 2px solid #00ff9d;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto var(--spacing-m);
+            color: #00ff9d;
+        }
+
+        .api-cta__step-text {
+            font-size: var(--font-size-m);
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .api-cta__copy {
+            font-size: var(--font-size-l);
+            margin-bottom: var(--spacing-2xl);
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .api-cta__buttons {
+            display: flex;
+            gap: var(--spacing-l);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Trusted By Section */
+        .api-trusted {
+            padding: 80px var(--spacing-3xl);
+            background-color: #fafafa;
+        }
+
+        .api-trusted__container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .api-trusted__title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: var(--spacing-l);
+            color: var(--color-neutral-black);
+        }
+
+        .api-trusted__message {
+            font-size: var(--font-size-l);
+            color: #666;
+            margin-bottom: 60px;
+        }
+
+        .api-trusted__logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--spacing-3xl);
+            flex-wrap: wrap;
+        }
+
+        .api-trusted__logo {
+            height: 48px;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        .api-trusted__logo:hover {
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .api-hero__headline {
+                font-size: 36px;
+            }
+
+            .api-problem__title,
+            .api-solution__title,
+            .api-usecase__title,
+            .api-cta__title {
+                font-size: 28px;
+            }
+
+            .api-value__title,
+            .api-offering__title,
+            .api-trusted__title {
+                font-size: 24px;
+            }
+
+            .api-solution__comparison {
+                grid-template-columns: 1fr;
+            }
+
+            .api-solution__arrow {
+                transform: rotate(90deg);
+            }
+
+            .api-code {
+                padding: 20px;
+            }
+
+            .api-code__content {
+                font-size: 12px;
+            }
+
+            .api-usecase__time {
+                font-size: 48px;
+            }
+
+            .api-cta__steps {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- GNB Placeholder (will be replaced by JavaScript) -->
+    <div id="gnb-placeholder"></div>
+
+    <main class="main">
+        <!-- Hero Section (Speed) -->
+        <section class="api-hero">
+            <div class="api-hero__content">
+                <h1 class="api-hero__headline">아이디어를 현실로,<br>몇 달이 아닌 몇 주 만에</h1>
+                <p class="api-hero__subcopy">
+                    기존 API는 조회 도구였지만, <span class="api-hero__emphasis">BigValue Data API</span>는 서비스와 AI를 위한 개발 인프라입니다.<br>
+                    데이터 수집/정제/연결 단계를 제거해 개발 속도를 근본적으로 단축합니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Problem Definition (Bottleneck) -->
+        <section class="api-problem">
+            <div class="api-problem__container">
+                <h2 class="api-problem__title">기존의 API는 개발의 병목이 됩니다</h2>
+
+                <div class="api-problem__visual">
+                    <div class="api-problem__bar">
+                        <div class="api-problem__bar-fill">데이터 준비 80%</div>
+                        <div class="api-problem__bar-rest">실제 개발 20%</div>
+                    </div>
+                </div>
+
+                <div class="api-problem__points">
+                    <div class="api-problem__point">
+                        <div class="api-problem__icon">✗</div>
+                        <p class="api-problem__text">정제되지 않은 원천 데이터 제공</p>
+                    </div>
+                    <div class="api-problem__point">
+                        <div class="api-problem__icon">✗</div>
+                        <p class="api-problem__text">직접 조인과 전처리 작업 필요</p>
+                    </div>
+                    <div class="api-problem__point">
+                        <div class="api-problem__icon">✗</div>
+                        <p class="api-problem__text">데이터 기준과 출처가 불명확</p>
+                    </div>
+                    <div class="api-problem__point">
+                        <div class="api-problem__icon">✗</div>
+                        <p class="api-problem__text">AI 서비스 확장 고려 안 됨</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Overview (Liberation) -->
+        <section class="api-solution">
+            <div class="api-solution__container">
+                <h2 class="api-solution__title">BigValue Data API는 개발을 바로 시작하게 합니다</h2>
+
+                <div class="api-solution__comparison">
+                    <div class="api-solution__old">
+                        <div class="api-solution__label">기존 방식 (Old)</div>
+                        <ul class="api-solution__steps">
+                            <li class="api-solution__step api-solution__step--old">1. 데이터 수집</li>
+                            <li class="api-solution__step api-solution__step--old">2. 데이터 정제</li>
+                            <li class="api-solution__step api-solution__step--old">3. 데이터 연결</li>
+                            <li class="api-solution__step api-solution__step--old">4. 개발 시작...?</li>
+                        </ul>
+                    </div>
+
+                    <div class="api-solution__arrow">→</div>
+
+                    <div class="api-solution__new">
+                        <div class="api-solution__label">BigValue (New)</div>
+                        <ul class="api-solution__steps">
+                            <li class="api-solution__step api-solution__step--new">✓ API 호출</li>
+                            <li class="api-solution__step api-solution__step--new">✓ 즉시 개발 가능</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="api-solution__conclusion">
+                    개발자는 데이터가 아니라 서비스 로직에 집중할 수 있습니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Core Value 1 (Completeness) -->
+        <section class="api-value">
+            <div class="api-value__container">
+                <h2 class="api-value__title">비교 불가능한 데이터 완성도</h2>
+
+                <div class="api-value__keywords">
+                    <span class="api-value__keyword">공공·민간 통합</span>
+                    <span class="api-value__keyword">고유 코드 연결</span>
+                    <span class="api-value__keyword">연속성 유지</span>
+                </div>
+
+                <p class="api-value__message">
+                    '많은 데이터'가 아니라 <strong>'완성된 데이터'</strong>를 제공합니다.<br>
+                    공공과 민간 데이터를 통합하고, 고유 코드로 연결하며, 시계열 연속성을 유지합니다.<br>
+                    개발자가 데이터 정합성을 걱정할 필요가 없습니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Core Value 2 (DX - Developer Experience) -->
+        <section class="api-value">
+            <div class="api-value__container">
+                <h2 class="api-value__title">개발 속도를 결정하는 API 설계</h2>
+
+                <p class="api-value__message">
+                    조인 없는 단일 조회, 예측 가능한 포맷.<br>
+                    개발자가 덜 고민하도록 설계된 API입니다.
+                </p>
+
+                <div class="api-code">
+                    <div class="api-code__header">
+                        <div class="api-code__dot api-code__dot--red"></div>
+                        <div class="api-code__dot api-code__dot--yellow"></div>
+                        <div class="api-code__dot api-code__dot--green"></div>
+                    </div>
+                    <pre class="api-code__content"><code><span class="api-code__punctuation">{</span>
+  <span class="api-code__key">"property_id"</span><span class="api-code__punctuation">:</span> <span class="api-code__string">"11680-1234"</span><span class="api-code__punctuation">,</span>
+  <span class="api-code__key">"address"</span><span class="api-code__punctuation">:</span> <span class="api-code__string">"서울특별시 강남구 역삼동 123-45"</span><span class="api-code__punctuation">,</span>
+  <span class="api-code__key">"price"</span><span class="api-code__punctuation">:</span> <span class="api-code__number">1450000000</span><span class="api-code__punctuation">,</span>
+  <span class="api-code__key">"area"</span><span class="api-code__punctuation">:</span> <span class="api-code__number">84.92</span><span class="api-code__punctuation">,</span>
+  <span class="api-code__key">"demographics"</span><span class="api-code__punctuation">:</span> <span class="api-code__punctuation">{</span>
+    <span class="api-code__key">"population"</span><span class="api-code__punctuation">:</span> <span class="api-code__number">45231</span><span class="api-code__punctuation">,</span>
+    <span class="api-code__key">"avg_age"</span><span class="api-code__punctuation">:</span> <span class="api-code__number">38.5</span><span class="api-code__punctuation">,</span>
+    <span class="api-code__key">"income_level"</span><span class="api-code__punctuation">:</span> <span class="api-code__string">"high"</span>
+  <span class="api-code__punctuation">}</span><span class="api-code__punctuation">,</span>
+  <span class="api-code__key">"nearby_facilities"</span><span class="api-code__punctuation">:</span> <span class="api-code__punctuation">[</span>
+    <span class="api-code__punctuation">{</span> <span class="api-code__key">"type"</span><span class="api-code__punctuation">:</span> <span class="api-code__string">"subway"</span><span class="api-code__punctuation">,</span> <span class="api-code__key">"name"</span><span class="api-code__punctuation">:</span> <span class="api-code__string">"역삼역"</span><span class="api-code__punctuation">,</span> <span class="api-code__key">"distance"</span><span class="api-code__punctuation">:</span> <span class="api-code__number">350</span> <span class="api-code__punctuation">}</span><span class="api-code__punctuation">,</span>
+    <span class="api-code__punctuation">{</span> <span class="api-code__key">"type"</span><span class="api-code__punctuation">:</span> <span class="api-code__string">"school"</span><span class="api-code__punctuation">,</span> <span class="api-code__key">"name"</span><span class="api-code__punctuation">:</span> <span class="api-code__string">"역삼초등학교"</span><span class="api-code__punctuation">,</span> <span class="api-code__key">"distance"</span><span class="api-code__punctuation">:</span> <span class="api-code__number">580</span> <span class="api-code__punctuation">}</span>
+  <span class="api-code__punctuation">]</span>
+<span class="api-code__punctuation">}</span></code></pre>
+                </div>
+
+                <p class="api-value__message">
+                    <strong>단 한 번의 API 호출</strong>로 부동산 정보, 인구통계, 주변 시설까지 모두 확인할 수 있습니다.<br>
+                    별도의 조인이나 추가 요청이 필요 없습니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Core Value 3 (AI Ready) -->
+        <section class="api-value">
+            <div class="api-value__container">
+                <h2 class="api-value__title">AI Ready Data API</h2>
+
+                <div class="api-value__keywords">
+                    <span class="api-value__keyword">구조화된 데이터</span>
+                    <span class="api-value__keyword">LLM 최적화</span>
+                    <span class="api-value__keyword">자동화 지원</span>
+                </div>
+
+                <p class="api-value__message">
+                    가공되지 않은 데이터는 AI의 장애물입니다.<br>
+                    BigValue는 AI·LLM·자동화를 전제로 설계되었습니다.<br><br>
+
+                    <strong>Flow Platform과 AI Solution으로 자연스럽게 확장</strong>되어,<br>
+                    데이터 조회부터 AI 인사이트 생성까지 하나의 생태계에서 완성됩니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Use Case (Evidence) -->
+        <section class="api-usecase">
+            <div class="api-usecase__container">
+                <h2 class="api-usecase__title">검증된 개발 속도</h2>
+
+                <div class="api-usecase__grid">
+                    <div class="api-usecase__card">
+                        <div class="api-usecase__time">3개월</div>
+                        <div class="api-usecase__client">A 은행</div>
+                        <p class="api-usecase__detail">5년째 안정적 운영 중</p>
+                    </div>
+
+                    <div class="api-usecase__card">
+                        <div class="api-usecase__time">1개월</div>
+                        <div class="api-usecase__client">B 증권사</div>
+                        <p class="api-usecase__detail">부동산 분석 시스템 구축</p>
+                    </div>
+
+                    <div class="api-usecase__card">
+                        <div class="api-usecase__time">1개월</div>
+                        <div class="api-usecase__client">C 은행</div>
+                        <p class="api-usecase__detail">담보 평가 시스템 개발</p>
+                    </div>
+
+                    <div class="api-usecase__card">
+                        <div class="api-usecase__time">100%</div>
+                        <div class="api-usecase__client">D 프롭테크</div>
+                        <p class="api-usecase__detail">API 기반 서비스 운영</p>
+                    </div>
+                </div>
+
+                <p class="api-usecase__summary">
+                    데이터 준비 단계를 제거해 개발 일정을 다시 정의합니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Business Offering (Specs) -->
+        <section class="api-offering">
+            <div class="api-offering__container">
+                <h2 class="api-offering__title">개발자를 위한 완벽한 준비</h2>
+
+                <div class="api-offering__grid">
+                    <div class="api-offering__item">
+                        <div class="api-offering__icon">🔑</div>
+                        <div class="api-offering__text">
+                            <div class="api-offering__label">API Key 인증</div>
+                            <p class="api-offering__desc">간단하고 안전한 키 기반 인증</p>
+                        </div>
+                    </div>
+
+                    <div class="api-offering__item">
+                        <div class="api-offering__icon">🔌</div>
+                        <div class="api-offering__text">
+                            <div class="api-offering__label">표준 REST API</div>
+                            <p class="api-offering__desc">HTTP 기반 표준 프로토콜</p>
+                        </div>
+                    </div>
+
+                    <div class="api-offering__item">
+                        <div class="api-offering__icon">📚</div>
+                        <div class="api-offering__text">
+                            <div class="api-offering__label">개발자 문서</div>
+                            <p class="api-offering__desc">상세한 API 문서와 예제 코드</p>
+                        </div>
+                    </div>
+
+                    <div class="api-offering__item">
+                        <div class="api-offering__icon">☁️</div>
+                        <div class="api-offering__text">
+                            <div class="api-offering__label">클라우드 / 온프레미스</div>
+                            <p class="api-offering__desc">환경에 맞는 유연한 배포</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Getting Started (CTA) -->
+        <section class="api-cta">
+            <div class="api-cta__container">
+                <h2 class="api-cta__title">지금 바로 시작하세요</h2>
+
+                <div class="api-cta__steps">
+                    <div class="api-cta__step">
+                        <div class="api-cta__step-number">1</div>
+                        <p class="api-cta__step-text">API Key 발급</p>
+                    </div>
+                    <div class="api-cta__step">
+                        <div class="api-cta__step-number">2</div>
+                        <p class="api-cta__step-text">개발자 문서 확인</p>
+                    </div>
+                    <div class="api-cta__step">
+                        <div class="api-cta__step-number">3</div>
+                        <p class="api-cta__step-text">즉시 개발 시작</p>
+                    </div>
+                </div>
+
+                <p class="api-cta__copy">도입보다 사용이 먼저입니다.</p>
+
+                <div class="api-cta__buttons">
+                    <a href="#inquiry-modal" class="btn btn--cta btn--large" onclick="document.getElementById('inquiry-modal').style.display='flex'">API Key 발급받기</a>
+                    <a href="https://docs.bigvalue.ai/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--large">개발자 문서 보기</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted By -->
+        <section class="api-trusted">
+            <div class="api-trusted__container">
+                <h2 class="api-trusted__title">신뢰받는 파트너</h2>
+                <p class="api-trusted__message">
+                    개발 속도와 안정성이 경쟁력이 되는 조직들의 선택
+                </p>
+
+                <div class="api-trusted__logos">
+                    <img src="../../src/images/clients/1_신한은행.png" alt="신한은행" class="api-trusted__logo">
+                    <img src="../../src/images/clients/2_하나은행.png" alt="하나은행" class="api-trusted__logo">
+                    <img src="../../src/images/clients/3_삼성증권.png" alt="삼성증권" class="api-trusted__logo">
+                    <img src="../../src/images/clients/5_npay.png" alt="네이버페이" class="api-trusted__logo">
+                    <img src="../../src/images/clients/6_banksalad.png" alt="뱅크샐러드" class="api-trusted__logo">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Inquiry Modal -->
+    <div id="inquiry-modal" class="modal" style="display: none;">
+        <div class="modal__overlay" onclick="document.getElementById('inquiry-modal').style.display='none'"></div>
+        <div class="modal__container">
+            <div class="modal__header">
+                <h2 class="modal__title">BigValue Data API 문의</h2>
+                <button class="modal__close" id="modal-close" aria-label="Close modal" onclick="document.getElementById('inquiry-modal').style.display='none'">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="#9291A5" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            <form id="inquiry-form" class="modal__form">
+                <div class="modal__field">
+                    <label class="modal__label" for="inquiry-name">이름 *</label>
+                    <input type="text" id="inquiry-name" name="name" class="modal__input" placeholder="홍길동" required>
+                </div>
+                <div class="modal__field-group">
+                    <div class="modal__field modal__field--half">
+                        <label class="modal__label" for="inquiry-email">이메일 *</label>
+                        <input type="email" id="inquiry-email" name="email" class="modal__input" placeholder="name@company.com" required>
+                    </div>
+                    <div class="modal__field modal__field--half">
+                        <label class="modal__label" for="inquiry-mobile">전화번호</label>
+                        <input type="tel" id="inquiry-mobile" name="mobile" class="modal__input" placeholder="010-0000-0000">
+                    </div>
+                </div>
+                <div class="modal__field">
+                    <label class="modal__label" for="inquiry-affiliation">소속</label>
+                    <input type="text" id="inquiry-affiliation" name="affiliation" class="modal__input" placeholder="회사명 또는 부서명">
+                </div>
+                <div class="modal__field">
+                    <label class="modal__label" for="inquiry-content">문의 내용 *</label>
+                    <textarea id="inquiry-content" name="content" class="modal__textarea" placeholder="API 사용 목적이나 궁금한 점을 자유롭게 작성해주세요" rows="5" required></textarea>
+                </div>
+                <div class="modal__privacy">
+                    <div class="modal__privacy-header">
+                        <span class="modal__privacy-title">개인정보처리방침</span>
+                        <a href="../../privacy-policy/" target="_blank" class="modal__privacy-link">전체보기</a>
+                    </div>
+                    <label class="modal__checkbox">
+                        <input type="checkbox" id="inquiry-agree" name="agreePrivacyPolicy" required>
+                        <span class="modal__checkbox-label">개인정보 제공에 동의합니다 *</span>
+                    </label>
+                </div>
+                <button type="submit" class="modal__submit">문의하기</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Placeholder (will be replaced by JavaScript) -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

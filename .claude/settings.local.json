@@ -16,7 +16,11 @@
       "Bash(node update-all-pages.js:*)",
       "Bash(python:*)",
       "Bash(pip install:*)",
-      "Bash(copy:*)"
+      "Bash(copy:*)",
+      "Bash(findstr:*)",
+      "Bash(powershell -Command \"Get-Content ''C:\\\\Users\\\\BV-JEONGSEUNGWON\\\\Downloads\\\\작업실\\\\bv-homepage\\\\script.js'' | Select-Object -Last 20\")",
+      "Bash(node -e:*)",
+      "Bash(powershell -Command:*)"
     ],
     "deny": [],
     "ask": []
