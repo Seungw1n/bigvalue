@@ -1,0 +1,255 @@
+/* ==========================================
+   Legal Page Styles (Terms & Privacy)
+   ========================================== */
+
+/* This file contains styles for legal/compliance pages
+   Used for: Terms of Service, Privacy Policy, Legal notices
+   Dependencies: common.css for base styles */
+
+/* ==========================================
+   Terms & Privacy Container
+   ========================================== */
+
+.terms-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 100px 30px 80px;
+}
+
+.terms-section {
+    margin-bottom: var(--spacing-4xl);
+}
+
+.terms-section__title {
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--color-neutral-darkest);
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-m);
+    border-bottom: 2px solid var(--color-border-light);
+}
+
+.terms-section__subtitle {
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--color-neutral-darkest);
+    margin-top: var(--spacing-2xl);
+    margin-bottom: var(--spacing-l);
+}
+
+.terms-section__content {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-xl);
+    color: var(--color-neutral-dark);
+}
+
+.terms-section__content p {
+    margin-bottom: var(--spacing-l);
+}
+
+.terms-section__content ul,
+.terms-section__content ol {
+    margin-left: var(--spacing-xl);
+    margin-bottom: var(--spacing-l);
+}
+
+.terms-section__content li {
+    margin-bottom: var(--spacing-s);
+}
+
+.terms-section__content strong {
+    font-weight: 600;
+    color: var(--color-neutral-darkest);
+}
+
+.terms-section__content a {
+    color: var(--color-brand-primary);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.terms-section__content a:hover {
+    color: var(--color-brand-primary-hover);
+}
+
+/* ==========================================
+   Legal Page Header
+   ========================================== */
+
+.legal-header {
+    text-align: center;
+    margin-bottom: var(--spacing-5xl);
+}
+
+.legal-header__title {
+    font-family: var(--font-family-secondary);
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-neutral-darkest);
+    margin-bottom: var(--spacing-m);
+}
+
+.legal-header__subtitle {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-l);
+    color: var(--color-neutral-dark);
+    line-height: 1.6;
+}
+
+.legal-header__updated {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-s);
+    color: var(--color-neutral-medium);
+    margin-top: var(--spacing-m);
+}
+
+/* ==========================================
+   Table of Contents (Optional)
+   ========================================== */
+
+.legal-toc {
+    background-color: var(--color-neutral-lightest);
+    border-radius: var(--radius-m);
+    padding: var(--spacing-2xl);
+    margin-bottom: var(--spacing-4xl);
+}
+
+.legal-toc__title {
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--color-neutral-darkest);
+    margin-bottom: var(--spacing-l);
+}
+
+.legal-toc__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.legal-toc__item {
+    margin-bottom: var(--spacing-s);
+}
+
+.legal-toc__link {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-m);
+    color: var(--color-brand-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.legal-toc__link:hover {
+    color: var(--color-brand-primary-hover);
+    text-decoration: underline;
+}
+
+/* ==========================================
+   Callout/Highlight Boxes
+   ========================================== */
+
+.legal-callout {
+    background-color: var(--color-brand-primary-pale);
+    border-left: 4px solid var(--color-brand-primary);
+    padding: var(--spacing-l);
+    margin: var(--spacing-xl) 0;
+    border-radius: var(--radius-s);
+}
+
+.legal-callout__title {
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-l);
+    font-weight: 600;
+    color: var(--color-neutral-darkest);
+    margin-bottom: var(--spacing-s);
+}
+
+.legal-callout__content {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-m);
+    line-height: 1.6;
+    color: var(--color-neutral-dark);
+}
+
+/* ==========================================
+   Contact Information Section
+   ========================================== */
+
+.legal-contact {
+    background-color: var(--color-neutral-lightest);
+    border-radius: var(--radius-m);
+    padding: var(--spacing-2xl);
+    margin-top: var(--spacing-5xl);
+}
+
+.legal-contact__title {
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--color-neutral-darkest);
+    margin-bottom: var(--spacing-l);
+}
+
+.legal-contact__content {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-m);
+    line-height: 1.8;
+    color: var(--color-neutral-dark);
+}
+
+.legal-contact__content p {
+    margin-bottom: var(--spacing-m);
+}
+
+/* ==========================================
+   Responsive Design for Legal Pages
+   ========================================== */
+
+@media (max-width: 1024px) {
+    .terms-container {
+        padding: 80px 30px 60px;
+    }
+
+    .legal-header__title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .terms-container {
+        padding: 60px 20px 40px;
+    }
+
+    .legal-header__title {
+        font-size: 32px;
+    }
+
+    .legal-header__subtitle {
+        font-size: var(--font-size-m);
+    }
+
+    .terms-section__title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .terms-section__subtitle {
+        font-size: var(--font-size-l);
+    }
+
+    .terms-section__content,
+    .legal-toc__link,
+    .legal-callout__content,
+    .legal-contact__content {
+        font-size: var(--font-size-s);
+    }
+
+    .legal-toc,
+    .legal-callout,
+    .legal-contact {
+        padding: var(--spacing-l);
+    }
+}

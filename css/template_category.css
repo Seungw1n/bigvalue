@@ -1,0 +1,339 @@
+/* ==========================================
+   Category Overview Page Styles
+   ========================================== */
+
+/* This file contains styles for category overview pages
+   Used for: Products category page (products/index.html)
+   Dependencies: common.css provides base components
+
+   Extracted from: styles.css.backup lines 4114-4422 */
+
+/* Section 1: Philosophy Hero */
+.philosophy-hero {
+    padding: 100px 0 80px;
+    background: var(--color-neutral-white);
+}
+
+.philosophy-hero__container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+    text-align: center;
+}
+
+.philosophy-hero__headline {
+    font-family: var(--font-family-secondary);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-neutral-darkest);
+    margin-bottom: var(--spacing-xl);
+}
+
+.philosophy-hero__subcopy {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-l);
+    line-height: 1.7;
+    color: var(--color-neutral-dark);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.philosophy-hero__subcopy strong {
+    color: var(--color-brand-primary);
+    font-weight: 600;
+}
+
+.philosophy-hero__body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.philosophy-hero__body p {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-m);
+    line-height: 1.8;
+    color: var(--color-neutral-dark);
+    margin-bottom: var(--spacing-l);
+    letter-spacing: 0.2px;
+}
+
+.philosophy-hero__body strong {
+    color: var(--color-neutral-darkest);
+    font-weight: 600;
+}
+
+/* Section 2: Common Value */
+.common-value {
+    padding: 80px 0;
+    background: var(--color-neutral-lightest);
+}
+
+.common-value__container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+    text-align: center;
+}
+
+.common-value__title {
+    font-family: var(--font-family-secondary);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-neutral-darkest);
+    margin-bottom: var(--spacing-l);
+}
+
+.common-value__intro {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-l);
+    line-height: 1.7;
+    color: var(--color-neutral-dark);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.common-value__intro strong {
+    color: var(--color-brand-primary);
+    font-weight: 600;
+}
+
+.common-value__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto var(--spacing-2xl);
+    max-width: 600px;
+}
+
+.common-value__item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-m);
+    padding: var(--spacing-m) 0;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.common-value__item:last-child {
+    border-bottom: none;
+}
+
+.common-value__icon {
+    font-size: 24px;
+    color: var(--color-brand-primary);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.common-value__text {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-l);
+    line-height: 1.6;
+    color: var(--color-neutral-darkest);
+    text-align: left;
+    font-weight: 500;
+}
+
+.common-value__emphasis {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-l);
+    line-height: 1.7;
+    color: var(--color-neutral-dark);
+    margin-top: var(--spacing-xl);
+}
+
+.common-value__emphasis strong {
+    color: var(--color-brand-primary);
+    font-weight: 600;
+}
+
+/* Section 3: Product Comparison */
+.product-comparison {
+    padding: 80px 0;
+    background: var(--color-neutral-white);
+}
+
+.product-comparison__container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+}
+
+.product-comparison__intro {
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+}
+
+.product-comparison__title {
+    font-family: var(--font-family-secondary);
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color-neutral-darkest);
+    margin-bottom: var(--spacing-m);
+}
+
+.product-comparison__subtitle {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-l);
+    line-height: 1.7;
+    color: var(--color-neutral-dark);
+}
+
+/* Comparison Table (Desktop) */
+.comparison-table {
+    display: block;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-l);
+    overflow: hidden;
+}
+
+.comparison-table__header,
+.comparison-table__row {
+    display: grid;
+    grid-template-columns: 200px repeat(4, 1fr);
+}
+
+.comparison-table__header {
+    background: var(--color-neutral-lightest);
+}
+
+.comparison-table__row {
+    border-top: 1px solid var(--color-border-light);
+}
+
+.comparison-table__cell {
+    padding: var(--spacing-l);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-m);
+    line-height: 1.6;
+    color: var(--color-neutral-dark);
+    border-right: 1px solid var(--color-border-light);
+}
+
+.comparison-table__cell:last-child {
+    border-right: none;
+}
+
+.comparison-table__cell--corner {
+    background: var(--color-neutral-lightest);
+}
+
+.comparison-table__cell--product h3 {
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-l);
+    font-weight: 700;
+    color: var(--color-brand-primary);
+    margin: 0;
+}
+
+.comparison-table__cell--label {
+    background: var(--color-neutral-lightest);
+    justify-content: flex-start;
+    text-align: left;
+    font-weight: 600;
+    color: var(--color-neutral-darkest);
+}
+
+/* Mobile Card Stack (hidden on desktop) */
+.comparison-cards {
+    display: none;
+}
+
+/* Section 4: Product List */
+.product-list {
+    padding: 80px 0;
+    background: var(--color-neutral-lightest);
+}
+
+.product-list__container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+}
+
+.product-list__title {
+    font-family: var(--font-family-secondary);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-neutral-darkest);
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-3xl);
+}
+
+.product-card {
+    background: var(--color-neutral-white);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-l);
+    padding: var(--spacing-2xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-l);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(68, 52, 226, 0.12);
+    border-color: var(--color-brand-primary);
+}
+
+.product-card__name {
+    font-family: var(--font-family-secondary);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-neutral-darkest);
+    margin: 0;
+}
+
+.product-card__description {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-m);
+    line-height: 1.7;
+    color: var(--color-neutral-dark);
+    margin: 0;
+    flex: 1;
+}
+
+.product-card .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.product-list__cta {
+    text-align: center;
+    padding: var(--spacing-2xl);
+    background: var(--color-neutral-white);
+    border-radius: var(--radius-l);
+    border: 2px dashed var(--color-border-light);
+}
+
+.product-list__cta-text {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-l);
+    line-height: 1.7;
+    color: var(--color-neutral-dark);
+    margin-bottom: var(--spacing-l);
+}
+
+/* Legacy placeholder classes (kept for compatibility) */
+.category-page {
+    background-color: var(--color-neutral-white);
+}
+
+.category-hero {
+    /* Inherits from common.css .hero--gradient */
+}
+
+.category-grid {
+    /* Inherits from common.css .card-grid */
+}

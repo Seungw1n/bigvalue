@@ -5,29 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="BigValue 정부/기관 솔루션 - 데이터 기반 정책 수립과 공공 서비스 혁신을 지원합니다">
     <title>정부/기관 솔루션 - BigValue</title>
-    <link rel="stylesheet" href="../../styles.css">
+    <!-- 새로운 CSS 구조: 공통 스타일 + 페이지 유형별 스타일 -->
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/template_solution.css">
+    <!-- 기존 styles.css (롤백용, 문제 없으면 삭제 예정) -->
+    <!-- <link rel="stylesheet" href="../../styles.css"> -->
 </head>
 <body>
     <!-- GNB Placeholder (will be replaced by JavaScript) -->
     <div id="gnb-placeholder"></div>
 
     <main class="main">
-        <div class="newsroom-container" style="max-width: 1200px;">
+        <div class="solution-container">
             <!-- Header Section -->
-            <div class="newsroom-header" style="margin-bottom: 80px;">
-                <h1 class="newsroom-title">정부/기관 솔루션</h1>
-                <p class="newsroom-subtitle">데이터 기반 정책 수립과 공공 서비스 혁신을 지원합니다</p>
+            <div class="solution-header">
+                <h1 class="solution-header__title">정부/기관 솔루션</h1>
+                <p class="solution-header__subtitle">데이터 기반 정책 수립과 공공 서비스 혁신을 지원합니다</p>
             </div>
 
             <!-- Overview Section -->
-            <section style="margin-bottom: 80px;">
-                <div style="background: linear-gradient(135deg, #f5f4ff 0%, #fffbf4 100%); padding: 60px; border-radius: 20px;">
-                    <h2 style="font-size: 32px; font-weight: 600; margin-bottom: 24px; color: #1D1D1F;">데이터로 만드는 스마트 공공 서비스</h2>
-                    <p style="font-size: 18px; line-height: 1.8; color: #424252; margin-bottom: 20px;">
+            <section class="solution-overview">
+                <div class="solution-overview__box solution-overview__box--government">
+                    <h2 class="solution-overview__title">데이터로 만드는 스마트 공공 서비스</h2>
+                    <p class="solution-overview__text">
                         BigValue의 정부/기관 솔루션은 공공 데이터, 인구 통계, 지역 경제 데이터를 통합 분석하여
                         증거 기반 정책 수립과 효율적인 행정 서비스를 지원합니다.
                     </p>
-                    <p style="font-size: 18px; line-height: 1.8; color: #424252;">
+                    <p class="solution-overview__text">
                         도시 계획, 복지 정책, 산업 육성 등 다양한 공공 영역에서 데이터 분석을 통해
                         국민의 삶의 질을 향상시키고 행정 효율성을 극대화할 수 있습니다.
                     </p>
@@ -35,101 +39,101 @@
             </section>
 
             <!-- Use Cases Grid -->
-            <section style="margin-bottom: 80px;">
-                <h2 style="font-size: 32px; font-weight: 600; margin-bottom: 40px; text-align: center; color: #1D1D1F;">주요 활용 사례</h2>
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
+            <section class="solution-usecases">
+                <h2 class="solution-usecases__title">주요 활용 사례</h2>
+                <div class="solution-usecases__grid">
                     <!-- Use Case 1: Urban Planning -->
-                    <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #E3E2E9;">
-                        <div style="width: 56px; height: 56px; background: #F5F4FF; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 28px;">
+                    <div class="solution-usecase-card">
+                        <div class="solution-usecase-card__icon">
                             🏙️
                         </div>
-                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 16px; color: #1D1D1F;">스마트 도시 계획</h3>
-                        <p style="font-size: 16px; line-height: 1.6; color: #6E6D7A; margin-bottom: 20px;">
+                        <h3 class="solution-usecase-card__title">스마트 도시 계획</h3>
+                        <p class="solution-usecase-card__description">
                             인구 이동, 교통 흐름, 부동산 데이터를 분석하여 과학적 근거에 기반한 도시 개발 계획을 수립합니다.
                         </p>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 인구 변화 예측 및 수요 분석</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 교통 인프라 최적 배치</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 공공시설 입지 선정</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 재개발/재건축 우선순위 결정</li>
+                        <ul class="solution-usecase-card__list">
+                            <li class="solution-usecase-card__list-item">✓ 인구 변화 예측 및 수요 분석</li>
+                            <li class="solution-usecase-card__list-item">✓ 교통 인프라 최적 배치</li>
+                            <li class="solution-usecase-card__list-item">✓ 공공시설 입지 선정</li>
+                            <li class="solution-usecase-card__list-item">✓ 재개발/재건축 우선순위 결정</li>
                         </ul>
                     </div>
 
                     <!-- Use Case 2: Welfare Policy -->
-                    <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #E3E2E9;">
-                        <div style="width: 56px; height: 56px; background: #F5F4FF; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 28px;">
+                    <div class="solution-usecase-card">
+                        <div class="solution-usecase-card__icon">
                             🤝
                         </div>
-                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 16px; color: #1D1D1F;">복지 정책 최적화</h3>
-                        <p style="font-size: 16px; line-height: 1.6; color: #6E6D7A; margin-bottom: 20px;">
+                        <h3 class="solution-usecase-card__title">복지 정책 최적화</h3>
+                        <p class="solution-usecase-card__description">
                             소득, 고용, 주거 데이터를 분석하여 복지 사각지대를 발굴하고 맞춤형 복지 서비스를 제공합니다.
                         </p>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 복지 사각지대 발굴</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 맞춤형 복지 대상자 선정</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 복지 예산 효율적 배분</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 복지 정책 효과 분석</li>
+                        <ul class="solution-usecase-card__list">
+                            <li class="solution-usecase-card__list-item">✓ 복지 사각지대 발굴</li>
+                            <li class="solution-usecase-card__list-item">✓ 맞춤형 복지 대상자 선정</li>
+                            <li class="solution-usecase-card__list-item">✓ 복지 예산 효율적 배분</li>
+                            <li class="solution-usecase-card__list-item">✓ 복지 정책 효과 분석</li>
                         </ul>
                     </div>
 
                     <!-- Use Case 3: Economic Development -->
-                    <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #E3E2E9;">
-                        <div style="width: 56px; height: 56px; background: #F5F4FF; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 28px;">
+                    <div class="solution-usecase-card">
+                        <div class="solution-usecase-card__icon">
                             📈
                         </div>
-                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 16px; color: #1D1D1F;">지역 경제 활성화</h3>
-                        <p style="font-size: 16px; line-height: 1.6; color: #6E6D7A; margin-bottom: 20px;">
+                        <h3 class="solution-usecase-card__title">지역 경제 활성화</h3>
+                        <p class="solution-usecase-card__description">
                             산업 데이터와 상권 분석을 통해 지역 경제 활성화 전략을 수립하고 중소기업 지원 정책을 최적화합니다.
                         </p>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 지역 산업 경쟁력 분석</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 상권 활성화 전략 수립</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 중소기업 지원 대상 선정</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 일자리 창출 효과 예측</li>
+                        <ul class="solution-usecase-card__list">
+                            <li class="solution-usecase-card__list-item">✓ 지역 산업 경쟁력 분석</li>
+                            <li class="solution-usecase-card__list-item">✓ 상권 활성화 전략 수립</li>
+                            <li class="solution-usecase-card__list-item">✓ 중소기업 지원 대상 선정</li>
+                            <li class="solution-usecase-card__list-item">✓ 일자리 창출 효과 예측</li>
                         </ul>
                     </div>
 
                     <!-- Use Case 4: Safety & Security -->
-                    <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #E3E2E9;">
-                        <div style="width: 56px; height: 56px; background: #F5F4FF; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 28px;">
+                    <div class="solution-usecase-card">
+                        <div class="solution-usecase-card__icon">
                             🚨
                         </div>
-                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 16px; color: #1D1D1F;">안전 및 재난 관리</h3>
-                        <p style="font-size: 16px; line-height: 1.6; color: #6E6D7A; margin-bottom: 20px;">
+                        <h3 class="solution-usecase-card__title">안전 및 재난 관리</h3>
+                        <p class="solution-usecase-card__description">
                             기상 데이터, 재난 이력, 시설물 정보를 분석하여 재난을 예방하고 신속한 대응 체계를 구축합니다.
                         </p>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 재난 위험 지역 예측</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 안전 취약 시설 모니터링</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 재난 대응 시뮬레이션</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 범죄 예방 순찰 경로 최적화</li>
+                        <ul class="solution-usecase-card__list">
+                            <li class="solution-usecase-card__list-item">✓ 재난 위험 지역 예측</li>
+                            <li class="solution-usecase-card__list-item">✓ 안전 취약 시설 모니터링</li>
+                            <li class="solution-usecase-card__list-item">✓ 재난 대응 시뮬레이션</li>
+                            <li class="solution-usecase-card__list-item">✓ 범죄 예방 순찰 경로 최적화</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
             <!-- Key Benefits Section -->
-            <section style="margin-bottom: 80px;">
-                <h2 style="font-size: 32px; font-weight: 600; margin-bottom: 40px; text-align: center; color: #1D1D1F;">BigValue 정부/기관 솔루션의 강점</h2>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
-                    <div style="text-align: center; padding: 32px;">
-                        <div style="font-size: 48px; margin-bottom: 16px;">📊</div>
-                        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: #1D1D1F;">증거 기반 정책</h3>
-                        <p style="font-size: 15px; line-height: 1.6; color: #6E6D7A;">
+            <section class="solution-benefits">
+                <h2 class="solution-benefits__title">BigValue 정부/기관 솔루션의 강점</h2>
+                <div class="solution-benefits__grid">
+                    <div class="solution-benefit-card">
+                        <div class="solution-benefit-card__icon">📊</div>
+                        <h3 class="solution-benefit-card__title">증거 기반 정책</h3>
+                        <p class="solution-benefit-card__description">
                             데이터에 기반한 객관적 정책 수립으로 정책 효과를 극대화합니다.
                         </p>
                     </div>
-                    <div style="text-align: center; padding: 32px;">
-                        <div style="font-size: 48px; margin-bottom: 16px;">⚡</div>
-                        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: #1D1D1F;">행정 효율화</h3>
-                        <p style="font-size: 15px; line-height: 1.6; color: #6E6D7A;">
+                    <div class="solution-benefit-card">
+                        <div class="solution-benefit-card__icon">⚡</div>
+                        <h3 class="solution-benefit-card__title">행정 효율화</h3>
+                        <p class="solution-benefit-card__description">
                             자동화된 데이터 분석으로 행정 업무 시간을 단축하고 효율성을 높입니다.
                         </p>
                     </div>
-                    <div style="text-align: center; padding: 32px;">
-                        <div style="font-size: 48px; margin-bottom: 16px;">🔒</div>
-                        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: #1D1D1F;">보안 및 규정 준수</h3>
-                        <p style="font-size: 15px; line-height: 1.6; color: #6E6D7A;">
+                    <div class="solution-benefit-card">
+                        <div class="solution-benefit-card__icon">🔒</div>
+                        <h3 class="solution-benefit-card__title">보안 및 규정 준수</h3>
+                        <p class="solution-benefit-card__description">
                             공공 데이터 보안 규정을 완벽히 준수하여 안전하게 데이터를 관리합니다.
                         </p>
                     </div>
@@ -137,54 +141,16 @@
             </section>
 
             <!-- CTA Section -->
-            <div style="text-align: center; padding: 60px 40px; background: linear-gradient(135deg, #4434e2 0%, #6b5eff 100%); border-radius: 20px;">
-                <h2 style="font-size: 32px; font-weight: 600; color: white; margin-bottom: 16px;">공공 데이터 솔루션이 궁금하신가요?</h2>
-                <p style="font-size: 18px; color: rgba(255, 255, 255, 0.9); margin-bottom: 32px;">BigValue의 공공 데이터 전문가가 귀 기관의 정책 수립과 행정 혁신을 지원합니다</p>
-                <a href="https://bigvalue.ai/guest" target="_blank" class="btn btn--cta btn--large" style="background: white; color: #4434e2;">문의하기</a>
-            </div>
+            <section class="solution-cta">
+                <div class="solution-cta__box">
+                    <h2 class="solution-cta__title">공공 데이터 솔루션이 궁금하신가요?</h2>
+                    <p class="solution-cta__text">BigValue의 공공 데이터 전문가가 귀 기관의 정책 수립과 행정 혁신을 지원합니다</p>
+                    <a href="https://bigvalue.ai/guest" target="_blank" class="solution-cta__button">문의하기</a>
+                </div>
+            </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer__container">
-            <div class="footer__top">
-                <div class="footer__left">
-                    <div class="footer__logo">
-                        <img src="https://www.figma.com/api/mcp/asset/27d01ce8-55c9-4521-b87e-77394e2198f1" alt="BigValue" class="footer__logo-img">
-                    </div>
-                    <div class="footer__company-info">
-                        <p class="footer__company-name">주식회사 빅밸류</p>
-                        <p class="footer__address">서울특별시 중구 서소문로 138 대한일보빌딩 12층</p>
-                    </div>
-                    <div class="footer__legal-links">
-                        <a href="../../privacy-policy/" class="footer__legal-link">개인정보처리방침</a>
-                        <a href="../../terms-of-service/" class="footer__legal-link">이용약관</a>
-                    </div>
-                </div>
-                <div class="footer__right">
-                    <nav class="footer__nav">
-                        <div class="footer__nav-section">
-                            <h4 class="footer__nav-title">회사소개</h4>
-                            <ul class="footer__nav-list">
-                                <li><a href="../../about-us/" class="footer__nav-link">About us</a></li>
-                                <li><a href="../../newsroom/" class="footer__nav-link">Newsroom</a></li>
-                                <li><a href="../../notice/" class="footer__nav-link">Notice</a></li>
-                                <li><a href="https://recruit.bigvalue.co.kr/" target="_blank" rel="noopener noreferrer" class="footer__nav-link">Careers</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-            <div class="footer__divider"></div>
-            <div class="footer__bottom">
-                <p class="footer__copyright">Copyright 2025 by BigValue Co., Ltd. All rights reserved.</p>
-                <div class="footer__certification">
-                    <img src="https://www.figma.com/api/mcp/asset/bfb6113e-b7b9-42b3-9e87-4b8fe77dfcd4" alt="혁신금융" class="footer__cert-img">
-                    <span class="footer__cert-text">혁신금융서비스사업자 선정기업</span>
-                </div>
-            </div>
-        </div>
     <!-- Footer Placeholder (will be replaced by JavaScript) -->
     <div id="footer-placeholder"></div>
 

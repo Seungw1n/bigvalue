@@ -3,145 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BigValue 금융 솔루션 - 데이터 기반 의사결정으로 금융 서비스를 혁신하세요">
+    <meta name="description" content="3일 걸리던 담보 평가, 10분이면 끝납니다. 빅밸류 AI 시세 솔루션으로 금융 AX 시작하세요.">
     <title>금융 솔루션 - BigValue</title>
-    <link rel="stylesheet" href="../../styles.css">
+    <!-- 새로운 CSS 구조: 공통 스타일 + 페이지 유형별 스타일 -->
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/template_solution.css">
+    <!-- 기존 styles.css (롤백용, 문제 없으면 삭제 예정) -->
+    <!-- <link rel="stylesheet" href="../../styles.css"> -->
 </head>
 <body>
     <!-- GNB Placeholder (will be replaced by JavaScript) -->
     <div id="gnb-placeholder"></div>
 
     <main class="main">
-        <div class="newsroom-container" style="max-width: 1200px;">
-            <!-- Header Section -->
-            <div class="newsroom-header" style="margin-bottom: 80px;">
-                <h1 class="newsroom-title">금융 솔루션</h1>
-                <p class="newsroom-subtitle">데이터 기반 의사결정으로 금융 서비스를 혁신하세요</p>
-            </div>
-
-            <!-- Overview Section -->
-            <section style="margin-bottom: 80px;">
-                <div style="background: linear-gradient(135deg, #f5f4ff 0%, #fef7ff 100%); padding: 60px; border-radius: 20px;">
-                    <h2 style="font-size: 32px; font-weight: 600; margin-bottom: 24px; color: #1D1D1F;">금융 시장의 복잡성을 데이터로 해결합니다</h2>
-                    <p style="font-size: 18px; line-height: 1.8; color: #424252; margin-bottom: 20px;">
-                        BigValue의 금융 솔루션은 실시간 시장 데이터, 신용평가, 리스크 분석 등을 통합하여
-                        금융 기관이 보다 정확하고 신속한 의사결정을 내릴 수 있도록 지원합니다.
+        <div class="solution-container">
+            <!-- Hero Section -->
+            <section class="solution-overview">
+                <div class="solution-overview__box solution-overview__box--finance">
+                    <h1 style="font-size: 40px; font-weight: 700; margin-bottom: 20px; color: #1D1D1F; line-height: 1.3;">3일 걸리던 담보 평가, 10분이면 끝납니다.</h1>
+                    <p class="solution-overview__text">
+                        빅밸류 AI 시세 솔루션은 주택부터 비주택까지, 모든 부동산 가치를 실시간으로 산정합니다.
+                        지루한 심사 대기 시간은 줄이고, 고객 만족도는 높이세요. 금융 AX(AI Transformation)의 시작입니다.
                     </p>
+                </div>
+            </section>
+
+            <!-- Problem Definition Section -->
+            <section class="solution-usecases">
+                <h2 class="solution-usecases__title">쏟아지는 대출 신청, 멈춰버린 심사 프로세스...<br>언제까지 사람 손에만 맡기시겠습니까?</h2>
+                <div style="max-width: 900px; margin: 0 auto 60px; text-align: center;">
                     <p style="font-size: 18px; line-height: 1.8; color: #424252;">
-                        대출 심사, 투자 포트폴리오 관리, 부동산 담보 평가 등 다양한 금융 업무에
-                        데이터 인텔리전스를 적용하여 업무 효율성과 정확성을 극대화하세요.
+                        아파트와 달리 시세 파악이 어려운 빌라, 연립주택... 현장 실사와 감정평가에 의존하느라 2~3일씩 소요되는 시간,
+                        건당 발생하는 높은 평가 비용. 반복되는 심사 업무가 당신의 핵심 경쟁력을 갉아먹고 있지는 않나요?
+                        <strong>심사 병목 현상은 고객 이탈의 가장 큰 원인입니다.</strong>
                     </p>
                 </div>
             </section>
 
-            <!-- Use Cases Grid -->
+            <!-- Solution & Benefit Section -->
             <section style="margin-bottom: 80px;">
-                <h2 style="font-size: 32px; font-weight: 600; margin-bottom: 40px; text-align: center; color: #1D1D1F;">주요 활용 사례</h2>
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
-                    <!-- Use Case 1: Credit Assessment -->
-                    <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #E3E2E9;">
-                        <div style="width: 56px; height: 56px; background: #F5F4FF; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 28px;">
-                            📊
-                        </div>
-                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 16px; color: #1D1D1F;">신용 평가 고도화</h3>
-                        <p style="font-size: 16px; line-height: 1.6; color: #6E6D7A; margin-bottom: 20px;">
-                            전통적인 신용평가 모델을 넘어, 대체 데이터와 AI 분석을 결합하여 보다 정확한 신용 리스크를 산출합니다.
-                        </p>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 실시간 재무제표 분석</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 사업자 거래 내역 기반 평가</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 업종별 리스크 벤치마킹</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 예측 모델을 통한 부도 확률 분석</li>
-                        </ul>
-                    </div>
+                <h2 style="font-size: 32px; font-weight: 600; margin-bottom: 16px; text-align: center; color: #1D1D1F;">데이터가 대신 일합니다. 당신은 결정만 하세요.</h2>
+                <p style="font-size: 16px; text-align: center; color: #6E6D7A; margin-bottom: 60px;">빅밸류 AI 시세 솔루션이 제공하는 핵심 가치</p>
 
-                    <!-- Use Case 2: Real Estate Collateral -->
-                    <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #E3E2E9;">
-                        <div style="width: 56px; height: 56px; background: #F5F4FF; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 28px;">
-                            🏠
-                        </div>
-                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 16px; color: #1D1D1F;">부동산 담보 평가</h3>
-                        <p style="font-size: 16px; line-height: 1.6; color: #6E6D7A; margin-bottom: 20px;">
-                            실시간 부동산 시세와 지역 개발 계획을 반영하여 담보 가치를 정확하게 산정하고 대출 한도를 결정합니다.
+                <div class="solution-benefits__grid">
+                    <div class="solution-benefit-card">
+                        <div class="solution-benefit-card__icon">⚡</div>
+                        <h3 class="solution-benefit-card__title">압도적인 속도 혁신</h3>
+                        <p style="font-size: 14px; font-weight: 600; color: #4434e2; margin-bottom: 12px;">"커피 한 잔 마시는 시간이면 충분합니다."</p>
+                        <p class="solution-benefit-card__description">
+                            빅데이터와 AI 알고리즘이 주소 입력 즉시 시세를 산출합니다. 3시간 이상 걸리던 건당 업무 시간을 10분 이내로 단축하여, 하루 처리량을 획기적으로 늘릴 수 있습니다.
                         </p>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 실거래가 기반 시세 평가</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 재개발/재건축 정보 반영</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 지역별 가격 트렌드 분석</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 자동화된 LTV 산출</li>
-                        </ul>
                     </div>
-
-                    <!-- Use Case 3: Fraud Detection -->
-                    <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #E3E2E9;">
-                        <div style="width: 56px; height: 56px; background: #F5F4FF; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 28px;">
-                            🛡️
-                        </div>
-                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 16px; color: #1D1D1F;">이상 거래 탐지</h3>
-                        <p style="font-size: 16px; line-height: 1.6; color: #6E6D7A; margin-bottom: 20px;">
-                            AI 기반 패턴 분석으로 금융 사기와 이상 거래를 실시간으로 탐지하고 리스크를 사전에 차단합니다.
+                    <div class="solution-benefit-card">
+                        <div class="solution-benefit-card__icon">💰</div>
+                        <h3 class="solution-benefit-card__title">비용 절감과 효율성</h3>
+                        <p style="font-size: 14px; font-weight: 600; color: #4434e2; margin-bottom: 12px;">"불필요한 현장 비용을 제로(0)로 만드세요."</p>
+                        <p class="solution-benefit-card__description">
+                            모든 건에 대해 값비싼 감정평가를 의뢰할 필요가 없습니다. AI가 1차 필터링을 수행하고, 꼭 필요한 건만 전문가에게 맡기세요. 비용은 줄이고 프로세스는 가벼워집니다.
                         </p>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 실시간 거래 모니터링</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 이상 패턴 자동 감지</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 의심 거래 알림 시스템</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ AML/KYC 준수 지원</li>
-                        </ul>
                     </div>
-
-                    <!-- Use Case 4: Investment Portfolio -->
-                    <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #E3E2E9;">
-                        <div style="width: 56px; height: 56px; background: #F5F4FF; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 28px;">
-                            💼
-                        </div>
-                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 16px; color: #1D1D1F;">포트폴리오 최적화</h3>
-                        <p style="font-size: 16px; line-height: 1.6; color: #6E6D7A; margin-bottom: 20px;">
-                            시장 데이터와 리스크 분석을 결합하여 고객 맞춤형 투자 포트폴리오를 구성하고 관리합니다.
+                    <div class="solution-benefit-card">
+                        <div class="solution-benefit-card__icon">🛡️</div>
+                        <h3 class="solution-benefit-card__title">빈틈없는 리스크 관리</h3>
+                        <p style="font-size: 14px; font-weight: 600; color: #4434e2; margin-bottom: 12px;">"사람의 감(感)이 아닌 데이터의 확신으로."</p>
+                        <p class="solution-benefit-card__description">
+                            주관적 판단이 개입될 여지를 없애고, 표준화된 AI 데이터 기준으로 일관성 있는 심사가 가능합니다. 데이터에 기반한 객관적 지표로 대출 리스크를 선제적으로 관리하세요.
                         </p>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 실시간 시장 데이터 통합</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 리스크-수익률 최적화</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 자산 배분 시뮬레이션</li>
-                            <li style="padding: 8px 0; color: #424252; font-size: 15px;">✓ 성과 분석 및 리밸런싱 추천</li>
-                        </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- Key Benefits Section -->
+            <!-- How it Works Section -->
+            <section class="solution-usecases">
+                <h2 class="solution-usecases__title">복잡한 설치 없이, API 연결만으로 즉시 시작하세요.</h2>
+                <p style="font-size: 16px; text-align: center; color: #6E6D7A; margin-bottom: 60px;">작동 원리 3단계</p>
+
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+                    <div class="solution-usecase-card">
+                        <div class="solution-usecase-card__icon" style="background: linear-gradient(135deg, #4434e2 0%, #6b5eff 100%); color: white;">
+                            1
+                        </div>
+                        <h3 class="solution-usecase-card__title">주소 입력</h3>
+                        <p class="solution-usecase-card__description">
+                            은행 내부 시스템에서 심사할 부동산 주소를 입력합니다.
+                        </p>
+                    </div>
+                    <div class="solution-usecase-card">
+                        <div class="solution-usecase-card__icon" style="background: linear-gradient(135deg, #4434e2 0%, #6b5eff 100%); color: white;">
+                            2
+                        </div>
+                        <h3 class="solution-usecase-card__title">AI 분석 & API 호출</h3>
+                        <p class="solution-usecase-card__description">
+                            빅밸류의 AI 엔진이 실거래가, 공시가 등 빅데이터를 분석하여 API로 결과를 전송합니다.
+                        </p>
+                    </div>
+                    <div class="solution-usecase-card">
+                        <div class="solution-usecase-card__icon" style="background: linear-gradient(135deg, #4434e2 0%, #6b5eff 100%); color: white;">
+                            3
+                        </div>
+                        <h3 class="solution-usecase-card__title">실시간 결과 확인</h3>
+                        <p class="solution-usecase-card__description">
+                            담보 가치와 리스크 리포트를 즉시 확인하고 대출 승인 여부를 결정합니다.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social Proof Section -->
             <section style="margin-bottom: 80px;">
-                <h2 style="font-size: 32px; font-weight: 600; margin-bottom: 40px; text-align: center; color: #1D1D1F;">BigValue 금융 솔루션의 강점</h2>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
-                    <div style="text-align: center; padding: 32px;">
-                        <div style="font-size: 48px; margin-bottom: 16px;">⚡</div>
-                        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: #1D1D1F;">실시간 데이터</h3>
-                        <p style="font-size: 15px; line-height: 1.6; color: #6E6D7A;">
-                            금융 시장의 변화를 실시간으로 포착하여 즉각적인 의사결정을 지원합니다.
+                <h2 style="font-size: 32px; font-weight: 600; margin-bottom: 16px; text-align: center; color: #1D1D1F;">대한민국 대표 금융사들이 이미 검증을 마쳤습니다.</h2>
+                <p style="font-size: 16px; text-align: center; color: #6E6D7A; margin-bottom: 60px;">
+                    신한은행, 하나은행, 토스뱅크 등 선도적인 금융기관들이 빅밸류와 함께 금융의 미래를 만들어가고 있습니다.
+                </p>
+
+                <!-- Customer Testimonials -->
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-bottom: 60px;">
+                    <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #E3E2E9;">
+                        <p style="font-size: 16px; line-height: 1.8; color: #424252; margin-bottom: 24px; font-style: italic;">
+                            "빌라 담보대출 심사는 늘 시간이 오래 걸리고 까다로운 업무였습니다. 빅밸류 AI 시세 도입 후, 심사 시간이 획기적으로 줄어 고객 대기 시간이 사라졌고, 직원들의 업무 만족도도 크게 높아졌습니다."
                         </p>
+                        <p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">A 시중은행 여신심사팀장</p>
                     </div>
-                    <div style="text-align: center; padding: 32px;">
-                        <div style="font-size: 48px; margin-bottom: 16px;">🎯</div>
-                        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: #1D1D1F;">정확한 분석</h3>
-                        <p style="font-size: 15px; line-height: 1.6; color: #6E6D7A;">
-                            AI와 머신러닝 기반 분석으로 높은 정확도의 예측과 평가를 제공합니다.
+                    <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #E3E2E9;">
+                        <p style="font-size: 16px; line-height: 1.8; color: #424252; margin-bottom: 24px; font-style: italic;">
+                            "비대면 대출 상품 출시에 있어 가장 큰 걸림돌이 담보 가치 산정이었는데, 빅밸류 API 덕분에 정확하고 빠른 자동 심사 시스템을 구축할 수 있었습니다."
                         </p>
+                        <p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">B 인터넷전문은행 상품기획 담당자</p>
                     </div>
-                    <div style="text-align: center; padding: 32px;">
-                        <div style="font-size: 48px; margin-bottom: 16px;">🔒</div>
-                        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: #1D1D1F;">규제 준수</h3>
-                        <p style="font-size: 15px; line-height: 1.6; color: #6E6D7A;">
-                            금융 규제와 컴플라이언스 요구사항을 완벽하게 준수하는 솔루션입니다.
-                        </p>
+                </div>
+
+                <!-- Partner Logos -->
+                <div style="text-align: center;">
+                    <p style="font-size: 14px; color: #9291A5; margin-bottom: 24px;">신뢰하는 파트너</p>
+                    <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; opacity: 0.6;">
+                        <span style="font-size: 18px; font-weight: 600; color: #646371;">신한은행</span>
+                        <span style="font-size: 18px; font-weight: 600; color: #646371;">하나은행</span>
+                        <span style="font-size: 18px; font-weight: 600; color: #646371;">광주은행</span>
+                        <span style="font-size: 18px; font-weight: 600; color: #646371;">토스뱅크</span>
+                        <span style="font-size: 18px; font-weight: 600; color: #646371;">농협은행</span>
                     </div>
                 </div>
             </section>
 
             <!-- CTA Section -->
-            <div style="text-align: center; padding: 60px 40px; background: linear-gradient(135deg, #4434e2 0%, #6b5eff 100%); border-radius: 20px;">
-                <h2 style="font-size: 32px; font-weight: 600; color: white; margin-bottom: 16px;">금융 데이터 솔루션이 궁금하신가요?</h2>
-                <p style="font-size: 18px; color: rgba(255, 255, 255, 0.9); margin-bottom: 32px;">BigValue의 금융 전문가가 귀사에 최적화된 솔루션을 제안해드립니다</p>
-                <a href="https://bigvalue.ai/guest" target="_blank" class="btn btn--cta btn--large" style="background: white; color: #4434e2;">문의하기</a>
-            </div>
+            <section class="solution-cta">
+                <div class="solution-cta__box">
+                    <h2 class="solution-cta__title">금융의 속도가 곧 경쟁력입니다. 지금 바로 확인해 보세요.</h2>
+                    <p class="solution-cta__text">귀사의 심사 프로세스에 최적화된 데이터 활용 전략, 빅밸류 전문가가 직접 제안해 드립니다.</p>
+                    <div style="display: flex; gap: 16px; justify-content: center; margin-top: 32px;">
+                        <a href="https://bigvalue.ai/guest" target="_blank" class="solution-cta__button">전문가 무료 상담 신청하기</a>
+                        <a href="#" class="solution-cta__button" style="background: transparent; border: 2px solid white;">서비스 소개서 다운로드</a>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 

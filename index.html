@@ -1,90 +1,210 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="BigValue - 데이터의 가치를 발견하세요">
     <title>BigValue - Find Your BigValue</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Component-based CSS Structure -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/template_landing.css">
 </head>
+
 <body>
     <!-- GNB Placeholder (will be replaced by JavaScript) -->
     <div id="gnb-placeholder"></div>
 
     <!-- Main Content -->
     <main class="main">
-        <!-- Hero Section with Interactive Animation -->
-        <section class="hero-new">
-            <div class="hero-new__background" id="hero-canvas"></div>
-            <div class="hero-new__content">
-                <h1 class="hero-new__title">
-                    <span class="hero-new__title-main">실시간으로 확인하는</span>
-                    <span class="hero-new__title-highlight">데이터의 가치</span>
-                </h1>
-                <div class="hero-new__stats">
-                    <div class="hero-new__stat-item">
-                        <div class="hero-new__stat-label">오늘의 사업자 개업</div>
-                        <div class="hero-new__stat-value" id="stat-opening">
-                            <span class="hero-new__stat-number">1,234</span>
-                            <span class="hero-new__stat-unit">건</span>
-                        </div>
-                    </div>
-                    <div class="hero-new__stat-divider"></div>
-                    <div class="hero-new__stat-item">
-                        <div class="hero-new__stat-label">오늘의 사업자 폐업</div>
-                        <div class="hero-new__stat-value" id="stat-closing">
-                            <span class="hero-new__stat-number">987</span>
-                            <span class="hero-new__stat-unit">건</span>
-                        </div>
-                    </div>
-                    <div class="hero-new__stat-divider"></div>
-                    <div class="hero-new__stat-item">
-                        <div class="hero-new__stat-label">개폐업률</div>
-                        <div class="hero-new__stat-value" id="stat-rate">
-                            <span class="hero-new__stat-number">125.0</span>
-                            <span class="hero-new__stat-unit">%</span>
-                        </div>
-                    </div>
+        <!-- Hero Section -->
+        <section class="hero section landing-hero">
+            <div class="landing-hero__background">
+                <img src="src/images/hero-bg.png" alt="" class="landing-hero__background-image">
+            </div>
+            <div class="container container--narrow landing-hero__container">
+                <div class="landing-hero__header">
+                    <h1 class="landing-hero__title">
+                        Find Your <span class="landing-hero__title-highlight">BigValue</span>
+                    </h1>
+                    <p class="landing-hero__subtitle">당신의 분석 여정을 <strong>단순하게</strong>, 결과는 <strong>풍부하게!</strong></p>
                 </div>
-                <div class="hero-new__cta">
-                    <a href="https://bigvalue.ai/guest" target="_blank" rel="noopener noreferrer" class="btn btn--cta btn--large">Guest 서비스 바로가기</a>
-                    <p class="hero-new__cta-note">로그인 없이 바로 체험해보세요</p>
+                <div class="landing-hero__cta">
+                    <a href="https://bigvalue.ai/guest" target="_blank" rel="noopener noreferrer"
+                        class="btn btn--outline btn--large">BigValue 시작하기</a>
+                    <a href="products/flow/" class="btn btn--cta btn--large">무료로 체험하기</a>
+                </div>
+                <div class="landing-hero__visual">
+                    <img src="src/images/my-own-flow.png" alt="BigValue Flow Dashboard" class="landing-hero__image">
                 </div>
             </div>
         </section>
 
-        <!-- Insight Feed Highlights -->
-        <section class="insight-highlights">
-            <div class="insight-highlights__container">
-                <div class="insight-highlights__header">
-                    <p class="insight-highlights__badge">Latest Insights</p>
-                    <h2 class="insight-highlights__title">최신 데이터 인사이트</h2>
-                    <p class="insight-highlights__subtitle">BigValue가 발견한 최신 트렌드를 확인하세요</p>
+        <!-- Features (How to use Flow) Section (Auto Scrolling) -->
+        <section class="section section--white landing-features">
+            <div class="container">
+                <div class="landing-features__header">
+                    <span class="landing-features__pre-title">당신이 알고 싶은 모든 데이터</span>
+                    <h2 class="landing-features__title">최적화 된 Flow로 관심 분야를 분석하세요!</h2>
                 </div>
-                <div class="insight-highlights__scroll-wrapper">
-                    <!-- Row 1 - Auto scroll left to right -->
-                    <div class="insight-highlights__row insight-highlights__row--scroll-right" id="insights-row-1">
-                        <!-- Cards will be dynamically generated -->
-                    </div>
-                    <!-- Row 2 - Auto scroll right to left -->
-                    <div class="insight-highlights__row insight-highlights__row--scroll-left" id="insights-row-2">
-                        <!-- Cards will be dynamically generated -->
-                    </div>
+            </div>
+
+            <div class="landing-features__scroll-wrapper">
+                <!-- Row 1: Left to Right -->
+                <div class="landing-features__row landing-features__row--scroll-right">
+                    <article class="landing-features__card">
+                        <div class="landing-features__card-icon">🏢</div>
+                        <span class="landing-features__card-category">Flow</span>
+                        <h3 class="landing-features__card-title">임대 수익 계산기</h3>
+                        <p class="landing-features__card-desc">건물의 임대 수익률 분석하여 최적의 임대료를 산정할 수 있습니다.</p>
+                    </article>
+                    <article class="landing-features__card">
+                        <div class="landing-features__card-icon">🗺️</div>
+                        <span class="landing-features__card-category">Flow</span>
+                        <h3 class="landing-features__card-title">도시 변화 지도</h3>
+                        <p class="landing-features__card-desc">도시의 개발 계획과 인구 흐름을 분석하여 지리적 가치 변화를 예측합니다.</p>
+                    </article>
+                    <article class="landing-features__card">
+                        <div class="landing-features__card-icon">📊</div>
+                        <span class="landing-features__card-category">Flow</span>
+                        <h3 class="landing-features__card-title">부동산 거래 기록</h3>
+                        <p class="landing-features__card-desc">최근 부동산 데이터를 분석하여 시장의 흐름과 가격 추이를 파악합니다.</p>
+                    </article>
+                    <article class="landing-features__card">
+                        <div class="landing-features__card-icon">👥</div>
+                        <span class="landing-features__card-category">Flow</span>
+                        <h3 class="landing-features__card-title">유동인구 분석</h3>
+                        <p class="landing-features__card-desc">격자별 유동인구 데이터를 확인하여 상권의 경쟁력을 분석합니다.</p>
+                    </article>
+                    <article class="landing-features__card">
+                        <div class="landing-features__card-icon">🏥</div>
+                        <span class="landing-features__card-category">Flow</span>
+                        <h3 class="landing-features__card-title">의료 기관 위치</h3>
+                        <p class="landing-features__card-desc">지역별 의료 서비스 접근성을 분석하고 최적의 입지를 탐색합니다.</p>
+                    </article>
+                    <!-- Duplicated for infinite scroll -->
+                    <article class="landing-features__card">
+                        <div class="landing-features__card-icon">🏢</div>
+                        <span class="landing-features__card-category">Flow</span>
+                        <h3 class="landing-features__card-title">임대 수익 계산기</h3>
+                        <p class="landing-features__card-desc">건물의 임대 수익률 분석하여 최적의 임대료를 산정할 수 있습니다.</p>
+                    </article>
+                    <article class="landing-features__card">
+                        <div class="landing-features__card-icon">🗺️</div>
+                        <span class="landing-features__card-category">Flow</span>
+                        <h3 class="landing-features__card-title">도시 변화 지도</h3>
+                        <p class="landing-features__card-desc">도시의 개발 계획과 인구 흐름을 분석하여 지리적 가치 변화를 예측합니다.</p>
+                    </article>
                 </div>
-                <div class="insight-highlights__footer">
-                    <a href="use-case/insight-feed/" class="btn btn--outline btn--medium">모든 인사이트 보기</a>
+
+                <!-- Row 2: Right to Left -->
+                <div class="landing-features__row landing-features__row--scroll-left">
+                    <article class="landing-features__card">
+                        <div class="landing-features__card-icon">📈</div>
+                        <span class="landing-features__card-category">Flow</span>
+                        <h3 class="landing-features__card-title">상권 변화 트렌드</h3>
+                        <p class="landing-features__card-desc">특정 지역의 상권 변화 추이를 분석하여 인근 경쟁력을 파악합니다.</p>
+                    </article>
+                    <article class="landing-features__card">
+                        <div class="landing-features__card-icon">📍</div>
+                        <span class="landing-features__card-category">Flow</span>
+                        <h3 class="landing-features__card-title">매출 분석 지도</h3>
+                        <p class="landing-features__card-desc">카드 결제 데이터를 활용하여 인근 상권의 매출 현황과 고객 패턴을 분석합니다.</p>
+                    </article>
+                    <article class="landing-features__card">
+                        <div class="landing-features__card-icon">🏠</div>
+                        <span class="landing-features__card-category">Flow</span>
+                        <h3 class="landing-features__card-title">부동산 시세 분석</h3>
+                        <p class="landing-features__card-desc">실시간 부동산 데이터를 활용하여 시세를 분석하고 트렌드를 파악하세요.</p>
+                    </article>
+                    <article class="landing-features__card">
+                        <div class="landing-features__card-icon">💰</div>
+                        <span class="landing-features__card-category">Flow</span>
+                        <h3 class="landing-features__card-title">금융 분석</h3>
+                        <p class="landing-features__card-desc">금융 데이터를 기반으로 심층 분석을 제공합니다.</p>
+                    </article>
+                    <article class="landing-features__card">
+                        <div class="landing-features__card-icon">🤖</div>
+                        <span class="landing-features__card-category">Flow</span>
+                        <h3 class="landing-features__card-title">AI 예측 분석</h3>
+                        <p class="landing-features__card-desc">AI 기반 분석 도구로 복잡한 데이터에서 최적의 해답을 찾습니다.</p>
+                    </article>
+                    <!-- Duplicated for infinite scroll -->
+                    <article class="landing-features__card">
+                        <div class="landing-features__card-icon">📈</div>
+                        <span class="landing-features__card-category">Flow</span>
+                        <h3 class="landing-features__card-title">상권 변화 트렌드</h3>
+                        <p class="landing-features__card-desc">특정 지역의 상권 변화 추이를 분석하여 인근 경쟁력을 파악합니다.</p>
+                    </article>
+                    <article class="landing-features__card">
+                        <div class="landing-features__card-icon">📍</div>
+                        <span class="landing-features__card-category">Flow</span>
+                        <h3 class="landing-features__card-title">매출 분석 지도</h3>
+                        <p class="landing-features__card-desc">카드 결제 데이터를 활용하여 인근 상권의 매출 현황과 고객 패턴을 분석합니다.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Final CTA Section -->
-        <section class="final-cta">
-            <div class="final-cta__container">
-                <h2 class="final-cta__title">지금 바로 BigValue를 시작하세요</h2>
-                <p class="final-cta__subtitle">데이터 분석부터 인사이트 도출까지, 모든 과정을 단순하게</p>
-                <div class="final-cta__buttons">
-                    <a href="https://bigvalue.ai/guest" target="_blank" rel="noopener noreferrer" class="btn btn--cta btn--large">무료 체험하기</a>
-                    <a href="pricing/" class="btn btn--outline btn--large">가격 알아보기</a>
+        <!-- Solution (API) Section -->
+        <section class="section landing-solution">
+            <div class="container container--narrow">
+                <div class="landing-solution__header">
+                    <span class="landing-solution__pre-title">새로운 데이터 분석 경험, Flow</span>
+                    <h2 class="landing-solution__title">BigValue Data API와 코드 기반 분석을 통해 인사이트를 얻으세요!</h2>
+                </div>
+                <div class="landing-solution__container">
+                    <div class="landing-solution__content">
+                        <div class="landing-solution__items">
+                            <button class="landing-solution__item landing-solution__item--active about-flow__tab"
+                                data-tab="call-data">
+                                <h3 class="landing-solution__item-title">데이터 호출</h3>
+                                <p class="landing-solution__item-desc">BigValue Data API를 통해 실시간으로 원하는 데이터를 호출하고 정보를 유지합니다.</p>
+                            </button>
+                            <button class="landing-solution__item about-flow__tab" data-tab="analysis">
+                                <h3 class="landing-solution__item-title">분석 및 시각화</h3>
+                                <p class="landing-solution__item-desc">코드 기반 유연성 : Python을 활용해 원하는 대로 분석과 시각화를 커스터마이즈하세요.</p>
+                            </button>
+                            <button class="landing-solution__item about-flow__tab" data-tab="insight">
+                                <h3 class="landing-solution__item-title">인사이트 도출 및 공유</h3>
+                                <p class="landing-solution__item-desc">Insight, 테이블, 차트, 지도 등으로 결과를 한눈에 확인하고, Flow 분석의 결과물을 공유하세요.</p>
+                            </button>
+                        </div>
+                        <div class="landing-solution__footer">
+                            <p class="landing-solution__footer-text">
+                                Flow의 작동 원리부터 설정 방법까지 확인할 수 있습니다.<br>
+                                <a href="https://docs.bigvalue.ai" target="_blank"
+                                    class="landing-solution__footer-link">Docs 바로 가기 &rarr;</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="landing-solution__visual-container">
+                        <div class="landing-solution__tab-content about-flow__tab-content about-flow__tab-content--active"
+                            data-tab-content="call-data">
+                            <img src="src/images/call-data.png" alt="BigValue API Service"
+                                class="landing-solution__image">
+                        </div>
+                        <div class="landing-solution__tab-content about-flow__tab-content" data-tab-content="analysis">
+                            <img src="src/images/analysis-and-visualization.png" alt="Analysis and Visualization"
+                                class="landing-solution__image">
+                        </div>
+                        <div class="landing-solution__tab-content about-flow__tab-content" data-tab-content="insight">
+                            <img src="src/images/get-insight.png" alt="Get Insight" class="landing-solution__image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA Section -->
+        <section class="landing-cta">
+            <div class="container container--narrow">
+                <h2 class="landing-cta__title">지금 바로 BigValue를 시작하세요!</h2>
+                <p class="landing-cta__subtitle">당신의 비즈니스 데이터를 혁신하는 가장 간단한 방법</p>
+                <div class="landing-cta__buttons">
+                    <a href="https://bigvalue.ai/guest" target="_blank" rel="noopener noreferrer"
+                        class="btn btn--cta btn--large">무료로 시작하기</a>
+                    <a href="contact.html" class="btn btn--outline btn--large">문의하기</a>
                 </div>
             </div>
         </section>
@@ -94,6 +214,6 @@
     <div id="footer-placeholder"></div>
 
     <script src="script.js"></script>
-    <script src="home-hero.js"></script>
 </body>
+
 </html>

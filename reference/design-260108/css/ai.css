@@ -1,0 +1,803 @@
+/* =========================================
+   1. Variables & Reset (AI Theme)
+   ========================================= */
+:root {
+    /* Colors - Deep Purple / Modern AI */
+    --color-bg: #0a0118;
+    /* Very Dark Purple */
+    --color-bg-soft: #140526;
+    --color-bg-darker: #05000d;
+
+    --color-text-main: #ffffff;
+    --color-text-muted: #bda6d9;
+
+    --color-primary: #a355ff;
+    /* Vivid Violet */
+    --color-accent: #6d28d9;
+    /* Deep Violet */
+    --color-cyan: #00e5ff;
+    /* Cyber Blue */
+    --color-hazard: #ff4d4d;
+
+    /* Spacing */
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
+
+    /* Typography */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Radius */
+    --radius-full: 9999px;
+    --radius-md: 16px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.mb-lg {
+    margin-bottom: var(--space-lg);
+}
+
+.bg-darker {
+    background-color: var(--color-bg-darker);
+}
+
+/* Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   2. Navbar
+   ========================================= */
+.navbar {
+    padding: 1.5rem var(--space-md);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.logo .accent {
+    color: var(--color-primary);
+}
+
+/* =========================================
+   3. Hero Section (Gear Core)
+   ========================================= */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 80px;
+    background: radial-gradient(circle at bottom center, #2e1065 0%, #0a0118 70%);
+    overflow: hidden;
+}
+
+.hero-bg-neural {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background-image: radial-gradient(var(--color-primary) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    width: 100%;
+    align-items: center;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-cyan);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.headline {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-ai {
+    color: var(--color-primary);
+    text-shadow: 0 0 20px rgba(163, 85, 255, 0.5);
+}
+
+.sub-copy {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    max-width: 500px;
+}
+
+/* Visual: Gear System */
+.hero-visual {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gear-system {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.gear {
+    position: absolute;
+    border-radius: 50%;
+    border: 8px dashed rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(163, 85, 255, 0.2);
+}
+
+.gear-large {
+    width: 250px;
+    height: 250px;
+    top: 25px;
+    left: 25px;
+    animation: spinLeft 20s linear infinite;
+}
+
+.gear-medium {
+    width: 150px;
+    height: 150px;
+    top: 75px;
+    left: 75px;
+    animation: spinRight 10s linear infinite;
+    border-color: rgba(0, 229, 255, 0.2);
+}
+
+.gear-small {
+    width: 80px;
+    height: 80px;
+    top: 110px;
+    left: 110px;
+    animation: spinLeft 5s linear infinite;
+    border-width: 4px;
+}
+
+.ai-core-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 50px var(--color-primary);
+    animation: pulseCore 3s infinite ease-in-out;
+    z-index: 10;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+@keyframes spinLeft {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes spinRight {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulseCore {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* =========================================
+   4. Problem (Disconnected)
+   ========================================= */
+.problem-section {
+    padding: var(--space-xl) 0;
+}
+
+.text-hazard {
+    color: var(--color-hazard);
+}
+
+.disconnected-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 3rem 0;
+}
+
+.side {
+    background: var(--color-bg-soft);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    width: 150px;
+}
+
+.icon-bot,
+.icon-human {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.output-paper,
+.piles {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.gap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-hazard);
+}
+
+.gap-line {
+    width: 100px;
+    height: 2px;
+    background: var(--color-text-muted);
+    opacity: 0.2;
+    margin: 10px 0;
+}
+
+.gap-cross {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: pulseRed 2s infinite;
+}
+
+@keyframes pulseRed {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* =========================================
+   5. Solution (Tri-Force)
+   ========================================= */
+.solution-section {
+    padding: var(--space-xl) 0;
+    background: var(--color-bg-soft);
+}
+
+.triforce-graphic {
+    position: relative;
+    width: 400px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.triforce-node {
+    position: absolute;
+    width: 100px;
+    padding: 10px;
+    background: #1a1a1a;
+    border: 1px solid var(--color-primary);
+    border-radius: 12px;
+    text-align: center;
+    z-index: 5;
+    box-shadow: 0 0 20px rgba(163, 85, 255, 0.2);
+}
+
+.node-1 {
+    top: 10px;
+    left: 150px;
+}
+
+/* Top: GeoAI */
+.node-2 {
+    bottom: 50px;
+    left: 50px;
+}
+
+/* Left: GeoChain */
+.node-3 {
+    bottom: 50px;
+    right: 50px;
+}
+
+/* Right: Agent */
+.node-icon {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.triforce-node h3 {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    margin-bottom: 2px;
+}
+
+.triforce-node p {
+    font-size: 0.7rem;
+    color: #aaa;
+}
+
+.triforce-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.triforce-lines line {
+    stroke: var(--color-primary);
+    stroke-width: 2;
+    opacity: 0.3;
+    stroke-dasharray: 10;
+    animation: dashMove 1s linear infinite;
+}
+
+@keyframes dashMove {
+    to {
+        stroke-dashoffset: -20;
+    }
+}
+
+/* =========================================
+   6. Product Detail Sections
+   ========================================= */
+.product-detail-section {
+    padding: var(--space-xl) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.split-layout.reverse {
+    direction: rtl;
+}
+
+.split-layout.reverse .detail-text {
+    direction: ltr;
+}
+
+.product-label {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 99px;
+    background: rgba(163, 85, 255, 0.1);
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.desc {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 450px;
+}
+
+.btn-link {
+    color: var(--color-cyan);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Visuals */
+.detail-visual {
+    height: 300px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* GeoAI Map */
+.map-scan-visual {
+    width: 80%;
+    height: 80%;
+    background: #222;
+    position: relative;
+    border-radius: 12px;
+}
+
+.map-poly {
+    width: 60%;
+    height: 60%;
+    background: #333;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: rotate(45deg);
+}
+
+.scan-beam {
+    width: 100%;
+    height: 4px;
+    background: var(--color-cyan);
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 20px var(--color-cyan);
+    animation: scanDown 3s linear infinite;
+}
+
+.info-tag {
+    position: absolute;
+    font-size: 0.7rem;
+    background: var(--color-primary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    animation: popTag 3s infinite;
+    opacity: 0;
+}
+
+.tag-1 {
+    top: 30%;
+    right: 20%;
+    animation-delay: 1s;
+}
+
+.tag-2 {
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 1.5s;
+    background: #2ecc71;
+}
+
+@keyframes scanDown {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes popTag {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* GeoChain Pipe */
+.pipeline-visual {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+}
+
+.pipe-segment {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.chaotic span {
+    font-size: 0.7rem;
+    background: #333;
+    padding: 4px;
+    border-radius: 4px;
+    transform: rotate(var(--r, 0deg));
+}
+
+.chaotic span:nth-child(1) {
+    --r: -10deg;
+}
+
+.chaotic span:nth-child(2) {
+    --r: 15deg;
+}
+
+.chaotic span:nth-child(3) {
+    --r: -5deg;
+}
+
+.pipe-processor {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    background: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.8rem;
+    box-shadow: 0 0 20px rgba(163, 85, 255, 0.4);
+    z-index: 2;
+}
+
+.stream-line {
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-cyan));
+    border-radius: 3px;
+    animation: streamFlow 2s infinite linear;
+    background-size: 200% 100%;
+}
+
+@keyframes streamFlow {
+    from {
+        background-position: 100% 0;
+    }
+
+    to {
+        background-position: -100% 0;
+    }
+}
+
+/* Agent Chat */
+.chat-ui-visual {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.chat-msg {
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    max-width: 80%;
+}
+
+.user-msg {
+    align-self: flex-end;
+    background: #333;
+    border-bottom-right-radius: 2px;
+}
+
+.system-msg,
+.system-task {
+    align-self: flex-start;
+    background: rgba(163, 85, 255, 0.2);
+    border: 1px solid rgba(163, 85, 255, 0.3);
+    border-bottom-left-radius: 2px;
+}
+
+.system-task {
+    margin-top: 5px;
+    color: var(--color-text-muted);
+}
+
+.typing .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    margin-right: 2px;
+    animation: bounce 1s infinite;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* =========================================
+   7. Social Proof (Metrics)
+   ========================================= */
+.social-proof-section {
+    padding: var(--space-xl) 0;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.metric-card {
+    background: var(--color-bg-soft);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(163, 85, 255, 0.2);
+}
+
+.metric-val {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.client-logos {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+
+    .hero-container,
+    .split-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .split-layout.reverse {
+        direction: ltr;
+    }
+
+    .triforce-graphic {
+        width: 100%;
+        transform: scale(0.8);
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -3,289 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BigValue Flow - 분석이 아니라, 판단을 바로 보세요">
+    <meta name="description" content="BigValue Flow - 분석은 저희가 합니다, 당신은 결정만 하세요">
     <title>Flow - BigValue</title>
-    <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="flow.css">
+    <!-- Component-based CSS Structure -->
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/template_product.css">
 </head>
 <body>
-    <!-- GNB Placeholder -->
+    <!-- GNB Placeholder (will be replaced by JavaScript) -->
     <div id="gnb-placeholder"></div>
 
-    <!-- Main Content -->
+    <!-- ===================================== -->
+    <!--         Main Content                 -->
+    <!-- ===================================== -->
     <main class="main">
-        <!-- Hero Section -->
-        <section class="flow-hero">
-            <div class="flow-hero__container">
-                <div class="flow-hero__content fade-in-up">
-                    <h1 class="flow-hero__headline">
-                        분석이 아니라,<br>
-                        <span class="flow-hero__headline-highlight">판단을 바로 보세요</span>
-                    </h1>
-                    <p class="flow-hero__description">
-                        데이터를 고르고 분석하는 시대는 끝났습니다.<br>
-                        <strong>Flow</strong>는 BigValue가 미리 설계한 분석을 그대로 실행해<br>
-                        판단 결과를 바로 보여주는 제품입니다.<br><br>
-                        데이터 핸들링이나 분석 역량이 없어도<br>
-                        누구나 동일한 기준으로 판단할 수 있습니다.
+
+        <!-- ===================================== -->
+        <!--         Hero Section                 -->
+        <!-- ===================================== -->
+        <section class="hero hero--dark section section--large product-hero flow-hero">
+            <div class="hero__bg-animated"></div>
+
+            <div class="product-hero__content fade-in-up">
+                <p class="flow-hero__eyebrow">Decision Accelerator</p>
+
+                <h1 class="title title--hero hero__headline">
+                    분석은 저희가 합니다,<br>
+                    당신은 <span class="title__highlight title__highlight--flow">결정</span>만 하세요.
+                </h1>
+
+                <p class="hero__description">
+                    데이터는 이미 충분합니다. 이제 중요한 것은 속도입니다.<br>
+                    Flow는 복잡한 분석 과정을 건너뛰고, 즉시 실행 가능한 결론을 제공합니다.
+                </p>
+
+                <div class="hero__cta">
+                    <a href="https://bigvalue.ai/guest" target="_blank" rel="noopener noreferrer"
+                       class="btn btn--cta btn--large">Flow 체험하기</a>
+                </div>
+            </div>
+
+            <div class="product-hero__visual fade-in-up fade-in-delay-2 flow-hero__visual"
+                 data-parallax="true">
+                <div class="flow-visual__chaos-order">
+                    <div class="flow-visual__chaos">
+                        <span class="flow-visual__particle">XLS</span>
+                        <span class="flow-visual__particle">SQL</span>
+                        <span class="flow-visual__particle">CSV</span>
+                        <span class="flow-visual__particle">JSON</span>
+                    </div>
+
+                    <div class="flow-visual__core">⚡</div>
+
+                    <div class="flow-visual__order">
+                        <div class="flow-visual__decision-card pulse-animate">
+                            <span class="flow-visual__score">A+</span>
+                            <span class="flow-visual__label">Recommended</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Hero Section -->
+
+        <!-- ===================================== -->
+        <!--       Problem Section                -->
+        <!-- ===================================== -->
+        <section class="section section--white section--large product-problem flow-problem">
+            <div class="section__header fade-in-up">
+                <h2 class="title title--section section__title">
+                    데이터는 많아졌는데,<br>
+                    왜 <span class="title__highlight title__highlight--hazard">결정</span>은 여전히 느릴까요?
+                </h2>
+                <p class="section__subtitle">
+                    무엇을 봐야 할지 고민하고, 전문가의 분석을 기다리느라 골든타임을 놓치고 있지 않으신가요?<br>
+                    문제는 데이터 부족이 아니라, 비효율적인 '분석 프로세스' 그 자체입니다.
+                </p>
+            </div>
+
+            <!-- Hourglass Visual -->
+            <div class="flow-problem__hourglass fade-in-up fade-in-delay-1">
+                <div class="flow-problem__top">
+                    <div class="flow-problem__item">Data Overload</div>
+                </div>
+
+                <div class="flow-problem__bottleneck shake-animate">
+                    <span>🔒 Analysis Loop</span>
+                </div>
+
+                <div class="flow-problem__bottom">
+                    <div class="flow-problem__item">No Decision</div>
+                </div>
+            </div>
+        </section>
+        <!-- End Problem Section -->
+
+        <!-- ===================================== -->
+        <!--       Solution Section               -->
+        <!-- ===================================== -->
+        <section class="section section--gradient-light section--large product-solution flow-solution">
+            <div class="product-solution__content fade-in-up">
+                <h2 class="title title--section section__title">
+                    Flow는 '분석 결과'가 아니라<br>
+                    <span class="title__highlight">결정의 구조</span>를 제공합니다.
+                </h2>
+
+                <p class="section__subtitle">
+                    어떤 데이터를 봐야 할지, 어떤 기준으로 비교해야 할지 고민하지 마세요.<br>
+                    Flow를 실행하는 순간, 결정에 필요한 모든 맥락과 기준이 완성된 형태로 제공됩니다.
+                </p>
+            </div>
+
+            <!-- Blueprint Visual -->
+            <div class="flow-solution__blueprint fade-in-up fade-in-delay-1">
+                <div class="flow-solution__layers">
+                    <div class="flow-solution__layer-item fade-in-up fade-in-delay-2">
+                        Logic
+                    </div>
+                    <div class="flow-solution__layer-item fade-in-up fade-in-delay-3">
+                        Data
+                    </div>
+                    <div class="flow-solution__layer-item fade-in-up fade-in-delay-4">
+                        Context
+                    </div>
+                </div>
+
+                <div class="flow-solution__arrow">⬇</div>
+
+                <div class="flow-solution__output fade-in-up fade-in-delay-5">
+                    <div class="flow-solution__output-icon">💎</div>
+                    <div class="flow-solution__output-text">Decision System</div>
+                </div>
+            </div>
+        </section>
+        <!-- End Solution Section -->
+
+        <!-- ===================================== -->
+        <!--       Benefits Section               -->
+        <!-- ===================================== -->
+        <section class="section section--white section--large product-benefits flow-benefits">
+            <div class="section__header fade-in-up">
+                <h2 class="title title--section section__title">
+                    Flow가 조직에 가져올<br>
+                    3가지 변화
+                </h2>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="flow-benefits__grid">
+                <!-- Large Card -->
+                <div class="card card--benefit flow-benefits__card flow-benefits__card--large fade-in-up fade-in-delay-1">
+                    <div class="card__icon">⚡</div>
+                    <h3 class="card__title">압도적인 속도</h3>
+                    <span class="flow-benefits__highlight">6개월의 프로젝트를 단 하루의 업무로</span>
+                    <p class="card__desc">
+                        질문이 생기는 순간, Flow는 이미 답을 준비하고 있습니다.<br>
+                        데이터 준비부터 시각화까지의 과정을 사전에 제거했습니다.
                     </p>
-                    <div class="flow-hero__cta">
-                        <a href="https://bigvalue.ai/guest" target="_blank" rel="noopener noreferrer" class="btn btn--cta btn--large">무료 체험하기</a>
-                        <button class="btn btn--outline btn--large" onclick="document.querySelector('.flow-how').scrollIntoView({behavior: 'smooth'})">작동 원리 보기</button>
-                    </div>
                 </div>
-                <div class="flow-hero__visual fade-in-up fade-in-delay-2">
-                    <div class="flow-hero__transformation">
-                        <div class="flow-hero__complex">
-                            <div class="flow-hero__complex-item">📊 복잡한 그래프</div>
-                            <div class="flow-hero__complex-item">📈 데이터 테이블</div>
-                            <div class="flow-hero__complex-item">💻 분석 코드</div>
-                        </div>
-                        <div class="flow-hero__arrow">→</div>
-                        <div class="flow-hero__result">
-                            <div class="flow-hero__result-card">
-                                <div class="flow-hero__result-icon">✓</div>
-                                <div class="flow-hero__result-title">판단 결과</div>
-                                <div class="flow-hero__result-value">즉시 확인</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Problem Section -->
-        <section class="flow-problem">
-            <div class="flow-problem__container">
-                <div class="flow-problem__header fade-in-up">
-                    <h2 class="flow-problem__title">데이터는 넘치지만,<br>판단은 느립니다</h2>
-                </div>
-                <div class="flow-problem__grid">
-                    <div class="flow-problem__card fade-in-up fade-in-delay-1">
-                        <div class="flow-problem__icon">❓</div>
-                        <h3 class="flow-problem__card-title">데이터를 모릅니다</h3>
-                        <p class="flow-problem__card-desc">어떤 데이터가 필요한지, 어디서 구해야 하는지 알 수 없습니다</p>
-                    </div>
-                    <div class="flow-problem__card fade-in-up fade-in-delay-2">
-                        <div class="flow-problem__icon">👥</div>
-                        <h3 class="flow-problem__card-title">인력이 제한적입니다</h3>
-                        <p class="flow-problem__card-desc">분석 인력이 부족하거나 없어서 판단이 지연됩니다</p>
-                    </div>
-                    <div class="flow-problem__card fade-in-up fade-in-delay-3">
-                        <div class="flow-problem__icon">🎯</div>
-                        <h3 class="flow-problem__card-title">개인에게 의존합니다</h3>
-                        <p class="flow-problem__card-desc">담당자의 역량에 따라 판단 기준이 달라집니다</p>
-                    </div>
-                    <div class="flow-problem__card fade-in-up fade-in-delay-4">
-                        <div class="flow-problem__icon">⏰</div>
-                        <h3 class="flow-problem__card-title">타이밍을 놓칩니다</h3>
-                        <p class="flow-problem__card-desc">분석 결과를 기다리는 동안 의사결정 시기를 놓칩니다</p>
-                    </div>
-                </div>
-                <div class="flow-problem__conclusion fade-in-up">
-                    <p>문제는 데이터가 아니라,<br><strong>'판단이 특정 역량을 가진 사람에게만 의존한다'</strong>는 점입니다.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Solution Section -->
-        <section class="flow-solution">
-            <div class="flow-solution__container">
-                <div class="flow-solution__content fade-in-up">
-                    <div class="flow-solution__badge">Solution</div>
-                    <h2 class="flow-solution__title">
-                        Flow는<br>
-                        <span class="flow-solution__title-highlight">'판단 구조'를 제품으로 만듭니다</span>
-                    </h2>
-                    <p class="flow-solution__description">
-                        역량이 없어도, 데이터를 몰라도,<br>
-                        Flow를 선택하면 동일한 판단 결과를 얻습니다.
+                <!-- Small Card 1 -->
+                <div class="card card--benefit flow-benefits__card fade-in-up fade-in-delay-2">
+                    <div class="card__icon">📏</div>
+                    <h3 class="card__title">판단의 표준화</h3>
+                    <span class="flow-benefits__highlight">개인의 감이 아닌 조직의 기준으로</span>
+                    <p class="card__desc">
+                        누가 분석하든 항상 동일한 결과.<br>
+                        해석의 오류와 불필요한 논쟁을 없앱니다.
                     </p>
-                    <div class="flow-solution__key-value">
-                        <div class="flow-solution__key-icon">✨</div>
-                        <p class="flow-solution__key-text">전문가가 아니어도 전문가 수준의 판단 가능</p>
-                    </div>
+                </div>
+
+                <!-- Small Card 2 -->
+                <div class="card card--benefit flow-benefits__card fade-in-up fade-in-delay-3">
+                    <div class="card__icon">🧠</div>
+                    <h3 class="card__title">데이터 민주화</h3>
+                    <span class="flow-benefits__highlight">누구나 전문가와 같은 시야로</span>
+                    <p class="card__desc">
+                        통계를 몰라도 됩니다.<br>
+                        전문가의 판단 로직을 그대로 이식하여 높은 수준의 결정을 돕습니다.
+                    </p>
                 </div>
             </div>
         </section>
+        <!-- End Benefits Section -->
 
-        <!-- Core Values Section -->
-        <section class="flow-values">
-            <div class="flow-values__container">
-                <div class="flow-values__header fade-in-up">
-                    <h2 class="flow-values__title">Flow가 제공하는 4가지 핵심 가치</h2>
-                </div>
-                <div class="flow-values__grid">
-                    <div class="flow-value-card fade-in-up fade-in-delay-1">
-                        <div class="flow-value-card__number">01</div>
-                        <div class="flow-value-card__icon">🎯</div>
-                        <h3 class="flow-value-card__title">분석 노하우를<br>선택할 필요가 없습니다</h3>
-                        <p class="flow-value-card__desc">
-                            BigValue가 설계한 판단 기준이 Flow에 내장되어 있습니다.<br>
-                            어떤 데이터를, 어떻게 분석할지 고민할 필요가 없습니다.
-                        </p>
-                    </div>
-                    <div class="flow-value-card fade-in-up fade-in-delay-2">
-                        <div class="flow-value-card__number">02</div>
-                        <div class="flow-value-card__icon">👤</div>
-                        <h3 class="flow-value-card__title">데이터·분석 경험이<br>없어도 바로 판단</h3>
-                        <p class="flow-value-card__desc">
-                            Flow는 분석 결과가 아닌 '의사결정 관점'으로 결과를 제공합니다.<br>
-                            전문 지식 없이도 즉시 이해하고 활용할 수 있습니다.
-                        </p>
-                    </div>
-                    <div class="flow-value-card fade-in-up fade-in-delay-3">
-                        <div class="flow-value-card__number">03</div>
-                        <div class="flow-value-card__icon">⚡</div>
-                        <h3 class="flow-value-card__title">단 하루 만에<br>도출되는 판단 결과</h3>
-                        <p class="flow-value-card__desc">
-                            데이터 준비, 분석 실행, 결과 해석에 필요한 시간이 모두 제거됩니다.<br>
-                            선택 즉시 판단 결과를 확인할 수 있습니다.
-                        </p>
-                    </div>
-                    <div class="flow-value-card fade-in-up fade-in-delay-4">
-                        <div class="flow-value-card__number">04</div>
-                        <div class="flow-value-card__icon">🤝</div>
-                        <h3 class="flow-value-card__title">조직 전체가<br>같은 기준으로 판단</h3>
-                        <p class="flow-value-card__desc">
-                            담당자가 바뀌어도 판단 기준은 동일합니다.<br>
-                            조직 전체가 일관된 기준으로 의사결정을 내릴 수 있습니다.
-                        </p>
-                    </div>
-                </div>
+        <!-- ===================================== -->
+        <!--       Trusted By Section             -->
+        <!-- ===================================== -->
+        <section class="section section--light section--large product-trusted flow-trusted">
+            <div class="section__header fade-in-up">
+                <h2 class="title title--section section__title">
+                    판단의 정확성이 곧 책임인 곳에서,<br>
+                    이미 사용하고 있습니다.
+                </h2>
+                <p class="section__subtitle">
+                    금융기관의 대출 심사부터 대기업의 입지 전략까지.<br>
+                    실패해선 안 되는 비즈니스 의사결정의 순간, 리더들은 Flow를 선택했습니다.
+                </p>
+            </div>
+
+            <div class="product-trusted__logos fade-in-up fade-in-delay-1">
+                <img src="../../src/images/clients/1_신한은행.png" alt="신한은행" class="flow-trusted__logo">
+                <img src="../../src/images/clients/2_하나은행.png" alt="하나은행" class="flow-trusted__logo">
+                <img src="../../src/images/clients/3_삼성증권.png" alt="삼성증권" class="flow-trusted__logo">
+                <img src="../../src/images/clients/4_농협중앙회.png" alt="농협중앙회" class="flow-trusted__logo">
+                <img src="../../src/images/clients/5_npay.png" alt="네이버페이" class="flow-trusted__logo">
+                <img src="../../src/images/clients/6_banksalad.png" alt="뱅크샐러드" class="flow-trusted__logo">
+            </div>
+
+            <div class="flow-trusted__use-cases fade-in-up fade-in-delay-2">
+                <span class="badge badge--outline">#금융기관 - 담보 가치 평가 Flow</span>
+                <span class="badge badge--outline">#프랜차이즈 - 출점 타당성 분석 Flow</span>
+                <span class="badge badge--outline">#건설사 - 사업지 분석 Flow</span>
             </div>
         </section>
+        <!-- End Trusted By Section -->
 
-        <!-- How It Works Section -->
-        <section class="flow-how">
-            <div class="flow-how__container">
-                <div class="flow-how__header fade-in-up">
-                    <h2 class="flow-how__title">놀라울 정도로 간단합니다</h2>
-                    <p class="flow-how__subtitle">복잡한 과정은 모두 제거했습니다</p>
+        <!-- ===================================== -->
+        <!--       Final CTA Section              -->
+        <!-- ===================================== -->
+        <section class="section section--dark section--large product-cta flow-cta">
+            <div class="flow-cta__bg-overlay"></div>
+
+            <div class="product-cta__content">
+                <h2 class="title title--section section__title fade-in-up">
+                    데이터는 준비되었습니다.<br>
+                    결정만 내리세요.
+                </h2>
+
+                <div class="flow-cta__buttons fade-in-up fade-in-delay-1">
+                    <button class="btn btn--outline btn--large flow-cta__btn"
+                            onclick="window.location.href='https://bigvalue.ai/guest'">
+                        <span class="btn__main">Flow 체험하기</span>
+                        <span class="btn__sub">별도 설정 없이 바로 경험해 보세요.</span>
+                    </button>
+                    <button class="btn btn--cta btn--large flow-cta__btn"
+                            onclick="window.openInquiryModal && window.openInquiryModal()">
+                        <span class="btn__main">서비스 도입 문의</span>
+                        <span class="btn__sub">우리 조직만의 결정 구조를 설계하세요.</span>
+                    </button>
                 </div>
 
-                <!-- Removed Steps -->
-                <div class="flow-how__removed fade-in-up">
-                    <h3 class="flow-how__removed-title">더 이상 필요하지 않은 단계들</h3>
-                    <div class="flow-how__removed-list">
-                        <div class="flow-how__removed-item">
-                            <span class="flow-how__removed-icon">✕</span>
-                            <span class="flow-how__removed-text">데이터 선택하기</span>
-                        </div>
-                        <div class="flow-how__removed-item">
-                            <span class="flow-how__removed-icon">✕</span>
-                            <span class="flow-how__removed-text">분석 방법 설정하기</span>
-                        </div>
-                        <div class="flow-how__removed-item">
-                            <span class="flow-how__removed-icon">✕</span>
-                            <span class="flow-how__removed-text">결과 해석 고민하기</span>
-                        </div>
-                        <div class="flow-how__removed-item">
-                            <span class="flow-how__removed-icon">✕</span>
-                            <span class="flow-how__removed-text">전문가 의견 기다리기</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Simple Steps -->
-                <div class="flow-how__steps">
-                    <div class="flow-how__step fade-in-up fade-in-delay-1">
-                        <div class="flow-how__step-number">STEP 1</div>
-                        <div class="flow-how__step-content">
-                            <h3 class="flow-how__step-title">Flow 선택</h3>
-                            <p class="flow-how__step-desc">판단하고 싶은 주제의 Flow를 선택합니다</p>
-                        </div>
-                        <div class="flow-how__step-visual">
-                            <div class="flow-how__step-box">
-                                <div class="flow-how__step-icon">📋</div>
-                                <div class="flow-how__step-label">Flow 목록</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flow-how__arrow fade-in-up fade-in-delay-2">↓</div>
-
-                    <div class="flow-how__step fade-in-up fade-in-delay-3">
-                        <div class="flow-how__step-number">STEP 2</div>
-                        <div class="flow-how__step-content">
-                            <h3 class="flow-how__step-title">결과 확인</h3>
-                            <p class="flow-how__step-desc">지도와 리포트로 판단 결과를 즉시 확인합니다</p>
-                        </div>
-                        <div class="flow-how__step-visual">
-                            <div class="flow-how__step-box flow-how__step-box--result">
-                                <div class="flow-how__step-icon">📊</div>
-                                <div class="flow-how__step-label">판단 결과</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <p class="flow-cta__footer-message fade-in-up fade-in-delay-2">
+                    Flow는 분석을 자동화하는 제품이 아닙니다.<br>
+                    결정을 가속하는 새로운 방식입니다.
+                </p>
             </div>
         </section>
+        <!-- End Final CTA Section -->
 
-        <!-- Target Audience Section -->
-        <section class="flow-target">
-            <div class="flow-target__container">
-                <div class="flow-target__content fade-in-up">
-                    <h2 class="flow-target__title">Flow는 이런 사람을 위한 제품입니다</h2>
-                    <div class="flow-target__checklist">
-                        <div class="flow-target__item fade-in-up fade-in-delay-1">
-                            <div class="flow-target__check">✓</div>
-                            <p class="flow-target__text">데이터·분석 역량이 없는 의사결정자</p>
-                        </div>
-                        <div class="flow-target__item fade-in-up fade-in-delay-2">
-                            <div class="flow-target__check">✓</div>
-                            <p class="flow-target__text">데이터 팀 리소스가 부족한 조직</p>
-                        </div>
-                        <div class="flow-target__item fade-in-up fade-in-delay-3">
-                            <div class="flow-target__check">✓</div>
-                            <p class="flow-target__text">분석 결과를 기다릴 시간이 없는 현업 팀</p>
-                        </div>
-                        <div class="flow-target__item fade-in-up fade-in-delay-4">
-                            <div class="flow-target__check">✓</div>
-                            <p class="flow-target__text">판단 기준을 통일하고 싶은 리더</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Trusted By Section -->
-        <section class="flow-trusted">
-            <div class="flow-trusted__container">
-                <h2 class="flow-trusted__title fade-in-up">신뢰받는 파트너</h2>
-                <div class="flow-trusted__logos fade-in-up fade-in-delay-1">
-                    <img src="../../src/images/clients/1_신한은행.png" alt="신한은행" class="flow-trusted__logo">
-                    <img src="../../src/images/clients/2_하나은행.png" alt="하나은행" class="flow-trusted__logo">
-                    <img src="../../src/images/clients/3_삼성증권.png" alt="삼성증권" class="flow-trusted__logo">
-                    <img src="../../src/images/clients/4_농협중앙회.png" alt="농협중앙회" class="flow-trusted__logo">
-                    <img src="../../src/images/clients/5_npay.png" alt="네이버페이" class="flow-trusted__logo">
-                    <img src="../../src/images/clients/6_banksalad.png" alt="뱅크샐러드" class="flow-trusted__logo">
-                </div>
-            </div>
-        </section>
-
-        <!-- Final CTA Section -->
-        <section class="flow-cta">
-            <div class="flow-cta__container">
-                <div class="flow-cta__content fade-in-up">
-                    <h2 class="flow-cta__title">지금 바로 Flow를 경험해보세요</h2>
-                    <p class="flow-cta__subtitle">전문가 없이도 전문가 수준의 판단이 가능합니다</p>
-                    <div class="flow-cta__buttons">
-                        <a href="https://bigvalue.ai/guest" target="_blank" rel="noopener noreferrer" class="btn btn--cta btn--large">무료 체험하기</a>
-                        <button class="btn btn--outline btn--large" onclick="window.openInquiryModal && window.openInquiryModal()">문의하기</button>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
+    <!-- End Main Content -->
 
-    <!-- Footer Placeholder -->
+    <!-- Footer Placeholder (will be replaced by JavaScript) -->
     <div id="footer-placeholder"></div>
 
     <script src="../../script.js"></script>
     <script>
         // Intersection Observer for fade-in animations
         document.addEventListener('DOMContentLoaded', function() {
+            // Defensive coding: Check if IntersectionObserver is supported
+            if (!('IntersectionObserver' in window)) {
+                console.warn('IntersectionObserver not supported, skipping animations');
+                return;
+            }
+
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
@@ -299,9 +281,13 @@
                 });
             }, observerOptions);
 
-            document.querySelectorAll('.fade-in-up').forEach(el => {
-                observer.observe(el);
-            });
+            // Observe all fade-in elements
+            const fadeElements = document.querySelectorAll('.fade-in-up');
+            if (fadeElements && fadeElements.length > 0) {
+                fadeElements.forEach(el => {
+                    observer.observe(el);
+                });
+            }
         });
     </script>
 </body>

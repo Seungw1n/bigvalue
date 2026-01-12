@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigValue Data API - Fast Development</title>
+    <meta name="description" content="아이디어를 현실로, 몇 달이 아닌 몇 주 만에. BigValue Data API는 개발 속도를 혁신적으로 단축하는 인프라입니다.">
+    <link rel="stylesheet" href="css/api.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;600;800&family=Fira+Code:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">BigValue <span class="accent">API</span></div>
+    </nav>
+
+    <main>
+        <!-- Section 1: Hero (Time-Lapse) -->
+        <section class="hero-section">
+            <div class="hero-bg-code"></div>
+            <div class="container hero-container">
+                <div class="hero-content text-left">
+                    <p class="eyebrow fade-in-up">Developer Productivity</p>
+                    <h1 class="headline fade-in-up delay-1">아이디어를 현실로,<br>몇 달이 아닌 <span class="highlight-speed">몇 주
+                            만에.</span></h1>
+                    <p class="sub-copy fade-in-up delay-2">
+                        기존 API는 '조회' 도구였지만, 저희는 '개발 인프라'입니다.<br>
+                        데이터 수집, 정제, 연결의 번거로움을 제거하여 개발 속도를 혁신적으로 단축하세요.
+                    </p>
+                    <div class="hero-cta fade-in-up delay-3">
+                        <button class="btn btn-primary">API Key 발급받기</button>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in-up delay-2">
+                    <div class="time-lapse-graphic">
+                        <div class="timeline-old">
+                            <span class="label">Others: Months</span>
+                            <div class="progress-bar slow">
+                                <div class="fill"></div>
+                            </div>
+                            <div class="building-blocks scattered">
+                                <span>Config</span><span>ETL</span><span>Clean</span>
+                            </div>
+                        </div>
+                        <div class="timeline-new">
+                            <span class="label highlight-speed">BigValue: Weeks</span>
+                            <div class="progress-bar fast">
+                                <div class="fill"></div>
+                            </div>
+                            <div class="building-city">
+                                <span class="city-icon">🏙️ Service Launched</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Problem (The Broken Bridge) -->
+        <section class="problem-section">
+            <div class="container text-center">
+                <h2 class="section-title scroll-reveal">기존의 API는<br>개발의 <span class="text-hazard">병목</span>이 되고 있습니다.
+                </h2>
+                <div class="bridge-visual scroll-reveal">
+                    <div class="cliff cliff-left">
+                        <div class="dev-figure">👨‍💻 Dev</div>
+                    </div>
+                    <div class="cliff cliff-right">
+                        <div class="app-figure">📱 App</div>
+                    </div>
+                    <div class="bridge broken">
+                        <div class="gap-text">Dirty Data</div>
+                        <div class="gap-text">No Standards</div>
+                    </div>
+                </div>
+                <p class="section-desc scroll-reveal">
+                    정제되지 않은 데이터를 수습하느라 '준비' 시간에 리소스를 쏟고 있다면,<br>그것은 API가 아니라 짐입니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 3: Solution (Direct Plug-in) -->
+        <section class="solution-section">
+            <div class="container">
+                <div class="solution-content">
+                    <div class="solution-text scroll-reveal">
+                        <h2 class="title">개발은 데이터가 아니라,<br><span class="accent">서비스 로직</span>에서 시작되어야 합니다.</h2>
+                        <p class="desc">데이터 준비는 저희가 끝냈습니다. 호출하는 순간, 당신의 서비스와 AI에 즉시 투입 가능한 '완성된 데이터'를 제공합니다.</p>
+                    </div>
+                    <div class="plugin-visual scroll-reveal box-card">
+                        <div class="terminal-window">
+                            <div class="terminal-header">
+                                <span class="dot red"></span><span class="dot yellow"></span><span
+                                    class="dot green"></span>
+                            </div>
+                            <div class="code-block">
+                                <span class="keyword">const</span> data = <span class="keyword">await</span>
+                                BigValue.<span class="func">getUnifiedData</span>(target);<br>
+                                <span class="comment">// Returns cleaned, joined, ready-to-use data</span><br>
+                                <span class="func">deployService</span>(data);
+                            </div>
+                        </div>
+                        <div class="bulb-icon">💡</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Key Benefits -->
+        <section class="benefits-section">
+            <div class="container">
+                <h2 class="section-title text-center mb-lg scroll-reveal">개발 속도를 결정짓는<br>3가지 설계</h2>
+                <div class="benefits-grid">
+                    <!-- Value 1: Connectivity -->
+                    <div class="benefit-card scroll-reveal">
+                        <div class="icon-box icon-connect">🔗</div>
+                        <h3>연결의 완성</h3>
+                        <p class="benefit-sub">조인(Join) 없는 완벽한 데이터 연결</p>
+                        <p class="benefit-desc">부동산, 사업자, 상권 데이터가 '고유 코드'로 이미 연결되어 있습니다. 단 한 번의 호출로 360도 분석이 끝납니다.</p>
+                    </div>
+                    <!-- Value 2: Quality -->
+                    <div class="benefit-card scroll-reveal delay-1">
+                        <div class="icon-box icon-quality">✨</div>
+                        <h3>비교 불가능한 품질</h3>
+                        <p class="benefit-sub">실서비스에 바로 투입 가능한 무결점</p>
+                        <p class="benefit-desc">오류 검증 없이 믿고 쓸 수 있는 데이터. 공공/민간 데이터를 단일 기준으로 정제하여 연속성을 보장합니다.</p>
+                    </div>
+                    <!-- Value 3: AI-Readiness -->
+                    <div class="benefit-card scroll-reveal delay-2 highlight-card">
+                        <div class="icon-box icon-ai">🧠</div>
+                        <h3>AI 시대를 위한 설계</h3>
+                        <p class="benefit-sub">AI와 LLM이 이해하는 구조</p>
+                        <p class="benefit-desc">빅밸류 API는 코드 생성기 및 AI 모델이 가장 잘 이해하고 활용할 수 있는 구조로 최적화되었습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Social Proof (Stats) -->
+        <section class="social-proof-section">
+            <div class="container text-center">
+                <h2 class="section-title scroll-reveal">수개월의 개발 일정을<br>단 <span class="highlight-speed">4주</span>로
+                    단축했습니다.</h2>
+                <p class="desc scroll-reveal">금융기관, 프롭테크 기업들이 입증한 압도적인 생산성.</p>
+                <div class="success-cards scroll-reveal">
+                    <div class="success-card">
+                        <div class="stat-number">3 Months</div>
+                        <div class="stat-label">A 시중은행<br>시가 추정 시스템</div>
+                    </div>
+                    <div class="success-card">
+                        <div class="stat-number">1 Month</div>
+                        <div class="stat-label">B 증권사<br>서비스 런칭</div>
+                    </div>
+                    <div class="success-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">D 프롭테크<br>API 기반 운영</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: CTA (DX) -->
+        <section class="cta-section">
+            <div class="container text-center">
+                <h2 class="section-title scroll-reveal">지금 바로,<br>개발을 시작하세요.</h2>
+                <div class="code-snippet-cta scroll-reveal">
+                    <code>Authorization: Bearer <span class="key-blur">bv_live_sek...</span></code>
+                </div>
+                <div class="cta-buttons scroll-reveal">
+                    <button class="btn btn-primary btn-large">API Key 발급받기</button>
+                    <button class="btn btn-outline btn-large">개발자 문서(Docs) 보기</button>
+                </div>
+                <div class="steps-row scroll-reveal">
+                    <span>1. 가입</span> &rarr; <span>2. Key 발급</span> &rarr; <span>3. 개발 시작</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/api.js"></script>
+</body>
+
+</html>

@@ -5,31 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="BigValue Customer Studies - AI 기반 데이터 분석 활용 사례">
     <title>Customer Studies - BigValue</title>
-    <link rel="stylesheet" href="../../styles.css">
+    <!-- 새로운 CSS 구조: 공통 스타일 + 페이지 유형별 스타일 -->
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/template_feed.css">
+    <!-- 기존 styles.css (롤백용, 문제 없으면 삭제 예정) -->
+    <!-- <link rel="stylesheet" href="../../styles.css"> -->
 </head>
 <body>
     <!-- GNB Placeholder (will be replaced by JavaScript) -->
     <div id="gnb-placeholder"></div>
 
     <main class="main">
-        <div class="newsroom-container">
-            <div class="newsroom-header">
-                <h1 class="newsroom-title">Customer Studies</h1>
-                <p class="newsroom-subtitle">AI 기반 데이터 분석 활용 사례</p>
+        <div class="customer-studies-container">
+            <div class="customer-studies-header">
+                <h1 class="customer-studies-title">Customer Studies</h1>
+                <p class="customer-studies-subtitle">AI 기반 데이터 분석 활용 사례</p>
             </div>
 
             <!-- Loading State -->
-            <div id="customer-studies-loading" class="newsroom-loading" style="display: none;">
+            <div id="customer-studies-loading" class="customer-studies-loading" style="display: none;">
                 <p>게시글을 불러오는 중...</p>
             </div>
 
             <!-- Error State -->
-            <div id="customer-studies-error" class="newsroom-error" style="display: none;">
+            <div id="customer-studies-error" class="customer-studies-error" style="display: none;">
                 <p>게시글을 불러오는데 실패했습니다. 다시 시도해주세요.</p>
             </div>
 
             <!-- Articles List -->
-            <div id="customer-studies-list" class="newsroom-list">
+            <div id="customer-studies-list" class="customer-studies-list">
                 <!-- 게시글 카드가 동적으로 렌더링됩니다 -->
             </div>
         </div>

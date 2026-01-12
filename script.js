@@ -4,7 +4,7 @@
  * Updated with Tab switching and Auto-scrolling cards
  */
 
-(function() {
+(function () {
     'use strict';
 
     // ==========================================
@@ -207,7 +207,7 @@
      */
     function throttle(func, limit) {
         let inThrottle;
-        return function(...args) {
+        return function (...args) {
             if (!inThrottle) {
                 func.apply(this, args);
                 inThrottle = true;
@@ -400,6 +400,57 @@
                 this.flowImage.alt = `Flow 화면 예시 - 탭 ${tabNumber}`;
             } else {
                 console.warn('⚠️ FlowTabs: Image element or image path not found');
+            }
+        }
+    }
+
+    // ==========================================
+    // About Flow - Tab Switching (Main Page)
+    // ==========================================
+    class AboutFlowTabs {
+        constructor() {
+            this.tabButtons = document.querySelectorAll('.about-flow__tab');
+            this.tabContents = document.querySelectorAll('.about-flow__tab-content');
+
+            if (this.tabButtons.length === 0) {
+                console.log('⚠️ AboutFlowTabs: No tab elements found (not on main page)');
+                return;
+            }
+
+            console.log('✅ AboutFlowTabs: Initializing with', this.tabButtons.length, 'tabs');
+            this.init();
+        }
+
+        init() {
+            this.tabButtons.forEach(button => {
+                button.addEventListener('click', (e) => this.switchTab(e));
+            });
+            console.log('✅ AboutFlowTabs: Event listeners attached');
+        }
+
+        switchTab(e) {
+            const button = e.currentTarget;
+            const targetTab = button.dataset.tab;
+            console.log('🖱️ AboutFlowTabs: Tab clicked, data-tab =', targetTab);
+
+            // Remove active state from all tabs
+            this.tabButtons.forEach(btn => {
+                btn.classList.remove('about-flow__tab--active');
+                btn.classList.remove('landing-solution__item--active'); // Safety clear
+            });
+            this.tabContents.forEach(content => {
+                content.classList.remove('about-flow__tab-content--active');
+                content.classList.remove('landing-solution__tab-content--active'); // Safety clear
+            });
+
+            // Add active state to clicked tab
+            button.classList.add('about-flow__tab--active');
+            const targetContent = document.querySelector(`[data-tab-content="${targetTab}"]`);
+            if (targetContent) {
+                targetContent.classList.add('about-flow__tab-content--active');
+                console.log('✅ AboutFlowTabs: Tab content switched to', targetTab);
+            } else {
+                console.warn('⚠️ AboutFlowTabs: Content element not found for', targetTab);
             }
         }
     }
@@ -776,6 +827,7 @@
             new SmoothScroll();
             new DataCards();
             new FlowTabs();
+            new AboutFlowTabs();
             new InsightCards();
             new ScrollAnimations();
             new InquiryModal();
@@ -823,13 +875,12 @@
                                     <span class="header__nav-link header__nav-link--dropdown">Solutions</span>
                                     <div class="header__dropdown-menu">
                                         <div class="header__dropdown-menu-container">
-                                            <a href="/solutions/finance/" class="header__dropdown-link">금융/리스크</a>
-                                            <a href="/solutions/logistics/" class="header__dropdown-link">부동산/건설</a>
-                                            <a href="/solutions/healthcare/" class="header__dropdown-link">유통/상권</a>
-                                            <a href="/solutions/government/" class="header__dropdown-link">공공/행정</a>
-                                            <a href="/solutions/government/" class="header__dropdown-link">의료/케어</a>
-                                            <a href="/solutions/government/" class="header__dropdown-link">농축산/방역</a>
-                                            <a href="/solutions/government/" class="header__dropdown-link">환경</a>
+                                            <a href="/solutions/" class="header__dropdown-link">Overview</a>
+                                            <a href="/solutions/finance/" class="header__dropdown-link">금융</a>
+                                            <a href="/solutions/logistics/" class="header__dropdown-link">유통/상권</a>
+                                            <a href="/solutions/government/" class="header__dropdown-link">공공/지자체</a>
+                                            <a href="/solutions/b2b-crm/" class="header__dropdown-link">B2B CRM</a>
+                                            <a href="/solutions/contents/" class="header__dropdown-link">정보/콘텐츠</a>
                                         </div>
                                     </div>
                                 </div>
@@ -952,6 +1003,59 @@
     }
 
     // ==========================================
+    // MouseParallax Class (for Flow page)
+    // ==========================================
+    class MouseParallax {
+        constructor(selector) {
+            this.elements = document.querySelectorAll(selector);
+            this.init();
+        }
+
+        init() {
+            // Defensive coding: Check if elements exist
+            if (!this.elements || this.elements.length === 0) {
+                return;
+            }
+
+            this.elements.forEach(element => {
+                const section = element.closest('section');
+                if (!section) {
+                    return;
+                }
+
+                // Add mouse move listener to parent section
+                section.addEventListener('mousemove', (e) => {
+                    this.handleMouseMove(e, element, section);
+                });
+
+                // Reset position on mouse leave
+                section.addEventListener('mouseleave', () => {
+                    this.resetPosition(element);
+                });
+            });
+        }
+
+        handleMouseMove(e, element, section) {
+            const rect = section.getBoundingClientRect();
+            const xVal = (e.clientX - rect.left) / rect.width - 0.5;
+            const yVal = (e.clientY - rect.top) / rect.height - 0.5;
+
+            // Calculate rotation values
+            const xRotation = xVal * 20; // Max 20 degrees
+            const yRotation = -yVal * 20; // Inverted for natural feel
+
+            // Apply 3D transform
+            element.style.transform =
+                `perspective(1000px) rotateY(${xRotation}deg) rotateX(${yRotation}deg)`;
+        }
+
+        resetPosition(element) {
+            element.style.transform =
+                'perspective(1000px) rotateY(0deg) rotateX(0deg)';
+        }
+    }
+
+    // ==========================================
     // Start Application
     // ==========================================
     new App();
@@ -964,10 +1068,25 @@
         document.addEventListener('DOMContentLoaded', () => {
             new GNBComponent();
             new FooterComponent();
+            // Initialize MouseParallax for Flow page
+            initMouseParallax();
         });
     } else {
         new GNBComponent();
         new FooterComponent();
+        // Initialize MouseParallax for Flow page
+        initMouseParallax();
+    }
+
+    // ==========================================
+    // Initialize MouseParallax (Flow Page)
+    // ==========================================
+    function initMouseParallax() {
+        // Defensive coding: Check if parallax elements exist
+        const parallaxElements = document.querySelectorAll('[data-parallax="true"]');
+        if (parallaxElements && parallaxElements.length > 0) {
+            new MouseParallax('[data-parallax="true"]');
+        }
     }
 
 })();

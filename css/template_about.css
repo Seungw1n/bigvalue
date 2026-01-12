@@ -1,0 +1,506 @@
+/* ==========================================
+   About Us Page Styles
+   ========================================== */
+
+/* This file contains styles for the About Us page
+   Used for: Company vision, data flow hub, history, notices, clients/partners
+   Dependencies: common.css for base styles */
+
+/* ==========================================
+   Vision Section with Background
+   ========================================== */
+
+.vision-section {
+    position: relative;
+    padding: 120px 30px;
+    overflow: hidden;
+}
+
+.vision-section__background {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+.vision-section__gradient {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(68, 52, 226, 0.3) 0%, rgba(68, 52, 226, 0.1) 40%, rgba(68, 52, 226, 0) 70%);
+    filter: blur(40px);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.vision-section__container {
+    position: relative;
+    z-index: 1;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.vision-section__text {
+    font-family: var(--font-family-primary);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--color-neutral-black);
+    margin: 0;
+}
+
+/* ==========================================
+   Data Flow Hub Section
+   ========================================== */
+
+.dataflow-section {
+    padding: 120px 30px;
+    background-color: #fafafa;
+}
+
+.dataflow-section__container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+}
+
+.dataflow-section__graphic {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.dataflow-section__orbit-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dataflow-section__center {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-brand-primary) 0%, #6b5eff 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(68, 52, 226, 0.3);
+    animation: rotate 20s linear infinite;
+}
+
+.dataflow-section__logo {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-neutral-white);
+    border-radius: 50%;
+}
+
+.dataflow-section__orbit {
+    position: absolute;
+    border: 2px solid rgba(68, 52, 226, 0.2);
+    border-radius: 50%;
+}
+
+.dataflow-section__orbit--1 {
+    width: 150px;
+    height: 150px;
+    animation: rotate 15s linear infinite reverse;
+}
+
+.dataflow-section__orbit--2 {
+    width: 250px;
+    height: 250px;
+    animation: rotate 25s linear infinite;
+}
+
+.dataflow-section__orbit--3 {
+    width: 350px;
+    height: 350px;
+    animation: rotate 35s linear infinite reverse;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.dataflow-section__content {
+    text-align: left;
+    flex: 1;
+}
+
+.dataflow-section__title {
+    font-family: var(--font-family-primary);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-neutral-black);
+    margin: 0 0 16px 0;
+}
+
+.dataflow-section__subtitle {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-xl);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-neutral-darker);
+    margin: 0;
+}
+
+/* ==========================================
+   History Section
+   ========================================== */
+
+.history-section {
+    padding: 120px 30px;
+}
+
+.history-section__container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+.history-timeline {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.history-timeline__year {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+}
+
+.history-timeline__year-title {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-brand-primary);
+    margin: 0;
+    text-align: left;
+}
+
+.history-timeline__events {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.history-timeline__event {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.history-timeline__month {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--color-neutral-dark);
+}
+
+.history-timeline__description {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-neutral-darker);
+    margin: 0;
+}
+
+/* ==========================================
+   Notice Section (On About Page)
+   ========================================== */
+
+.notice-section {
+    padding: 120px 30px;
+    background-color: #fafafa;
+}
+
+.notice-section__container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+.notice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--color-neutral-lighter);
+}
+
+.notice-list__item {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--color-neutral-lighter);
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.notice-list__item:hover {
+    background-color: rgba(68, 52, 226, 0.02);
+}
+
+.notice-list__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notice-list__title {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-m);
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-neutral-darker);
+    flex: 1;
+}
+
+.notice-list__date {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-s);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-neutral-medium);
+}
+
+.notice-section__more {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.notice-section__more-link {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-m);
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-neutral-dark);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.notice-section__more-link:hover {
+    color: var(--color-brand-primary-hover);
+}
+
+/* ==========================================
+   Clients & Partners Sections
+   ========================================== */
+
+.clients-section,
+.partners-section {
+    padding: 120px 30px;
+}
+
+.clients-section {
+    background-color: var(--color-neutral-white);
+}
+
+.partners-section {
+    background-color: var(--color-neutral-white);
+}
+
+.clients-section__container,
+.partners-section__container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+.clients-grid,
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 40px;
+}
+
+.clients-grid__item,
+.partners-grid__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: none;
+    border-radius: var(--radius-m);
+    transition: all 0.3s ease;
+}
+
+.clients-grid__item:hover,
+.partners-grid__item:hover {
+    transform: translateY(-2px);
+}
+
+.clients-grid__item img,
+.partners-grid__item img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.clients-grid__item:hover img,
+.partners-grid__item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* ==========================================
+   Responsive Design for About Page
+   ========================================== */
+
+@media (max-width: 1024px) {
+    .vision-section__text {
+        font-size: 36px;
+    }
+
+    .dataflow-section__container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .dataflow-section__graphic {
+        width: 300px;
+        height: 300px;
+    }
+
+    .dataflow-section__orbit--1 {
+        width: 120px;
+        height: 120px;
+    }
+
+    .dataflow-section__orbit--2 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .dataflow-section__orbit--3 {
+        width: 280px;
+        height: 280px;
+    }
+
+    .dataflow-section__title {
+        font-size: 36px;
+    }
+
+    .dataflow-section__content {
+        text-align: center;
+    }
+
+    .history-timeline {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .clients-grid,
+    .partners-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vision-section {
+        padding: 80px 20px;
+    }
+
+    .vision-section__gradient {
+        width: 300px;
+        height: 300px;
+    }
+
+    .vision-section__text {
+        font-size: 28px;
+    }
+
+    .dataflow-section {
+        padding: 80px 20px;
+    }
+
+    .dataflow-section__container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .dataflow-section__graphic {
+        width: 250px;
+        height: 250px;
+    }
+
+    .dataflow-section__orbit--1 {
+        width: 100px;
+        height: 100px;
+    }
+
+    .dataflow-section__orbit--2 {
+        width: 160px;
+        height: 160px;
+    }
+
+    .dataflow-section__orbit--3 {
+        width: 220px;
+        height: 220px;
+    }
+
+    .dataflow-section__title {
+        font-size: 28px;
+    }
+
+    .dataflow-section__content {
+        text-align: center;
+    }
+
+    .history-section,
+    .notice-section,
+    .clients-section,
+    .partners-section {
+        padding: 80px 20px;
+    }
+
+    .history-timeline {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .notice-list__content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-s);
+    }
+
+    .clients-grid,
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}

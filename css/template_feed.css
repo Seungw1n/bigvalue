@@ -1,0 +1,413 @@
+/* ==========================================
+   Feed Page Styles
+   ========================================== */
+
+/* This file contains styles for feed/stream pages
+   Used for: Customer Studies, Insight Feed, AI Use Case pages
+   Dependencies: common.css for base styles */
+
+/* ==========================================
+   Customer Studies Page
+   ========================================== */
+
+.customer-studies-section {
+    padding: 100px 30px 80px;
+    background-color: #fafafa;
+}
+
+.customer-studies-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.customer-studies-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.customer-studies-title {
+    font-family: var(--font-family-secondary);
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color-neutral-darkest);
+    margin-bottom: var(--spacing-l);
+    letter-spacing: -0.25px;
+}
+
+.customer-studies-subtitle {
+    font-family: var(--font-family-primary);
+    font-size: 20px;
+    color: var(--color-neutral-dark);
+    line-height: 1.6;
+}
+
+.customer-studies-loading,
+.customer-studies-error {
+    text-align: center;
+    padding: 80px 20px;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-l);
+}
+
+.customer-studies-loading {
+    color: var(--color-neutral-medium);
+}
+
+.customer-studies-error {
+    color: var(--color-accent-error);
+}
+
+.customer-studies-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-2xl);
+}
+
+/* Legacy: customer-studies-grid (same as customer-studies-list) */
+.customer-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-2xl);
+}
+
+.customer-study-card {
+    background-color: var(--color-neutral-white);
+    border-radius: var(--radius-l);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+
+.customer-study-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.customer-study-card__image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.customer-study-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.customer-study-card:hover .customer-study-card__image img {
+    transform: scale(1.05);
+}
+
+.customer-study-card__content {
+    padding: 24px;
+}
+
+.customer-study-card__category {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--color-brand-primary);
+    background-color: var(--color-brand-primary-pale);
+    border-radius: var(--radius-s);
+    margin-bottom: var(--spacing-m);
+}
+
+.customer-study-card__title {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--color-neutral-black);
+    line-height: 1.4;
+    margin-bottom: var(--spacing-m);
+}
+
+.customer-study-card__summary {
+    font-size: var(--font-size-m);
+    color: var(--color-neutral-dark);
+    line-height: 1.6;
+}
+
+/* ==========================================
+   Insight Feed Page
+   ========================================== */
+
+.insight-feed-section {
+    padding: 100px 30px 80px;
+    background-color: #fafafa;
+}
+
+.insight-feed-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.insight-feed-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.insight-feed-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--color-neutral-darkest);
+    margin-bottom: var(--spacing-l);
+    letter-spacing: -0.25px;
+}
+
+.insight-feed-subtitle {
+    font-size: 20px;
+    color: var(--color-neutral-dark);
+    line-height: 1.6;
+}
+
+.insight-feed-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Insight Card */
+.insight-card {
+    background-color: var(--color-neutral-white);
+    border-radius: var(--radius-xl);
+    padding: 28px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.insight-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.insight-card__header {
+    margin-bottom: var(--spacing-l);
+}
+
+.insight-card__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-m);
+}
+
+.insight-card__category {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--color-brand-primary);
+    background-color: var(--color-brand-primary-pale);
+    border-radius: var(--radius-s);
+    letter-spacing: 0.3px;
+}
+
+.insight-card__date {
+    font-size: var(--font-size-xs);
+    color: var(--color-neutral-medium);
+    letter-spacing: 0.3px;
+}
+
+.insight-card__content {
+    margin-bottom: var(--spacing-l);
+}
+
+.insight-card__title {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--color-neutral-black);
+    line-height: 1.4;
+    margin-bottom: var(--spacing-m);
+}
+
+.insight-card__description {
+    font-size: var(--font-size-m);
+    color: var(--color-neutral-dark);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.insight-card__footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.insight-card__action {
+    padding: 8px 16px;
+    font-size: var(--font-size-s);
+    font-weight: 500;
+    color: var(--color-brand-primary);
+    background-color: transparent;
+    border: 1px solid var(--color-brand-primary);
+    border-radius: var(--radius-s);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.insight-card__action:hover {
+    background-color: var(--color-brand-primary);
+    color: var(--color-neutral-white);
+}
+
+/* ==========================================
+   AI Use Case Page
+   ========================================== */
+
+.ai-usecase-section {
+    padding: 100px 30px 80px;
+    background-color: var(--color-neutral-white);
+}
+
+.ai-usecase-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.ai-usecase-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.ai-usecase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-2xl);
+}
+
+.ai-usecase-card {
+    background-color: var(--color-neutral-white);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-l);
+    padding: var(--spacing-2xl);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.ai-usecase-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(68, 52, 226, 0.12);
+    border-color: var(--color-brand-primary);
+}
+
+.ai-usecase-card__icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-brand-primary-pale);
+    border-radius: var(--radius-m);
+    margin-bottom: var(--spacing-l);
+}
+
+.ai-usecase-card__title {
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-neutral-darkest);
+    margin-bottom: var(--spacing-m);
+}
+
+.ai-usecase-card__description {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-m);
+    line-height: 1.6;
+    color: var(--color-neutral-dark);
+    margin-bottom: var(--spacing-l);
+}
+
+.ai-usecase-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.ai-usecase-card__tag {
+    padding: 4px 10px;
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    color: var(--color-neutral-medium);
+    background-color: var(--color-neutral-lightest);
+    border-radius: var(--radius-s);
+}
+
+/* ==========================================
+   Responsive Design for Feed Pages
+   ========================================== */
+
+@media (max-width: 1024px) {
+    .customer-studies-section,
+    .insight-feed-section,
+    .ai-usecase-section {
+        padding: 80px var(--spacing-2xl) 60px;
+    }
+
+    .customer-studies-grid,
+    .ai-usecase-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .insight-feed-title {
+        font-size: 32px;
+    }
+
+    .insight-feed-subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .customer-studies-section,
+    .insight-feed-section,
+    .ai-usecase-section {
+        padding: 60px var(--spacing-l) 40px;
+    }
+
+    .customer-studies-grid,
+    .ai-usecase-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-l);
+    }
+
+    .insight-feed-header {
+        margin-bottom: 40px;
+    }
+
+    .insight-feed-title {
+        font-size: 28px;
+    }
+
+    .insight-feed-subtitle {
+        font-size: 16px;
+    }
+
+    .insight-card {
+        padding: 20px;
+    }
+
+    .insight-card__title {
+        font-size: 18px;
+    }
+
+    .insight-card__description {
+        font-size: var(--font-size-s);
+    }
+
+    .insight-feed-list {
+        gap: 16px;
+    }
+
+    .customer-study-card__content {
+        padding: 20px;
+    }
+
+    .ai-usecase-card {
+        padding: var(--spacing-xl);
+    }
+}

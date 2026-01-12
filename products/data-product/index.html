@@ -5,497 +5,269 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="BigValue Data Product - 데이터 공급망 전체를 관리하는 제품">
     <title>Data Product - BigValue</title>
-    <link rel="stylesheet" href="../../styles.css">
+    <!-- Component-based CSS Structure -->
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/template_product.css">
 </head>
 <body>
-    <!-- GNB Placeholder -->
+    <!-- GNB Placeholder (will be replaced by JavaScript) -->
     <div id="gnb-placeholder"></div>
 
-    <!-- Main Content -->
+    <!-- ===================================== -->
+    <!--         Main Content                 -->
+    <!-- ===================================== -->
     <main class="main">
-        <!-- Section 1: Hero (Identity) -->
-        <section class="data-product-hero">
-            <div class="data-product-hero__background"></div>
-            <div class="data-product-hero__container">
-                <h1 class="data-product-hero__headline">
-                    보이지 않는 차이,<br>
-                    <span class="data-product-hero__headline-highlight">데이터 공급망의 모든 리스크를 방어합니다</span>
-                </h1>
-                <div class="data-product-hero__subcopy">
-                    <p>
-                        데이터 원천의 변화와 오류는 더 이상 고객의 문제가 아닙니다.<br>
-                        BigValue는 데이터의 연속성과 안정성을 끝까지 책임지는 주체입니다.
-                    </p>
-                    <p class="data-product-hero__emphasis">
-                        <strong>Data Product</strong>는 데이터를 '제공'하는 서비스가 아니라,<br>
-                        데이터 공급망 전체를 '관리'하는 제품입니다.
-                    </p>
-                </div>
-            </div>
-        </section>
 
-        <!-- Section 2: Problem Definition (Data Chaos) -->
-        <section class="data-chaos">
-            <div class="data-chaos__container">
-                <h2 class="data-chaos__title">모든 비즈니스의 시작,<br>그러나 가장 큰 장애물: 데이터</h2>
-                <div class="data-chaos__grid">
-                    <article class="data-chaos-card">
-                        <div class="data-chaos-card__icon">⚠️</div>
-                        <h3 class="data-chaos-card__title">분산된 출처</h3>
-                        <p class="data-chaos-card__description">
-                            데이터가 여러 출처에 흩어져 있어<br>
-                            통합과 관리에 막대한 리소스가 소모됩니다
-                        </p>
-                    </article>
-                    <article class="data-chaos-card">
-                        <div class="data-chaos-card__icon">⚠️</div>
-                        <h3 class="data-chaos-card__title">일관성 부재</h3>
-                        <p class="data-chaos-card__description">
-                            기준과 형식이 달라<br>
-                            분석 결과가 일관되지 않습니다
-                        </p>
-                    </article>
-                    <article class="data-chaos-card">
-                        <div class="data-chaos-card__icon">⚠️</div>
-                        <h3 class="data-chaos-card__title">수작업 검증</h3>
-                        <p class="data-chaos-card__description">
-                            오류·누락 검증을<br>
-                            내부 인력이 직접 수행해야 합니다
-                        </p>
-                    </article>
-                    <article class="data-chaos-card">
-                        <div class="data-chaos-card__icon">⚠️</div>
-                        <h3 class="data-chaos-card__title">업데이트 지연</h3>
-                        <p class="data-chaos-card__description">
-                            업데이트 지연으로<br>
-                            중요한 판단 타이밍을 놓칩니다
-                        </p>
-                    </article>
-                    <article class="data-chaos-card">
-                        <div class="data-chaos-card__icon">⚠️</div>
-                        <h3 class="data-chaos-card__title">품질 책임</h3>
-                        <p class="data-chaos-card__description">
-                            데이터 품질에 대한 책임이<br>
-                            항상 내부에 남아 있습니다
-                        </p>
-                    </article>
-                </div>
-                <p class="data-chaos__conclusion">
-                    이러한 <strong>데이터의 혼돈(Data Chaos)</strong>은 비즈니스의 속도를 늦추고,<br>
-                    의사결정 리스크를 구조적으로 키웁니다.
+        <!-- ===================================== -->
+        <!--         Hero Section                 -->
+        <!-- ===================================== -->
+        <section class="hero hero--dark section section--large product-hero data-hero">
+            <div class="data-hero__grid-bg"></div>
+
+            <div class="product-hero__content fade-in-up">
+                <p class="data-hero__eyebrow">Managed Data Product</p>
+
+                <h1 class="title title--hero hero__headline">
+                    <span class="title__highlight title__highlight--data">BigValue가 책임지는 데이터 품질,</span><br>
+                    이제 내부에서 고민하지 마세요.<br>
+                </h1>
+
+                <p class="hero__description">
+                    보이지 않는 차이, 데이터 공급망의 모든 리스크를 방어합니다.<br>
+                    단순한 '제공'이 아닌, 연속성과 안정성을 끝까지 '관리'하는 파트너입니다.
                 </p>
             </div>
-        </section>
 
-        <!-- Section 3: Solution Overview (Clarity) -->
-        <section class="data-clarity">
-            <div class="data-clarity__container">
-                <h2 class="data-clarity__title">BigValue는 데이터의 혼돈을<br><span class="data-clarity__title-highlight">비즈니스 명확성</span>으로 바꿉니다</h2>
-                <div class="data-clarity__process">
-                    <div class="data-clarity__input">
-                        <div class="data-clarity__label">데이터 혼돈</div>
-                        <div class="data-clarity__chaos-icon">
-                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                                <circle cx="40" cy="40" r="35" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" opacity="0.5"/>
-                                <circle cx="25" cy="25" r="8" fill="currentColor" opacity="0.3"/>
-                                <circle cx="55" cy="25" r="8" fill="currentColor" opacity="0.3"/>
-                                <circle cx="40" cy="55" r="8" fill="currentColor" opacity="0.3"/>
-                            </svg>
-                        </div>
+            <div class="product-hero__visual fade-in-up fade-in-delay-2">
+                <div class="data-shield">
+                    <!-- Chaos Particles -->
+                    <div class="data-shield__particles">
+                        <div class="data-shield__particle data-shield__particle--1">Error</div>
+                        <div class="data-shield__particle data-shield__particle--2">Delay</div>
+                        <div class="data-shield__particle data-shield__particle--3">Noise</div>
+                        <div class="data-shield__particle data-shield__particle--4">Format</div>
+                        <div class="data-shield__particle data-shield__particle--5">Missing</div>
                     </div>
-                    <div class="data-clarity__engine">
-                        <div class="data-clarity__engine-box">
-                            <h3 class="data-clarity__engine-title">BigValue Engine</h3>
-                            <div class="data-clarity__engine-steps">
-                                <span class="data-clarity__step">정제</span>
-                                <span class="data-clarity__step-arrow">→</span>
-                                <span class="data-clarity__step">연결</span>
-                                <span class="data-clarity__step-arrow">→</span>
-                                <span class="data-clarity__step">검증</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="data-clarity__output">
-                        <div class="data-clarity__label">비즈니스 자산</div>
-                        <div class="data-clarity__clarity-icon">
-                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                                <rect x="10" y="10" width="60" height="60" rx="8" fill="currentColor" opacity="0.1"/>
-                                <path d="M25 40 L35 50 L55 30" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
+
+                    <!-- Shield Dome -->
+                    <div class="data-shield__dome shield-pulse-animate"></div>
+
+                    <!-- Protected Core -->
+                    <div class="data-shield__core floating-animate">
+                        Clean Data
                     </div>
                 </div>
-                <p class="data-clarity__summary">즉시 활용 가능한 비즈니스 자산으로 전환</p>
             </div>
         </section>
+        <!-- End Hero Section -->
 
-        <!-- Section 4: Core Values (4 Pillars) -->
-        <section class="data-pillars">
-            <div class="data-pillars__container">
-                <h2 class="data-pillars__title">BigValue Data Product의 4가지 핵심 가치</h2>
+        <!-- ===================================== -->
+        <!--       Problem Section                -->
+        <!-- ===================================== -->
+        <section class="section section--white section--large product-problem">
+            <div class="section__header fade-in-up">
+                <h2 class="title title--section section__title">
+                    모든 비즈니스의 시작점,<br>
+                    하지만 가장 큰 <span class="title__highlight title__highlight--alert">병목</span>이 된 데이터.
+                </h2>
+                <p class="section__subtitle">
+                    흩어진 출처, 제각각인 형식...<br>
+                    내부 인력이 '활용'보다 '관리'에 지쳐가고 있지 않으신가요?
+                </p>
+            </div>
 
-                <!-- Pillar 1: Reliability -->
-                <article class="data-pillar-card">
-                    <div class="data-pillar-card__icon">🛡️</div>
-                    <h3 class="data-pillar-card__title">Reliability</h3>
-                    <h4 class="data-pillar-card__subtitle">데이터 공급망 전체를 책임지는 구조</h4>
-                    <p class="data-pillar-card__description">
-                        데이터 원천이 바뀌어도, 형식이 달라져도, 고객은 영향을 받지 않습니다.<br>
-                        BigValue는 <strong>Data Shield</strong> 구조로 모든 변경을 흡수하고,
-                        변경 이력을 관리하며, 오류를 자동으로 보정합니다.
+            <!-- Error Popups Visual -->
+            <div class="data-problem__visual fade-in-up fade-in-delay-1">
+                <div class="data-problem__wires"></div>
+                <div class="data-problem__error-popup data-problem__error-popup--1">⚠️ Format Mismatch</div>
+                <div class="data-problem__error-popup data-problem__error-popup--2">⏱ Update Delayed</div>
+                <div class="data-problem__error-popup data-problem__error-popup--3">🚫 Validation Failed</div>
+            </div>
+
+            <div class="grid grid--auto">
+                <div class="card card--problem fade-in-up fade-in-delay-2">
+                    <div class="card__icon">⚠️</div>
+                    <h3 class="card__title">분산된 출처</h3>
+                    <p class="card__desc">
+                        데이터가 여러 출처에 흩어져 있어<br>
+                        통합과 관리에 막대한 리소스가 소모됩니다
                     </p>
-                    <ul class="data-pillar-card__features">
-                        <li>원천 데이터 변경 이력 자동 추적</li>
-                        <li>오류 자동 감지 및 보정 시스템</li>
-                        <li>데이터 연속성 보장 (100% SLA)</li>
-                    </ul>
-                </article>
-
-                <!-- Pillar 2: Connectivity -->
-                <article class="data-pillar-card">
-                    <div class="data-pillar-card__icon">🔗</div>
-                    <h3 class="data-pillar-card__title">Connectivity</h3>
-                    <h4 class="data-pillar-card__subtitle">연결이 모든 것을 바꿉니다</h4>
-                    <p class="data-pillar-card__description">
-                        부동산, 기업, 인구, 상권 데이터가 <strong>단일 BigValue 고유 코드</strong>로 연결됩니다.<br>
-                        여러 데이터셋을 조합하지 않아도, 하나의 키로 360° 분석이 가능합니다.
+                </div>
+                <div class="card card--problem fade-in-up fade-in-delay-3">
+                    <div class="card__icon">⚠️</div>
+                    <h3 class="card__title">일관성 부재</h3>
+                    <p class="card__desc">
+                        기준과 형식이 달라<br>
+                        분석 결과가 일관되지 않습니다
                     </p>
-                    <ul class="data-pillar-card__features">
-                        <li>BigValue 고유 ID 체계로 모든 데이터 연결</li>
-                        <li>Cross-domain 분석을 위한 사전 매핑</li>
-                        <li>복잡한 JOIN 작업 불필요</li>
-                    </ul>
-                </article>
-
-                <!-- Pillar 3: Speed -->
-                <article class="data-pillar-card">
-                    <div class="data-pillar-card__icon">⚡</div>
-                    <h3 class="data-pillar-card__title">Speed</h3>
-                    <h4 class="data-pillar-card__subtitle">속도가 경쟁력입니다</h4>
-                    <p class="data-pillar-card__description">
-                        공시지가는 익일, 실거래는 당일 제공합니다.<br>
-                        시장이 움직이는 속도에 맞춰 데이터를 제공하여,
-                        고객이 타이밍을 놓치지 않도록 합니다.
+                </div>
+                <div class="card card--problem fade-in-up fade-in-delay-4">
+                    <div class="card__icon">⚠️</div>
+                    <h3 class="card__title">수작업 검증</h3>
+                    <p class="card__desc">
+                        오류·누락 검증을<br>
+                        내부 인력이 직접 수행해야 합니다
                     </p>
-                    <ul class="data-pillar-card__features">
-                        <li>공시지가: 발표 익일 제공</li>
-                        <li>부동산 실거래: 당일 오후 제공</li>
-                        <li>기업 정보: 실시간 업데이트</li>
-                    </ul>
-                </article>
+                </div>
+            </div>
+        </section>
+        <!-- End Problem Section -->
 
-                <!-- Pillar 4: AI-Ready (Most Important) -->
-                <article class="data-pillar-card data-pillar-card--highlight">
-                    <div class="data-pillar-card__badge">Most Important</div>
-                    <div class="data-pillar-card__icon">🤖</div>
-                    <h3 class="data-pillar-card__title">AI-Ready Data</h3>
-                    <h4 class="data-pillar-card__subtitle">새로운 경쟁 우위</h4>
-                    <p class="data-pillar-card__description">
-                        <strong class="data-pillar-card__emphasis">원본 데이터는 AI의 학습을 방해하는 장애물입니다.</strong><br>
-                        BigValue는 AI Agent가 즉시 활용 가능한 상태로 데이터를 제공합니다.
-                        추가 가공 없이, 바로 학습과 추론에 사용할 수 있습니다.
+        <!-- ===================================== -->
+        <!--       Solution Section               -->
+        <!-- ===================================== -->
+        <section class="section section--gradient-light section--large product-solution">
+            <div class="section__header fade-in-up">
+                <h2 class="title title--section section__title">
+                    흩어진 데이터를<br>
+                    '<span class="title__highlight">비즈니스의 언어</span>'로 완성합니다.
+                </h2>
+                <p class="section__subtitle">
+                    독자적인 BigValue Engine을 통해 혼란스러운 원본 데이터를<br>
+                    '즉시 활용 가능한 자산'으로 재가공합니다.
+                </p>
+            </div>
+
+            <!-- Engine Graphic -->
+            <div class="data-engine fade-in-up fade-in-delay-1">
+                <div class="data-engine__step">
+                    <div class="data-engine__icon">🪨</div>
+                    <span class="data-engine__label">Raw Data</span>
+                </div>
+
+                <div class="data-engine__arrow">➡</div>
+
+                <div class="data-engine__step">
+                    <div class="data-engine__icon data-engine__icon--gear">⚙️</div>
+                    <span class="data-engine__label">BigValue Engine</span>
+                    <div class="data-engine__badges">
+                        <span class="data-engine__badge">AI Auto</span>
+                        <span class="data-engine__badge">Expert QA</span>
+                    </div>
+                </div>
+
+                <div class="data-engine__arrow">➡</div>
+
+                <div class="data-engine__step">
+                    <div class="data-engine__icon">💎</div>
+                    <span class="data-engine__label">Refined Data</span>
+                </div>
+            </div>
+        </section>
+        <!-- End Solution Section -->
+
+        <!-- ===================================== -->
+        <!--       Benefits Section               -->
+        <!-- ===================================== -->
+        <section class="section section--white section--large product-benefits">
+            <div class="section__header fade-in-up">
+                <h2 class="title title--section section__title">
+                    BigValue Data가 주는<br>
+                    4가지 확신
+                </h2>
+            </div>
+
+            <div class="data-benefits__grid">
+                <!-- Value 1: Governance -->
+                <div class="card card--benefit data-benefits__card fade-in-up fade-in-delay-1">
+                    <span class="data-benefits__icon">🛡️</span>
+                    <h3 class="data-benefits__title">관리의 해방</h3>
+                    <p class="data-benefits__subtitle">공급망 전체를 책임지는 방어막</p>
+                    <p class="data-benefits__description">
+                        행정구역 변경, 원천 오류 등 모든 리스크를 사전에 감지하고 보정하여<br>
+                        시스템의 연속성을 보장합니다.
                     </p>
-                    <ul class="data-pillar-card__features">
-                        <li>AI 학습에 최적화된 구조화된 형식</li>
-                        <li>Tokenization, Embedding 사전 처리</li>
-                        <li>LLM/Agent 즉시 연동 가능</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <!-- Section 5: Production Process (Quality Control) -->
-        <section class="data-process">
-            <div class="data-process__container">
-                <h2 class="data-process__title">하이브리드 생산 프로세스</h2>
-                <p class="data-process__subtitle">AI 자동화 + 전문가 감독</p>
-
-                <div class="data-process__flow">
-                    <div class="data-process__step">
-                        <div class="data-process__step-number">1</div>
-                        <h3 class="data-process__step-title">수집</h3>
-                        <p class="data-process__step-description">
-                            다양한 원천에서<br>데이터 자동 수집
-                        </p>
-                    </div>
-                    <div class="data-process__arrow">→</div>
-                    <div class="data-process__step">
-                        <div class="data-process__step-number">2</div>
-                        <h3 class="data-process__step-title">정제</h3>
-                        <p class="data-process__step-description">
-                            AI 기반<br>데이터 클렌징
-                        </p>
-                    </div>
-                    <div class="data-process__arrow">→</div>
-                    <div class="data-process__step">
-                        <div class="data-process__step-number">3</div>
-                        <h3 class="data-process__step-title">가공</h3>
-                        <p class="data-process__step-description">
-                            비즈니스 로직<br>적용 및 연결
-                        </p>
-                    </div>
-                    <div class="data-process__arrow">→</div>
-                    <div class="data-process__step">
-                        <div class="data-process__step-number">4</div>
-                        <h3 class="data-process__step-title">생산</h3>
-                        <p class="data-process__step-description">
-                            최종 데이터<br>프로덕트 생성
-                        </p>
-                    </div>
-                    <div class="data-process__arrow">→</div>
-                    <div class="data-process__step data-process__step--highlight">
-                        <div class="data-process__step-number">5</div>
-                        <h3 class="data-process__step-title">QA</h3>
-                        <p class="data-process__step-description">
-                            전문가 감독<br>품질 검증
-                        </p>
-                    </div>
                 </div>
 
-                <div class="data-process__note">
-                    <p>모든 단계는 자동화되어 있으나, 최종 품질 검증은 데이터 전문가가 직접 수행합니다.</p>
+                <!-- Value 2: Connectivity -->
+                <div class="card card--benefit data-benefits__card fade-in-up fade-in-delay-2">
+                    <span class="data-benefits__icon">🔗</span>
+                    <h3 class="data-benefits__title">완벽한 연결</h3>
+                    <p class="data-benefits__subtitle">단 하나의 코드로 모든 데이터 연결</p>
+                    <p class="data-benefits__description">
+                        부동산, 사업자, 금융 데이터를 '고유 코드'로 통합.<br>
+                        복잡한 조인 없이 360도 분석이 가능합니다.
+                    </p>
+                </div>
+
+                <!-- Value 3: Speed -->
+                <div class="card card--benefit data-benefits__card fade-in-up fade-in-delay-3">
+                    <span class="data-benefits__icon">⚡</span>
+                    <h3 class="data-benefits__title">압도적인 속도</h3>
+                    <p class="data-benefits__subtitle">판단의 골든타임을 지키는 최신성</p>
+                    <p class="data-benefits__description">
+                        공시지가 익일, 실거래가 당일 제공.<br>
+                        발생 시점과 판단 시점 사이의 지연을 제로로 만듭니다.
+                    </p>
+                </div>
+
+                <!-- Value 4: AI-Readiness (Highlight) -->
+                <div class="card card--benefit data-benefits__card data-benefits__card--highlight fade-in-up fade-in-delay-4">
+                    <span class="data-benefits__icon">🤖</span>
+                    <h3 class="data-benefits__title">AI 시대를 위한 준비</h3>
+                    <p class="data-benefits__subtitle">AI 모델에 바로 투입하는 연료</p>
+                    <p class="data-benefits__description">
+                        노이즈가 제거된 AI-Ready Data.<br>
+                        분석을 넘어 자동화 서비스로 비즈니스를 확장하세요.
+                    </p>
                 </div>
             </div>
         </section>
+        <!-- End Benefits Section -->
 
-        <!-- Section 6: Business Offering (Product Definition) -->
-        <section class="data-offering">
-            <div class="data-offering__container">
-                <h2 class="data-offering__title">BigValue Data Product는<br>고객의 이런 문제를 이렇게 해결합니다</h2>
-
-                <div class="data-offering__grid">
-                    <!-- Box 1: Data Expertise -->
-                    <article class="data-offering-box">
-                        <div class="data-offering-box__icon">📊</div>
-                        <h3 class="data-offering-box__title">데이터 전문</h3>
-                        <p class="data-offering-box__description">
-                            데이터 구조 설계부터 해석, 정의까지<br>
-                            모든 전문 영역을 BigValue가 수행합니다
-                        </p>
-                        <ul class="data-offering-box__features">
-                            <li>데이터 스키마 설계</li>
-                            <li>비즈니스 용어 정의</li>
-                            <li>분석 가이드 제공</li>
-                        </ul>
-                    </article>
-
-                    <!-- Box 2: Data Supply -->
-                    <article class="data-offering-box">
-                        <div class="data-offering-box__icon">🚚</div>
-                        <h3 class="data-offering-box__title">데이터 공급</h3>
-                        <p class="data-offering-box__description">
-                            대용량 Bulk 데이터부터<br>
-                            정기/비정기 업데이트까지 유연하게 제공
-                        </p>
-                        <ul class="data-offering-box__features">
-                            <li>초기 Bulk 데이터 제공</li>
-                            <li>일/주/월 단위 정기 업데이트</li>
-                            <li>이벤트 기반 비정기 업데이트</li>
-                        </ul>
-                    </article>
-
-                    <!-- Box 3: Quality Assurance -->
-                    <article class="data-offering-box data-offering-box--primary">
-                        <div class="data-offering-box__icon">✓</div>
-                        <h3 class="data-offering-box__title">품질 관리(QA)</h3>
-                        <p class="data-offering-box__description">
-                            오류 감지, 연속성 유지, 품질 리스크까지<br>
-                            <strong>BigValue가 모든 책임을 집니다</strong>
-                        </p>
-                        <ul class="data-offering-box__features">
-                            <li>자동 오류 감지 및 알림</li>
-                            <li>데이터 연속성 100% 보장</li>
-                            <li>품질 리스크 책임 이전</li>
-                        </ul>
-                    </article>
-                </div>
+        <!-- ===================================== -->
+        <!--       Trusted By Section             -->
+        <!-- ===================================== -->
+        <section class="section section--light section--large product-trusted">
+            <h2 class="title title--section section__title fade-in-up">신뢰받는 BigValue</h2>
+            <p class="section__subtitle fade-in-up fade-in-delay-1">
+                데이터 품질이 곧 '책임'이 되는 조직들이<br>
+                BigValue를 선택했습니다
+            </p>
+            <div class="product-trusted__logos fade-in-up fade-in-delay-2">
+                <img src="../../src/images/clients/1_신한은행.png" alt="신한은행" class="product-trusted__logo">
+                <img src="../../src/images/clients/2_하나은행.png" alt="하나은행" class="product-trusted__logo">
+                <img src="../../src/images/clients/3_삼성증권.png" alt="삼성증권" class="product-trusted__logo">
+                <img src="../../src/images/clients/4_농협중앙회.png" alt="농협중앙회" class="product-trusted__logo">
+                <img src="../../src/images/clients/5_npay.png" alt="네이버페이" class="product-trusted__logo">
+                <img src="../../src/images/clients/6_banksalad.png" alt="뱅크샐러드" class="product-trusted__logo">
             </div>
         </section>
+        <!-- End Trusted By Section -->
 
-        <!-- Section 7: Before & After (Comparison) -->
-        <section class="data-comparison">
-            <div class="data-comparison__container">
-                <h2 class="data-comparison__title">Before & After</h2>
-                <p class="data-comparison__subtitle">BigValue Data Product 도입 전후 비교</p>
-
-                <div class="data-comparison__table-wrapper">
-                    <table class="data-comparison__table">
-                        <thead>
-                            <tr>
-                                <th class="data-comparison__header data-comparison__header--before">Before</th>
-                                <th class="data-comparison__header data-comparison__header--after">After (BigValue)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="data-comparison__cell data-comparison__cell--before">
-                                    <div class="data-comparison__content">
-                                        <h4>데이터 관리 부담</h4>
-                                        <p>내부 팀이 직접 수집, 정제, 검증 수행</p>
-                                    </div>
-                                </td>
-                                <td class="data-comparison__cell data-comparison__cell--after">
-                                    <div class="data-comparison__content">
-                                        <h4>BigValue에 완전 위임</h4>
-                                        <p>데이터 공급망 전체를 외부로 이전</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="data-comparison__cell data-comparison__cell--before">
-                                    <div class="data-comparison__content">
-                                        <h4>분석 결과 흔들림</h4>
-                                        <p>기준과 형식이 달라 결과가 일관되지 않음</p>
-                                    </div>
-                                </td>
-                                <td class="data-comparison__cell data-comparison__cell--after">
-                                    <div class="data-comparison__content">
-                                        <h4>항상 동일한 기준</h4>
-                                        <p>BigValue 표준으로 재현 가능한 결과</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="data-comparison__cell data-comparison__cell--before">
-                                    <div class="data-comparison__content">
-                                        <h4>업데이트 지연</h4>
-                                        <p>중요한 판단 타이밍을 놓침</p>
-                                    </div>
-                                </td>
-                                <td class="data-comparison__cell data-comparison__cell--after">
-                                    <div class="data-comparison__content">
-                                        <h4>최신 데이터 보장</h4>
-                                        <p>판단 시점에 맞춘 적시 제공</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="data-comparison__cell data-comparison__cell--before">
-                                    <div class="data-comparison__content">
-                                        <h4>QA 리스크 내부 보유</h4>
-                                        <p>데이터 품질 책임이 항상 내부에 남음</p>
-                                    </div>
-                                </td>
-                                <td class="data-comparison__cell data-comparison__cell--after">
-                                    <div class="data-comparison__content">
-                                        <h4>QA 리스크 외부 이전</h4>
-                                        <p>BigValue가 품질을 100% 보장</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="data-comparison__cell data-comparison__cell--before">
-                                    <div class="data-comparison__content">
-                                        <h4>AI 활용 시 추가 가공</h4>
-                                        <p>원본 데이터를 AI용으로 재가공 필요</p>
-                                    </div>
-                                </td>
-                                <td class="data-comparison__cell data-comparison__cell--after">
-                                    <div class="data-comparison__content">
-                                        <h4>AI-Ready Data</h4>
-                                        <p>즉시 학습 및 추론에 활용 가능</p>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Mobile Stack Version -->
-                <div class="data-comparison__cards">
-                    <div class="data-comparison-card">
-                        <div class="data-comparison-card__before">
-                            <h4 class="data-comparison-card__label">Before</h4>
-                            <h5 class="data-comparison-card__title">데이터 관리 부담</h5>
-                            <p>내부 팀이 직접 수집, 정제, 검증 수행</p>
-                        </div>
-                        <div class="data-comparison-card__after">
-                            <h4 class="data-comparison-card__label">After</h4>
-                            <h5 class="data-comparison-card__title">BigValue에 완전 위임</h5>
-                            <p>데이터 공급망 전체를 외부로 이전</p>
-                        </div>
-                    </div>
-                    <div class="data-comparison-card">
-                        <div class="data-comparison-card__before">
-                            <h4 class="data-comparison-card__label">Before</h4>
-                            <h5 class="data-comparison-card__title">분석 결과 흔들림</h5>
-                            <p>기준과 형식이 달라 결과가 일관되지 않음</p>
-                        </div>
-                        <div class="data-comparison-card__after">
-                            <h4 class="data-comparison-card__label">After</h4>
-                            <h5 class="data-comparison-card__title">항상 동일한 기준</h5>
-                            <p>BigValue 표준으로 재현 가능한 결과</p>
-                        </div>
-                    </div>
-                    <div class="data-comparison-card">
-                        <div class="data-comparison-card__before">
-                            <h4 class="data-comparison-card__label">Before</h4>
-                            <h5 class="data-comparison-card__title">업데이트 지연</h5>
-                            <p>중요한 판단 타이밍을 놓침</p>
-                        </div>
-                        <div class="data-comparison-card__after">
-                            <h4 class="data-comparison-card__label">After</h4>
-                            <h5 class="data-comparison-card__title">최신 데이터 보장</h5>
-                            <p>판단 시점에 맞춘 적시 제공</p>
-                        </div>
-                    </div>
-                    <div class="data-comparison-card">
-                        <div class="data-comparison-card__before">
-                            <h4 class="data-comparison-card__label">Before</h4>
-                            <h5 class="data-comparison-card__title">QA 리스크 내부 보유</h5>
-                            <p>데이터 품질 책임이 항상 내부에 남음</p>
-                        </div>
-                        <div class="data-comparison-card__after">
-                            <h4 class="data-comparison-card__label">After</h4>
-                            <h5 class="data-comparison-card__title">QA 리스크 외부 이전</h5>
-                            <p>BigValue가 품질을 100% 보장</p>
-                        </div>
-                    </div>
-                    <div class="data-comparison-card">
-                        <div class="data-comparison-card__before">
-                            <h4 class="data-comparison-card__label">Before</h4>
-                            <h5 class="data-comparison-card__title">AI 활용 시 추가 가공</h5>
-                            <p>원본 데이터를 AI용으로 재가공 필요</p>
-                        </div>
-                        <div class="data-comparison-card__after">
-                            <h4 class="data-comparison-card__label">After</h4>
-                            <h5 class="data-comparison-card__title">AI-Ready Data</h5>
-                            <p>즉시 학습 및 추론에 활용 가능</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 8: Trusted By (Social Proof) -->
-        <section class="data-trust">
-            <div class="data-trust__container">
-                <h2 class="data-trust__title">신뢰받는 BigValue</h2>
-                <p class="data-trust__subtitle">데이터 품질이 곧 '책임'이 되는 조직들이 BigValue를 선택했습니다</p>
+        <!-- ===================================== -->
+        <!--       Final CTA Section              -->
+        <!-- ===================================== -->
+        <section class="section section--dark section--large product-cta">
+            <div class="product-cta__content">
+                <h2 class="title title--section section__title fade-in-up">
+                    당신의 조직도<br>
+                    BigValue와 함께하세요
+                </h2>
 
                 <div class="data-trust__categories">
-                    <div class="data-trust__category">
+                    <div class="data-trust__category fade-in-up fade-in-delay-1">
                         <h3 class="data-trust__category-title">금융기관</h3>
                         <p class="data-trust__category-description">
                             리스크 관리와 투자 판단에<br>
                             BigValue 데이터를 활용합니다
                         </p>
                     </div>
-                    <div class="data-trust__category">
+                    <div class="data-trust__category fade-in-up fade-in-delay-2">
                         <h3 class="data-trust__category-title">공공기관</h3>
                         <p class="data-trust__category-description">
                             정책 수립과 의사결정에<br>
                             검증된 데이터를 사용합니다
                         </p>
                     </div>
-                    <div class="data-trust__category">
+                    <div class="data-trust__category fade-in-up fade-in-delay-3">
                         <h3 class="data-trust__category-title">대기업</h3>
                         <p class="data-trust__category-description">
                             전략적 의사결정과 시장 분석에<br>
                             신뢰할 수 있는 데이터를 활용합니다
                         </p>
                     </div>
-                    <div class="data-trust__category">
+                    <div class="data-trust__category fade-in-up fade-in-delay-4">
                         <h3 class="data-trust__category-title">전략·컨설팅</h3>
                         <p class="data-trust__category-description">
                             고객사 프로젝트에<br>
@@ -504,17 +276,52 @@
                     </div>
                 </div>
 
-                <div class="data-trust__cta">
-                    <p class="data-trust__cta-text">당신의 조직도 BigValue와 함께하세요</p>
-                    <button class="btn btn--cta btn--large">데이터 전문가와 상담하기</button>
+                <div class="data-trust__cta fade-in-up fade-in-delay-5">
+                    <p class="data-trust__cta-text">데이터 전문가와 상담하고 싶으신가요?</p>
+                    <button class="btn btn--cta btn--large"
+                            onclick="window.openInquiryModal && window.openInquiryModal()">데이터 전문가와 상담하기</button>
                 </div>
             </div>
         </section>
-    </main>
+        <!-- End Final CTA Section -->
 
-    <!-- Footer Placeholder -->
+    </main>
+    <!-- End Main Content -->
+
+    <!-- Footer Placeholder (will be replaced by JavaScript) -->
     <div id="footer-placeholder"></div>
 
     <script src="../../script.js"></script>
+    <script>
+        // Intersection Observer for fade-in animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Defensive coding: Check if IntersectionObserver is supported
+            if (!('IntersectionObserver' in window)) {
+                console.warn('IntersectionObserver not supported, skipping animations');
+                return;
+            }
+
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in elements
+            const fadeElements = document.querySelectorAll('.fade-in-up');
+            if (fadeElements && fadeElements.length > 0) {
+                fadeElements.forEach(el => {
+                    observer.observe(el);
+                });
+            }
+        });
+    </script>
 </body>
 </html>
