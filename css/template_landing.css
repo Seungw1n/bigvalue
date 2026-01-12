@@ -150,7 +150,14 @@
 }
 
 .landing-features__card-icon {
-    font-size: 48px;
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-neutral-white);
+    border-radius: var(--radius-m);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
     margin-bottom: 20px;
 }
 
@@ -306,8 +313,7 @@
 }
 
 .landing-solution__image {
-    width: 100%;
-    height: auto;
+    min-height: 500px;
     display: block;
 }
 

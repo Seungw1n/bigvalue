@@ -854,7 +854,7 @@
                         <div class="header__left">
                             <div class="header__logo">
                                 <a href="/">
-                                    <img src="https://www.figma.com/api/mcp/asset/a54d4e2e-aacd-40f4-8130-d3937c1af719" alt="BigValue 로고" class="header__logo-img">
+                                    <img src="/src/images/bv-logo.png" alt="BigValue 로고" class="header__logo-img">
                                 </a>
                             </div>
                             <nav class="header__nav">
@@ -955,7 +955,7 @@
                         <div class="footer__top">
                             <div class="footer__left">
                                 <div class="footer__logo">
-                                    <img src="https://www.figma.com/api/mcp/asset/27d01ce8-55c9-4521-b87e-77394e2198f1" alt="BigValue" class="footer__logo-img">
+                                    <img src="/src/images/footer-bv-logo.png" alt="BigValue" class="footer__logo-img">
                                 </div>
                                 <div class="footer__company-info">
                                     <p class="footer__company-name">주식회사 빅밸류</p>
@@ -969,11 +969,11 @@
                             <div class="footer__right">
                                 <nav class="footer__nav">
                                     <div class="footer__nav-section">
-                                        <h4 class="footer__nav-title">회사소개</h4>
+                                        <h4 class="footer__nav-title">Company</h4>
                                         <ul class="footer__nav-list">
-                                            <li><a href="/about-us/" class="footer__nav-link">About us</a></li>
-                                            <li><a href="/newsroom/" class="footer__nav-link">Newsroom</a></li>
-                                            <li><a href="/notice/" class="footer__nav-link">Notice</a></li>
+                                            <li><a href="/company/about-us/" class="footer__nav-link">About us</a></li>
+                                            <li><a href="/company/newsroom/" class="footer__nav-link">Newsroom</a></li>
+                                            <li><a href="/company/notice/" class="footer__nav-link">Notice</a></li>
                                             <li><a href="https://recruit.bigvalue.co.kr/" target="_blank" rel="noopener noreferrer" class="footer__nav-link">Careers</a></li>
                                         </ul>
                                     </div>
@@ -984,7 +984,7 @@
                         <div class="footer__bottom">
                             <p class="footer__copyright">Copyright 2025 by BigValue Co., Ltd. All rights reserved.</p>
                             <div class="footer__certification">
-                                <img src="https://www.figma.com/api/mcp/asset/bfb6113e-b7b9-42b3-9e87-4b8fe77dfcd4" alt="혁신금융" class="footer__cert-img">
+                                <img src="/src/images/financial-services-commission.png" alt="금융위원회 혁신금융서비스" class="footer__cert-img">
                                 <span class="footer__cert-text">혁신금융서비스사업자 선정기업</span>
                             </div>
                         </div>

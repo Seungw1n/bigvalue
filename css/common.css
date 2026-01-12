@@ -397,7 +397,7 @@ ul {
 }
 
 .btn--text {
-    background-color: var(--color-neutral-white);
+    background-color: transparent;
     color: var(--color-brand-primary);
 }
 
@@ -1279,7 +1279,7 @@ ul {
 .footer {
     background-color: var(--color-neutral-darkest);
     color: var(--color-neutral-white);
-    padding: 80px 200px 56px;
+    padding: 80px 100px 56px;
     margin: 56px 40px 80px;
     border-radius: var(--radius-2xl);
 }
