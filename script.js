@@ -588,7 +588,76 @@
     }
 
     // ==========================================
-    // Inquiry Modal
+    // Inquiry Modal Component (HTML Generator)
+    // ==========================================
+    class InquiryModalComponent {
+        constructor() {
+            this.init();
+        }
+
+        getHTML() {
+            return `
+                <!-- Inquiry Modal -->
+                <div id="inquiry-modal" class="modal" style="display: none;">
+                    <div class="modal__overlay"></div>
+                    <div class="modal__container">
+                        <div class="modal__header">
+                            <h2 class="modal__title">BigValue 문의하기</h2>
+                            <button class="modal__close" id="modal-close" aria-label="Close modal">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 6L6 18M6 6L18 18" stroke="#9291A5" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <form id="inquiry-form" class="modal__form">
+                            <div class="modal__field">
+                                <label class="modal__label" for="inquiry-name">이름 *</label>
+                                <input type="text" id="inquiry-name" name="name" class="modal__input" placeholder="홍길동" required>
+                            </div>
+                            <div class="modal__field-group">
+                                <div class="modal__field modal__field--half">
+                                    <label class="modal__label" for="inquiry-email">이메일 *</label>
+                                    <input type="email" id="inquiry-email" name="email" class="modal__input" placeholder="name@company.com" required>
+                                </div>
+                                <div class="modal__field modal__field--half">
+                                    <label class="modal__label" for="inquiry-mobile">전화번호</label>
+                                    <input type="tel" id="inquiry-mobile" name="mobile" class="modal__input" placeholder="010-0000-0000">
+                                </div>
+                            </div>
+                            <div class="modal__field">
+                                <label class="modal__label" for="inquiry-affiliation">소속</label>
+                                <input type="text" id="inquiry-affiliation" name="affiliation" class="modal__input" placeholder="회사명 또는 부서명">
+                            </div>
+                            <div class="modal__field">
+                                <label class="modal__label" for="inquiry-content">문의 내용 *</label>
+                                <textarea id="inquiry-content" name="content" class="modal__textarea" placeholder="BigValue에 대해 궁금한 점을 자유롭게 작성해주세요" rows="5" required></textarea>
+                            </div>
+                            <div class="modal__privacy">
+                                <div class="modal__privacy-header">
+                                    <span class="modal__privacy-title">개인정보처리방침</span>
+                                    <a href="/privacy-policy/" target="_blank" class="modal__privacy-link">전체보기</a>
+                                </div>
+                                <label class="modal__checkbox">
+                                    <input type="checkbox" id="inquiry-agree" name="agreePrivacyPolicy" required>
+                                    <span class="modal__checkbox-label">개인정보 제공에 동의합니다 *</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="modal__submit">문의하기</button>
+                        </form>
+                    </div>
+                </div>
+            `;
+        }
+
+        init() {
+            // Insert modal at the end of body
+            const modalHTML = this.getHTML();
+            document.body.insertAdjacentHTML('beforeend', modalHTML);
+        }
+    }
+
+    // ==========================================
+    // Inquiry Modal (Event Handler)
     // ==========================================
     class InquiryModal {
         constructor() {
@@ -824,6 +893,7 @@
 
             // Initialize all components
             new Header();
+            new InquiryModalComponent(); // Must be before InquiryModal
             new SmoothScroll();
             new DataCards();
             new FlowTabs();
@@ -867,7 +937,7 @@
                     <div class="header__container">
                         <div class="header__left">
                             <div class="header__logo">
-                                <a href="${root}index.html">
+                                <a href="${root}">
                                     <img src="${root}src/images/bv-logo.png" alt="BigValue 로고" class="header__logo-img">
                                 </a>
                             </div>
@@ -911,8 +981,17 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Company Dropdown -->
                                 <div class="header__nav-dropdown">
-                                    <a href="${root}company/" class="header__nav-link">Company</a>
+                                    <span class="header__nav-link header__nav-link--dropdown">Company</span>
+                                    <div class="header__dropdown-menu">
+                                        <div class="header__dropdown-menu-container">
+                                            <a href="${root}company/about-us/" class="header__dropdown-link">About us</a>
+                                            <a href="${root}company/newsroom/" class="header__dropdown-link">Newsroom</a>
+                                            <a href="${root}company/notice/" class="header__dropdown-link">Notice</a>
+                                            <a href="https://recruit.bigvalue.co.kr/" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">Careers</a>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="header__nav-dropdown">
                                     <a href="${root}pricing/" class="header__nav-link">Pricing</a>
@@ -920,8 +999,8 @@
                             </nav>
                         </div>
                         <div class="header__right">
-                            <a href="https://service.bigvalue.ai/" target="_blank" rel="noopener noreferrer" class="btn btn--login">Login</a>
-                            <a href="https://service.bigvalue.ai/guest" target="_blank" rel="noopener noreferrer" class="btn btn--contact">Get Started</a>
+                            <button class="btn btn--text btn--small">문의하기</button>
+                            <a href="https://service.staging.bigvalue.ai/sign-in" target="_blank" rel="noopener noreferrer" class="btn btn--cta btn--small">Sign in</a>
                         </div>
                     </div>
                 </header>
