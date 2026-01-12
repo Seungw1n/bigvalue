@@ -839,34 +839,48 @@
     }
 
     // ==========================================
+    // Helper: Detect Root Path
+    // ==========================================
+    const getRootPath = () => {
+        const script = document.querySelector('script[src$="script.js"]');
+        if (!script) return './';
+        const src = script.getAttribute('src');
+        // If src is "script.js", root is "./" (or empty)
+        // If src is "../../script.js", root is "../../"
+        return src.replace('script.js', '');
+    };
+
+    // ==========================================
     // GNB (Global Navigation Bar) Component
     // ==========================================
     class GNBComponent {
         constructor() {
+            this.rootPath = getRootPath();
             this.init();
         }
 
         getHTML() {
+            const root = this.rootPath;
             return `
                 <!-- Global Navigation Bar -->
                 <header class="header">
                     <div class="header__container">
                         <div class="header__left">
                             <div class="header__logo">
-                                <a href="/">
-                                    <img src="/src/images/bv-logo.png" alt="BigValue 로고" class="header__logo-img">
+                                <a href="${root}index.html">
+                                    <img src="${root}src/images/bv-logo.png" alt="BigValue 로고" class="header__logo-img">
                                 </a>
                             </div>
                             <nav class="header__nav">
                                 <!-- Products Dropdown -->
                                 <div class="header__nav-dropdown">
-                                    <a href="/products/" class="header__nav-link header__nav-link--dropdown">Products</a>
+                                    <a href="${root}products/" class="header__nav-link header__nav-link--dropdown">Products</a>
                                     <div class="header__dropdown-menu">
                                         <div class="header__dropdown-menu-container">
-                                            <a href="/products/data-product/" class="header__dropdown-link">Data Product</a>
-                                            <a href="/products/data-api/" class="header__dropdown-link">Data API</a>
-                                            <a href="/products/flow/" class="header__dropdown-link">Flow</a>
-                                            <a href="/products/ai-solution/" class="header__dropdown-link">AI Solution</a>
+                                            <a href="${root}products/data-product/" class="header__dropdown-link">Data Product</a>
+                                            <a href="${root}products/data-api/" class="header__dropdown-link">Data API</a>
+                                            <a href="${root}products/flow/" class="header__dropdown-link">Flow</a>
+                                            <a href="${root}products/ai-solution/" class="header__dropdown-link">AI Solution</a>
                                         </div>
                                     </div>
                                 </div>
@@ -875,12 +889,12 @@
                                     <span class="header__nav-link header__nav-link--dropdown">Solutions</span>
                                     <div class="header__dropdown-menu">
                                         <div class="header__dropdown-menu-container">
-                                            <a href="/solutions/" class="header__dropdown-link">Overview</a>
-                                            <a href="/solutions/finance/" class="header__dropdown-link">금융</a>
-                                            <a href="/solutions/logistics/" class="header__dropdown-link">유통/상권</a>
-                                            <a href="/solutions/government/" class="header__dropdown-link">공공/지자체</a>
-                                            <a href="/solutions/b2b-crm/" class="header__dropdown-link">B2B CRM</a>
-                                            <a href="/solutions/contents/" class="header__dropdown-link">정보/콘텐츠</a>
+                                            <a href="${root}solutions/" class="header__dropdown-link">Overview</a>
+                                            <a href="${root}solutions/finance/" class="header__dropdown-link">금융</a>
+                                            <a href="${root}solutions/logistics/" class="header__dropdown-link">유통/상권</a>
+                                            <a href="${root}solutions/government/" class="header__dropdown-link">공공/지자체</a>
+                                            <a href="${root}solutions/b2b-crm/" class="header__dropdown-link">B2B CRM</a>
+                                            <a href="${root}solutions/contents/" class="header__dropdown-link">정보/콘텐츠</a>
                                         </div>
                                     </div>
                                 </div>
@@ -889,41 +903,25 @@
                                     <span class="header__nav-link header__nav-link--dropdown">Developers</span>
                                     <div class="header__dropdown-menu">
                                         <div class="header__dropdown-menu-container">
-                                            <a href="/developers/data-product/" class="header__dropdown-link">Data Product</a>
-                                            <a href="/developers/data-api/" class="header__dropdown-link">Data API</a>
-                                            <a href="/developers/flow/" class="header__dropdown-link">Flow</a>
-                                            <a href="/developers/ai-agent/" class="header__dropdown-link">AI Agent</a>
+                                            <a href="${root}developers/data-product/" class="header__dropdown-link">Data Product</a>
+                                            <a href="${root}developers/data-api/" class="header__dropdown-link">Data API</a>
+                                            <a href="${root}developers/flow/" class="header__dropdown-link">Flow</a>
+                                            <a href="${root}developers/ai-agent/" class="header__dropdown-link">AI Agent</a>
                                             <a href="https://docs.bigvalue.ai/" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">Docs</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="header__nav-dropdown">
-                                    <span class="header__nav-link header__nav-link--dropdown">Use Case</span>
-                                    <div class="header__dropdown-menu">
-                                        <div class="header__dropdown-menu-container">
-                                            <a href="/use-case/customer-studies/" class="header__dropdown-link">Customer Studies</a>
-                                            <a href="/use-case/insight-feed/" class="header__dropdown-link">Insight Feed</a>
-                                        </div>
-                                    </div>
+                                    <a href="${root}company/" class="header__nav-link">Company</a>
                                 </div>
-                                <!-- Company Dropdown -->
                                 <div class="header__nav-dropdown">
-                                    <span class="header__nav-link header__nav-link--dropdown">Company</span>
-                                    <div class="header__dropdown-menu">
-                                        <div class="header__dropdown-menu-container">
-                                            <a href="/company/about-us/" class="header__dropdown-link">About us</a>
-                                            <a href="/company/newsroom/" class="header__dropdown-link">Newsroom</a>
-                                            <a href="/company/notice/" class="header__dropdown-link">Notice</a>
-                                            <a href="https://recruit.bigvalue.co.kr/" target="_blank" rel="noopener noreferrer" class="header__dropdown-link">Careers</a>
-                                        </div>
-                                    </div>
+                                    <a href="${root}pricing/" class="header__nav-link">Pricing</a>
                                 </div>
-                                <a href="/pricing/" class="header__nav-link">Pricing</a>
                             </nav>
                         </div>
                         <div class="header__right">
-                            <button class="btn btn--text btn--small">문의하기</button>
-                            <a href="https://service.staging.bigvalue.ai/sign-in" target="_blank" rel="noopener noreferrer" class="btn btn--cta btn--small">Sign in</a>
+                            <a href="https://service.bigvalue.ai/" target="_blank" rel="noopener noreferrer" class="btn btn--login">Login</a>
+                            <a href="https://service.bigvalue.ai/guest" target="_blank" rel="noopener noreferrer" class="btn btn--contact">Get Started</a>
                         </div>
                     </div>
                 </header>
@@ -931,7 +929,7 @@
         }
 
         init() {
-            // GNB를 페이지 시작 부분에 삽입
+            // GNB를 페이지 최상단에 삽입
             const gnbPlaceholder = document.getElementById('gnb-placeholder');
             if (gnbPlaceholder) {
                 gnbPlaceholder.outerHTML = this.getHTML();
@@ -944,10 +942,12 @@
     // ==========================================
     class FooterComponent {
         constructor() {
+            this.rootPath = getRootPath();
             this.init();
         }
 
         getHTML() {
+            const root = this.rootPath;
             return `
                 <!-- Footer -->
                 <footer class="footer">
@@ -955,15 +955,15 @@
                         <div class="footer__top">
                             <div class="footer__left">
                                 <div class="footer__logo">
-                                    <img src="/src/images/footer-bv-logo.png" alt="BigValue" class="footer__logo-img">
+                                    <img src="${root}src/images/footer-bv-logo.png" alt="BigValue" class="footer__logo-img">
                                 </div>
                                 <div class="footer__company-info">
                                     <p class="footer__company-name">주식회사 빅밸류</p>
                                     <p class="footer__address">서울특별시 중구 서소문로 138 대한일보빌딩 12층</p>
                                 </div>
                                 <div class="footer__legal-links">
-                                    <a href="/privacy-policy/" class="footer__legal-link">개인정보처리방침</a>
-                                    <a href="/terms-of-service/" class="footer__legal-link">이용약관</a>
+                                    <a href="${root}privacy-policy/" class="footer__legal-link">개인정보처리방침</a>
+                                    <a href="${root}terms-of-service/" class="footer__legal-link">이용약관</a>
                                 </div>
                             </div>
                             <div class="footer__right">
@@ -971,9 +971,9 @@
                                     <div class="footer__nav-section">
                                         <h4 class="footer__nav-title">Company</h4>
                                         <ul class="footer__nav-list">
-                                            <li><a href="/company/about-us/" class="footer__nav-link">About us</a></li>
-                                            <li><a href="/company/newsroom/" class="footer__nav-link">Newsroom</a></li>
-                                            <li><a href="/company/notice/" class="footer__nav-link">Notice</a></li>
+                                            <li><a href="${root}company/about-us/" class="footer__nav-link">About us</a></li>
+                                            <li><a href="${root}company/newsroom/" class="footer__nav-link">Newsroom</a></li>
+                                            <li><a href="${root}company/notice/" class="footer__nav-link">Notice</a></li>
                                             <li><a href="https://recruit.bigvalue.co.kr/" target="_blank" rel="noopener noreferrer" class="footer__nav-link">Careers</a></li>
                                         </ul>
                                     </div>
@@ -984,7 +984,7 @@
                         <div class="footer__bottom">
                             <p class="footer__copyright">Copyright 2025 by BigValue Co., Ltd. All rights reserved.</p>
                             <div class="footer__certification">
-                                <img src="/src/images/financial-services-commission.png" alt="금융위원회 혁신금융서비스" class="footer__cert-img">
+                                <img src="${root}src/images/financial-services-commission.png" alt="금융위원회 혁신금융서비스" class="footer__cert-img">
                                 <span class="footer__cert-text">혁신금융서비스사업자 선정기업</span>
                             </div>
                         </div>
