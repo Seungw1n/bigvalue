@@ -1,159 +1,257 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BigValue 정부/기관 솔루션 - 데이터 기반 정책 수립과 공공 서비스 혁신을 지원합니다">
-    <title>정부/기관 솔루션 - BigValue</title>
-    <!-- 새로운 CSS 구조: 공통 스타일 + 페이지 유형별 스타일 -->
+    <title>BigValue - 공공/지자체 솔루션</title>
     <link rel="stylesheet" href="../../css/common.css">
     <link rel="stylesheet" href="../../css/template_solution.css">
-    <!-- 기존 styles.css (롤백용, 문제 없으면 삭제 예정) -->
-    <!-- <link rel="stylesheet" href="../../styles.css"> -->
 </head>
+
 <body>
-    <!-- GNB Placeholder (will be replaced by JavaScript) -->
+    <!-- GNB Placeholder -->
     <div id="gnb-placeholder"></div>
 
-    <main class="main">
-        <div class="solution-container">
-            <!-- Header Section -->
-            <div class="solution-header">
-                <h1 class="solution-header__title">정부/기관 솔루션</h1>
-                <p class="solution-header__subtitle">데이터 기반 정책 수립과 공공 서비스 혁신을 지원합니다</p>
+    <main class="solution-main solution-container">
+
+        <!-- Section 1: Process Steps -->
+        <section class="solution-section solution-process">
+            <div class="solution-section__header">
+                <h1 class="solution-section__title">빅밸류는 솔루션이 아닌,<br>공공 혁신 파트너십을 제공합니다</h1>
             </div>
 
-            <!-- Overview Section -->
-            <section class="solution-overview">
-                <div class="solution-overview__box solution-overview__box--government">
-                    <h2 class="solution-overview__title">데이터로 만드는 스마트 공공 서비스</h2>
-                    <p class="solution-overview__text">
-                        BigValue의 정부/기관 솔루션은 공공 데이터, 인구 통계, 지역 경제 데이터를 통합 분석하여
-                        증거 기반 정책 수립과 효율적인 행정 서비스를 지원합니다.
+            <div class="solution-process__list">
+                <div class="solution-process__item">
+                    <div class="solution-process__number">1</div>
+                    <div class="solution-process__icon">📋</div>
+                    <h3 class="solution-process__title">데이터 전략 컨설팅</h3>
+                    <p class="solution-process__desc">공공 데이터 활용도를 진단하고<br>AI 활용 로드맵을 설계합니다.</p>
+                </div>
+                <div class="solution-process__item">
+                    <div class="solution-process__number">2</div>
+                    <div class="solution-process__icon">🗺️</div>
+                    <h3 class="solution-process__title">GeoAI 솔루션 구축</h3>
+                    <p class="solution-process__desc">공간 정보 기반의 맞춤형<br>예측·분석 시스템과<br>AI Ops 플랫폼을 제공합니다.</p>
+                </div>
+                <div class="solution-process__item">
+                    <div class="solution-process__number">3</div>
+                    <div class="solution-process__icon">⚙️</div>
+                    <h3 class="solution-process__title">행정 AX 자동화</h3>
+                    <p class="solution-process__desc">분석 결과를 실제 업무<br>프로세스(보고서, 공문 등)와 연결하여<br>업무 효율을 혁신합니다.</p>
+                </div>
+                <div class="solution-process__item">
+                    <div class="solution-process__number">4</div>
+                    <div class="solution-process__icon">💎</div>
+                    <h3 class="solution-process__title">AI-Ready 데이터 공급</h3>
+                    <p class="solution-process__desc">고도화된 예측 모델링에 필요한<br>신뢰성 있는 고품질 데이터<br>자산을 공급합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Tech Flow -->
+        <section class="solution-section solution-section--gray solution-tech">
+            <div class="solution-section__header">
+                <h2 class="solution-section__title">철학을 현실로 만드는 기술:<br>GeoAI와 자동화된 AI Ops 플랫폼</h2>
+            </div>
+
+            <div class="solution-tech-flow">
+                <div class="solution-tech-flow__stage">
+                    <div class="solution-tech-flow__title">데이터 수집<br>(Data Ingestion)</div>
+                    <div class="solution-tech-flow__desc">(GPS, 위성, 공공 데이터 등 다양한 소스)</div>
+                </div>
+                <div class="solution-tech-flow__arrow">➜</div>
+                <div class="solution-tech-flow__stage">
+                    <div class="solution-tech-flow__title">자동 QA/정제<br>(Automated Processing)</div>
+                    <div class="solution-tech-flow__desc">(AI-Ready 데이터 생성)</div>
+                </div>
+                <div class="solution-tech-flow__arrow">➜</div>
+                <div class="solution-tech-flow__stage">
+                    <div class="solution-tech-flow__title">GeoAI 분석<br>(GeoAI Analysis)</div>
+                    <div class="solution-tech-flow__desc">(빅밸류 Spatial Analysis Library 활용)</div>
+                </div>
+                <div class="solution-tech-flow__arrow">➜</div>
+                <div class="solution-tech-flow__stage">
+                    <div class="solution-tech-flow__title">모델 학습 및 예측<br>(Predictive Modeling)</div>
+                    <div class="solution-tech-flow__desc">(머신러닝 엔진)</div>
+                </div>
+                <div class="solution-tech-flow__arrow">➜</div>
+                <div class="solution-tech-flow__stage">
+                    <div class="solution-tech-flow__title">실행 가능한 결과<br>(Actionable Output)</div>
+                    <div class="solution-tech-flow__desc">(지도 기반 시각화, 보고서 자동 생성)</div>
+                </div>
+            </div>
+
+            <div class="solution-grid solution-grid--3col solution-tech__features">
+                <div class="solution-card">
+                    <h3 class="solution-card__title">AI Ops Pipeline</h3>
+                    <p class="solution-card__desc">데이터 수집부터 예측 결과<br>도출까지 전 과정 자동화.</p>
+                </div>
+                <div class="solution-card">
+                    <h3 class="solution-card__title">Spatial Analysis Library</h3>
+                    <p class="solution-card__desc">복잡한 지리적 관계를 해석하는<br>독자적 알고리즘.</p>
+                </div>
+                <div class="solution-card">
+                    <h3 class="solution-card__title">Dynamic Visualization</h3>
+                    <p class="solution-card__desc">지도 기반 시각화를 통한<br>직관적 의사결정 지원.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Philosophy -->
+        <section class="solution-section solution-philosophy">
+            <div class="solution-philosophy__content">
+                <blockquote class="solution-philosophy__quote">
+                    "모든 데이터가 AI에<br>바로 쓰일 수는 없습니다."
+                </blockquote>
+                <div class="solution-philosophy__text">
+                    <p>빅밸류는 단순히 많은 데이터를 쌓는 것에 집중하지 않습니다.<br>데이터의 양이 아닌 '질'과 '활용성'이 행정 혁신의 성패를 좌우합니다.</p>
+                    <br>
+                    <p>우리는 지속 가능하고(Sustainable), 분석 가능하며(Analytic), 예측에 최적화된(Predictive) 'AI-Ready' 데이터를 지향합니다.<br>이것이
+                        진정한 AX의 시작입니다.</p>
+                </div>
+            </div>
+            <div class="solution-philosophy__graphic">
+                <div class="solution-philosophy__graphic-content">
+                    <span class="solution-philosophy__graphic-icon">🕸️ ➜ 🧊</span>
+                    <p class="solution-philosophy__graphic-label">Raw Data to AI-Ready Cube</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Value -->
+        <section class="solution-section solution-value">
+            <div class="solution-section__header">
+                <h2 class="solution-section__title">빅밸류의 AI-Ready 데이터는 '가치'를 발굴하고<br>'미래'를 예측하며 '행동'을 이끌어냅니다.</h2>
+            </div>
+            <div class="solution-grid solution-grid--3col">
+                <div class="solution-card">
+                    <div class="solution-card__icon">🔍</div>
+                    <h3 class="solution-card__title">데이터 본연의 가치 발굴(Data Literacy)</h3>
+                    <p class="solution-card__desc">전문가 그룹의 탐색적 데이터 분석(EDA)을 통해 숨겨진 패턴과 인사이트를 찾아내고, 데이터의 근본적인 가치를 극대화합니다.
                     </p>
-                    <p class="solution-overview__text">
-                        도시 계획, 복지 정책, 산업 육성 등 다양한 공공 영역에서 데이터 분석을 통해
-                        국민의 삶의 질을 향상시키고 행정 효율성을 극대화할 수 있습니다.
+                </div>
+                <div class="solution-card">
+                    <div class="solution-card__icon">🔮</div>
+                    <h3 class="solution-card__title">미래 위험과 기회 예측(Predictive Value)</h3>
+                    <p class="solution-card__desc">과거의 기록을 넘어, 시뮬레이션과 예측 모델을 통해 미래에 발생할 수 있는 위험을 사전에 경고하고 새로운 기회를 포착합니다.
                     </p>
                 </div>
-            </section>
+                <div class="solution-card">
+                    <div class="solution-card__icon">🎯</div>
+                    <h3 class="solution-card__title">즉각적 의사결정 지원(Actionable Insights)</h3>
+                    <p class="solution-card__desc">분석 결과를 복잡한 리포트가 아닌, 실제 행정 현장에서 담당자가 즉시 이해하고 의사결정에 활용할 수 있는 명확한 정보로
+                        제공합니다.</p>
+                </div>
+            </div>
+        </section>
 
-            <!-- Use Cases Grid -->
-            <section class="solution-usecases">
-                <h2 class="solution-usecases__title">주요 활용 사례</h2>
-                <div class="solution-usecases__grid">
-                    <!-- Use Case 1: Urban Planning -->
-                    <div class="solution-usecase-card">
-                        <div class="solution-usecase-card__icon">
-                            🏙️
-                        </div>
-                        <h3 class="solution-usecase-card__title">스마트 도시 계획</h3>
-                        <p class="solution-usecase-card__description">
-                            인구 이동, 교통 흐름, 부동산 데이터를 분석하여 과학적 근거에 기반한 도시 개발 계획을 수립합니다.
-                        </p>
-                        <ul class="solution-usecase-card__list">
-                            <li class="solution-usecase-card__list-item">✓ 인구 변화 예측 및 수요 분석</li>
-                            <li class="solution-usecase-card__list-item">✓ 교통 인프라 최적 배치</li>
-                            <li class="solution-usecase-card__list-item">✓ 공공시설 입지 선정</li>
-                            <li class="solution-usecase-card__list-item">✓ 재개발/재건축 우선순위 결정</li>
-                        </ul>
+        <!-- Section 5: Impact -->
+        <section class="solution-section solution-section--gray solution-impact">
+            <div class="solution-section__header">
+                <h2 class="solution-section__title">데이터가 어떻게 실제 행정의 힘이 되는가</h2>
+            </div>
+
+            <div class="solution-impact-grid">
+                <div class="solution-impact-card">
+                    <h3 class="solution-impact-card__title">솔루션 (Solution)</h3>
+                    <ul class="solution-impact-card__list">
+                        <li class="solution-impact-card__item">
+                            <strong>AI-Ready 데이터 선별:</strong> 차량 GPS, 철새 정보 등 방대한 빅데이터 중 예측에 유효한 핵심 지표만 추출.
+                        </li>
+                        <li class="solution-impact-card__item">
+                            <strong>GeoAI 예측 모델:</strong> 과거 역학 보고서와 전문가 지식을 학습한 조류독감 사전 예측 알고리즘 구축.
+                        </li>
+                        <li class="solution-impact-card__item">
+                            <strong>실제 행정 업무용 공문 및 보고서 양식으로 자동 생성하여 지자체 담당자에게 즉시 전파.</strong>
+                        </li>
+                    </ul>
+                </div>
+                <div class="solution-impact-card">
+                    <h3 class="solution-impact-card__title">성과 (Impact)</h3>
+                    <ul class="solution-impact-card__list">
+                        <li class="solution-impact-card__item">
+                            <strong>방역 효율 극대화:</strong> 한정된 자원을 고위험 농장에 집중 배치.
+                        </li>
+                        <li class="solution-impact-card__item">
+                            <strong>행정 업무 자동화:</strong> 보고서 작성 등 반복 업무 자동화로 현장 대응 시간 확보.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="solution-impact-flow">
+                <div class="solution-impact-flow__item">
+                    <div class="solution-impact-flow__icon">🗺️</div>
+                    <div class="solution-impact-flow__text">지도 시각화</div>
+                </div>
+                <div class="solution-impact-flow__arrow">➜</div>
+                <div class="solution-impact-flow__item">
+                    <div class="solution-impact-flow__icon">📄</div>
+                    <div class="solution-impact-flow__text">보고서 자동 생성</div>
+                </div>
+                <div class="solution-impact-flow__arrow">➜</div>
+                <div class="solution-impact-flow__item">
+                    <div class="solution-impact-flow__icon">📡</div>
+                    <div class="solution-impact-flow__text">지자체 전파</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Case Studies -->
+        <section class="solution-section solution-cases">
+            <div class="solution-section__header">
+                <h2 class="solution-section__title">데이터의 품질이 행정의 신뢰를 만듭니다</h2>
+            </div>
+
+            <div class="solution-grid solution-grid--2col">
+                <div class="solution-card">
+                    <div class="solution-case-header">
+                        <h3 class="solution-card__title">충청남도 '올담' - 데이터 품질 진단 및 QA</h3>
                     </div>
-
-                    <!-- Use Case 2: Welfare Policy -->
-                    <div class="solution-usecase-card">
-                        <div class="solution-usecase-card__icon">
-                            🤝
-                        </div>
-                        <h3 class="solution-usecase-card__title">복지 정책 최적화</h3>
-                        <p class="solution-usecase-card__description">
-                            소득, 고용, 주거 데이터를 분석하여 복지 사각지대를 발굴하고 맞춤형 복지 서비스를 제공합니다.
-                        </p>
-                        <ul class="solution-usecase-card__list">
-                            <li class="solution-usecase-card__list-item">✓ 복지 사각지대 발굴</li>
-                            <li class="solution-usecase-card__list-item">✓ 맞춤형 복지 대상자 선정</li>
-                            <li class="solution-usecase-card__list-item">✓ 복지 예산 효율적 배분</li>
-                            <li class="solution-usecase-card__list-item">✓ 복지 정책 효과 분석</li>
-                        </ul>
+                    <div class="solution-case-graphic">
+                        <span class="solution-case-graphic__icon">🕸️ ➜ 💎</span>
                     </div>
-
-                    <!-- Use Case 3: Economic Development -->
-                    <div class="solution-usecase-card">
-                        <div class="solution-usecase-card__icon">
-                            📈
-                        </div>
-                        <h3 class="solution-usecase-card__title">지역 경제 활성화</h3>
-                        <p class="solution-usecase-card__description">
-                            산업 데이터와 상권 분석을 통해 지역 경제 활성화 전략을 수립하고 중소기업 지원 정책을 최적화합니다.
-                        </p>
-                        <ul class="solution-usecase-card__list">
-                            <li class="solution-usecase-card__list-item">✓ 지역 산업 경쟁력 분석</li>
-                            <li class="solution-usecase-card__list-item">✓ 상권 활성화 전략 수립</li>
-                            <li class="solution-usecase-card__list-item">✓ 중소기업 지원 대상 선정</li>
-                            <li class="solution-usecase-card__list-item">✓ 일자리 창출 효과 예측</li>
-                        </ul>
-                    </div>
-
-                    <!-- Use Case 4: Safety & Security -->
-                    <div class="solution-usecase-card">
-                        <div class="solution-usecase-card__icon">
-                            🚨
-                        </div>
-                        <h3 class="solution-usecase-card__title">안전 및 재난 관리</h3>
-                        <p class="solution-usecase-card__description">
-                            기상 데이터, 재난 이력, 시설물 정보를 분석하여 재난을 예방하고 신속한 대응 체계를 구축합니다.
-                        </p>
-                        <ul class="solution-usecase-card__list">
-                            <li class="solution-usecase-card__list-item">✓ 재난 위험 지역 예측</li>
-                            <li class="solution-usecase-card__list-item">✓ 안전 취약 시설 모니터링</li>
-                            <li class="solution-usecase-card__list-item">✓ 재난 대응 시뮬레이션</li>
-                            <li class="solution-usecase-card__list-item">✓ 범죄 예방 순찰 경로 최적화</li>
-                        </ul>
+                    <div class="solution-card__desc solution-case-content">
+                        <p><strong>과제:</strong> 오랜 기간 축적된 데이터의 질적 저하 및 활용성 문제.</p>
+                        <p><strong>해결:</strong> 빅밸류의 데이터 QA 솔루션과 EDA 전문 역량을 투입하여 데이터 결함 진단 및 개선 방안 제시.</p>
+                        <p><strong>결과:</strong> 신뢰도 높은 고품질 공공 데이터 자산 관리 체계 확립.</p>
                     </div>
                 </div>
-            </section>
 
-            <!-- Key Benefits Section -->
-            <section class="solution-benefits">
-                <h2 class="solution-benefits__title">BigValue 정부/기관 솔루션의 강점</h2>
-                <div class="solution-benefits__grid">
-                    <div class="solution-benefit-card">
-                        <div class="solution-benefit-card__icon">📊</div>
-                        <h3 class="solution-benefit-card__title">증거 기반 정책</h3>
-                        <p class="solution-benefit-card__description">
-                            데이터에 기반한 객관적 정책 수립으로 정책 효과를 극대화합니다.
-                        </p>
+                <div class="solution-card">
+                    <div class="solution-case-header">
+                        <h3 class="solution-card__title">고부가가치 AI-Ready 데이터 공급</h3>
                     </div>
-                    <div class="solution-benefit-card">
-                        <div class="solution-benefit-card__icon">⚡</div>
-                        <h3 class="solution-benefit-card__title">행정 효율화</h3>
-                        <p class="solution-benefit-card__description">
-                            자동화된 데이터 분석으로 행정 업무 시간을 단축하고 효율성을 높입니다.
-                        </p>
+                    <div class="solution-case-graphic">
+                        <span class="solution-case-graphic__icon">🔘 ➜ 🏦</span>
                     </div>
-                    <div class="solution-benefit-card">
-                        <div class="solution-benefit-card__icon">🔒</div>
-                        <h3 class="solution-benefit-card__title">보안 및 규정 준수</h3>
-                        <p class="solution-benefit-card__description">
-                            공공 데이터 보안 규정을 완벽히 준수하여 안전하게 데이터를 관리합니다.
-                        </p>
+                    <div class="solution-card__desc solution-case-content">
+                        <p><strong>파트너:</strong> 금융보안원, NIA, 소방청 빅데이터 플랫폼.</p>
+                        <p><strong>전략:</strong> 사용자가 바로 분석에 투입할 수 있는 '가공된 형태'의 데이터를 공급.</p>
+                        <p><strong>결과:</strong> 수요자 중심의 데이터 공급 전략으로 플랫폼 내 인기 데이터 상위권 유지.</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- CTA Section -->
-            <section class="solution-cta">
-                <div class="solution-cta__box">
-                    <h2 class="solution-cta__title">공공 데이터 솔루션이 궁금하신가요?</h2>
-                    <p class="solution-cta__text">BigValue의 공공 데이터 전문가가 귀 기관의 정책 수립과 행정 혁신을 지원합니다</p>
-                    <a href="https://bigvalue.ai/guest" target="_blank" class="solution-cta__button">문의하기</a>
+        <!-- Section 7: CTA -->
+        <section class="solution-section">
+            <div class="solution-cta">
+                <h2 class="solution-cta__title">지금 바로 공공 혁신을 시작하세요</h2>
+                <p class="solution-cta__desc">빅밸류의 전문 컨설턴트가 여러분의 데이터를 진단해드립니다.</p>
+                <div class="solution-cta__buttons">
+                    <button class="btn">문의하기</button>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer Placeholder (will be replaced by JavaScript) -->
+    <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
     <script src="../../script.js"></script>
 </body>
+
 </html>

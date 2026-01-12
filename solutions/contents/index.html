@@ -1,159 +1,529 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="BigValue 콘텐츠 솔루션 - 데이터 기반 콘텐츠 전략으로 고객 참여를 극대화하세요">
     <title>콘텐츠 솔루션 - BigValue</title>
-    <!-- 새로운 CSS 구조: 공통 스타일 + 페이지 유형별 스타일 -->
     <link rel="stylesheet" href="../../css/common.css">
     <link rel="stylesheet" href="../../css/template_solution.css">
-    <!-- 기존 styles.css (롤백용, 문제 없으면 삭제 예정) -->
-    <!-- <link rel="stylesheet" href="../../styles.css"> -->
 </head>
+
 <body>
-    <!-- GNB Placeholder (will be replaced by JavaScript) -->
+    <!-- GNB Placeholder -->
     <div id="gnb-placeholder"></div>
 
-    <main class="main">
-        <div class="solution-container">
-            <!-- Header Section -->
-            <div class="solution-header">
-                <h1 class="solution-header__title">콘텐츠 솔루션</h1>
-                <p class="solution-header__subtitle">데이터 기반 콘텐츠 전략으로 고객 참여를 극대화하세요</p>
+    <main class="solution-main solution-container">
+
+        <!-- Section 1: Hero (Image 0) -->
+        <section class="solution-section">
+            <div class="solution-section__header">
+                <p class="solution-section__subtitle" style="font-weight: 700; color: var(--color-brand-primary);">[제안서]
+                </p>
+                <h1 class="solution-section__title">빅밸류(BigValue) 컨텐츠 기반<br>데이터 공급 솔루션</h1>
+                <p class="solution-section__subtitle">고객의 서비스 혁신을 가속화하는 가장 빠른 데이터 파이프라인</p>
             </div>
+            <div class="solution-pipeline">
+                <div class="solution-pipeline__box">
+                    <span style="font-size: 40px;">🧵</span><br>
+                    <strong>Raw Data</strong>
+                </div>
+                <div class="solution-pipeline__arrow">➡️</div>
+                <div class="solution-pipeline__box"
+                    style="background: var(--color-brand-primary-light); color: white; border-style: solid;">
+                    <span style="font-size: 40px;">🧊</span><br>
+                    <strong>BigValue Pipeline</strong>
+                </div>
+                <div class="solution-pipeline__arrow">➡️</div>
+                <div class="solution-pipeline__box">
+                    <span style="font-size: 40px;">📱</span><br>
+                    <strong>Ready-to-Use Content</strong>
+                </div>
+            </div>
+        </section>
 
-            <!-- Overview Section -->
-            <section class="solution-overview">
-                <div class="solution-overview__box">
-                    <h2 class="solution-overview__title">데이터로 만드는 성공하는 콘텐츠</h2>
-                    <p class="solution-overview__text">
-                        BigValue의 콘텐츠 솔루션은 사용자 행동 데이터, 트렌드 분석, 경쟁사 인사이트를 통합하여
-                        가장 효과적인 콘텐츠 전략을 수립하고 성과를 측정합니다.
+        <!-- Section 2: Market Reality (Image 1) -->
+        <section class="solution-section solution-section--gray">
+            <div class="solution-section__header">
+                <h2 class="solution-section__title">디지털 전환 시대, 서비스 경쟁의 핵심은 '데이터'<br>그러나 현실은...</h2>
+            </div>
+            <div class="solution-grid solution-grid--3col">
+                <div class="solution-card">
+                    <div class="solution-card__icon">🏃</div>
+                    <h3 class="solution-card__title">가속화되는 시장 경쟁</h3>
+                    <p class="solution-card__desc">금융, 빅테크, 스타트업 등 산업 전반에서 대고객 서비스 경쟁이 심화되고 있습니다. 차별화된 고객 경험을 제공하기 위한
+                        데이터 기반 서비스 출시가 필수적입니다.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-card__icon">🧬</div>
+                    <h3 class="solution-card__title">데이터 활용의 병목 현상</h3>
+                    <p class="solution-card__desc">공공과 민간에 산재된 파편화된 데이터는 그 자체로 가치를 갖기 어렵습니다. 데이터를 실제 서비스에 사용하기까지의 정제,
+                        가공, 결합 과정에서 막대한 시간과 비용이 발생합니다.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-card__icon">🕒</div>
+                    <h3 class="solution-card__title">Time-to-Market의 압박</h3>
+                    <p class="solution-card__desc">아이디어를 빠르게 시장에 선보여야 하는 비즈니스 환경에서, 데이터 준비 기간은 가장 큰 허들입니다. 고품질의 컨텐츠를
+                        단기간에 서비스로 구현하려는 니즈가 폭발적으로 증가하고 있습니다.</p>
+                </div>
+            </div>
+            <div class="solution-visual-center" style="margin-top: 60px;">
+                <!-- Funnel Visual -->
+                <div style="display: flex; align-items: center; justify-content: center; gap: 40px;">
+                    <div style="text-align: right; color: var(--color-neutral-medium); font-size: var(--font-size-s);">
+                        공공 데이터<br>민간 데이터<br>파편화된 정보
+                    </div>
+                    <div style="font-size: 60px;">🌪️</div>
+                    <div style="color: var(--color-brand-primary); font-weight: 700;">
+                        정제 / 가공 비용 & 시간
+                    </div>
+                    <div style="font-size: 40px;">➡️</div>
+                    <div style="color: #1e40af; font-weight: 800; font-size: var(--font-size-l);">
+                        Time-to-Market
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Paradigm Shift (Image 4) -->
+        <section class="solution-section">
+            <div class="solution-section__header">
+                <h2 class="solution-section__title">빅밸류의 제안: ‘데이터’에서 ‘컨텐츠’로,<br>새로운 활용 패러다임의 시작</h2>
+                <p class="solution-section__subtitle">우리는 단순한 원천 데이터(Raw Data)가 아닌, 즉시 서비스에 탑재 가능한 완성형 컨텐츠(Ready-to-Use
+                    Content)를 제공하여 고객의 성공을 돕습니다.</p>
+            </div>
+            <div class="solution-grid solution-grid--3col">
+                <div class="solution-card">
+                    <h3 class="solution-card__title">서비스 구축 시간 단축</h3>
+                    <p class="solution-card__desc">빅밸류의 정제된 데이터 파이프라인을 통해 아이디어 구상부터 시장 출시까지의 기간을 획기적으로 단축합니다.</p>
+                </div>
+                <div class="solution-card">
+                    <h3 class="solution-card__title">전문성 내재화</h3>
+                    <p class="solution-card__desc">데이터 시각화 및 도메인 지식을 컨텐츠에 담아 제공함으로써, 고객사가 자체적으로 전문가를 확보하는 것 이상의 효과를
+                        제공합니다.</p>
+                </div>
+                <div class="solution-card">
+                    <h3 class="solution-card__title">핵심 비즈니스 집중</h3>
+                    <p class="solution-card__desc">고객은 데이터 인프라 구축 및 관리에 대한 고민 없이, 오직 자신의 핵심 서비스와 비즈니스 모델에만 집중할 수 있습니다.
                     </p>
-                    <p class="solution-overview__text">
-                        콘텐츠 기획부터 제작, 배포, 성과 분석까지 전 과정을 데이터로 최적화하여
-                        높은 참여율과 전환율을 달성하세요.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: 4 Core Values (Image 2) -->
+        <section class="solution-section solution-section--gray">
+            <div class="solution-section__header">
+                <h2 class="solution-section__title">빅밸류 데이터 솔루션의 4가지 핵심 가치</h2>
+            </div>
+            <div class="solution-grid solution-grid--4col">
+                <div class="solution-card">
+                    <div class="solution-card__icon">🔌</div>
+                    <h3 class="solution-card__title" style="font-size: var(--font-size-m);">Ready-to-Use</h3>
+                    <p class="solution-card__desc"
+                        style="font-size: var(--font-size-xs); color: var(--color-neutral-medium);">(즉시 사용 가능한 컨텐츠형 데이터)
                     </p>
+                    <ul class="solution-card__desc"
+                        style="font-size: var(--font-size-xs); margin-top: 15px; padding-left: 20px;">
+                        <li>별도의 정제/가공이 불필요합니다.</li>
+                        <li>API 호출 즉시 서비스 UI/UX에 바로 적용할 수 있습니다.</li>
+                    </ul>
                 </div>
-            </section>
+                <div class="solution-card">
+                    <div class="solution-card__icon">💠</div>
+                    <h3 class="solution-card__title" style="font-size: var(--font-size-m);">Hybrid Data</h3>
+                    <p class="solution-card__desc"
+                        style="font-size: var(--font-size-xs); color: var(--color-neutral-medium);">(신뢰성과 풍부함의 결합)</p>
+                    <ul class="solution-card__desc"
+                        style="font-size: var(--font-size-xs); margin-top: 15px; padding-left: 20px;">
+                        <li>공공 데이터의 높은 신뢰성과 민간 데이터의 풍부함을 결합했습니다.</li>
+                        <li>단일 소스로는 불가능한 깊이와 넓이를 제공합니다.</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-card__icon">💡</div>
+                    <h3 class="solution-card__title" style="font-size: var(--font-size-m);">Expert Consulting</h3>
+                    <p class="solution-card__desc"
+                        style="font-size: var(--font-size-xs); color: var(--color-neutral-medium);">(전문가 인사이트 제공)</p>
+                    <ul class="solution-card__desc"
+                        style="font-size: var(--font-size-xs); margin-top: 15px; padding-left: 20px;">
+                        <li>도메인 전문가의 자문을 통해 데이터를 설계합니다.</li>
+                        <li>효과적인 데이터 시각화 및 비즈니스 인사이트를 제공합니다.</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-card__icon">🛡️</div>
+                    <h3 class="solution-card__title" style="font-size: var(--font-size-m);">Stability</h3>
+                    <p class="solution-card__desc"
+                        style="font-size: var(--font-size-xs); color: var(--color-neutral-medium);">(안정적인 운영 및 관리)</p>
+                    <ul class="solution-card__desc"
+                        style="font-size: var(--font-size-xs); margin-top: 15px; padding-left: 20px;">
+                        <li>안정적인 데이터 파이프라인 관리와 주기적 업데이트를 보장합니다.</li>
+                        <li>SLA 준수를 통해 서비스 신뢰성을 담보합니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-            <!-- Use Cases Grid -->
-            <section class="solution-usecases">
-                <h2 class="solution-usecases__title">주요 활용 사례</h2>
-                <div class="solution-usecases__grid">
-                    <!-- Use Case 1: Trend Analysis -->
-                    <div class="solution-usecase-card">
-                        <div class="solution-usecase-card__icon">
-                            📈
-                        </div>
-                        <h3 class="solution-usecase-card__title">트렌드 분석 및 토픽 발굴</h3>
-                        <p class="solution-usecase-card__description">
-                            실시간 소셜 데이터와 검색 트렌드를 분석하여 화제성 높은 콘텐츠 주제를 선제적으로 발굴합니다.
-                        </p>
-                        <ul class="solution-usecase-card__list">
-                            <li class="solution-usecase-card__list-item">✓ 실시간 트렌드 모니터링</li>
-                            <li class="solution-usecase-card__list-item">✓ 키워드 검색량 분석</li>
-                            <li class="solution-usecase-card__list-item">✓ 경쟁사 콘텐츠 벤치마킹</li>
-                            <li class="solution-usecase-card__list-item">✓ 타겟 오디언스 관심사 파악</li>
+        <!-- Section 5: 4 Core Data Models (Image 3) -->
+        <section class="solution-section">
+            <div class="solution-section__header">
+                <h2 class="solution-section__title">비즈니스 니즈에 맞춰 즉시 적용 가능한<br>4가지 핵심 데이터 모듈</h2>
+            </div>
+            <div class="solution-hub">
+                <div class="solution-hub__center" style="font-size: 20px;">핵심 데이터<br>모듈</div>
+
+                <div class="solution-hub__item solution-hub__item--tl">
+                    <div class="solution-hub__item-icon">🏢</div>
+                    <h3 class="solution-hub__item-title">아파트 정보 솔루션</h3>
+                    <p class="solution-hub__item-desc"><strong>For:</strong> 부동산 포털, 금융 앱 자산관리</p>
+                </div>
+
+                <div class="solution-hub__item solution-hub__item--tr">
+                    <div class="solution-hub__item-icon">🏪</div>
+                    <h3 class="solution-hub__item-title">소상공인 정보 솔루션</h3>
+                    <p class="solution-hub__item-desc"><strong>For:</strong> 핀테크, 창업 지원, CRM</p>
+                </div>
+
+                <div class="solution-hub__item solution-hub__item--bl">
+                    <div class="solution-hub__item-icon">👤</div>
+                    <h3 class="solution-hub__item-title">부동산 마이데이터 솔루션</h3>
+                    <p class="solution-hub__item-desc"><strong>For:</strong> 마이데이터 사업자, PFM 서비스</p>
+                </div>
+
+                <div class="solution-hub__item solution-hub__item--br">
+                    <div class="solution-hub__item-icon">📍</div>
+                    <h3 class="solution-hub__item-title">상권 분석 데이터 솔루션</h3>
+                    <p class="solution-hub__item-desc"><strong>For:</strong> 상업용 부동산, 점포 개발 전략</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Apartment Info Solution (Module 01) -->
+        <section class="solution-section">
+            <div class="solution-module-detail">
+                <div class="solution-module-detail__content">
+                    <h2 class="solution-section__title" style="text-align: left;">01. 아파트 정보 솔루션<br>(Residential
+                        Intelligence)</h2>
+                    <p class="solution-section__subtitle" style="text-align: left;">네이버부동산 수준의 풍부하고 체계적인 단지형 아파트 정보를
+                        제공하여, 단기간 내 완성도 높은 부동산 서비스를 구축할 수 있도록 지원합니다.</p>
+
+                    <div class="solution-detail-list">
+                        <h4 class="solution-detail-list__title">포함 데이터 (Included Data)</h4>
+                        <ul class="solution-detail-list__items">
+                            <li class="solution-detail-list__item">🏢 <strong>공공 데이터:</strong> 건축물대장 기본 정보, 실거래가
+                                (월별/평형별), 공동주택 관리비, 공시가격</li>
+                            <li class="solution-detail-list__item">🅱️ <strong>빅밸류 특화 데이터:</strong> 방/욕실 개수, 평형 정보, 세대별
+                                단면도, 동 배치도, 단지 특성 정보 (학군, 교통, 편의시설 등 태그)</li>
+                            <li class="solution-detail-list__item">🤝 <strong>민간 데이터:</strong> 실시간 매물 정보 연동 (협의)</li>
                         </ul>
                     </div>
 
-                    <!-- Use Case 2: Content Optimization -->
-                    <div class="solution-usecase-card">
-                        <div class="solution-usecase-card__icon">
-                            ✍️
-                        </div>
-                        <h3 class="solution-usecase-card__title">콘텐츠 최적화</h3>
-                        <p class="solution-usecase-card__description">
-                            사용자 반응 데이터를 기반으로 콘텐츠 형식, 길이, 톤앤매너를 최적화하여 참여율을 높입니다.
-                        </p>
-                        <ul class="solution-usecase-card__list">
-                            <li class="solution-usecase-card__list-item">✓ A/B 테스트 자동화</li>
-                            <li class="solution-usecase-card__list-item">✓ 최적 게시 시간 분석</li>
-                            <li class="solution-usecase-card__list-item">✓ 제목/썸네일 성과 예측</li>
-                            <li class="solution-usecase-card__list-item">✓ SEO 키워드 추천</li>
-                        </ul>
-                    </div>
-
-                    <!-- Use Case 3: Personalization -->
-                    <div class="solution-usecase-card">
-                        <div class="solution-usecase-card__icon">
-                            👤
-                        </div>
-                        <h3 class="solution-usecase-card__title">개인화 콘텐츠 추천</h3>
-                        <p class="solution-usecase-card__description">
-                            사용자 프로필과 행동 패턴을 분석하여 각 사용자에게 최적화된 콘텐츠를 추천합니다.
-                        </p>
-                        <ul class="solution-usecase-card__list">
-                            <li class="solution-usecase-card__list-item">✓ 사용자 세그먼트별 맞춤 콘텐츠</li>
-                            <li class="solution-usecase-card__list-item">✓ 행동 기반 추천 알고리즘</li>
-                            <li class="solution-usecase-card__list-item">✓ 개인화 이메일 캠페인</li>
-                            <li class="solution-usecase-card__list-item">✓ 다이나믹 콘텐츠 배치</li>
-                        </ul>
-                    </div>
-
-                    <!-- Use Case 4: Performance Analytics -->
-                    <div class="solution-usecase-card">
-                        <div class="solution-usecase-card__icon">
-                            📊
-                        </div>
-                        <h3 class="solution-usecase-card__title">성과 분석 및 리포팅</h3>
-                        <p class="solution-usecase-card__description">
-                            콘텐츠별 KPI를 추적하고 분석하여 ROI를 측정하고 개선점을 도출합니다.
-                        </p>
-                        <ul class="solution-usecase-card__list">
-                            <li class="solution-usecase-card__list-item">✓ 실시간 성과 대시보드</li>
-                            <li class="solution-usecase-card__list-item">✓ 참여율/전환율 추적</li>
-                            <li class="solution-usecase-card__list-item">✓ 채널별 성과 비교</li>
-                            <li class="solution-usecase-card__list-item">✓ ROI 자동 산출</li>
+                    <div class="solution-detail-list">
+                        <h4 class="solution-detail-list__title">활용 효과 (Expected Outcome)</h4>
+                        <ul class="solution-detail-list__items">
+                            <li class="solution-detail-list__item">✅ 부동산 포털 및 뱅킹 앱 내 아파트 상세 정보 서비스의 빠른 구축</li>
                         </ul>
                     </div>
                 </div>
-            </section>
-
-            <!-- Key Benefits Section -->
-            <section class="solution-benefits">
-                <h2 class="solution-benefits__title">BigValue 콘텐츠 솔루션의 강점</h2>
-                <div class="solution-benefits__grid">
-                    <div class="solution-benefit-card">
-                        <div class="solution-benefit-card__icon">🎯</div>
-                        <h3 class="solution-benefit-card__title">참여율 증대</h3>
-                        <p class="solution-benefit-card__description">
-                            데이터 기반 최적화로 콘텐츠 참여율을 평균 40% 이상 향상시킵니다.
-                        </p>
-                    </div>
-                    <div class="solution-benefit-card">
-                        <div class="solution-benefit-card__icon">⚡</div>
-                        <h3 class="solution-benefit-card__title">제작 효율성</h3>
-                        <p class="solution-benefit-card__description">
-                            트렌드 자동 분석과 성과 예측으로 콘텐츠 제작 시간을 50% 단축합니다.
-                        </p>
-                    </div>
-                    <div class="solution-benefit-card">
-                        <div class="solution-benefit-card__icon">📈</div>
-                        <h3 class="solution-benefit-card__title">ROI 극대화</h3>
-                        <p class="solution-benefit-card__description">
-                            성과가 검증된 콘텐츠에 집중하여 마케팅 ROI를 최대화합니다.
-                        </p>
+                <div class="solution-module-detail__visual">
+                    <div style="text-align: center;">
+                        <span style="font-size: 80px;">📱</span><br>
+                        <p
+                            style="font-size: var(--font-size-xs); color: var(--color-neutral-medium); margin-top: 10px;">
+                            [모바일 UI 상의 실거래가 그래프, 단면도, 매물 예시]</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- CTA Section -->
-            <section class="solution-cta">
-                <div class="solution-cta__box">
-                    <h2 class="solution-cta__title">콘텐츠 데이터 솔루션이 궁금하신가요?</h2>
-                    <p class="solution-cta__text">BigValue의 콘텐츠 전문가가 귀사의 콘텐츠 마케팅을 혁신할 솔루션을 제안해드립니다</p>
-                    <a href="https://bigvalue.ai/guest" target="_blank" class="solution-cta__button">문의하기</a>
+        <!-- Section 7: Small Business Info Solution (Module 02) -->
+        <section class="solution-section solution-section--gray">
+            <div class="solution-module-detail">
+                <div class="solution-module-detail__visual">
+                    <div style="text-align: center;">
+                        <span style="font-size: 80px;">💻</span><br>
+                        <p
+                            style="font-size: var(--font-size-xs); color: var(--color-neutral-medium); margin-top: 10px;">
+                            [상권 분석 대시보드, 매출 성장성 지수 그래프 예시]</p>
+                    </div>
                 </div>
-            </section>
-        </div>
+                <div class="solution-module-detail__content">
+                    <h2 class="solution-section__title" style="text-align: left;">02. 소상공인 정보 솔루션<br>(Business
+                        Intelligence)</h2>
+                    <p class="solution-section__subtitle" style="text-align: left;">소상공인 대상 핀테크 및 상생 서비스 구축에 필요한 전방위
+                        데이터를 제공하여, 데이터 기반의 정교한 비즈니스 모델 구현을 지원합니다.</p>
+
+                    <div class="solution-detail-list">
+                        <h4 class="solution-detail-list__title">포함 데이터 📊</h4>
+                        <ul class="solution-detail-list__items">
+                            <li class="solution-detail-list__item">📍 지역/업종별 개·폐업 현황 및 추이</li>
+                            <li class="solution-detail-list__item">💳 카드사 연계 매출 추이 분석</li>
+                            <li class="solution-detail-list__item">📈 소상공인 활동성 지수 (빅밸류 자체 개발)</li>
+                            <li class="solution-detail-list__item">🔍 업종별 밀집도 및 경쟁 강도 분석</li>
+                        </ul>
+                    </div>
+
+                    <div class="solution-detail-list">
+                        <h4 class="solution-detail-list__title">활용 효과 (Expected Outcome)</h4>
+                        <ul class="solution-detail-list__items">
+                            <li class="solution-detail-list__item">✅ 소상공인 특화 금융 상품 추천 엔진 개발</li>
+                            <li class="solution-detail-list__item">✅ 예비 창업자 대상 상권 분석 및 창업 지원 서비스</li>
+                            <li class="solution-detail-list__item">✅ 소상공인 CRM 시스템의 빠른 런칭 및 고도화</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Real Estate MyData Solution (Module 03) -->
+        <section class="solution-section">
+            <div class="solution-module-detail">
+                <div class="solution-module-detail__content">
+                    <h2 class="solution-section__title" style="text-align: left;">03. 부동산 마이데이터 솔루션<br>(Personal Asset
+                        Care)</h2>
+                    <p class="solution-section__subtitle" style="text-align: left;">고객이 소유한 자산을 기반으로 한 초개인화 자산관리 서비스를
+                        지원하여, 마이데이터 사업자의 PFM 기능을 강화하고 사용자 락인(Lock-in) 효과를 창출합니다.</p>
+
+                    <div class="solution-detail-list">
+                        <h4 class="solution-detail-list__title">포함 데이터 (Included Data) 📋</h4>
+                        <ul class="solution-detail-list__items">
+                            <li class="solution-detail-list__item">🔍 부동산 보유 자산 자동 조회 및 등록</li>
+                            <li class="solution-detail-list__item">⚡ 빅밸류 AVM(Automated Valuation Model) 기반 실시간 시세 제공
+                            </li>
+                            <li class="solution-detail-list__item">🧾 보유세, 취득세, 양도세 등 자동 세금 계산 로직 연동</li>
+                            <li class="solution-detail-list__item">💰 담보 대출 가능 금액 시뮬레이션</li>
+                        </ul>
+                    </div>
+
+                    <div class="solution-detail-list">
+                        <h4 class="solution-detail-list__title">활용 효과 (Expected Outcome)</h4>
+                        <ul class="solution-detail-list__items">
+                            <li class="solution-detail-list__item">✅ 마이데이터 앱의 핵심 기능인 자산 관리(PFM) 기능 대폭 강화</li>
+                            <li class="solution-detail-list__item">✅ 부동산 자산 기반의 맞춤형 금융 상품 추천으로 새로운 수익 모델 창출</li>
+                            <li class="solution-detail-list__item">✅ 높은 사용자 리텐션 및 인게이지먼트 확보</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="solution-module-detail__visual">
+                    <div style="text-align: center;">
+                        <span style="font-size: 80px;">🏠</span><br>
+                        <p
+                            style="font-size: var(--font-size-xs); color: var(--color-neutral-medium); margin-top: 10px;">
+                            [반포 자이 아파트 AVM 시세 및 대출 한도 조회 화면 예시]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Area Analysis Data Solution (Module 04) -->
+        <section class="solution-section solution-section--gray">
+            <div class="solution-module-detail">
+                <div class="solution-module-detail__visual">
+                    <div style="text-align: center;">
+                        <span style="font-size: 80px;">🗺️</span><br>
+                        <p
+                            style="font-size: var(--font-size-xs); color: var(--color-neutral-medium); margin-top: 10px;">
+                            [전국 상권 변화 시계열 분석 맵 및 데이터 대시보드 예시]</p>
+                    </div>
+                </div>
+                <div class="solution-module-detail__content">
+                    <h2 class="solution-section__title" style="text-align: left;">04. 상권 분석 데이터 솔루션<br>(Area Analysis)
+                    </h2>
+                    <p class="solution-section__subtitle" style="text-align: left;">전국 단위의 상권 변화를 시계열로 분석한 전문 데이터를 통해,
+                        상업용 부동산 투자 분석 및 점포 개발 전략 수립 등 고도화된 의사결정을 지원합니다.</p>
+
+                    <div class="solution-detail-list">
+                        <h4 class="solution-detail-list__title">포함 데이터 🗺️</h4>
+                        <ul class="solution-detail-list__items">
+                            <li class="solution-detail-list__item">👥 행정동/블록 단위 지역별 유동인구 (성별/연령별/시간대별)</li>
+                            <li class="solution-detail-list__item">💸 지역별 소비 패턴 및 업종별 카드 소비 데이터</li>
+                            <li class="solution-detail-list__item">🏚️ 주요 프랜차이즈 업종별 생존율 분석</li>
+                            <li class="solution-detail-list__item">📊 시계열 상권 성장성 및 안정성 지표 (빅밸류 자체 개발)</li>
+                        </ul>
+                    </div>
+
+                    <div class="solution-detail-list">
+                        <h4 class="solution-detail-list__title">활용 효과</h4>
+                        <ul class="solution-detail-list__items">
+                            <li class="solution-detail-list__item">✅ 상업용 부동산 투자 분석 서비스 구현</li>
+                            <li class="solution-detail-list__item">✅ 프랜차이즈 및 리테일 기업의 신규 점포 개발 전략 수립 지원</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: Technical Support (Supply Flow) -->
+        <section class="solution-section">
+            <div class="solution-section__header">
+                <h2 class="solution-section__title">유연한 데이터 공급 방식과 전문가 그룹의 기술 지원</h2>
+            </div>
+            <div class="solution-supply-grid">
+                <div class="solution-supply-card">
+                    <div class="solution-supply-card__icon">⛓️</div>
+                    <h3 class="solution-supply-card__title">데이터 파이프라인 (Data Pipeline)</h3>
+                    <p class="solution-supply-card__desc"><strong>API 방식:</strong> 실시간 데이터 조회가 필요한 서비스에 적합 (e.g., 자산 시세
+                        조회)<br><strong>Batch 방식:</strong> 주기적인 데이터 적재 및 내부 분석용으로 적합 (e.g., 월별 상권 데이터 업데이트)<br>고객사 시스템
+                        환경에 맞춘 최적의 연동 방식을 지원합니다.</p>
+                </div>
+                <div class="solution-supply-card">
+                    <div class="solution-supply-card__icon">🔍</div>
+                    <h3 class="solution-supply-card__title">데이터 중계 서비스 (Data Brokerage)</h3>
+                    <p class="solution-supply-card__desc">핵심 모듈 외에 고객이 필요로 하는 특정 공공/민간 데이터가 있습니까? 빅밸류의 데이터 소싱 노하우를 통해
+                        맞춤형으로 발굴하고 중계해 드립니다.</p>
+                </div>
+                <div class="solution-supply-card">
+                    <div class="solution-supply-card__icon">👨‍🏫</div>
+                    <h3 class="solution-supply-card__title">전문가 자문 (Expert Advisory)</h3>
+                    <p class="solution-supply-card__desc">데이터 시각화(Visualization) 디자인 가이드 제공하며, 고객사 서비스에 최적화된 도메인 특화 데이터
+                        모델링 및 설계 자문을 지원합니다.</p>
+                </div>
+            </div>
+            <div class="solution-visual-center" style="margin-top: 60px;">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 30px; font-weight: 700;">
+                    <div style="border: 2px solid var(--color-brand-primary); padding: 15px 25px; border-radius: 8px;">
+                        고객 니즈</div>
+                    <div style="font-size: 30px; color: var(--color-brand-primary);">➡️</div>
+                    <div
+                        style="background: var(--color-brand-primary); color: white; padding: 15px 35px; border-radius: 8px; font-size: var(--font-size-l);">
+                        성공적인 서비스 런칭</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 11: Expected Outcomes (Image 0) -->
+        <section class="solution-section solution-section--gray">
+            <div class="solution-section__header">
+                <h2 class="solution-section__title">빅밸류 도입을 통해 얻게 될 명확한 기대 효과</h2>
+            </div>
+            <div class="solution-grid solution-grid--3col">
+                <div class="solution-card">
+                    <div style="text-align: center; margin-bottom: 20px;">⚖️</div>
+                    <h3 class="solution-card__title" style="text-align: center; font-size: var(--font-size-m);">혁신적인 비용
+                        절감<br>(Drastic Cost Reduction)</h3>
+                    <p class="solution-card__desc" style="font-size: var(--font-size-s);">데이터 수집, 정제, 가공, 인프라 운영에 소요되는
+                        내부 개발 인력 및 인프라 비용을 최소화합니다.</p>
+                </div>
+                <div class="solution-card">
+                    <div style="text-align: center; margin-bottom: 20px;">🏅</div>
+                    <h3 class="solution-card__title" style="text-align: center; font-size: var(--font-size-m);">검증된 데이터
+                        품질<br>(Guaranteed Data Quality)</h3>
+                    <p class="solution-card__desc" style="font-size: var(--font-size-s);">도메인 전문가가 검증하고 체계적으로 관리하는 고품질
+                        데이터 공급으로 서비스의 신뢰도를 확보합니다. 지속적인 데이터 업데이트 및 품질 관리를 통해 최신성을 유지합니다.</p>
+                </div>
+                <div class="solution-card">
+                    <div style="text-align: center; margin-bottom: 20px;">🧩</div>
+                    <h3 class="solution-card__title" style="text-align: center; font-size: var(--font-size-m);">미래를 위한
+                        유연성<br>(Future-Proof Flexibility)</h3>
+                    <p class="solution-card__desc" style="font-size: var(--font-size-s);">초기에는 핵심 모듈로 시작하여, 향후 서비스 확장에
+                        따라 필요한 데이터 모듈을 유연하게 추가할 수 있습니다. 고객사의 특정 비즈니스 로직에 맞춘 데이터 커스터마이징을 지원합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 12: Roadmap (Image 1) -->
+        <section class="solution-section">
+            <div class="solution-section__header">
+                <h2 class="solution-section__title">성공적인 데이터 기반 서비스 런칭을 위한<br>3단계 협력 로드맵</h2>
+            </div>
+            <div class="solution-roadmap">
+                <div class="solution-roadmap__step">
+                    <div class="solution-roadmap__circle">1</div>
+                    <div class="solution-roadmap__card">
+                        <h4 class="solution-roadmap__title">요구사항 분석 및 PoC<br>(Requirement Analysis & PoC)</h4>
+                        <ul class="solution-card__desc" style="font-size: var(--font-size-xs); padding-left: 20px;">
+                            <li>고객사의 비즈니스 목표 및 데이터 요구사항 심층 분석</li>
+                            <li>핵심 데이터 샘플을 활용한 기술 검증(PoC) 및 효과 측정</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="solution-roadmap__step">
+                    <div class="solution-roadmap__circle">2</div>
+                    <div class="solution-roadmap__card">
+                        <h4 class="solution-roadmap__title">맞춤형 API 설계 및 계약<br>(Custom API Design & Agreement)</h4>
+                        <ul class="solution-card__desc" style="font-size: var(--font-size-xs); padding-left: 20px;">
+                            <li>PoC 결과를 바탕으로 고객사 서비스에 최적화된 데이터 API 설계</li>
+                            <li>데이터 공급 범위, SLA 등을 포함한 본 계약 체결</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="solution-roadmap__step">
+                    <div class="solution-roadmap__circle">3</div>
+                    <div class="solution-roadmap__card">
+                        <h4 class="solution-roadmap__title">서비스 런칭 및 운영 지원<br>(Launch & Operational Support)</h4>
+                        <ul class="solution-card__desc" style="font-size: var(--font-size-xs); padding-left: 20px;">
+                            <li>안정적인 데이터 연동 및 서비스 런칭 지원</li>
+                            <li>지속적인 데이터 품질 관리 및 운영 최적화 지원</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 13: Social Proof (Image 2) -->
+        <section class="solution-section solution-section--gray">
+            <div class="solution-section__header">
+                <h2 class="solution-section__title">이미 최고의 기업들이 빅밸류와 함께하고 있습니다</h2>
+            </div>
+            <div class="solution-logo-strip">
+                <span style="font-weight: 700; color: #64748b;">SHINHAN</span>
+                <span style="font-weight: 700; color: #64748b;">NH INVESTMENT</span>
+                <span style="font-weight: 700; color: #64748b;">KB BANK</span>
+                <span style="font-weight: 700; color: #64748b;">KAKAO</span>
+                <span style="font-weight: 700; color: #64748b;">TOSS</span>
+                <span style="font-weight: 700; color: #64748b;">NAVER</span>
+            </div>
+            <div class="solution-case-cols">
+                <div class="solution-case-box solution-case-box--green">
+                    <div class="solution-case-box__header">
+                        <span>🏢</span> <span>금융권 (Financial Sector)</span>
+                    </div>
+                    <p class="solution-card__desc" style="font-size: var(--font-size-s); margin-bottom: 15px;">
+                        <strong>고객사:</strong> 신한은행, 농협증권 등 대형 금융사
+                    </p>
+                    <div style="background: #f1f5f9; padding: 15px; border-radius: 8px;">
+                        <p
+                            style="color: #10b981; font-weight: 700; font-size: var(--font-size-xs); margin-bottom: 5px;">
+                            성과</p>
+                        <p class="solution-card__desc" style="font-size: var(--font-size-xs); line-height: 1.6;">기존 부동산
+                            플랫폼의 기능을 대폭 고도화하고, 비대면 자산관리 서비스의 경쟁력을 성공적으로 강화했습니다. AVM을 활용한 담보 가치 평가 정확도를 높여 리스크 관리에
+                            기여했습니다.</p>
+                    </div>
+                </div>
+                <div class="solution-case-box solution-case-box--green">
+                    <div class="solution-case-box__header">
+                        <span>🚀</span> <span>빅테크/스타트업</span>
+                    </div>
+                    <div style="background: #f1f5f9; padding: 15px; border-radius: 8px; margin-top: 35px;">
+                        <p
+                            style="color: #10b981; font-weight: 700; font-size: var(--font-size-xs); margin-bottom: 5px;">
+                            성과</p>
+                        <p class="solution-card__desc" style="font-size: var(--font-size-xs); line-height: 1.6;">데이터 수급
+                            및 가공에 필요한 리소스를 최소화하여 서비스 런칭 기간을 수개월 단축했습니다. 안정적인 데이터 수급을 통해 핵심 비즈니스 로직 개발에만 집중, 운영 효율화를
+                            달성했습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="solution-section">
+            <div class="solution-cta">
+                <h2 class="solution-cta__title">콘텐츠 데이터 솔루션이 궁금하신가요?</h2>
+                <p class="solution-cta__desc">BigValue의 콘텐츠 전문가가 귀사의 콘텐츠 마케팅을 혁신할 솔루션을 제안해드립니다.</p>
+                <div class="solution-cta__buttons">
+                    <button class="btn">문의하기</button>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer Placeholder (will be replaced by JavaScript) -->
+    <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
     <script src="../../script.js"></script>
 </body>
+
 </html>
