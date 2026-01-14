@@ -4,609 +4,402 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BigValue - 금융 솔루션</title>
+    <title>금융 솔루션 - BigValue</title>
     <link rel="stylesheet" href="../../css/common.css">
     <link rel="stylesheet" href="../../css/template_solution.css">
-    <link rel="stylesheet" href="../../css/template_solution_cases.css">
-    <link rel="stylesheet" href="../../css/template_solution_responsive.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- GNB Placeholder -->
     <div id="gnb-placeholder"></div>
 
-    <!-- MAIN V2 CONTAINER -->
-    <main class="sol-v2-container">
-
+    <main class="solution-main">
         <!-- 1. Hero Section -->
-        <section class="sol-v2-hero">
-            <div class="sol-v2-hero__top sol-v2-hero__grid">
-                <!-- Text Left -->
-                <div class="sol-v2-hero__content">
-                    <span class="sol-v2-hero__label">Finance Solution</span>
-                    <h1 class="sol-v2-hero__title">금융 AX를 위한<br>데이터 기술 파트너</h1>
-                    <p class="sol-v2-hero__desc">
-                        금융 기관이 직면한 디지털 전환의 과제,<br>
-                        부동산을 중심으로 한 빅밸류의 독보적인 데이터와 AI 기술로 해결합니다.
+        <section class="solution-section solution-section--hero">
+            <div class="solution-container">
+                <div class="solution-hero-split">
+                    <!-- Left: Text Content -->
+                    <div class="solution-hero-content">
+                        <h1 class="solution-hero-title">
+                            금융의 AI 전환(AX)을<br>선도합니다.
+                        </h1>
+                        <p class="solution-hero-desc">
+                            부동산을 중심으로 한 독보적인 데이터와 AI 기술을 통해<br>
+                            금융 서비스의 속도, 정확성, 범위를 혁신하여,<br>
+                            더 정확한 의사결정과 혁신적인 고객 경험을 제공하세요.
+                        </p>
+                        <button class="btn btn--primary solution-hero-cta">문의하기</button>
+                    </div>
+
+                    <!-- Right: Financial Illustration with Animation -->
+                    <div class="solution-hero-visual">
+                        <div class="solution-hero-visual__icon">
+                            <div class="hero-visual-icon hero-visual-icon--1">📊</div>
+                            <div class="hero-visual-icon hero-visual-icon--2">🏦</div>
+                            <div class="hero-visual-icon hero-visual-icon--3">📈</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom: Client Logos -->
+                <div class="solution-hero-clients">
+                    <div class="solution-hero-clients__logos">
+                        <img src="../../src/images/clients/1_신한은행.png" alt="신한은행" class="solution-hero-clients__logo">
+                        <img src="../../src/images/clients/2_하나은행.png" alt="하나은행" class="solution-hero-clients__logo">
+                        <img src="../../src/images/clients/3_삼성증권.png" alt="삼성증권" class="solution-hero-clients__logo">
+                        <img src="../../src/images/clients/4_농협중앙회.png" alt="농협중앙회" class="solution-hero-clients__logo">
+                        <img src="../../src/images/clients/5_npay.png" alt="네이버페이" class="solution-hero-clients__logo">
+                        <img src="../../src/images/clients/6_banksalad.png" alt="뱅크샐러드" class="solution-hero-clients__logo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Core Section - Data Hub Section (5 Nodes) -->
+        <section class="solution-section solution-section--gray solution-section--core">
+            <div class="solution-container">
+                <div class="solution-core-header">
+                    <h2 class="solution-core-title">금융의 모든 가치 사슬을 연결하는 데이터 허브</h2>
+                </div>
+
+                <div class="solution-hub solution-hub--5col">
+                    <div class="solution-hub__center" style="width: 200px; height: 200px;">
+                        <div>
+                            <div style="font-size: 24px; font-weight: 800; color: var(--color-brand-primary);">BigValue
+                            </div>
+                            <div style="font-size: 18px; color: var(--color-neutral-dark);">Data & API</div>
+                        </div>
+                    </div>
+
+                    <!-- Top Node -->
+                    <div class="solution-hub__item solution-hub__item--top">
+                        <div class="solution-hub__item-icon">🏛️</div>
+                        <h3 class="solution-hub__item-title">AI 가치평가</h3>
+                        <p class="solution-hub__item-desc">주택/비주택 실시간 시세 산정</p>
+                    </div>
+
+                    <!-- Mid Right Node -->
+                    <div class="solution-hub__item solution-hub__item--mid-right">
+                        <div class="solution-hub__item-icon">👤</div>
+                        <h3 class="solution-hub__item-title">초개인화 자산관리</h3>
+                        <p class="solution-hub__item-desc">마이데이터 기반 자산 분석</p>
+                    </div>
+
+                    <!-- Bot Right Node -->
+                    <div class="solution-hub__item solution-hub__item--bot-right">
+                        <div class="solution-hub__item-icon">📊</div>
+                        <h3 class="solution-hub__item-title">고객관리 및 마케팅</h3>
+                        <p class="solution-hub__item-desc">타겟 마케팅 및 CRM 최적화</p>
+                    </div>
+
+                    <!-- Bot Left Node -->
+                    <div class="solution-hub__item solution-hub__item--bot-left">
+                        <div class="solution-hub__item-icon">⚙️</div>
+                        <h3 class="solution-hub__item-title">내부 업무 자동화</h3>
+                        <p class="solution-hub__item-desc">금융 심사 및 운영 효율화</p>
+                    </div>
+
+                    <!-- Mid Left Node -->
+                    <div class="solution-hub__item solution-hub__item--mid-left">
+                        <div class="solution-hub__item-icon">📱</div>
+                        <h3 class="solution-hub__item-title">대고객 콘텐츠 및 서비스</h3>
+                        <p class="solution-hub__item-desc">부동산/금융 정보 서비스 제공</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Features - API Infrastructure Section -->
+        <section class="solution-section solution-section--gray solution-section--core">
+            <div class="solution-container">
+                <!-- Top: Title and Description (left-aligned) -->
+                <div class="solution-core-header">
+                    <h2 class="solution-core-title">모든 혁신의 기반: 강력하고 유연한 빅밸류 API</h2>
+                    <p class="solution-core-subtitle">
+                        빅밸류의 모든 서비스는 국내 최고 수준의 부동산 데이터 처리 기술과 AI 모델링 역량이 집약된 API를 통해 제공됩니다.<br>
+                        안정성, 확장성, 보안성을 모두 갖춘 API로 귀사의 시스템과 완벽하게 연동됩니다.
                     </p>
-                    <a href="#contact" class="sol-v2-hero__cta">문의하기</a>
-                </div>
-
-                <!-- Visual Right -->
-                <div class="sol-v2-hero__visual">
-                    <canvas id="hero-canvas"
-                        style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0;"></canvas>
-                </div>
-            </div>
-
-            <!-- Logos Bottom -->
-            <div class="sol-v2-hero__logos">
-                <div class="sol-v2-hero__logos-list">
-                    <img src="../../src/images/clients/1_신한은행.png" alt="신한은행">
-                    <img src="../../src/images/clients/2_하나은행.png" alt="하나은행">
-                    <img src="../../src/images/clients/20_kwangjubank.png" alt="광주은행">
-                    <img src="../../src/images/clients/18_TossBank.png" alt="토스뱅크">
-                    <img src="../../src/images/clients/19_naverfinancial.png" alt="네이버파이낸셜">
-                    <img src="../../src/images/clients/4_농협중앙회.png" alt="농협은행">
-                </div>
-            </div>
-        </section>
-
-        <!-- Core Section: Sticky Data Hub Experience (Sticky Track) -->
-        <section class="sol-hub-track" id="hub-track">
-            <div class="sol-hub-stage">
-                <div class="sol-hub-layout">
-
-                    <!-- Text Side (Updates based on scroll) -->
-                    <div class="sol-hub-text is-visible" id="hub-text">
-                        <h2
-                            style="color: #a5b4fc; font-size: 1.2rem; margin-bottom: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">
-                            The Core Engine</h2>
-                        <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 20px; color: white;">금융의 모든 가치
-                            사슬을<br>연결하는 데이터 허브</h2>
-                        <p style="font-size: 1.25rem; color: #cbd5e1; line-height: 1.6;">
-                            빅밸류의 독보적인 Data & API는<br>
-                            단순한 연결을 넘어 금융의 미래를 확장시킵니다.
-                        </p>
-                    </div>
-
-                    <!-- Visual Side (3D Hub) -->
-                    <div class="sol-hub-visual">
-                        <div class="sol-iso-scene-v2" id="hub-scene">
-
-                            <!-- CENTER HUB -->
-                            <div class="sol-iso-node center-hub pos-c">
-                                <div class="sol-iso-face-v2 face-top"></div>
-                                <div class="sol-iso-face-v2 face-bottom"></div>
-                                <div class="sol-iso-face-v2 face-front"></div>
-                                <div class="sol-iso-face-v2 face-back"></div>
-                                <div class="sol-iso-face-v2 face-left"></div>
-                                <div class="sol-iso-face-v2 face-right"></div>
-                                <div class="sol-iso-billboard">
-                                    <div class="sol-iso-text-main"
-                                        style="font-size: 1.4rem; background: rgba(99, 102, 241, 0.8);">Data & API</div>
-                                </div>
-                            </div>
-
-                            <!-- Satellites (Initially hidden via JS controlled vars) -->
-                            <!-- 1. AI Valuation -->
-                            <div class="sol-iso-node satellite pos-1" data-idx="1">
-                                <div class="sol-iso-face-v2 face-top"></div>
-                                <div class="sol-iso-face-v2 face-bottom"></div>
-                                <div class="sol-iso-face-v2 face-front"></div>
-                                <div class="sol-iso-face-v2 face-back"></div>
-                                <div class="sol-iso-face-v2 face-left"></div>
-                                <div class="sol-iso-face-v2 face-right"></div>
-                                <div class="sol-iso-billboard">
-                                    <div class="sol-iso-text-main">AI 가치평가</div>
-                                </div>
-                                <div class="sol-iso-line" style="transform: rotate(180deg); width: 200px; padding: 0;">
-                                </div>
-                            </div>
-
-                            <!-- 2. Asset Mgmt -->
-                            <div class="sol-iso-node satellite pos-2" data-idx="2">
-                                <div class="sol-iso-face-v2 face-top"></div>
-                                <div class="sol-iso-face-v2 face-bottom"></div>
-                                <div class="sol-iso-face-v2 face-front"></div>
-                                <div class="sol-iso-face-v2 face-back"></div>
-                                <div class="sol-iso-face-v2 face-left"></div>
-                                <div class="sol-iso-face-v2 face-right"></div>
-                                <div class="sol-iso-billboard">
-                                    <div class="sol-iso-text-main">자산관리</div>
-                                </div>
-                                <div class="sol-iso-line" style="transform: rotate(240deg); width: 200px;"></div>
-                            </div>
-
-                            <!-- 3. Customer -->
-                            <div class="sol-iso-node satellite pos-3" data-idx="3">
-                                <div class="sol-iso-face-v2 face-top"></div>
-                                <div class="sol-iso-face-v2 face-bottom"></div>
-                                <div class="sol-iso-face-v2 face-front"></div>
-                                <div class="sol-iso-face-v2 face-back"></div>
-                                <div class="sol-iso-face-v2 face-left"></div>
-                                <div class="sol-iso-face-v2 face-right"></div>
-                                <div class="sol-iso-billboard">
-                                    <div class="sol-iso-text-main">고객관리</div>
-                                </div>
-                                <div class="sol-iso-line" style="transform: rotate(300deg); width: 200px;"></div>
-                            </div>
-
-                            <!-- 4. Automation -->
-                            <div class="sol-iso-node satellite pos-4" data-idx="4">
-                                <div class="sol-iso-face-v2 face-top"></div>
-                                <div class="sol-iso-face-v2 face-bottom"></div>
-                                <div class="sol-iso-face-v2 face-front"></div>
-                                <div class="sol-iso-face-v2 face-back"></div>
-                                <div class="sol-iso-face-v2 face-left"></div>
-                                <div class="sol-iso-face-v2 face-right"></div>
-                                <div class="sol-iso-billboard">
-                                    <div class="sol-iso-text-main">업무 자동화</div>
-                                </div>
-                                <div class="sol-iso-line" style="transform: rotate(0deg); width: 200px;"></div>
-                            </div>
-
-                            <!-- 5. Content -->
-                            <div class="sol-iso-node satellite pos-5" data-idx="5">
-                                <div class="sol-iso-face-v2 face-top"></div>
-                                <div class="sol-iso-face-v2 face-bottom"></div>
-                                <div class="sol-iso-face-v2 face-front"></div>
-                                <div class="sol-iso-face-v2 face-back"></div>
-                                <div class="sol-iso-face-v2 face-left"></div>
-                                <div class="sol-iso-face-v2 face-right"></div>
-                                <div class="sol-iso-billboard">
-                                    <div class="sol-iso-text-main">콘텐츠</div>
-                                </div>
-                                <div class="sol-iso-line" style="transform: rotate(60deg); width: 200px;"></div>
-                            </div>
-
+                    <div style="display: flex; gap: 40px; margin-top: var(--spacing-l);">
+                        <div
+                            style="display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--color-brand-primary);">
+                            <span>🔒</span> Stability
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. Features Section: API -->
-        <section class="sol-v2-section">
-            <div class="sol-v2-split">
-                <div class="sol-v2-split__header">
-                    <h2 class="sol-v2-split__title">강력하고 유연한<br>빅밸류 API</h2>
-                    <p class="sol-v2-split__desc">
-                        국내 최고 수준의 부동산 데이터 처리 기술과<br>
-                        AI 모델링 역량이 집약된 API를 경험하세요.
-                    </p>
-
-                    <!-- 3 Strengths as List -->
-                    <div style="margin-top: 40px;">
-                        <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px;">
-                            <span style="font-size: 24px;">🛡️</span>
-                            <strong style="color: var(--sol-v2-text-main);">안정성 (99.9% 가동)</strong>
+                        <div
+                            style="display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--color-brand-primary);">
+                            <span>🚀</span> Scalability
                         </div>
-                        <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px;">
-                            <span style="font-size: 24px;">📈</span>
-                            <strong style="color: var(--sol-v2-text-main);">확장성 (대용량 처리)</strong>
-                        </div>
-                        <div style="display: flex; gap: 15px; align-items: center;">
-                            <span style="font-size: 24px;">🔒</span>
-                            <strong style="color: var(--sol-v2-text-main);">보안 (금융권 수준)</strong>
+                        <div
+                            style="display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--color-brand-primary);">
+                            <span>🛡️</span> Security
                         </div>
                     </div>
                 </div>
 
-                <div class="sol-v2-split__content" style="justify-content: center;">
-                    <!-- New Radial Collaboration Visual -->
-                    <div class="sol-api-visual-box">
-                        <div class="sol-api-bg-glow"></div>
-                        <div class="sol-api-spotlight"></div>
-
-                        <!-- Rotating Ring (Decorative) -->
-                        <div class="sol-api-orbit"></div>
-
-                        <!-- Center API Node -->
-                        <div class="sol-api-center">
-                            <span style="font-weight: 800; color: white; font-size: 1.2rem;">API</span>
+                <!-- Bottom: API Architecture Visual (fills remaining height) -->
+                <div class="solution-visual-center" style="flex: 1; display: flex; align-items: center; justify-content: center;">
+                    <div
+                        style="position: relative; display: flex; align-items: center; justify-content: center; min-height: 400px;">
+                        <!-- Central API Box -->
+                        <div
+                            style="width: 200px; height: 200px; background: #1e293b; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 16px; z-index: 10; font-weight: 700; box-shadow: 0 0 40px rgba(30,41,59,0.3);">
+                            <div style="font-size: 24px; margin-bottom: 5px;">BigValue</div>
+                            <div style="font-size: 32px; color: var(--color-brand-primary);">API</div>
                         </div>
 
-                        <!-- Beams -->
-                        <div class="sol-api-beam beam-to-top"></div> <!-- To Bank (Top) -->
-                        <div class="sol-api-beam beam-to-bl"></div> <!-- To Fintech (Bottom Left) -->
-                        <div class="sol-api-beam beam-to-br"></div> <!-- To Insurance (Bottom Right) -->
-
-                        <!-- Target Systems -->
-                        <div class="sol-api-sys pos-top">
-                            <span class="sol-api-sys-icon">🏦</span>
-                            <span class="sol-api-sys-label">은행<br>시스템</span>
-                        </div>
-                        <div class="sol-api-sys pos-bl">
-                            <span class="sol-api-sys-icon">📱</span>
-                            <span class="sol-api-sys-label">핀테크<br>서비스</span>
-                        </div>
-                        <div class="sol-api-sys pos-br">
-                            <span class="sol-api-sys-icon">🛡️</span>
-                            <span class="sol-api-sys-label">보험<br>플랫폼</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. Why Section (Dark Minimal) -->
-        <section class="sol-why-minimal">
-            <div class="sol-why-minimal__container">
-                <div class="sol-why-minimal__header">
-                    <h2 class="sol-why-minimal__title">Why BigValue<br>Finance Solution</h2>
-                    <p class="sol-why-minimal__desc">
-                        데이터의 깊이와 기술의 격차가<br>
-                        서비스의 품질을 결정합니다.
-                    </p>
-                </div>
-
-                <div class="sol-why-minimal__grid">
-                    <!-- Item 1 -->
-                    <div class="sol-why-item">
-                        <div class="sol-why-item__icon">
-                            <!-- Simple Arrow/Check Icon like ref -->
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </div>
-                        <h3 class="sol-why-item__title">독보적인 데이터 커버리지</h3>
-                        <p class="sol-why-item__desc">
-                            주택부터 비주택까지, 10년 이상 축적된 전국 부동산 데이터로 시장의 불확실성을 제거하고 가장 정확한 기준을 제시합니다.
-                        </p>
-                    </div>
-
-                    <!-- Item 2 -->
-                    <div class="sol-why-item">
-                        <div class="sol-why-item__icon">
-                            <!-- Star/Badge Icon -->
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                            </svg>
-                        </div>
-                        <h3 class="sol-why-item__title">신뢰 받는 AI 기술력</h3>
-                        <p class="sol-why-item__desc">
-                            최고의 전문 연구팀이 개발한 AI 분석 모델이 복잡한 시장 데이터를 빠르고 정확하게 분석하여 인간의 직관을 뛰어넘는 인사이트를 제공합니다.
-                        </p>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="sol-why-item">
-                        <div class="sol-why-item__icon">
-                            <!-- Rocket/Launch Icon -->
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
-                                <path
-                                    d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
-                                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
-                                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
-                            </svg>
-                        </div>
-                        <h3 class="sol-why-item__title">검증된 레퍼런스</h3>
-                        <p class="sol-why-item__desc">
-                            국내 대표 금융기관들이 이미 빅밸류 솔루션을 도입하여 실제 비즈니스 성과를 창출하고 있습니다. 성공이 검증된 파트너와 함께하세요.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. Cases Detail: Sticky Feature Scroll -->
-        <section class="sol-case-scroll">
-            <div class="sol-case-sticky-wrapper">
-                <!-- Invisible Scroll Track -->
-                <div class="sol-case-track">
-                    <div class="sol-case-trigger" data-index="0"></div>
-                    <div class="sol-case-trigger" data-index="1"></div>
-                    <div class="sol-case-trigger" data-index="2"></div>
-                    <div class="sol-case-trigger" data-index="3"></div>
-                    <div class="sol-case-trigger" data-index="4"></div>
-                </div>
-
-                <!-- Sticky Stage -->
-                <div class="sol-case-stage">
-                    <!-- Left: Text Stage -->
-                    <div class="sol-case-text-stage">
-                        <!-- Item 1 -->
-                        <div class="sol-case-text-item is-active" data-index="0">
-                            <div class="sol-case-text-content">
-                                <h3 class="sol-case-item__title">1. AI 시세</h3>
-                                <p class="sol-case-item__desc">
-                                    국내 최초의 연립·다세대 완전 자동 가치평가 시스템입니다. 50세대 미만 아파트까지 영역을 확장하여 담보대출 심사를 혁신합니다.
-                                </p>
-                                <ul class="sol-case-list">
-                                    <li>가치평가 시간 90% 이상 단축</li>
-                                    <li>실시간 시세 산정 및 리스크 탐지</li>
-                                </ul>
-                            </div>
-                            <!-- Mobile Visual -->
-                            <div class="sol-case-mobile-visual">
-                                <div class="sol-ui-card">
-                                    <div class="sol-ui-card__header">
-                                        <span class="sol-ui-card__title">AI Valuation</span>
-                                        <span class="sol-ui-tag" style="background:#dcfce7; color:#166534;">Safe</span>
-                                    </div>
-                                    <div class="sol-ui-row medium"></div>
-                                    <div class="sol-ui-graph">
-                                        <div class="sol-ui-bar" style="height:40%"></div>
-                                        <div class="sol-ui-bar" style="height:60%"></div>
-                                        <div class="sol-ui-bar" style="height:50%"></div>
-                                        <div class="sol-ui-bar" style="height:80%; background:#22c55e;"></div>
-                                        <div class="sol-ui-bar" style="height:70%"></div>
-                                    </div>
-                                    <div style="font-size: 2rem; font-weight: 800; color: #1e293b;">4.5억 <span
-                                            style="font-size:1rem; color:#64748b;">(전월대비 +2%)</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item 2 -->
-                        <div class="sol-case-text-item" data-index="1">
-                            <div class="sol-case-text-content">
-                                <h3 class="sol-case-item__title">2. 부동산 마이데이터</h3>
-                                <p class="sol-case-item__desc">
-                                    흩어진 고객의 부동산 자산을 한곳에 모아 관리합니다. 자산 변동 알림과 수익률 분석으로 고객 Lock-in 효과를 극대화합니다.
-                                </p>
-                                <ul class="sol-case-list">
-                                    <li>숨겨진 부동산 자산 자동 파악</li>
-                                    <li>실거래 기반 수익률 추적 리포트</li>
-                                </ul>
-                            </div>
-                            <!-- Mobile Visual -->
-                            <div class="sol-case-mobile-visual">
-                                <div class="sol-ui-card">
-                                    <div class="sol-ui-card__header">
-                                        <span class="sol-ui-card__title">My Portfolio</span>
-                                        <span class="sol-ui-tag">Updates</span>
-                                    </div>
-                                    <div style="display:flex; justify-content:center; padding: 20px;">
-                                        <div style="width:120px; height:120px; border-radius:50%; background: conic-gradient(#3b82f6 0% 60%, #e2e8f0 60% 100%);"></div>
-                                    </div>
-                                    <div class="sol-ui-row medium"></div>
-                                    <div class="sol-ui-row short"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item 3 -->
-                        <div class="sol-case-text-item" data-index="2">
-                            <div class="sol-case-text-content">
-                                <h3 class="sol-case-item__title">3. GA 맞춤 솔루션</h3>
-                                <p class="sol-case-item__desc">
-                                    보험 설계사를 위한 고객 입체 분석 데이터를 제공합니다. 부동산 보유 현황을 기반으로 최적의 보험 상품을 제안할 수 있습니다.
-                                </p>
-                                <ul class="sol-case-list">
-                                    <li>마케팅용 타겟 고객 DB 추출</li>
-                                    <li>설계사 전용 모바일 ASP 시스템</li>
-                                </ul>
-                            </div>
-                            <!-- Mobile Visual -->
-                            <div class="sol-case-mobile-visual">
-                                <div class="sol-ui-card">
-                                    <div class="sol-ui-card__header">
-                                        <span class="sol-ui-card__title">Target Customer</span>
-                                        <span class="sol-ui-tag">High Value</span>
-                                    </div>
-                                    <div style="display:flex; align-items:center; gap:15px; margin-bottom:10px;">
-                                        <div style="width:50px; height:50px; background:#e2e8f0; border-radius:50%;"></div>
-                                        <div>
-                                            <div class="sol-ui-row medium" style="width:120px; margin-bottom:5px;"></div>
-                                            <div class="sol-ui-row short" style="width:80px;"></div>
-                                        </div>
-                                    </div>
-                                    <div style="background:#f8fafc; padding:15px; border-radius:10px;">
-                                        <div style="font-size:0.9rem; font-weight:600; color:#334155; margin-bottom:5px;">추천 상품</div>
-                                        <div style="font-size:0.8rem; color:#64748b;">주택 화재 보험 (프리미엄)</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item 4 -->
-                        <div class="sol-case-text-item" data-index="3">
-                            <div class="sol-case-text-content">
-                                <h3 class="sol-case-item__title">4. 본부시가추정 시스템</h3>
-                                <p class="sol-case-item__desc">
-                                    금융기관 내부 심사 업무를 위한 표준화된 솔루션입니다. 일반 건축물(상가, 공장 등)의 간편 가격 산정을 지원합니다.
-                                </p>
-                                <ul class="sol-case-list">
-                                    <li>평가 프로세스 전산화 및 효율화</li>
-                                    <li>담보 리스크 모니터링 기능</li>
-                                </ul>
-                            </div>
-                            <!-- Mobile Visual -->
-                            <div class="sol-case-mobile-visual">
-                                <div class="sol-ui-card">
-                                    <div class="sol-ui-card__header">
-                                        <span class="sol-ui-card__title">Risk Report</span>
-                                        <span class="sol-ui-tag" style="background:#fee2e2; color:#b91c1c;">Check</span>
-                                    </div>
-                                    <div style="display:flex; flex-direction:column; gap:10px;">
-                                        <div style="display:flex; justify-content:space-between;">
-                                            <div class="sol-ui-row short" style="width:40%"></div>
-                                            <div class="sol-ui-row short" style="width:20%; background:#d1d5db;"></div>
-                                        </div>
-                                        <div style="display:flex; justify-content:space-between;">
-                                            <div class="sol-ui-row short" style="width:50%"></div>
-                                            <div class="sol-ui-row short" style="width:20%; background:#d1d5db;"></div>
-                                        </div>
-                                        <div style="display:flex; justify-content:space-between;">
-                                            <div class="sol-ui-row short" style="width:30%"></div>
-                                            <div class="sol-ui-row short" style="width:20%; background:#d1d5db;"></div>
-                                        </div>
-                                    </div>
-                                    <div style="background:var(--sol-color-primary); color:white; padding:15px; border-radius:10px; text-align:center; font-weight:700;">
-                                        심사 승인 가능
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item 5 -->
-                        <div class="sol-case-text-item" data-index="4">
-                            <div class="sol-case-text-content">
-                                <h3 class="sol-case-item__title">5. 콘텐츠 서비스</h3>
-                                <p class="sol-case-item__desc">
-                                    금융 앱 내에 탑재 가능한 부동산 정보 콘텐츠입니다. 사용자의 흥미를 유발하고 체류 시간을 늘립니다.
-                                </p>
-                                <ul class="sol-case-list">
-                                    <li>트렌드 리포트 및 상권 분석 뉴스</li>
-                                    <li>금융 상품 가입 유도 배너 연동</li>
-                                </ul>
-                            </div>
-                            <!-- Mobile Visual -->
-                            <div class="sol-case-mobile-visual">
-                                <div class="sol-ui-card" style="background:linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border:none;">
-                                    <div class="sol-ui-card__header" style="border-bottom-color: rgba(255,255,255,0.1);">
-                                        <span class="sol-ui-card__title" style="color:white;">Real Estate News</span>
-                                        <span class="sol-ui-tag" style="background:rgba(255,255,255,0.2); color:white;">Hot</span>
-                                    </div>
-                                    <div style="height:120px; background:rgba(255,255,255,0.05); border-radius:12px; margin-bottom:15px;"></div>
-                                    <div class="sol-ui-row medium" style="background:rgba(255,255,255,0.5); width:90%;"></div>
-                                    <div class="sol-ui-row short" style="background:rgba(255,255,255,0.3); width:60%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right: Visual Stage -->
-                    <div class="sol-case-visual-stage">
-
-                        <!-- Visual 1: AI Price -->
-                        <div class="sol-case-visual-item is-active" data-index="0">
-                            <div class="sol-ui-card">
-                                <div class="sol-ui-card__header">
-                                    <span class="sol-ui-card__title">AI Valuation</span>
-                                    <span class="sol-ui-tag" style="background:#dcfce7; color:#166534;">Safe</span>
-                                </div>
-                                <div class="sol-ui-row medium"></div>
-                                <div class="sol-ui-graph">
-                                    <div class="sol-ui-bar" style="height:40%"></div>
-                                    <div class="sol-ui-bar" style="height:60%"></div>
-                                    <div class="sol-ui-bar" style="height:50%"></div>
-                                    <div class="sol-ui-bar" style="height:80%; background:#22c55e;"></div>
-                                    <div class="sol-ui-bar" style="height:70%"></div>
-                                </div>
-                                <div style="font-size: 2rem; font-weight: 800; color: #1e293b;">4.5억 <span
-                                        style="font-size:1rem; color:#64748b;">(전월대비 +2%)</span></div>
-                            </div>
-                        </div>
-
-                        <!-- Visual 2: My Data -->
-                        <div class="sol-case-visual-item" data-index="1">
-                            <div class="sol-ui-card">
-                                <div class="sol-ui-card__header">
-                                    <span class="sol-ui-card__title">My Portfolio</span>
-                                    <span class="sol-ui-tag">Updates</span>
-                                </div>
-                                <div style="display:flex; justify-content:center; padding: 20px;">
-                                    <div
-                                        style="width:120px; height:120px; border-radius:50%; background: conic-gradient(#3b82f6 0% 60%, #e2e8f0 60% 100%);">
-                                    </div>
-                                </div>
-                                <div class="sol-ui-row medium"></div>
-                                <div class="sol-ui-row short"></div>
-                            </div>
-                        </div>
-
-                        <!-- Visual 3: GA Solution -->
-                        <div class="sol-case-visual-item" data-index="2">
-                            <div class="sol-ui-card">
-                                <div class="sol-ui-card__header">
-                                    <span class="sol-ui-card__title">Target Customer</span>
-                                    <span class="sol-ui-tag">High Value</span>
-                                </div>
-                                <div style="display:flex; align-items:center; gap:15px; margin-bottom:10px;">
-                                    <div style="width:50px; height:50px; background:#e2e8f0; border-radius:50%;"></div>
-                                    <div>
-                                        <div class="sol-ui-row medium" style="width:120px; margin-bottom:5px;"></div>
-                                        <div class="sol-ui-row short" style="width:80px;"></div>
-                                    </div>
-                                </div>
-                                <div style="background:#f8fafc; padding:15px; border-radius:10px;">
-                                    <div style="font-size:0.9rem; font-weight:600; color:#334155; margin-bottom:5px;">추천
-                                        상품</div>
-                                    <div style="font-size:0.8rem; color:#64748b;">주택 화재 보험 (프리미엄)</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Visual 4: Internal System -->
-                        <div class="sol-case-visual-item" data-index="3">
-                            <div class="sol-ui-card">
-                                <div class="sol-ui-card__header">
-                                    <span class="sol-ui-card__title">Risk Report</span>
-                                    <span class="sol-ui-tag" style="background:#fee2e2; color:#b91c1c;">Check</span>
-                                </div>
-                                <div style="display:flex; flex-direction:column; gap:10px;">
-                                    <div style="display:flex; justify-content:space-between;">
-                                        <div class="sol-ui-row short" style="width:40%"></div>
-                                        <div class="sol-ui-row short" style="width:20%; background:#d1d5db;"></div>
-                                    </div>
-                                    <div style="display:flex; justify-content:space-between;">
-                                        <div class="sol-ui-row short" style="width:50%"></div>
-                                        <div class="sol-ui-row short" style="width:20%; background:#d1d5db;"></div>
-                                    </div>
-                                    <div style="display:flex; justify-content:space-between;">
-                                        <div class="sol-ui-row short" style="width:30%"></div>
-                                        <div class="sol-ui-row short" style="width:20%; background:#d1d5db;"></div>
-                                    </div>
-                                </div>
+                        <!-- Connecting Lines & Client Boxes (CSS simulated) -->
+                        <div
+                            style="position: absolute; width: 100%; height: 100%; display: flex; align-items: center; justify-content: space-between; max-width: 800px;">
+                            <div style="display: flex; flex-direction: column; gap: 60px;">
                                 <div
-                                    style="background:var(--sol-color-primary); color:white; padding:15px; border-radius:10px; text-align:center; font-weight:700;">
-                                    심사 승인 가능
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Visual 5: Content -->
-                        <div class="sol-case-visual-item" data-index="4">
-                            <div class="sol-ui-card"
-                                style="background:linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border:none;">
-                                <div class="sol-ui-card__header" style="border-bottom-color: rgba(255,255,255,0.1);">
-                                    <span class="sol-ui-card__title" style="color:white;">Real Estate News</span>
-                                    <span class="sol-ui-tag"
-                                        style="background:rgba(255,255,255,0.2); color:white;">Hot</span>
-                                </div>
+                                    style="background: white; padding: 15px 25px; border-radius: 8px; box-shadow: var(--shadow-m); border: 1px solid #e2e8f0; text-align: center;">
+                                    🏦 Bank Systems</div>
                                 <div
-                                    style="height:120px; background:rgba(255,255,255,0.05); border-radius:12px; margin-bottom:15px;">
-                                </div>
-                                <div class="sol-ui-row medium" style="background:rgba(255,255,255,0.5); width:90%;">
-                                </div>
-                                <div class="sol-ui-row short" style="background:rgba(255,255,255,0.3); width:60%;">
-                                </div>
+                                    style="background: white; padding: 15px 25px; border-radius: 8px; box-shadow: var(--shadow-m); border: 1px solid #e2e8f0; text-align: center;">
+                                    🛡️ Insurance Platforms</div>
+                                <div
+                                    style="background: white; padding: 15px 25px; border-radius: 8px; box-shadow: var(--shadow-m); border: 1px solid #e2e8f0; text-align: center;">
+                                    📱 Fintech Apps</div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 60px;">
+                                <div
+                                    style="background: white; padding: 15px 25px; border-radius: 8px; box-shadow: var(--shadow-m); border: 1px solid #e2e8f0; text-align: center;">
+                                    🏦 Bank Systems</div>
+                                <div
+                                    style="background: white; padding: 15px 25px; border-radius: 8px; box-shadow: var(--shadow-m); border: 1px solid #e2e8f0; text-align: center;">
+                                    🛡️ Insurance Platforms</div>
+                                <div
+                                    style="background: white; padding: 15px 25px; border-radius: 8px; box-shadow: var(--shadow-m); border: 1px solid #e2e8f0; text-align: center;">
+                                    📱 Fintech Apps</div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="sol-v2-section sol-v2-section--alt" style="justify-content: center; text-align: center;">
-            <div style="max-width: 800px;">
-                <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 20px; color: var(--sol-v2-text-main);">금융의
-                    속도가 곧 경쟁력입니다.</h2>
-                <p style="font-size: 1.2rem; color: var(--sol-v2-text-sub); margin-bottom: 40px;">귀사의 프로세스에 최적화된 데이터 활용
-                    전략, 지금 바로 상담받아보세요.</p>
-                <div style="display: flex; gap: 20px; justify-content: center;">
-                    <a href="../../about/contact/index.html" class="sol-v2-hero__cta">전문가 상담 신청</a>
+        <!-- 4. Why-BV - Why BigValue? Section -->
+        <section class="solution-section">
+            <div class="solution-container">
+                <div class="solution-section__header">
+                    <h2 class="solution-section__title">왜 빅밸류여야 하는가?</h2>
+                </div>
+                <div class="solution-grid solution-grid--3col">
+                    <div class="solution-card">
+                        <div style="font-size: 50px; margin-bottom: 20px;">🗺️</div>
+                        <h3 class="solution-card__title">독보적인 데이터 커버리지</h3>
+                        <p class="solution-card__desc">주택부터 비주택까지, 가치평가부터 고객관리까지 금융에 필요한 모든 부동산 데이터를 포괄합니다.</p>
+                    </div>
+                    <div class="solution-card">
+                        <div style="font-size: 50px; margin-bottom: 20px;">🧠</div>
+                        <h3 class="solution-card__title">검증된 AI 기술력</h3>
+                        <p class="solution-card__desc">국내 최고 금융사들이 신뢰하는 정확하고 빠른 AI 분석 모델을 보유하고 있습니다.</p>
+                    </div>
+                    <div class="solution-card">
+                        <div style="font-size: 50px; margin-bottom: 20px;">📈</div>
+                        <h3 class="solution-card__title">성공적인 도입 사례</h3>
+                        <p class="solution-card__desc">금융 서비스 혁신, 비대면 전환, 자산관리 고도화 등 실제 성공 사례로 가치를 증명합니다.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- 5. Cases Section - Card Design with Sticky Scroll -->
+        <section class="solution-cases">
+            <div class="solution-cases__container">
+
+                <!-- Card 1: AI 시세 -->
+                <div class="solution-case-card">
+                    <div class="solution-case-card__content">
+                        <div class="solution-case-card__number">Use Case 1</div>
+                        <h3 class="solution-case-card__title">AI 시세: 비대면 시대, 금융 서비스의 속도를 결정합니다</h3>
+                        <div class="solution-case-card__description">
+                            <p class="solution-case-card__what">주택부터 비주택까지, 모든 부동산의 가치를 AI로 실시간 산정하여 제공합니다.</p>
+                            <ul class="solution-case-card__benefits">
+                                <li>가치평가 시간 90% 이상 단축으로 신속한 의사결정 지원</li>
+                                <li>비대면 담보대출 등 혁신 금융 상품 개발의 핵심 기반</li>
+                                <li>금융 AX(AI Transformation) 전환 가속화</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="solution-case-card__visual">
+                        <div style="text-align: center;">
+                            <span style="font-size: 100px; color: var(--color-brand-primary);">⚡</span>
+                            <div style="display: flex; gap: 10px; margin-top: 20px; justify-content: center;">
+                                <div style="width: 40px; height: 80px; background: #e2e8f0; border-radius: 4px;"></div>
+                                <div style="width: 40px; height: 120px; background: #cbd5e1; border-radius: 4px;"></div>
+                                <div style="width: 40px; height: 60px; background: #e2e8f0; border-radius: 4px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: 부동산 마이데이터 -->
+                <div class="solution-case-card">
+                    <div class="solution-case-card__content">
+                        <div class="solution-case-card__number">Use Case 2</div>
+                        <h3 class="solution-case-card__title">부동산 마이데이터: 금융을 넘어 고객의 모든 자산을 관리합니다</h3>
+                        <div class="solution-case-card__description">
+                            <p class="solution-case-card__what">고객의 숨겨진 부동산 자산을 자동으로 파악, 시세 변동과 수익성을 추적하여 종합 자산관리 서비스를 구현합니다.</p>
+                            <ul class="solution-case-card__benefits">
+                                <li>금융 자산을 넘어 부동산까지 확장된, 진정한 자산관리 서비스 제공</li>
+                                <li>안정적이고 완전한 고객 자산 포트폴리오 분석</li>
+                                <li>고객 Lock-in 효과 및 초개인화 서비스 기반 마련</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="solution-case-card__visual">
+                        <div style="text-align: center; position: relative; width: 300px; height: 300px;">
+                            <svg viewBox="0 0 100 100" style="transform: rotate(-90deg);">
+                                <path d="M 50 50 L 50 0 A 50 50 0 1 1 0 50 Z" fill="#94a3b8" opacity="0.3" />
+                                <path d="M 50 50 L 0 50 A 50 50 0 0 1 50 0 Z" fill="var(--color-brand-primary)"
+                                    style="filter: drop-shadow(0 0 10px rgba(50,212,164,0.3)); transform: translate(5px, -5px);" />
+                            </svg>
+                            <div style="position: absolute; top: 30%; right: -20px; font-weight: 700; color: var(--color-brand-primary); font-size: 24px;">부동산</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: GA 맞춤 솔루션 -->
+                <div class="solution-case-card">
+                    <div class="solution-case-card__content">
+                        <div class="solution-case-card__number">Use Case 3</div>
+                        <h3 class="solution-case-card__title">GA 맞춤 솔루션: 데이터로 보험 고객 관리의 질을 높입니다</h3>
+                        <div class="solution-case-card__description">
+                            <p class="solution-case-card__what">마케팅 DB부터 다차원 고객 분석 데이터, 그리고 이를 관리하는 ASP 시스템까지 원스톱으로 제공합니다. 빅밸류의 강력한 API를 통해 안정적으로 공급됩니다.</p>
+                            <ul class="solution-case-card__benefits">
+                                <li>고객에 대한 입체적 이해를 통한 영업 기회 발굴</li>
+                                <li>데이터 기반의 효율적인 마케팅 및 고객 관리</li>
+                                <li>강력한 빅밸류 API를 통한 안정적인 데이터 공급</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="solution-case-card__visual">
+                        <div style="max-width: 350px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                                <div style="width: 80px; height: 80px; background: #f1f5f9; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #64748b;">DB</div>
+                                <div style="font-size: 24px; color: var(--color-brand-primary);">↓</div>
+                                <div style="width: 120px; height: 80px; background: var(--color-brand-primary); color: white; border-radius: 50% 8px 8px 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">원스톱<br>솔루션</div>
+                                <div style="font-size: 24px; color: var(--color-brand-primary);">↓</div>
+                                <div style="width: 100%; padding: 15px; background: #f8fafc; border-radius: 8px; text-align: center;">
+                                    <div style="font-weight: 700; margin-bottom: 5px;">맞춤 상품</div>
+                                    <div style="font-size: 12px; color: #64748b;">건강보험 · 연금보험</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: 본부시가추정 시스템 -->
+                <div class="solution-case-card">
+                    <div class="solution-case-card__content">
+                        <div class="solution-case-card__number">Use Case 4</div>
+                        <h3 class="solution-case-card__title">본부시가추정 시스템: 내부 감정평가 업무를 자동화합니다</h3>
+                        <div class="solution-case-card__description">
+                            <p class="solution-case-card__what">은행 내 감정평가사가 일반 건축물의 가격을 손쉽게 산정할 수 있도록 지원하는 ASP 서비스입니다. 신뢰도 높은 빅밸류 API를 기반으로 서비스됩니다.</p>
+                            <ul class="solution-case-card__benefits">
+                                <li>내부 심사 및 평가 업무의 효율성과 정확성 극대화</li>
+                                <li>리스크 관리 강화 및 표준화된 평가 프로세스 정립</li>
+                                <li>신뢰도 높은 빅밸류 API 기반의 안정적인 서비스</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="solution-case-card__visual">
+                        <div style="width: 280px; background: #e2e8f0; border-radius: 12px; padding: 20px;">
+                            <div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                                <div style="display: flex; gap: 10px; height: 200px;">
+                                    <div style="flex: 1; background: #f1f5f9; border-radius: 6px; position: relative;">
+                                        <div style="position: absolute; top: 15px; right: 15px; background: #10b981; color: white; padding: 6px 10px; border-radius: 4px; font-size: 11px; font-weight: 700;">
+                                            AI 추정 시가<br>1,250억
+                                        </div>
+                                    </div>
+                                    <div style="width: 60px; display: flex; flex-direction: column; gap: 8px;">
+                                        <div style="height: 60px; background: #cbd5e1; border-radius: 6px;"></div>
+                                        <div style="flex: 1; background: #f8fafc; border-radius: 6px;"></div>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 15px; display: flex; gap: 10px; justify-content: center;">
+                                    <span style="font-size: 32px;">🏢</span>
+                                    <span style="font-size: 32px;">🏦</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: 부동산 및 사업자 콘텐츠 -->
+                <div class="solution-case-card">
+                    <div class="solution-case-card__content">
+                        <h3 class="solution-case-card__title">부동산 및 사업자 콘텐츠: 고객을 머무르게 하는 힘</h3>
+                        <div class="solution-case-card__description">
+                            <p class="solution-case-card__what">금융사 앱/웹을 위한 매력적인 부동산 트렌드, 상권 분석, 사업자 관련 데이터 및 콘텐츠를 공급합니다.</p>
+                            <ul class="solution-case-card__benefits">
+                                <li>고객 유입 및 MAU(월간 활성 사용자) 증대</li>
+                                <li>금융 플랫폼의 서비스 경쟁력 강화</li>
+                                <li>고객의 관심사를 기반으로 한 자연스러운 금융 상품 연계</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="solution-case-card__visual">
+                        <div style="position: relative; width: 200px; height: 360px; background: #1a1a1a; border-radius: 30px; border: 6px solid #333; margin: 0 auto; overflow: hidden; box-shadow: 0 30px 60px -15px rgba(0,0,0,0.3);">
+                            <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 20px; background: #333; border-radius: 0 0 10px 10px;"></div>
+                            <div style="padding: 30px 12px 12px; background: #f8fafc; height: 100%;">
+                                <div style="background: white; padding: 12px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 3px 5px rgba(0,0,0,0.1);">
+                                    <div style="font-weight: 700; font-size: 12px; margin-bottom: 8px;">이번 주 부동산 트렌드</div>
+                                    <div style="height: 40px; background: linear-gradient(90deg, #dcfce7 0%, #f0fdf4 100%); border-radius: 4px;"></div>
+                                </div>
+                                <div style="background: white; padding: 12px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 3px 5px rgba(0,0,0,0.1);">
+                                    <div style="font-weight: 700; font-size: 12px; margin-bottom: 8px;">내 주변 상권 분석</div>
+                                    <div style="height: 60px; background: #f1f5f9; border-radius: 4px; position: relative;">
+                                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 24px; height: 24px; background: rgba(50, 212, 164, 0.2); border-radius: 50%; border: 2px solid var(--color-brand-primary);"></div>
+                                    </div>
+                                </div>
+                                <div style="background: var(--color-brand-primary); padding: 10px; border-radius: 6px; color: white; text-align: center; font-size: 11px; font-weight: 700;">추천 상품 보기</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 6. Customers - Representing Clients Section -->
+        <section class="solution-section solution-section--gray" style="padding: 80px 0;">
+            <div class="solution-container">
+                <div class="solution-section__header">
+                    <h2 class="solution-section__title">대한민국 대표 금융사들이 빅밸류와 함께합니다</h2>
+                </div>
+                <!-- Full Logo Grid -->
+                <div
+                    style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin-top: 40px; max-width: 900px; margin-left: auto; margin-right: auto;">
+                    <span style="font-size: 20px; font-weight: 800; color: #64748b;">SHINHAN</span>
+                    <span style="font-size: 20px; font-weight: 800; color: #64748b;">HANA BANK</span>
+                    <span style="font-size: 20px; font-weight: 800; color: #64748b;">KWANGJU BANK</span>
+                    <span style="font-size: 20px; font-weight: 800; color: #64748b;">toss BANK</span>
+                    <span style="font-size: 20px; font-weight: 800; color: #64748b;">NAVER FINANCIAL</span>
+                    <span style="font-size: 20px; font-weight: 800; color: #64748b;">NH INVESTMENT</span>
+                    <span style="font-size: 20px; font-weight: 800; color: #64748b;">NH BANK</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CTA -->
+        <section class="solution-section">
+            <div class="solution-cta">
+                <h2 class="solution-cta__title">금융 비즈니스의 혁신, 빅밸류와 함께 시작하세요</h2>
+                <p class="solution-cta__desc">빅밸류의 데이터 솔루션 도입에 대해 더 자세히 알아보시겠습니까?</p>
+                <div class="solution-cta__buttons">
+                    <a href="../../about/contact/index.html" class="button button--primary button--large">도입 문의하기</a>
+                    <a href="../../solutions/contents/index.html" class="button button--secondary button--large">콘텐츠 솔루션
+                        보기</a>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
+
     <script src="../../script.js"></script>
-    <script src="../../js/solution_visuals.js"></script>
 </body>
 
 </html>
