@@ -1,0 +1,360 @@
+/* =========================================
+   CASES SECTION - STICKY WRAPPER STYLES
+   ========================================= */
+
+.sol-case-scroll {
+    position: relative;
+    padding: 0;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Sticky Wrapper Concept */
+.sol-case-sticky-wrapper {
+    position: relative;
+    /* Height will be set dynamically by JavaScript based on trigger count */
+    /* Default for cases without JS: auto */
+    min-height: 100vh;
+}
+
+/* Invisible Scroll Track */
+.sol-case-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.sol-case-trigger {
+    height: 100vh;
+    /* Each trigger is one viewport height */
+}
+
+/* Sticky Stage Pinned to Viewport */
+.sol-case-stage {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background: transparent;
+    z-index: 10;
+    pointer-events: none;
+    /* Allow scroll through */
+}
+
+/* Left: Text Stage (Fixed Content) */
+/* Mobile Visual - Hidden on Desktop */
+.sol-case-mobile-visual {
+    display: none;
+}
+
+.sol-case-text-content {
+    /* Wrapper for text content */
+}
+
+/* List Styles */
+.sol-case-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Default: Bullet Points */
+.sol-case-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #334155;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.sol-case-list li::before {
+    content: '•';
+    color: #6366f1;
+    font-size: 1.5rem;
+    margin-right: 12px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+/* Labeled Items (과제/해결/결과, 포함 데이터 등) */
+.sol-case-list--labeled {
+    display: grid;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.sol-case-list--labeled li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: start;
+    margin-bottom: 0;
+    padding: 16px;
+    background: rgba(99, 102, 241, 0.03);
+    border-radius: 12px;
+    border-left: 3px solid #6366f1;
+}
+
+.sol-case-list--labeled li::before {
+    content: none;
+}
+
+.sol-case-list--labeled .label {
+    font-weight: 700;
+    color: #6366f1;
+    white-space: nowrap;
+    font-size: 0.95rem;
+    padding-top: 2px;
+}
+
+.sol-case-list--labeled .content {
+    color: #334155;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* 활용 효과 스타일 */
+.sol-case-list--effects {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.sol-case-list--effects li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 14px 18px;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.05) 0%, rgba(34, 197, 94, 0.02) 100%);
+    border-radius: 10px;
+    border-left: 3px solid #22c55e;
+}
+
+.sol-case-list--effects li::before {
+    content: '✓';
+    color: #22c55e;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-right: 12px;
+}
+
+.sol-case-text-stage {
+    width: 40%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* Center Vertically */
+    pointer-events: auto;
+}
+
+.sol-case-text-item {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(0.95);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sol-case-text-item.is-active {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+    filter: blur(0);
+    z-index: 2;
+}
+
+/* Right: Visual Stage (Fixed Content) */
+.sol-case-visual-stage {
+    width: 50%;
+    height: 600px;
+    /* Fixed visual height */
+    position: relative;
+    background: #f8fafc;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    pointer-events: auto;
+}
+
+.sol-case-visual-item {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 40px;
+}
+
+.sol-case-visual-item.is-active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .sol-case-text-stage {
+        width: 45%;
+    }
+
+    .sol-case-visual-stage {
+        width: 50%;
+        height: 500px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .sol-case-scroll {
+        padding: 60px 0;
+    }
+
+    .sol-case-sticky-wrapper {
+        height: auto;
+        position: relative;
+    }
+
+    .sol-case-stage {
+        flex-direction: column;
+        height: auto;
+        position: static;
+        padding: 0 20px;
+        gap: 0;
+    }
+
+    .sol-case-track {
+        display: none;
+    }
+
+    /* Text Stage - Normal Flow Layout */
+    .sol-case-text-stage {
+        width: 100%;
+        height: auto;
+        position: static;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        pointer-events: auto;
+    }
+
+    .sol-case-text-item {
+        position: static;
+        opacity: 1;
+        transform: none;
+        filter: none;
+        width: 100%;
+        padding: 30px;
+        margin-bottom: 0;
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Show all text items */
+    .sol-case-text-item.is-active {
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
+
+    /* Hide desktop visual stage on mobile */
+    .sol-case-visual-stage {
+        display: none;
+    }
+
+    /* Show mobile visual inside each text item */
+    .sol-case-mobile-visual {
+        display: block;
+        width: 100%;
+        padding: 20px;
+        background: #f8fafc;
+        border-radius: 16px;
+    }
+
+    /* Support for alternative layout structure (logistics page) */
+    .sol-case-layout {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .sol-case-text-col {
+        width: 100%;
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .sol-case-visual-col {
+        display: none;
+    }
+
+    .sol-case-item {
+        min-height: auto;
+        opacity: 1;
+        filter: none;
+        transform: none;
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sol-case-scroll {
+        padding: 40px 0;
+    }
+
+    .sol-case-stage {
+        padding: 0 15px;
+    }
+
+    .sol-case-text-stage {
+        gap: 30px;
+    }
+
+    .sol-case-text-item {
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .sol-case-item__title {
+        font-size: 1.5rem;
+    }
+
+    .sol-case-item__desc {
+        font-size: 1rem;
+    }
+
+    .sol-case-mobile-visual {
+        padding: 15px;
+    }
+
+    .sol-ui-card {
+        padding: 20px;
+    }
+}

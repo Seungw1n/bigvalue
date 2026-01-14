@@ -1,0 +1,367 @@
+/* =========================================
+   V2 RESPONSIVE DESIGN
+   ========================================= */
+
+/* Tablet Breakpoint */
+@media (max-width: 1200px) {
+    .sol-v2-hero__grid {
+        gap: 40px;
+    }
+
+    .sol-v2-split {
+        gap: 40px;
+    }
+}
+
+/* Tablet to Mobile Transition */
+@media (max-width: 1024px) {
+    :root {
+        --sol-v2-padding-y: 50px;
+        --sol-v2-gap: 40px;
+        --sol-v2-min-height-hero: 600px;
+        --sol-v2-min-height-sec: 600px;
+    }
+
+    /* Hero Section - Stack Text Above Visual */
+    .sol-v2-hero__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sol-v2-hero__content {
+        order: 1;
+        text-align: center;
+    }
+
+    .sol-v2-hero__visual {
+        order: 2;
+        min-height: 400px;
+    }
+
+    .sol-v2-hero__title {
+        font-size: 2.5rem;
+    }
+
+    .sol-v2-hero__desc {
+        font-size: 1.125rem;
+    }
+
+    /* Split Sections - Stack Text Above Content */
+    .sol-v2-split {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sol-v2-split__header {
+        order: 1;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .sol-v2-split__content {
+        order: 2;
+    }
+
+    .sol-v2-split__title {
+        font-size: 2rem;
+    }
+
+    .sol-v2-split__desc {
+        font-size: 1.125rem;
+    }
+
+    /* Logos */
+    .sol-v2-hero__logos-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .sol-v2-hero__logos-list img {
+        height: 35px;
+    }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 768px) {
+    :root {
+        --sol-v2-padding-x: 20px;
+        --sol-v2-padding-y: 40px;
+        --sol-v2-gap: 30px;
+        --sol-v2-min-height-hero: auto;
+        --sol-v2-min-height-sec: auto;
+    }
+
+    .sol-v2-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .sol-v2-hero {
+        min-height: auto;
+        padding: 40px 0;
+    }
+
+    .sol-v2-hero__grid {
+        gap: 30px;
+    }
+
+    .sol-v2-hero__content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .sol-v2-hero__cta {
+        align-self: center;
+    }
+
+    .sol-v2-hero__title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .sol-v2-hero__desc {
+        font-size: 1rem;
+    }
+
+    .sol-v2-hero__visual {
+        min-height: 250px;
+        height: 250px;
+    }
+
+    .sol-v2-section {
+        min-height: auto;
+        padding: 40px 0;
+    }
+
+    /* Core Section: Hide graphics on mobile */
+    /* Hide hub visual (finance page) */
+    .sol-hub-visual,
+    .sol-hub-stage {
+        display: none !important;
+    }
+
+    /* Hide core section content (logistics, b2b, contents pages) */
+    .sol-v2-hero + .sol-v2-section .sol-v2-split__content,
+    .sol-v2-section.sol-v2-section--alt:nth-of-type(2) .sol-v2-split__content {
+        display: none !important;
+    }
+
+    /* Show only text for hub track */
+    .sol-hub-track {
+        min-height: auto !important;
+        height: auto !important;
+    }
+
+    .sol-hub-text {
+        position: static !important;
+        padding: 40px 20px !important;
+        text-align: left !important;
+    }
+
+    .sol-hub-text h2,
+    .sol-hub-text p {
+        text-align: left !important;
+    }
+
+    .sol-v2-split {
+        gap: 30px;
+        grid-template-columns: 1fr;
+    }
+
+    .sol-v2-split__header {
+        text-align: left;
+    }
+
+    /* Features Section: Keep content, align text left */
+    .sol-v2-section:not(.sol-v2-section--alt) .sol-v2-split__header,
+    .sol-v2-section .sol-v2-split__header {
+        text-align: left;
+    }
+
+    .sol-v2-split__title {
+        font-size: 1.75rem;
+    }
+
+    .sol-v2-split__desc {
+        font-size: 1rem;
+    }
+
+    .sol-v2-hero__logos-list {
+        gap: 20px;
+    }
+
+    .sol-v2-hero__logos-list img {
+        height: 30px;
+    }
+
+    /* Final CTA Section */
+    .sol-v2-section[style*="justify-content: center"] {
+        min-height: 400px !important;
+        padding: 60px 20px !important;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .sol-v2-hero__title {
+        font-size: 1.75rem;
+    }
+
+    .sol-v2-split__title {
+        font-size: 1.5rem;
+    }
+
+    .sol-v2-hero__cta {
+        padding: 14px 28px;
+        font-size: 0.95rem;
+    }
+}
+
+/* =========================================
+   INLINE GRID RESPONSIVE STYLES
+   Handle inline-styled grids in solution pages
+   ========================================= */
+
+/* Tablet Breakpoint - 2-column grids */
+@media (max-width: 1024px) {
+    /* Core Section: 2x2 grid becomes 2x2 (no change yet) */
+    .sol-v2-split__content > div[style*="grid-template-columns: repeat(2, 1fr)"] {
+        gap: 20px !important;
+    }
+
+    /* Problem Section: Reduce padding and gaps */
+    .sol-v2-split__content > div[style*="flex-direction: column"] > div[style*="padding: 40px"] {
+        padding: 30px !important;
+    }
+
+    .sol-v2-split__content > div[style*="flex-direction: column"] > div[style*="grid-template-columns: repeat(2, 1fr)"] {
+        gap: 15px !important;
+    }
+
+    /* Features Section: Dark grid - reduce padding */
+    .sol-v2-split__content > div[style*="background: linear-gradient(135deg, #1e293b"] {
+        padding: 40px !important;
+    }
+
+    /* Why-BV inline override: Override the inline style to use 2 columns */
+    .sol-why-minimal__grid[style*="grid-template-columns"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Mobile Breakpoint - All grids become 1-column */
+@media (max-width: 768px) {
+    /* Core Section: 2x2 grid becomes 1 column */
+    .sol-v2-split__content > div[style*="grid-template-columns: repeat(2, 1fr)"] {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    /* Problem Section: Cards stack vertically */
+    .sol-v2-split__content > div[style*="flex-direction: column"] {
+        gap: 30px !important;
+    }
+
+    .sol-v2-split__content > div[style*="flex-direction: column"] > div[style*="padding: 40px"],
+    .sol-v2-split__content > div[style*="flex-direction: column"] > div[style*="padding: 30px"] {
+        padding: 25px !important;
+    }
+
+    .sol-v2-split__content > div[style*="flex-direction: column"] > div[style*="grid-template-columns: repeat(2, 1fr)"] {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    /* Features Section: Dark grid becomes 1 column */
+    .sol-v2-split__content > div[style*="background: linear-gradient(135deg, #1e293b"] {
+        padding: 30px !important;
+    }
+
+    .sol-v2-split__content > div[style*="background: linear-gradient(135deg, #1e293b"] > div > div[style*="grid-template-columns: repeat(2, 1fr)"] {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    /* Arrow indicators - make smaller */
+    .sol-v2-split__content div[style*="font-size: 48px"] {
+        font-size: 36px !important;
+    }
+
+    /* Card titles and text - ensure readability and left alignment */
+    .sol-v2-split__content h3[style*="font-size: 24px"] {
+        font-size: 20px !important;
+        line-height: 1.3 !important;
+        text-align: left !important;
+    }
+
+    .sol-v2-split__content h4[style*="font-size: 18px"] {
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+        text-align: left !important;
+    }
+
+    .sol-v2-split__content p[style*="font-size: 16px"] {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+        text-align: left !important;
+    }
+
+    .sol-v2-split__content p[style*="font-size: 14px"] {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        text-align: left !important;
+    }
+
+    /* Features section content alignment */
+    .sol-v2-split__content > div > div {
+        text-align: left !important;
+    }
+
+    /* Features section - align flex items to left */
+    .sol-v2-split__header div[style*="display: flex"] {
+        justify-content: flex-start !important;
+    }
+
+    /* Numbered badges - adjust size and alignment */
+    .sol-v2-split__content div[style*="font-size: 48px"][style*="font-weight: 800"] {
+        font-size: 36px !important;
+        margin-bottom: 10px !important;
+        text-align: left !important;
+    }
+
+    /* Why-BV inline override: Single column on mobile */
+    .sol-why-minimal__grid[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+}
+
+/* Small Mobile - Further text adjustments */
+@media (max-width: 480px) {
+    /* Reduce padding further to prevent crushing */
+    .sol-v2-split__content > div[style*="padding"] {
+        padding: 20px !important;
+    }
+
+    .sol-v2-split__content h3[style*="font-size: 24px"],
+    .sol-v2-split__content h3[style*="font-size: 20px"] {
+        font-size: 18px !important;
+    }
+
+    .sol-v2-split__content h4[style*="font-size: 18px"],
+    .sol-v2-split__content h4[style*="font-size: 16px"] {
+        font-size: 15px !important;
+    }
+
+    /* Numbered badges */
+    .sol-v2-split__content div[style*="font-size: 48px"][style*="font-weight: 800"],
+    .sol-v2-split__content div[style*="font-size: 36px"][style*="font-weight: 800"] {
+        font-size: 32px !important;
+    }
+
+    /* Grid indicator in features section */
+    .sol-v2-split__content div[style*="font-size: 18px"][style*="font-weight: 700"] {
+        font-size: 16px !important;
+    }
+}

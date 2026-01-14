@@ -1051,3 +1051,1327 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================
+   V2 MODERN LAYOUT (DeepMind / Unicorn Style)
+   Strict, High-End, Responsive
+   ========================================= */
+
+/* Root Variables for V2 */
+:root {
+    --sol-v2-padding-y: 60px;
+    /* Adjusted for better spacing */
+    --sol-v2-padding-x: max(5vw, (100% - 1400px) / 2);
+    --sol-v2-min-height-hero: 760px;
+    --sol-v2-min-height-sec: 840px;
+    --sol-v2-gap: 60px;
+
+    --sol-v2-radius: 24px;
+    --sol-v2-bg-light: #f8fafc;
+    --sol-v2-bg-white: #ffffff;
+
+    --sol-v2-text-main: #1e293b;
+    --sol-v2-text-sub: #64748b;
+    --sol-v2-accent: #4434e2;
+}
+
+/* Base Utility for V2 */
+.sol-v2-container {
+    padding-left: var(--sol-v2-padding-x);
+    padding-right: var(--sol-v2-padding-x);
+    width: 100%;
+}
+
+/* 1. HERO SECTION */
+.sol-v2-hero {
+    min-height: var(--sol-v2-min-height-hero);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding-top: 100px;
+    /* GNB Offset */
+    padding-bottom: 60px;
+    overflow: hidden;
+}
+
+.sol-v2-hero__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sol-v2-gap);
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.sol-v2-hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.sol-v2-hero__label {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--sol-v2-accent);
+}
+
+.sol-v2-hero__title {
+    font-size: 4rem;
+    /* Big, Bold */
+    line-height: 1.1;
+    font-weight: 800;
+    color: var(--sol-v2-text-main);
+    letter-spacing: -0.02em;
+}
+
+.sol-v2-hero__desc {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--sol-v2-text-sub);
+    max-width: 90%;
+}
+
+.sol-v2-hero__cta {
+    margin-top: 20px;
+    padding: 16px 32px;
+    background: var(--sol-v2-text-main);
+    color: white;
+    font-weight: 600;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.sol-v2-hero__cta:hover {
+    transform: translateY(-2px);
+    background: black;
+}
+
+.sol-v2-hero__visual {
+    position: relative;
+    height: 500px;
+    border-radius: var(--sol-v2-radius);
+    background: var(--sol-v2-bg-light);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sol-v2-hero__logos {
+    margin-top: 60px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 30px;
+}
+
+.sol-v2-hero__logos-list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    opacity: 0.6;
+    flex-wrap: wrap;
+}
+
+.sol-v2-hero__logos-list img {
+    height: 24px;
+    width: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.sol-v2-hero__logos-list img:hover {
+    filter: grayscale(0%);
+}
+
+
+/* 2. STANDARD SECTIONS (Split Layout) */
+.sol-v2-section {
+    min-height: var(--sol-v2-min-height-sec);
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.sol-v2-section--alt {
+    background-color: var(--sol-v2-bg-light);
+}
+
+.sol-v2-split {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    /* Text narrower than visual */
+    gap: 80px;
+    width: 100%;
+}
+
+.sol-v2-split__header {
+    position: sticky;
+    top: 120px;
+    /* Sticky effect */
+    align-self: start;
+}
+
+.sol-v2-split__title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--sol-v2-text-main);
+}
+
+.sol-v2-split__desc {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--sol-v2-text-sub);
+    margin-bottom: 40px;
+}
+
+.sol-v2-split__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Graphic Containers */
+.sol-v2-graphic-box {
+    background: var(--sol-v2-bg-white);
+    border-radius: var(--sol-v2-radius);
+    padding: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.sol-v2-graphic-box--dark {
+    background: var(--sol-v2-text-main);
+    color: white;
+    border: none;
+}
+
+/* Grids inside Content */
+.sol-v2-subgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.sol-v2-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s;
+}
+
+.sol-v2-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--sol-v2-accent);
+}
+
+.sol-v2-card__icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.sol-v2-card__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--sol-v2-text-main);
+}
+
+.sol-v2-card__desc {
+    font-size: 0.95rem;
+    color: var(--sol-v2-text-sub);
+    line-height: 1.5;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .sol-v2-hero__title {
+        font-size: 3rem;
+    }
+
+    .sol-v2-split {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sol-v2-split__header {
+        position: static;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sol-v2-hero__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sol-v2-hero__title {
+        font-size: 2.5rem;
+    }
+
+    .sol-v2-min-height-hero {
+        min-height: auto;
+        padding: 120px 0 60px;
+    }
+
+    .sol-v2-min-height-sec {
+        min-height: auto;
+    }
+}
+
+
+/* =========================================
+   3. ISOMETRIC CORE NETWORK VISUAL
+   ========================================= */
+
+.sol-iso-scene {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: #0f172a;
+    /* Dark background */
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
+    /* Enhanced 3D depth */
+}
+
+.sol-iso-grid-bg {
+    position: absolute;
+    inset: -50%;
+    width: 200%;
+    height: 200%;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    transform: rotateX(60deg) rotateZ(-45deg) scale(1.5);
+    animation: iso-grid-move 20s linear infinite;
+}
+
+@keyframes iso-grid-move {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 60px 60px;
+    }
+}
+
+.sol-iso-container {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(60deg) rotateZ(-45deg);
+    width: 0;
+    height: 0;
+    /* This pivot centers everything */
+}
+
+/* CUBE DEFINITION */
+.sol-iso-cube {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%);
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sol-iso-cube__faces {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.sol-iso-face {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    /* Hide text in face, show on hover/label */
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.05);
+    backface-visibility: hidden;
+}
+
+.sol-iso-face--top {
+    transform: rotateX(0deg) translateZ(40px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sol-iso-face--bottom {
+    transform: rotateX(-180deg) translateZ(40px);
+}
+
+.sol-iso-face--front {
+    transform: rotateX(-90deg) translateZ(40px);
+}
+
+.sol-iso-face--back {
+    transform: rotateX(90deg) translateZ(40px);
+}
+
+.sol-iso-face--left {
+    transform: rotateY(-90deg) translateZ(40px);
+}
+
+.sol-iso-face--right {
+    transform: rotateY(90deg) translateZ(40px);
+}
+
+/* Center Cube Override - Purple Brand */
+.sol-iso-cube--center .sol-iso-face {
+    border-color: rgba(99, 102, 241, 0.6);
+    background: rgba(99, 102, 241, 0.2);
+    box-shadow: inset 0 0 20px rgba(99, 102, 241, 0.4);
+}
+
+.sol-iso-cube--center .sol-iso-face--top {
+    background: rgba(99, 102, 241, 0.4);
+}
+
+/* LABELS (Floating above) */
+.sol-iso-label {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%) rotateZ(45deg) rotateX(-60deg);
+    /* Counter-rotate to face cam */
+    background: rgba(15, 23, 42, 0.9);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease 0.8s;
+    /* Lag appearance */
+}
+
+/* CONNECTOR LINES */
+.sol-iso-connector {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, #6366f1, transparent);
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 50%;
+    width: 0;
+    /* Start length 0 */
+    transition: width 0.8s ease;
+    opacity: 0.5;
+}
+
+/* ANIMATION STATES (The 'Scroll' Interaction) */
+/* Initial State: Center visible, satellites hidden/collapsed */
+.sol-iso-cube.is-satellite {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateZ(-100px) scale(0);
+}
+
+/* Active State: Triggered via JS when in view */
+.sol-iso-scene.is-active .sol-iso-cube.is-satellite {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateZ(0) scale(1);
+}
+
+.sol-iso-scene.is-active .sol-iso-label {
+    opacity: 1;
+}
+
+/* Connector Growth */
+.sol-iso-scene.is-active .sol-iso-connector {
+    /* widths will be set inline or via specific classes */
+}
+
+/* POSITIONS (Hexagonal Layout around Center) */
+/* Distances roughly 160px */
+
+/* S1: Top Right */
+.sol-iso-pos-1 {
+    top: -120px;
+    left: 120px;
+}
+
+/* S2: Right */
+.sol-iso-pos-2 {
+    top: 0px;
+    left: 160px;
+}
+
+/* S3: Bottom Right */
+.sol-iso-pos-3 {
+    top: 120px;
+    left: 120px;
+}
+
+/* S4: Bottom Left */
+.sol-iso-pos-4 {
+    top: 120px;
+    left: -120px;
+}
+
+/* S5: Left */
+.sol-iso-pos-5 {
+    top: 0px;
+    left: -160px;
+}
+
+/* S6: Top Left (Extra slot if needed) */
+.sol-iso-pos-6 {
+    top: -120px;
+    left: -120px;
+}
+
+/* Stagger Delays */
+.sol-iso-scene.is-active .delay-1 {
+    transition-delay: 0.1s;
+}
+
+.sol-iso-scene.is-active .delay-2 {
+    transition-delay: 0.2s;
+}
+
+.sol-iso-scene.is-active .delay-3 {
+    transition-delay: 0.3s;
+}
+
+.sol-iso-scene.is-active .delay-4 {
+    transition-delay: 0.4s;
+}
+
+.sol-iso-scene.is-active .delay-5 {
+    transition-delay: 0.5s;
+}
+
+
+/* =========================================
+   SCROLL-LINKED DATA HUB (Sticky & Rich)
+   ========================================= */
+
+/* The Track (Tall container to scroll through) */
+.sol-hub-track {
+    height: 400vh;
+    /* Long scroll area */
+    position: relative;
+    z-index: 10;
+}
+
+/* The Stage (Pinned view) */
+.sol-hub-stage {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: #0f172a;
+    /* Match hub bg */
+    display: flex;
+    /* Centering content */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Internal Layout of Stage */
+.sol-hub-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    /* Text Left, Hub Right */
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 40px;
+    height: 100%;
+    align-items: center;
+}
+
+/* Text Side */
+.sol-hub-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+    color: white;
+}
+
+.sol-hub-text.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sol-hub-text h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.sol-hub-text p {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+
+/* VISUAL SIDE (Enhanced ISO) */
+.sol-hub-visual {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 2000px;
+}
+
+.sol-iso-scene-v2 {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(60deg) rotateZ(-45deg);
+    width: 0;
+    height: 0;
+}
+
+/* Enhanced Connectors */
+.sol-iso-line {
+    position: absolute;
+    height: 4px;
+    /* Thicker */
+    background: rgba(99, 102, 241, 0.2);
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 50%;
+    width: 0;
+    /* Animated via JS/Scroll */
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.1);
+}
+
+.sol-iso-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #6366f1, transparent);
+    animation: flowData 1.5s infinite linear;
+    filter: drop-shadow(0 0 5px #6366f1);
+}
+
+@keyframes flowData {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+/* Enhanced Cubes */
+.sol-iso-node {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) translateZ(0);
+    transition: transform 0.1s linear;
+    /* Smooth scroll sync */
+}
+
+/* Scale logic handled by CSS var driven by JS usually, or simplistic transitions */
+.sol-iso-node {
+    transform: translate(-50%, -50%) translateZ(var(--z-pos, 0px)) scale(var(--scale, 0));
+}
+
+.sol-iso-face-v2 {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.85);
+    /* Darker, thicker */
+    border: 2px solid rgba(99, 102, 241, 0.5);
+    /* Brand border */
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+
+/* 3D Face Transforms */
+.face-top {
+    transform: rotateX(0deg) translateZ(50px);
+    background: rgba(99, 102, 241, 0.15);
+    border-color: rgba(99, 102, 241, 0.8);
+}
+
+.face-bottom {
+    transform: rotateX(-180deg) translateZ(50px);
+}
+
+.face-front {
+    transform: rotateX(-90deg) translateZ(50px);
+}
+
+.face-back {
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.face-left {
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+.face-right {
+    transform: rotateY(90deg) translateZ(50px);
+}
+
+/* Center Text (Counter-Rotated Billboard) */
+.sol-iso-billboard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Create a flat plane facing camera: Undo Scene Rotation */
+    /* Scene: X60, Z-45. To undo: Z45, X-60. */
+    transform: translate(-50%, -50%) translateZ(60px)
+        /* Float above cube */
+        rotateZ(45deg) rotateX(-60deg);
+    text-align: center;
+    width: 200px;
+    pointer-events: none;
+}
+
+.sol-iso-text-main {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    display: inline-block;
+}
+
+/* Center Node specific Pulse */
+.sol-iso-node.center-hub .face-top {
+    box-shadow: 0 0 50px rgba(99, 102, 241, 0.5), inset 0 0 20px rgba(99, 102, 241, 0.5);
+    background: rgba(99, 102, 241, 0.3);
+}
+
+/* Positions (Larger Spread) */
+.pos-c {
+    top: 0;
+    left: 0;
+    --z-pos: 0px;
+    --scale: 1;
+}
+
+/* Center always visible */
+.pos-1 {
+    top: -200px;
+    left: 0;
+}
+
+.pos-2 {
+    top: -100px;
+    left: 173px;
+}
+
+.pos-3 {
+    top: 100px;
+    left: 173px;
+}
+
+.pos-4 {
+    top: 200px;
+    left: 0;
+}
+
+.pos-5 {
+    top: 100px;
+    left: -173px;
+}
+
+.pos-6 {
+    top: -100px;
+    left: -173px;
+}
+
+
+
+/* =========================================
+   4. API COLLABORATION VISUAL (Radial Dark)
+   ========================================= */
+
+.sol-api-visual-box {
+    background: #020617;
+    /* Very Dark Blue/Black */
+    border-radius: 24px;
+    padding: 60px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Ambient glow background */
+.sol-api-bg-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* The Grid (Orbital Layout) */
+.sol-api-orbit {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 2px dashed rgba(99, 102, 241, 0.2);
+    border-radius: 50%;
+    animation: orbit-spin 60s linear infinite;
+}
+
+@keyframes orbit-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Central Node (API) */
+.sol-api-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);
+    border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.sol-api-center::after {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border-radius: 50%;
+    border: 1px solid rgba(124, 58, 237, 0.5);
+    animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+/* System Nodes (Satellites) */
+.sol-api-sys {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: rgba(15, 23, 42, 0.9);
+    border: 2px solid #6366f1;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 5;
+    transition: transform 0.3s;
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+}
+
+/* Positioning on Circle (Static relative to spinner or fixed?) 
+   Let's keep them fixed in screen space for readability, 
+   so placed outside the rotating orbit div container, or counter-rotated.
+   We'll place them absolutely in the main box.
+*/
+.sol-api-sys.pos-top {
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sol-api-sys.pos-bl {
+    bottom: 60px;
+    left: 40px;
+}
+
+.sol-api-sys.pos-br {
+    bottom: 60px;
+    right: 40px;
+}
+
+/* Connection Beams (Animated SVG or Divs) */
+.sol-api-beam {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Center start */
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, transparent);
+    transform-origin: 0 50%;
+    z-index: 1;
+    width: 0;
+    animation: beam-shoot 2s infinite;
+}
+
+/* Beam Rotations to point to systems */
+.beam-to-top {
+    transform: rotate(-90deg);
+    width: 140px;
+    animation-delay: 0s;
+}
+
+.beam-to-bl {
+    transform: rotate(135deg);
+    width: 180px;
+    animation-delay: 0.5s;
+}
+
+.beam-to-br {
+    transform: rotate(45deg);
+    width: 180px;
+    animation-delay: 1s;
+}
+
+@keyframes beam-shoot {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 220px;
+        opacity: 0;
+    }
+}
+
+/* System Labels */
+.sol-api-sys-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 4px;
+    color: #e2e8f0;
+    text-align: center;
+}
+
+.sol-api-sys-icon {
+    font-size: 1.5rem;
+}
+
+/* Large Spotlight Effect (from reference) */
+.sol-api-spotlight {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 100px;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+    transform: translate(-50%, -50%) rotate(45deg);
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+/* =========================================
+   5. WHY SECTION - DARK MINIMAL (Reference Style)
+   ========================================= */
+
+.sol-why-minimal {
+    background-color: #000000;
+    /* Pure black as per ref */
+    color: #ffffff;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.sol-why-minimal__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 max(5vw, 40px);
+}
+
+.sol-why-minimal__header {
+    margin-bottom: 80px;
+    max-width: 800px;
+}
+
+.sol-why-minimal__title {
+    font-size: 4rem;
+    /* Very large */
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+    background: linear-gradient(to right, #ffffff, #94a3b8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sol-why-minimal__desc {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+.sol-why-minimal__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    /* Spacious gap */
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    /* Subtle separator line like ref alignment implies */
+    padding-top: 60px;
+}
+
+.sol-why-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sol-why-item__icon {
+    font-size: 24px;
+    /* Small icon */
+    color: #ffffff;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sol-why-item__title {
+    font-size: 1.125rem;
+    /* Ref looks concise, ~18px */
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.sol-why-item__desc {
+    font-size: 1rem;
+    color: #94a3b8;
+    /* Muted text */
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .sol-why-minimal__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+
+    .sol-why-minimal__title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sol-why-minimal {
+        padding: 60px 0;
+    }
+
+    .sol-why-minimal__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 40px;
+    }
+
+    .sol-why-minimal__title {
+        font-size: 2.5rem;
+    }
+
+    .sol-why-minimal__desc {
+        font-size: 1.125rem;
+    }
+
+    .sol-why-minimal__header {
+        margin-bottom: 50px;
+    }
+}
+
+
+/* =========================================
+   6. CASES: STICKY FEATURE SCROLL (Ref Style)
+   ========================================= */
+
+.sol-case-scroll {
+    position: relative;
+    padding: 100px 0;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.sol-case-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 40px;
+}
+
+/* Left: Scrollable Text Items */
+.sol-case-text-col {
+    width: 40%;
+    /* Extra padding at bottom to allow last item to scroll fully */
+    padding-bottom: 20vh;
+}
+
+.sol-case-item {
+    min-height: 80vh;
+    /* One item per screen height approx */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.1;
+    /* Almost invisible when inactive */
+    filter: blur(3px);
+    /* Blur effect for depth */
+    transform: scale(0.95);
+    /* Slight shrink */
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Match visual transition */
+    padding-right: 40px;
+}
+
+.sol-case-item.is-active {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+}
+
+.sol-case-item__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+.sol-case-item__desc {
+    font-size: 1.125rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.sol-case-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sol-case-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #334155;
+    font-weight: 500;
+}
+
+.sol-case-list li::before {
+    content: '';
+    color: #6366f1;
+    font-size: 1.5rem;
+    margin-right: 12px;
+    line-height: 1;
+}
+
+
+/* Right: Sticky Visual Stage */
+.sol-case-visual-col {
+    width: 50%;
+    position: sticky;
+    top: 100px;
+    /* Sticky from top */
+    height: 600px;
+    /* Fixed height for visual container */
+    background: #f8fafc;
+    /* Very light gray bg from ref */
+    border-radius: 40px;
+    /* Soft roundness */
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.sol-case-visual-stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.sol-case-visual {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 40px;
+}
+
+.sol-case-visual.is-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    z-index: 10;
+}
+
+/* UI Card Mockups (Generic Styled Cards) */
+.sol-ui-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+}
+
+.sol-ui-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 15px;
+}
+
+.sol-ui-card__title {
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 1.1rem;
+}
+
+.sol-ui-tag {
+    background: #eff6ff;
+    color: #3b82f6;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.sol-ui-row {
+    height: 12px;
+    background: #f1f5f9;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.sol-ui-row.short {
+    width: 60%;
+}
+
+.sol-ui-row.medium {
+    width: 80%;
+}
+
+.sol-ui-graph {
+    flex-grow: 1;
+    background: linear-gradient(135deg, #e0e7ff 0%, #ffffff 100%);
+    border-radius: 12px;
+    min-height: 120px;
+    display: flex;
+
+    padding: 20px;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.sol-ui-bar {
+    width: 15%;
+    background: #6366f1;
+    border-radius: 4px 4px 0 0;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .sol-case-layout {
+        flex-direction: column;
+    }
+
+    .sol-case-text-col {
+        width: 100%;
+    }
+
+    .sol-case-visual-col {
+        display: none;
+        /* Hide sticky visuals on mobile, or stack them differently. For now, following ref which implies desktop richness. We can stack for mobile later if needed. */
+    }
+
+    /* Mobile Fallback: Just show text cards */
+    .sol-case-item {
+        min-height: auto;
+        opacity: 1;
+        background: #f8fafc;
+        padding: 30px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+    }
+}

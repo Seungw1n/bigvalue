@@ -4,526 +4,664 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BigValue 콘텐츠 솔루션 - 데이터 기반 콘텐츠 전략으로 고객 참여를 극대화하세요">
-    <title>콘텐츠 솔루션 - BigValue</title>
+    <title>BigValue - 정보/콘텐츠 솔루션</title>
     <link rel="stylesheet" href="../../css/common.css">
     <link rel="stylesheet" href="../../css/template_solution.css">
+    <link rel="stylesheet" href="../../css/template_solution_responsive.css">
+    <link rel="stylesheet" href="../../css/template_solution_cases.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- GNB Placeholder -->
     <div id="gnb-placeholder"></div>
 
-    <main class="solution-main solution-container">
+    <!-- MAIN V2 CONTAINER -->
+    <main class="sol-v2-container">
 
-        <!-- Section 1: Hero (Image 0) -->
-        <section class="solution-section">
-            <div class="solution-section__header">
-                <p class="solution-section__subtitle" style="font-weight: 700; color: var(--color-brand-primary);">[제안서]
+        <!-- 1. Hero Section -->
+        <section class="sol-v2-hero">
+            <div class="sol-v2-hero__top sol-v2-hero__grid">
+                <!-- Text Left -->
+                <div class="sol-v2-hero__content">
+                    <span class="sol-v2-hero__label">정보/콘텐츠</span>
+                    <h1 class="sol-v2-hero__title">빅밸류 콘텐츠 기반<br>데이터 공급 솔루션</h1>
+                    <p class="sol-v2-hero__desc">
+                        고객의 서비스 혁신을 가속화하는 가장 빠른 데이터 파이프라인
+                    </p>
+                    <a href="#contact" class="sol-v2-hero__cta">문의하기</a>
+                </div>
+
+                <!-- Visual Right -->
+                <div class="sol-v2-hero__visual">
+                    <canvas id="hero-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0;"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Section -->
+        <section class="sol-v2-section sol-v2-section--alt">
+            <div class="sol-v2-split">
+                <div class="sol-v2-split__header">
+                    <h2 class="sol-v2-split__title">데이터를 즉시 서비스에<br>탑재 가능한 완성형 콘텐츠로</h2>
+                </div>
+
+                <div class="sol-v2-split__content">
+                    <!-- Pipeline Graphic -->
+                    <div style="margin-bottom: 60px;">
+                        <div style="display: flex; align-items: center; gap: 30px; justify-content: center; flex-wrap: wrap;">
+                            <div style="background: white; padding: 40px 50px; border-radius: 20px; text-align: center; border: 2px solid #e2e8f0; min-width: 200px;">
+                                <div style="font-size: 48px; margin-bottom: 15px;">🧵</div>
+                                <h4 style="font-size: 18px; font-weight: 700; color: #1e293b;">Raw Data</h4>
+                            </div>
+                            <div style="font-size: 32px; color: #6366f1;">→</div>
+                            <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); padding: 40px 50px; border-radius: 20px; text-align: center; box-shadow: 0 8px 24px rgba(99,102,241,0.3); min-width: 200px;">
+                                <div style="font-size: 48px; margin-bottom: 15px;">⚡</div>
+                                <h4 style="font-size: 18px; font-weight: 700; color: white;">BigValue Pipeline</h4>
+                            </div>
+                            <div style="font-size: 32px; color: #6366f1;">→</div>
+                            <div style="background: white; padding: 40px 50px; border-radius: 20px; text-align: center; border: 2px solid #e2e8f0; min-width: 200px;">
+                                <div style="font-size: 48px; margin-bottom: 15px;">📱</div>
+                                <h4 style="font-size: 18px; font-weight: 700; color: #1e293b;">Production-ready Contents</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 Benefits Grid -->
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; width: 100%;">
+                        <!-- Benefit 1 -->
+                        <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 35px 30px; border-radius: 20px;">
+                            <div style="font-size: 40px; margin-bottom: 20px;">⚡</div>
+                            <h3 style="font-size: 20px; font-weight: 700; color: #0c4a6e; margin-bottom: 15px;">서비스 구축 시간 단축</h3>
+                            <p style="font-size: 14px; color: #0c4a6e; line-height: 1.6;">빅밸류의 정제된 데이터 파이프라인을 통해 아이디어 구상부터 시장 출시까지의 기간을 획기적으로 단축합니다.</p>
+                        </div>
+
+                        <!-- Benefit 2 -->
+                        <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 35px 30px; border-radius: 20px;">
+                            <div style="font-size: 40px; margin-bottom: 20px;">🎓</div>
+                            <h3 style="font-size: 20px; font-weight: 700; color: #78350f; margin-bottom: 15px;">전문성 내재화</h3>
+                            <p style="font-size: 14px; color: #78350f; line-height: 1.6;">데이터 시각화 및 도메인 지식을 컨텐츠에 담아 제공함으로써, 고객사가 자체적으로 전문가를 확보하는 것 이상의 효과를 제공합니다.</p>
+                        </div>
+
+                        <!-- Benefit 3 -->
+                        <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 35px 30px; border-radius: 20px;">
+                            <div style="font-size: 40px; margin-bottom: 20px;">🎯</div>
+                            <h3 style="font-size: 20px; font-weight: 700; color: #14532d; margin-bottom: 15px;">핵심 비즈니스 집중</h3>
+                            <p style="font-size: 14px; color: #14532d; line-height: 1.6;">고객은 데이터 인프라 구축 및 관리에 대한 고민 없이, 오직 자신의 핵심 서비스와 비즈니스 모델에만 집중할 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="sol-v2-section">
+            <div class="sol-v2-split">
+                <div class="sol-v2-split__header">
+                    <h2 class="sol-v2-split__title">데이터 준비라는 병목,<br>서비스 출시의 골든타임을 위협합니다</h2>
+                    <p class="sol-v2-split__desc">
+                        금융, 빅테크, 스타트업 등 전 산업에서 데이터 기반 서비스 경쟁이 가속화되고 있습니다. 하지만 파편화된 데이터를 실제 서비스 가능한 상태로 정제하고 결합하는 데 소모되는 막대한 시간과 비용은, 혁신적인 아이디어를 시장에 적기에 선보이는 것(Time-to-Market)을 가로막는 가장 큰 장애물입니다.
+                    </p>
+                </div>
+
+                <div class="sol-v2-split__content">
+                    <!-- Problem Flow -->
+                    <div style="display: flex; flex-direction: column; gap: 40px; width: 100%;">
+
+                        <!-- Step 1: Market Competition -->
+                        <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 40px; border-radius: 24px;">
+                            <div style="display: flex; align-items: center; gap: 25px;">
+                                <div style="font-size: 64px;">🏃</div>
+                                <div>
+                                    <h3 style="font-size: 24px; font-weight: 700; color: #78350f; margin-bottom: 12px;">가속화되는 시장 경쟁</h3>
+                                    <p style="font-size: 16px; color: #78350f; line-height: 1.6;">차별화된 고객 경험을 위한 데이터 기반 서비스 출시의 필수성 대두</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="text-align: center; font-size: 48px; color: #dc2626;">↓</div>
+
+                        <!-- Step 2: Data Bottleneck -->
+                        <div style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); padding: 40px; border-radius: 24px;">
+                            <div style="display: flex; align-items: center; gap: 25px;">
+                                <div style="font-size: 64px;">🧬</div>
+                                <div>
+                                    <h3 style="font-size: 24px; font-weight: 700; color: #7f1d1d; margin-bottom: 12px;">데이터 활용의 병목 현상</h3>
+                                    <p style="font-size: 16px; color: #7f1d1d; line-height: 1.6;">파편화된 데이터의 정제 및 결합 과정에서 발생하는 막대한 리소스 소모</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="text-align: center; font-size: 48px; color: #dc2626;">↓</div>
+
+                        <!-- Step 3: Time-to-Market Pressure -->
+                        <div style="background: linear-gradient(135deg, #fee2e2 0%, #fca5a5 100%); padding: 40px; border-radius: 24px; border: 3px solid #dc2626;">
+                            <div style="display: flex; align-items: center; gap: 25px;">
+                                <div style="font-size: 64px;">⚠️</div>
+                                <div>
+                                    <h3 style="font-size: 24px; font-weight: 700; color: #7f1d1d; margin-bottom: 12px;">Time-to-Market의 압박</h3>
+                                    <p style="font-size: 16px; color: #7f1d1d; line-height: 1.6;">데이터 준비 기간의 지연으로 인해 고품질 콘텐츠의 적기 서비스 구현 실패</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section: 4 Core Modules -->
+        <section class="sol-v2-section sol-v2-section--alt">
+            <div class="sol-v2-split">
+                <div class="sol-v2-split__header">
+                    <h2 class="sol-v2-split__title">비즈니스 니즈에 맞춰<br>즉시 적용 가능한 4가지 핵심 데이터 모듈</h2>
+                </div>
+
+                <div class="sol-v2-split__content">
+
+                    <!-- Central Module Graphic -->
+                    <div style="margin-bottom: 60px;">
+                        <div style="text-align: center; margin-bottom: 40px;">
+                            <div style="display: inline-block; background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); padding: 30px 60px; border-radius: 20px; box-shadow: 0 8px 24px rgba(99,102,241,0.3);">
+                                <h3 style="font-size: 28px; font-weight: 800; color: white; margin: 0;">핵심 데이터 모듈</h3>
+                            </div>
+                        </div>
+
+                        <!-- 4 Modules Grid -->
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
+
+                            <!-- Module 1 -->
+                            <div style="background: white; padding: 35px; border-radius: 20px; border: 2px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                                <div style="font-size: 48px; margin-bottom: 15px;">🏢</div>
+                                <h3 style="font-size: 22px; font-weight: 700; color: #1e293b; margin-bottom: 12px;">아파트 정보 솔루션</h3>
+                                <p style="font-size: 14px; color: #64748b; line-height: 1.6;"><strong>For:</strong> 부동산 포털, 금융 앱 자산관리</p>
+                            </div>
+
+                            <!-- Module 2 -->
+                            <div style="background: white; padding: 35px; border-radius: 20px; border: 2px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                                <div style="font-size: 48px; margin-bottom: 15px;">🏪</div>
+                                <h3 style="font-size: 22px; font-weight: 700; color: #1e293b; margin-bottom: 12px;">소상공인 정보 솔루션</h3>
+                                <p style="font-size: 14px; color: #64748b; line-height: 1.6;"><strong>For:</strong> 핀테크, 창업 지원, CRM</p>
+                            </div>
+
+                            <!-- Module 3 -->
+                            <div style="background: white; padding: 35px; border-radius: 20px; border: 2px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                                <div style="font-size: 48px; margin-bottom: 15px;">💼</div>
+                                <h3 style="font-size: 22px; font-weight: 700; color: #1e293b; margin-bottom: 12px;">부동산 마이데이터 솔루션</h3>
+                                <p style="font-size: 14px; color: #64748b; line-height: 1.6;"><strong>For:</strong> 마이데이터 사업자, PFM 서비스</p>
+                            </div>
+
+                            <!-- Module 4 -->
+                            <div style="background: white; padding: 35px; border-radius: 20px; border: 2px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                                <div style="font-size: 48px; margin-bottom: 15px;">📊</div>
+                                <h3 style="font-size: 22px; font-weight: 700; color: #1e293b; margin-bottom: 12px;">상권 분석 데이터 솔루션</h3>
+                                <p style="font-size: 14px; color: #64748b; line-height: 1.6;"><strong>For:</strong> 상업용 부동산, 점포 개발 전략</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Why-BV Section -->
+        <section class="sol-why-minimal">
+            <div class="sol-why-minimal__container">
+                <div class="sol-why-minimal__header">
+                    <h2 class="sol-why-minimal__title">빅밸류만의 차별화된<br>데이터 공급 전략</h2>
+                </div>
+
+                <div class="sol-why-minimal__grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <!-- Item 1 -->
+                    <div class="sol-why-item">
+                        <div class="sol-why-item__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="sol-why-item__title">Production-ready Contents</h3>
+                        <p class="sol-why-item__desc">
+                            별도의 정제/가공이 불필요합니다. API 호출 즉시 서비스 UI/UX에 바로 적용할 수 있는 형태로 제공됩니다.
+                        </p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="sol-why-item">
+                        <div class="sol-why-item__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2v20M2 12h20"></path>
+                                <circle cx="12" cy="12" r="9"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="sol-why-item__title">Hybrid Data</h3>
+                        <p class="sol-why-item__desc">
+                            공공 데이터의 높은 신뢰성과 민간 데이터(실시간 매물, 평면도 등)의 풍부함을 결합했습니다. 단일 소스로는 불가능한 깊이와 넓이를 모두 갖춘 데이터셋을 제공합니다.
+                        </p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="sol-why-item">
+                        <div class="sol-why-item__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="sol-why-item__title">전문가 인사이트 제공</h3>
+                        <p class="sol-why-item__desc">
+                            부동산, 상권분석 등 각 분야 도메인 전문가의 자문을 통해 데이터를 설계합니다. 단순 정보 나열을 넘어, 효과적인 데이터 시각화 및 비즈니스 인사이트를 함께 제공합니다.
+                        </p>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="sol-why-item">
+                        <div class="sol-why-item__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0110 0v4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="sol-why-item__title">안정적인 운영 및 관리</h3>
+                        <p class="sol-why-item__desc">
+                            안정적인 데이터 파이프라인 관리와 주기적인 업데이트를 보장합니다. SLA(Service Level Agreement) 준수를 통해 서비스의 연속성과 신뢰성을 담보합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cases Section -->
+        <section class="sol-case-scroll">
+            <div class="sol-case-sticky-wrapper">
+                <!-- Invisible Scroll Track -->
+                <div class="sol-case-track">
+                    <div class="sol-case-trigger" data-index="0"></div>
+                    <div class="sol-case-trigger" data-index="1"></div>
+                    <div class="sol-case-trigger" data-index="2"></div>
+                    <div class="sol-case-trigger" data-index="3"></div>
+                </div>
+
+                <!-- Sticky Stage -->
+                <div class="sol-case-stage">
+                    <!-- Left: Text Stage -->
+                    <div class="sol-case-text-stage">
+
+                        <!-- Case 1: 아파트 정보 솔루션 -->
+                        <div class="sol-case-text-item is-active" data-index="0">
+                        <div class="sol-case-text-content">
+                            <h3 class="sol-case-item__title">아파트 정보 솔루션</h3>
+                            <p class="sol-case-item__desc" style="margin-bottom: 20px;">
+                                네이버부동산 수준의 풍부하고 체계적인 단지형 아파트 정보를 제공하여, 단기간 내 완성도 높은 부동산 서비스를 구축할 수 있도록 지원합니다.
+                            </p>
+
+                            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; color: #1e293b;">포함 데이터</h4>
+                            <ul class="sol-case-list">
+                                <li><strong>공공 데이터:</strong> 건축물대장 기본 정보, 실거래가 (월별/평형별), 공동주택 관리비, 공시가격</li>
+                                <li><strong>빅밸류 특화 데이터:</strong> 방/욕실 개수, 평형 정보, 세대별 단면도, 동 배치도, 단지 특성 정보 (학군, 교통, 편의시설 등 태그)</li>
+                                <li><strong>민간 데이터:</strong> 실시간 매물 정보 연동</li>
+                            </ul>
+
+                            <h4 style="font-size: 16px; font-weight: 700; margin-top: 20px; margin-bottom: 10px; color: #6366f1;">활용 효과</h4>
+                            <p style="font-size: 14px; color: #64748b;">부동산 포털 및 뱅킹 앱 내 아파트 상세 정보 서비스의 빠른 구축</p>
+                        </div>
+                        <!-- Mobile Visual -->
+                        <div class="sol-case-mobile-visual">
+                            <div class="sol-ui-card">
+                                <div class="sol-ui-card__header">
+                                    <span class="sol-ui-card__title">Apartment Info UI</span>
+                                    <span class="sol-ui-tag" style="background:#dcfce7; color:#166534;">Ready</span>
+                                </div>
+                                <div style="padding: 20px;">
+                                    <div style="background: #f8fafc; padding: 20px; border-radius: 12px; margin-bottom: 15px;">
+                                        <h4 style="font-size: 1.1rem; font-weight: 700; color: #1e293b; margin-bottom: 10px;">래미안 강남더퍼스트</h4>
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+                                            <div style="font-size: 0.85rem; color: #64748b;">전용 84㎡</div>
+                                            <div style="font-size: 0.85rem; color: #64748b;">방 3 / 욕실 2</div>
+                                        </div>
+                                        <div style="font-size: 1.5rem; font-weight: 800; color: #6366f1;">25.8억</div>
+                                    </div>
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                                        <div style="background: #f1f5f9; padding: 12px; border-radius: 8px; text-align: center;">
+                                            <div style="font-size: 0.8rem; color: #64748b;">학군</div>
+                                            <div style="font-size: 1rem; font-weight: 700; color: #1e293b;">⭐⭐⭐</div>
+                                        </div>
+                                        <div style="background: #f1f5f9; padding: 12px; border-radius: 8px; text-align: center;">
+                                            <div style="font-size: 0.8rem; color: #64748b;">교통</div>
+                                            <div style="font-size: 1rem; font-weight: 700; color: #1e293b;">⭐⭐⭐</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <!-- Case 2: 소상공인 정보 솔루션 -->
+                        <div class="sol-case-text-item" data-index="1">
+                        <div class="sol-case-text-content">
+                            <h3 class="sol-case-item__title">소상공인 정보 솔루션</h3>
+                            <p class="sol-case-item__desc" style="margin-bottom: 20px;">
+                                소상공인 대상 핀테크 및 상생 서비스 구축에 필요한 전방위 데이터를 제공하여, 데이터 기반의 정교한 비즈니스 모델 구현을 지원합니다.
+                            </p>
+
+                            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; color: #1e293b;">포함 데이터</h4>
+                            <ul class="sol-case-list">
+                                <li>지역/업종별 개·폐업 현황 및 추이</li>
+                                <li>카드사 연계 매출 추이 분석</li>
+                                <li>소상공인 활동성 지수 (빅밸류 자체 개발)</li>
+                                <li>업종별 밀집도 및 경쟁 강도 분석</li>
+                            </ul>
+
+                            <h4 style="font-size: 16px; font-weight: 700; margin-top: 20px; margin-bottom: 10px; color: #6366f1;">활용 효과</h4>
+                            <ul class="sol-case-list">
+                                <li>소상공인 특화 금융 상품 추천 엔진 개발</li>
+                                <li>예비 창업자 대상 상권 분석 및 창업 지원 서비스</li>
+                                <li>소상공인 CRM 시스템의 빠른 런칭 및 고도화</li>
+                            </ul>
+                        </div>
+                        <!-- Mobile Visual -->
+                        <div class="sol-case-mobile-visual">
+                            <div class="sol-ui-card">
+                                <div class="sol-ui-card__header">
+                                    <span class="sol-ui-card__title">Business Analysis</span>
+                                    <span class="sol-ui-tag" style="background:#fef3c7; color:#78350f;">Growing</span>
+                                </div>
+                                <div style="padding: 20px;">
+                                    <div style="margin-bottom: 20px;">
+                                        <div style="font-size: 0.9rem; color: #64748b; margin-bottom: 8px;">매출 추이 (최근 6개월)</div>
+                                        <div class="sol-ui-graph" style="height: 60px;">
+                                            <div class="sol-ui-bar" style="height: 40%"></div>
+                                            <div class="sol-ui-bar" style="height: 50%"></div>
+                                            <div class="sol-ui-bar" style="height: 65%"></div>
+                                            <div class="sol-ui-bar" style="height: 75%"></div>
+                                            <div class="sol-ui-bar" style="height: 85%; background: #22c55e;"></div>
+                                            <div class="sol-ui-bar" style="height: 90%; background: #22c55e;"></div>
+                                        </div>
+                                    </div>
+                                    <div style="background: #f8fafc; padding: 15px; border-radius: 10px;">
+                                        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                            <span style="font-size: 0.85rem; color: #64748b;">활동성 지수</span>
+                                            <span style="font-weight: 700; color: #22c55e;">85점</span>
+                                        </div>
+                                        <div style="display: flex; justify-content: space-between;">
+                                            <span style="font-size: 0.85rem; color: #64748b;">경쟁 강도</span>
+                                            <span style="font-weight: 700; color: #f59e0b;">중</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <!-- Case 3: 부동산 마이데이터 솔루션 -->
+                        <div class="sol-case-text-item" data-index="2">
+                        <div class="sol-case-text-content">
+                            <h3 class="sol-case-item__title">부동산 마이데이터 솔루션</h3>
+                            <p class="sol-case-item__desc" style="margin-bottom: 20px;">
+                                고객이 소유한 자산을 기반으로 한 초개인화 자산관리 서비스를 지원하여, 마이데이터 사업자의 PFM 기능을 강화하고 사용자 락인(Lock-in) 효과를 창출합니다.
+                            </p>
+
+                            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; color: #1e293b;">포함 데이터</h4>
+                            <ul class="sol-case-list">
+                                <li>부동산 보유 자산 자동 조회 및 등록</li>
+                                <li>빅밸류 AVM(Automated Valuation Model) 기반 실시간 시세 제공</li>
+                                <li>보유세, 취득세, 양도세 등 자동 세금 계산 로직 연동</li>
+                                <li>담보 대출 가능 금액 시뮬레이션</li>
+                            </ul>
+
+                            <h4 style="font-size: 16px; font-weight: 700; margin-top: 20px; margin-bottom: 10px; color: #6366f1;">활용 효과</h4>
+                            <ul class="sol-case-list">
+                                <li>마이데이터 앱의 핵심 기능인 자산 관리(PFM) 기능 대폭 강화</li>
+                                <li>부동산 자산 기반의 맞춤형 금융 상품 추천으로 새로운 수익 모델 창출</li>
+                                <li>높은 사용자 리텐션 및 인게이지먼트 확보</li>
+                            </ul>
+                        </div>
+                        <!-- Mobile Visual -->
+                        <div class="sol-case-mobile-visual">
+                            <div class="sol-ui-card">
+                                <div class="sol-ui-card__header">
+                                    <span class="sol-ui-card__title">My Real Estate</span>
+                                    <span class="sol-ui-tag" style="background:#e0e7ff; color:#3730a3;">PFM</span>
+                                </div>
+                                <div style="padding: 20px;">
+                                    <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); padding: 25px; border-radius: 12px; margin-bottom: 15px; color: white;">
+                                        <div style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 8px;">총 자산 가치</div>
+                                        <div style="font-size: 2rem; font-weight: 800;">12.5억</div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                                        <div style="background: #f8fafc; padding: 15px; border-radius: 10px; border-left: 4px solid #6366f1;">
+                                            <div style="font-size: 0.85rem; color: #64748b; margin-bottom: 5px;">서울 강남구 아파트</div>
+                                            <div style="font-size: 1.1rem; font-weight: 700; color: #1e293b;">8.5억</div>
+                                        </div>
+                                        <div style="background: #f8fafc; padding: 15px; border-radius: 10px; border-left: 4px solid #8b5cf6;">
+                                            <div style="font-size: 0.85rem; color: #64748b; margin-bottom: 5px;">경기 성남시 오피스텔</div>
+                                            <div style="font-size: 1.1rem; font-weight: 700; color: #1e293b;">4.0억</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <!-- Case 4: 상권 분석 데이터 솔루션 -->
+                        <div class="sol-case-text-item" data-index="3">
+                        <div class="sol-case-text-content">
+                            <h3 class="sol-case-item__title">상권 분석 데이터 솔루션</h3>
+                            <p class="sol-case-item__desc" style="margin-bottom: 20px;">
+                                전국 단위의 상권 변화를 시계열로 분석한 전문 데이터를 통해, 상업용 부동산 투자 분석 및 점포 개발 전략 수립 등 고도화된 의사결정을 지원합니다.
+                            </p>
+
+                            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; color: #1e293b;">포함 데이터</h4>
+                            <ul class="sol-case-list">
+                                <li>행정동/블록 단위 지역별 유동인구 (성별/연령별/시간대별)</li>
+                                <li>지역별 소비 패턴 및 업종별 카드 소비 데이터</li>
+                                <li>주요 프랜차이즈 업종별 생존율 분석</li>
+                                <li>시계열 상권 성장성 및 안정성 지표 (빅밸류 자체 개발)</li>
+                            </ul>
+
+                            <h4 style="font-size: 16px; font-weight: 700; margin-top: 20px; margin-bottom: 10px; color: #6366f1;">활용 효과</h4>
+                            <ul class="sol-case-list">
+                                <li>상업용 부동산 투자 분석 서비스 구현</li>
+                                <li>프랜차이즈 및 리테일 기업의 신규 점포 개발 전략 수립 지원</li>
+                            </ul>
+                        </div>
+                        <!-- Mobile Visual -->
+                        <div class="sol-case-mobile-visual">
+                            <div class="sol-ui-card">
+                                <div class="sol-ui-card__header">
+                                    <span class="sol-ui-card__title">District Analysis</span>
+                                    <span class="sol-ui-tag" style="background:#dcfce7; color:#166534;">Hot Zone</span>
+                                </div>
+                                <div style="padding: 20px;">
+                                    <div style="background: #f8fafc; padding: 20px; border-radius: 12px; margin-bottom: 15px;">
+                                        <h4 style="font-size: 1rem; font-weight: 700; color: #1e293b; margin-bottom: 15px;">강남구 역삼동</h4>
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                                            <div>
+                                                <div style="font-size: 0.8rem; color: #64748b; margin-bottom: 5px;">유동인구</div>
+                                                <div style="font-size: 1.2rem; font-weight: 700; color: #22c55e;">↑ 15%</div>
+                                            </div>
+                                            <div>
+                                                <div style="font-size: 0.8rem; color: #64748b; margin-bottom: 5px;">소비 증가율</div>
+                                                <div style="font-size: 1.2rem; font-weight: 700; color: #22c55e;">↑ 22%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 15px; border-radius: 10px;">
+                                        <div style="font-size: 0.9rem; font-weight: 700; color: #78350f;">성장성 지수</div>
+                                        <div style="font-size: 1.5rem; font-weight: 800; color: #78350f; margin-top: 5px;">92점</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+
+                    <!-- Right: Visual Stage -->
+                    <div class="sol-case-visual-stage">
+
+                        <!-- Visual 1: 아파트 정보 -->
+                        <div class="sol-case-visual-item is-active" data-index="0">
+                            <div class="sol-ui-card">
+                                <div class="sol-ui-card__header">
+                                    <span class="sol-ui-card__title">Apartment Info UI</span>
+                                    <span class="sol-ui-tag" style="background:#dcfce7; color:#166534;">Ready</span>
+                                </div>
+                                <div style="padding: 20px;">
+                                    <div style="background: #f8fafc; padding: 20px; border-radius: 12px; margin-bottom: 15px;">
+                                        <h4 style="font-size: 1.1rem; font-weight: 700; color: #1e293b; margin-bottom: 10px;">래미안 강남더퍼스트</h4>
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+                                            <div style="font-size: 0.85rem; color: #64748b;">전용 84㎡</div>
+                                            <div style="font-size: 0.85rem; color: #64748b;">방 3 / 욕실 2</div>
+                                        </div>
+                                        <div style="font-size: 1.5rem; font-weight: 800; color: #6366f1;">25.8억</div>
+                                    </div>
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                                        <div style="background: #f1f5f9; padding: 12px; border-radius: 8px; text-align: center;">
+                                            <div style="font-size: 0.8rem; color: #64748b;">학군</div>
+                                            <div style="font-size: 1rem; font-weight: 700; color: #1e293b;">⭐⭐⭐</div>
+                                        </div>
+                                        <div style="background: #f1f5f9; padding: 12px; border-radius: 8px; text-align: center;">
+                                            <div style="font-size: 0.8rem; color: #64748b;">교통</div>
+                                            <div style="font-size: 1rem; font-weight: 700; color: #1e293b;">⭐⭐⭐</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual 2: 소상공인 정보 -->
+                        <div class="sol-case-visual-item" data-index="1">
+                            <div class="sol-ui-card">
+                                <div class="sol-ui-card__header">
+                                    <span class="sol-ui-card__title">Business Analysis</span>
+                                    <span class="sol-ui-tag" style="background:#fef3c7; color:#78350f;">Growing</span>
+                                </div>
+                                <div style="padding: 20px;">
+                                    <div style="margin-bottom: 20px;">
+                                        <div style="font-size: 0.9rem; color: #64748b; margin-bottom: 8px;">매출 추이 (최근 6개월)</div>
+                                        <div class="sol-ui-graph" style="height: 60px;">
+                                            <div class="sol-ui-bar" style="height: 40%"></div>
+                                            <div class="sol-ui-bar" style="height: 50%"></div>
+                                            <div class="sol-ui-bar" style="height: 65%"></div>
+                                            <div class="sol-ui-bar" style="height: 75%"></div>
+                                            <div class="sol-ui-bar" style="height: 85%; background: #22c55e;"></div>
+                                            <div class="sol-ui-bar" style="height: 90%; background: #22c55e;"></div>
+                                        </div>
+                                    </div>
+                                    <div style="background: #f8fafc; padding: 15px; border-radius: 10px;">
+                                        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                            <span style="font-size: 0.85rem; color: #64748b;">활동성 지수</span>
+                                            <span style="font-weight: 700; color: #22c55e;">85점</span>
+                                        </div>
+                                        <div style="display: flex; justify-content: space-between;">
+                                            <span style="font-size: 0.85rem; color: #64748b;">경쟁 강도</span>
+                                            <span style="font-weight: 700; color: #f59e0b;">중</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual 3: 마이데이터 -->
+                        <div class="sol-case-visual-item" data-index="2">
+                            <div class="sol-ui-card">
+                                <div class="sol-ui-card__header">
+                                    <span class="sol-ui-card__title">My Real Estate</span>
+                                    <span class="sol-ui-tag" style="background:#e0e7ff; color:#3730a3;">PFM</span>
+                                </div>
+                                <div style="padding: 20px;">
+                                    <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); padding: 25px; border-radius: 12px; margin-bottom: 15px; color: white;">
+                                        <div style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 8px;">총 자산 가치</div>
+                                        <div style="font-size: 2rem; font-weight: 800;">12.5억</div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                                        <div style="background: #f8fafc; padding: 15px; border-radius: 10px; border-left: 4px solid #6366f1;">
+                                            <div style="font-size: 0.85rem; color: #64748b; margin-bottom: 5px;">서울 강남구 아파트</div>
+                                            <div style="font-size: 1.1rem; font-weight: 700; color: #1e293b;">8.5억</div>
+                                        </div>
+                                        <div style="background: #f8fafc; padding: 15px; border-radius: 10px; border-left: 4px solid #8b5cf6;">
+                                            <div style="font-size: 0.85rem; color: #64748b; margin-bottom: 5px;">경기 성남시 오피스텔</div>
+                                            <div style="font-size: 1.1rem; font-weight: 700; color: #1e293b;">4.0억</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual 4: 상권 분석 -->
+                        <div class="sol-case-visual-item" data-index="3">
+                            <div class="sol-ui-card">
+                                <div class="sol-ui-card__header">
+                                    <span class="sol-ui-card__title">District Analysis</span>
+                                    <span class="sol-ui-tag" style="background:#dcfce7; color:#166534;">Hot Zone</span>
+                                </div>
+                                <div style="padding: 20px;">
+                                    <div style="background: #f8fafc; padding: 20px; border-radius: 12px; margin-bottom: 15px;">
+                                        <h4 style="font-size: 1rem; font-weight: 700; color: #1e293b; margin-bottom: 15px;">강남구 역삼동</h4>
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                                            <div>
+                                                <div style="font-size: 0.8rem; color: #64748b; margin-bottom: 5px;">유동인구</div>
+                                                <div style="font-size: 1.2rem; font-weight: 700; color: #22c55e;">↑ 15%</div>
+                                            </div>
+                                            <div>
+                                                <div style="font-size: 0.8rem; color: #64748b; margin-bottom: 5px;">소비 증가율</div>
+                                                <div style="font-size: 1.2rem; font-weight: 700; color: #22c55e;">↑ 22%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 15px; border-radius: 10px;">
+                                        <div style="font-size: 0.9rem; font-weight: 700; color: #78350f;">성장성 지수</div>
+                                        <div style="font-size: 1.5rem; font-weight: 800; color: #78350f; margin-top: 5px;">92점</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customers Section -->
+        <section class="sol-v2-section sol-v2-section--alt">
+            <div style="text-align: center; max-width: 1000px; margin: 0 auto;">
+                <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 60px; color: var(--sol-v2-text-main);">
+                    대한민국 대표 금융사가<br>선택한 데이터 파트너
+                </h2>
+
+                <div class="sol-v2-hero__logos">
+                    <div class="sol-v2-hero__logos-list" style="justify-content: center;">
+                        <img src="../../src/images/clients/1_신한은행.png" alt="신한은행">
+                        <img src="../../src/images/clients/6_농협투자증권.png" alt="농협투자증권">
+                        <img src="../../src/images/clients/18_TossBank.png" alt="토스뱅크">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="sol-v2-section" style="justify-content: center; text-align: center;">
+            <div style="max-width: 800px;">
+                <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 20px; color: var(--sol-v2-text-main);">
+                    즉시 적용 가능한<br>콘텐츠 데이터 솔루션
+                </h2>
+                <p style="font-size: 1.2rem; color: var(--sol-v2-text-sub); margin-bottom: 40px;">
+                    귀사의 서비스에 최적화된 데이터 공급 전략,<br>
+                    지금 바로 상담받아보세요.
                 </p>
-                <h1 class="solution-section__title">빅밸류(BigValue) 컨텐츠 기반<br>데이터 공급 솔루션</h1>
-                <p class="solution-section__subtitle">고객의 서비스 혁신을 가속화하는 가장 빠른 데이터 파이프라인</p>
-            </div>
-            <div class="solution-pipeline">
-                <div class="solution-pipeline__box">
-                    <span style="font-size: 40px;">🧵</span><br>
-                    <strong>Raw Data</strong>
-                </div>
-                <div class="solution-pipeline__arrow">➡️</div>
-                <div class="solution-pipeline__box"
-                    style="background: var(--color-brand-primary-light); color: white; border-style: solid;">
-                    <span style="font-size: 40px;">🧊</span><br>
-                    <strong>BigValue Pipeline</strong>
-                </div>
-                <div class="solution-pipeline__arrow">➡️</div>
-                <div class="solution-pipeline__box">
-                    <span style="font-size: 40px;">📱</span><br>
-                    <strong>Ready-to-Use Content</strong>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 2: Market Reality (Image 1) -->
-        <section class="solution-section solution-section--gray">
-            <div class="solution-section__header">
-                <h2 class="solution-section__title">디지털 전환 시대, 서비스 경쟁의 핵심은 '데이터'<br>그러나 현실은...</h2>
-            </div>
-            <div class="solution-grid solution-grid--3col">
-                <div class="solution-card">
-                    <div class="solution-card__icon">🏃</div>
-                    <h3 class="solution-card__title">가속화되는 시장 경쟁</h3>
-                    <p class="solution-card__desc">금융, 빅테크, 스타트업 등 산업 전반에서 대고객 서비스 경쟁이 심화되고 있습니다. 차별화된 고객 경험을 제공하기 위한
-                        데이터 기반 서비스 출시가 필수적입니다.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-card__icon">🧬</div>
-                    <h3 class="solution-card__title">데이터 활용의 병목 현상</h3>
-                    <p class="solution-card__desc">공공과 민간에 산재된 파편화된 데이터는 그 자체로 가치를 갖기 어렵습니다. 데이터를 실제 서비스에 사용하기까지의 정제,
-                        가공, 결합 과정에서 막대한 시간과 비용이 발생합니다.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-card__icon">🕒</div>
-                    <h3 class="solution-card__title">Time-to-Market의 압박</h3>
-                    <p class="solution-card__desc">아이디어를 빠르게 시장에 선보여야 하는 비즈니스 환경에서, 데이터 준비 기간은 가장 큰 허들입니다. 고품질의 컨텐츠를
-                        단기간에 서비스로 구현하려는 니즈가 폭발적으로 증가하고 있습니다.</p>
-                </div>
-            </div>
-            <div class="solution-visual-center" style="margin-top: 60px;">
-                <!-- Funnel Visual -->
-                <div style="display: flex; align-items: center; justify-content: center; gap: 40px;">
-                    <div style="text-align: right; color: var(--color-neutral-medium); font-size: var(--font-size-s);">
-                        공공 데이터<br>민간 데이터<br>파편화된 정보
-                    </div>
-                    <div style="font-size: 60px;">🌪️</div>
-                    <div style="color: var(--color-brand-primary); font-weight: 700;">
-                        정제 / 가공 비용 & 시간
-                    </div>
-                    <div style="font-size: 40px;">➡️</div>
-                    <div style="color: #1e40af; font-weight: 800; font-size: var(--font-size-l);">
-                        Time-to-Market
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 3: Paradigm Shift (Image 4) -->
-        <section class="solution-section">
-            <div class="solution-section__header">
-                <h2 class="solution-section__title">빅밸류의 제안: ‘데이터’에서 ‘컨텐츠’로,<br>새로운 활용 패러다임의 시작</h2>
-                <p class="solution-section__subtitle">우리는 단순한 원천 데이터(Raw Data)가 아닌, 즉시 서비스에 탑재 가능한 완성형 컨텐츠(Ready-to-Use
-                    Content)를 제공하여 고객의 성공을 돕습니다.</p>
-            </div>
-            <div class="solution-grid solution-grid--3col">
-                <div class="solution-card">
-                    <h3 class="solution-card__title">서비스 구축 시간 단축</h3>
-                    <p class="solution-card__desc">빅밸류의 정제된 데이터 파이프라인을 통해 아이디어 구상부터 시장 출시까지의 기간을 획기적으로 단축합니다.</p>
-                </div>
-                <div class="solution-card">
-                    <h3 class="solution-card__title">전문성 내재화</h3>
-                    <p class="solution-card__desc">데이터 시각화 및 도메인 지식을 컨텐츠에 담아 제공함으로써, 고객사가 자체적으로 전문가를 확보하는 것 이상의 효과를
-                        제공합니다.</p>
-                </div>
-                <div class="solution-card">
-                    <h3 class="solution-card__title">핵심 비즈니스 집중</h3>
-                    <p class="solution-card__desc">고객은 데이터 인프라 구축 및 관리에 대한 고민 없이, 오직 자신의 핵심 서비스와 비즈니스 모델에만 집중할 수 있습니다.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 4: 4 Core Values (Image 2) -->
-        <section class="solution-section solution-section--gray">
-            <div class="solution-section__header">
-                <h2 class="solution-section__title">빅밸류 데이터 솔루션의 4가지 핵심 가치</h2>
-            </div>
-            <div class="solution-grid solution-grid--4col">
-                <div class="solution-card">
-                    <div class="solution-card__icon">🔌</div>
-                    <h3 class="solution-card__title" style="font-size: var(--font-size-m);">Ready-to-Use</h3>
-                    <p class="solution-card__desc"
-                        style="font-size: var(--font-size-xs); color: var(--color-neutral-medium);">(즉시 사용 가능한 컨텐츠형 데이터)
-                    </p>
-                    <ul class="solution-card__desc"
-                        style="font-size: var(--font-size-xs); margin-top: 15px; padding-left: 20px;">
-                        <li>별도의 정제/가공이 불필요합니다.</li>
-                        <li>API 호출 즉시 서비스 UI/UX에 바로 적용할 수 있습니다.</li>
-                    </ul>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-card__icon">💠</div>
-                    <h3 class="solution-card__title" style="font-size: var(--font-size-m);">Hybrid Data</h3>
-                    <p class="solution-card__desc"
-                        style="font-size: var(--font-size-xs); color: var(--color-neutral-medium);">(신뢰성과 풍부함의 결합)</p>
-                    <ul class="solution-card__desc"
-                        style="font-size: var(--font-size-xs); margin-top: 15px; padding-left: 20px;">
-                        <li>공공 데이터의 높은 신뢰성과 민간 데이터의 풍부함을 결합했습니다.</li>
-                        <li>단일 소스로는 불가능한 깊이와 넓이를 제공합니다.</li>
-                    </ul>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-card__icon">💡</div>
-                    <h3 class="solution-card__title" style="font-size: var(--font-size-m);">Expert Consulting</h3>
-                    <p class="solution-card__desc"
-                        style="font-size: var(--font-size-xs); color: var(--color-neutral-medium);">(전문가 인사이트 제공)</p>
-                    <ul class="solution-card__desc"
-                        style="font-size: var(--font-size-xs); margin-top: 15px; padding-left: 20px;">
-                        <li>도메인 전문가의 자문을 통해 데이터를 설계합니다.</li>
-                        <li>효과적인 데이터 시각화 및 비즈니스 인사이트를 제공합니다.</li>
-                    </ul>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-card__icon">🛡️</div>
-                    <h3 class="solution-card__title" style="font-size: var(--font-size-m);">Stability</h3>
-                    <p class="solution-card__desc"
-                        style="font-size: var(--font-size-xs); color: var(--color-neutral-medium);">(안정적인 운영 및 관리)</p>
-                    <ul class="solution-card__desc"
-                        style="font-size: var(--font-size-xs); margin-top: 15px; padding-left: 20px;">
-                        <li>안정적인 데이터 파이프라인 관리와 주기적 업데이트를 보장합니다.</li>
-                        <li>SLA 준수를 통해 서비스 신뢰성을 담보합니다.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 5: 4 Core Data Models (Image 3) -->
-        <section class="solution-section">
-            <div class="solution-section__header">
-                <h2 class="solution-section__title">비즈니스 니즈에 맞춰 즉시 적용 가능한<br>4가지 핵심 데이터 모듈</h2>
-            </div>
-            <div class="solution-hub">
-                <div class="solution-hub__center" style="font-size: 20px;">핵심 데이터<br>모듈</div>
-
-                <div class="solution-hub__item solution-hub__item--tl">
-                    <div class="solution-hub__item-icon">🏢</div>
-                    <h3 class="solution-hub__item-title">아파트 정보 솔루션</h3>
-                    <p class="solution-hub__item-desc"><strong>For:</strong> 부동산 포털, 금융 앱 자산관리</p>
-                </div>
-
-                <div class="solution-hub__item solution-hub__item--tr">
-                    <div class="solution-hub__item-icon">🏪</div>
-                    <h3 class="solution-hub__item-title">소상공인 정보 솔루션</h3>
-                    <p class="solution-hub__item-desc"><strong>For:</strong> 핀테크, 창업 지원, CRM</p>
-                </div>
-
-                <div class="solution-hub__item solution-hub__item--bl">
-                    <div class="solution-hub__item-icon">👤</div>
-                    <h3 class="solution-hub__item-title">부동산 마이데이터 솔루션</h3>
-                    <p class="solution-hub__item-desc"><strong>For:</strong> 마이데이터 사업자, PFM 서비스</p>
-                </div>
-
-                <div class="solution-hub__item solution-hub__item--br">
-                    <div class="solution-hub__item-icon">📍</div>
-                    <h3 class="solution-hub__item-title">상권 분석 데이터 솔루션</h3>
-                    <p class="solution-hub__item-desc"><strong>For:</strong> 상업용 부동산, 점포 개발 전략</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 6: Apartment Info Solution (Module 01) -->
-        <section class="solution-section">
-            <div class="solution-module-detail">
-                <div class="solution-module-detail__content">
-                    <h2 class="solution-section__title" style="text-align: left;">01. 아파트 정보 솔루션<br>(Residential
-                        Intelligence)</h2>
-                    <p class="solution-section__subtitle" style="text-align: left;">네이버부동산 수준의 풍부하고 체계적인 단지형 아파트 정보를
-                        제공하여, 단기간 내 완성도 높은 부동산 서비스를 구축할 수 있도록 지원합니다.</p>
-
-                    <div class="solution-detail-list">
-                        <h4 class="solution-detail-list__title">포함 데이터 (Included Data)</h4>
-                        <ul class="solution-detail-list__items">
-                            <li class="solution-detail-list__item">🏢 <strong>공공 데이터:</strong> 건축물대장 기본 정보, 실거래가
-                                (월별/평형별), 공동주택 관리비, 공시가격</li>
-                            <li class="solution-detail-list__item">🅱️ <strong>빅밸류 특화 데이터:</strong> 방/욕실 개수, 평형 정보, 세대별
-                                단면도, 동 배치도, 단지 특성 정보 (학군, 교통, 편의시설 등 태그)</li>
-                            <li class="solution-detail-list__item">🤝 <strong>민간 데이터:</strong> 실시간 매물 정보 연동 (협의)</li>
-                        </ul>
-                    </div>
-
-                    <div class="solution-detail-list">
-                        <h4 class="solution-detail-list__title">활용 효과 (Expected Outcome)</h4>
-                        <ul class="solution-detail-list__items">
-                            <li class="solution-detail-list__item">✅ 부동산 포털 및 뱅킹 앱 내 아파트 상세 정보 서비스의 빠른 구축</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="solution-module-detail__visual">
-                    <div style="text-align: center;">
-                        <span style="font-size: 80px;">📱</span><br>
-                        <p
-                            style="font-size: var(--font-size-xs); color: var(--color-neutral-medium); margin-top: 10px;">
-                            [모바일 UI 상의 실거래가 그래프, 단면도, 매물 예시]</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 7: Small Business Info Solution (Module 02) -->
-        <section class="solution-section solution-section--gray">
-            <div class="solution-module-detail">
-                <div class="solution-module-detail__visual">
-                    <div style="text-align: center;">
-                        <span style="font-size: 80px;">💻</span><br>
-                        <p
-                            style="font-size: var(--font-size-xs); color: var(--color-neutral-medium); margin-top: 10px;">
-                            [상권 분석 대시보드, 매출 성장성 지수 그래프 예시]</p>
-                    </div>
-                </div>
-                <div class="solution-module-detail__content">
-                    <h2 class="solution-section__title" style="text-align: left;">02. 소상공인 정보 솔루션<br>(Business
-                        Intelligence)</h2>
-                    <p class="solution-section__subtitle" style="text-align: left;">소상공인 대상 핀테크 및 상생 서비스 구축에 필요한 전방위
-                        데이터를 제공하여, 데이터 기반의 정교한 비즈니스 모델 구현을 지원합니다.</p>
-
-                    <div class="solution-detail-list">
-                        <h4 class="solution-detail-list__title">포함 데이터 📊</h4>
-                        <ul class="solution-detail-list__items">
-                            <li class="solution-detail-list__item">📍 지역/업종별 개·폐업 현황 및 추이</li>
-                            <li class="solution-detail-list__item">💳 카드사 연계 매출 추이 분석</li>
-                            <li class="solution-detail-list__item">📈 소상공인 활동성 지수 (빅밸류 자체 개발)</li>
-                            <li class="solution-detail-list__item">🔍 업종별 밀집도 및 경쟁 강도 분석</li>
-                        </ul>
-                    </div>
-
-                    <div class="solution-detail-list">
-                        <h4 class="solution-detail-list__title">활용 효과 (Expected Outcome)</h4>
-                        <ul class="solution-detail-list__items">
-                            <li class="solution-detail-list__item">✅ 소상공인 특화 금융 상품 추천 엔진 개발</li>
-                            <li class="solution-detail-list__item">✅ 예비 창업자 대상 상권 분석 및 창업 지원 서비스</li>
-                            <li class="solution-detail-list__item">✅ 소상공인 CRM 시스템의 빠른 런칭 및 고도화</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 8: Real Estate MyData Solution (Module 03) -->
-        <section class="solution-section">
-            <div class="solution-module-detail">
-                <div class="solution-module-detail__content">
-                    <h2 class="solution-section__title" style="text-align: left;">03. 부동산 마이데이터 솔루션<br>(Personal Asset
-                        Care)</h2>
-                    <p class="solution-section__subtitle" style="text-align: left;">고객이 소유한 자산을 기반으로 한 초개인화 자산관리 서비스를
-                        지원하여, 마이데이터 사업자의 PFM 기능을 강화하고 사용자 락인(Lock-in) 효과를 창출합니다.</p>
-
-                    <div class="solution-detail-list">
-                        <h4 class="solution-detail-list__title">포함 데이터 (Included Data) 📋</h4>
-                        <ul class="solution-detail-list__items">
-                            <li class="solution-detail-list__item">🔍 부동산 보유 자산 자동 조회 및 등록</li>
-                            <li class="solution-detail-list__item">⚡ 빅밸류 AVM(Automated Valuation Model) 기반 실시간 시세 제공
-                            </li>
-                            <li class="solution-detail-list__item">🧾 보유세, 취득세, 양도세 등 자동 세금 계산 로직 연동</li>
-                            <li class="solution-detail-list__item">💰 담보 대출 가능 금액 시뮬레이션</li>
-                        </ul>
-                    </div>
-
-                    <div class="solution-detail-list">
-                        <h4 class="solution-detail-list__title">활용 효과 (Expected Outcome)</h4>
-                        <ul class="solution-detail-list__items">
-                            <li class="solution-detail-list__item">✅ 마이데이터 앱의 핵심 기능인 자산 관리(PFM) 기능 대폭 강화</li>
-                            <li class="solution-detail-list__item">✅ 부동산 자산 기반의 맞춤형 금융 상품 추천으로 새로운 수익 모델 창출</li>
-                            <li class="solution-detail-list__item">✅ 높은 사용자 리텐션 및 인게이지먼트 확보</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="solution-module-detail__visual">
-                    <div style="text-align: center;">
-                        <span style="font-size: 80px;">🏠</span><br>
-                        <p
-                            style="font-size: var(--font-size-xs); color: var(--color-neutral-medium); margin-top: 10px;">
-                            [반포 자이 아파트 AVM 시세 및 대출 한도 조회 화면 예시]</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 9: Area Analysis Data Solution (Module 04) -->
-        <section class="solution-section solution-section--gray">
-            <div class="solution-module-detail">
-                <div class="solution-module-detail__visual">
-                    <div style="text-align: center;">
-                        <span style="font-size: 80px;">🗺️</span><br>
-                        <p
-                            style="font-size: var(--font-size-xs); color: var(--color-neutral-medium); margin-top: 10px;">
-                            [전국 상권 변화 시계열 분석 맵 및 데이터 대시보드 예시]</p>
-                    </div>
-                </div>
-                <div class="solution-module-detail__content">
-                    <h2 class="solution-section__title" style="text-align: left;">04. 상권 분석 데이터 솔루션<br>(Area Analysis)
-                    </h2>
-                    <p class="solution-section__subtitle" style="text-align: left;">전국 단위의 상권 변화를 시계열로 분석한 전문 데이터를 통해,
-                        상업용 부동산 투자 분석 및 점포 개발 전략 수립 등 고도화된 의사결정을 지원합니다.</p>
-
-                    <div class="solution-detail-list">
-                        <h4 class="solution-detail-list__title">포함 데이터 🗺️</h4>
-                        <ul class="solution-detail-list__items">
-                            <li class="solution-detail-list__item">👥 행정동/블록 단위 지역별 유동인구 (성별/연령별/시간대별)</li>
-                            <li class="solution-detail-list__item">💸 지역별 소비 패턴 및 업종별 카드 소비 데이터</li>
-                            <li class="solution-detail-list__item">🏚️ 주요 프랜차이즈 업종별 생존율 분석</li>
-                            <li class="solution-detail-list__item">📊 시계열 상권 성장성 및 안정성 지표 (빅밸류 자체 개발)</li>
-                        </ul>
-                    </div>
-
-                    <div class="solution-detail-list">
-                        <h4 class="solution-detail-list__title">활용 효과</h4>
-                        <ul class="solution-detail-list__items">
-                            <li class="solution-detail-list__item">✅ 상업용 부동산 투자 분석 서비스 구현</li>
-                            <li class="solution-detail-list__item">✅ 프랜차이즈 및 리테일 기업의 신규 점포 개발 전략 수립 지원</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 10: Technical Support (Supply Flow) -->
-        <section class="solution-section">
-            <div class="solution-section__header">
-                <h2 class="solution-section__title">유연한 데이터 공급 방식과 전문가 그룹의 기술 지원</h2>
-            </div>
-            <div class="solution-supply-grid">
-                <div class="solution-supply-card">
-                    <div class="solution-supply-card__icon">⛓️</div>
-                    <h3 class="solution-supply-card__title">데이터 파이프라인 (Data Pipeline)</h3>
-                    <p class="solution-supply-card__desc"><strong>API 방식:</strong> 실시간 데이터 조회가 필요한 서비스에 적합 (e.g., 자산 시세
-                        조회)<br><strong>Batch 방식:</strong> 주기적인 데이터 적재 및 내부 분석용으로 적합 (e.g., 월별 상권 데이터 업데이트)<br>고객사 시스템
-                        환경에 맞춘 최적의 연동 방식을 지원합니다.</p>
-                </div>
-                <div class="solution-supply-card">
-                    <div class="solution-supply-card__icon">🔍</div>
-                    <h3 class="solution-supply-card__title">데이터 중계 서비스 (Data Brokerage)</h3>
-                    <p class="solution-supply-card__desc">핵심 모듈 외에 고객이 필요로 하는 특정 공공/민간 데이터가 있습니까? 빅밸류의 데이터 소싱 노하우를 통해
-                        맞춤형으로 발굴하고 중계해 드립니다.</p>
-                </div>
-                <div class="solution-supply-card">
-                    <div class="solution-supply-card__icon">👨‍🏫</div>
-                    <h3 class="solution-supply-card__title">전문가 자문 (Expert Advisory)</h3>
-                    <p class="solution-supply-card__desc">데이터 시각화(Visualization) 디자인 가이드 제공하며, 고객사 서비스에 최적화된 도메인 특화 데이터
-                        모델링 및 설계 자문을 지원합니다.</p>
-                </div>
-            </div>
-            <div class="solution-visual-center" style="margin-top: 60px;">
-                <div style="display: flex; align-items: center; justify-content: center; gap: 30px; font-weight: 700;">
-                    <div style="border: 2px solid var(--color-brand-primary); padding: 15px 25px; border-radius: 8px;">
-                        고객 니즈</div>
-                    <div style="font-size: 30px; color: var(--color-brand-primary);">➡️</div>
-                    <div
-                        style="background: var(--color-brand-primary); color: white; padding: 15px 35px; border-radius: 8px; font-size: var(--font-size-l);">
-                        성공적인 서비스 런칭</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 11: Expected Outcomes (Image 0) -->
-        <section class="solution-section solution-section--gray">
-            <div class="solution-section__header">
-                <h2 class="solution-section__title">빅밸류 도입을 통해 얻게 될 명확한 기대 효과</h2>
-            </div>
-            <div class="solution-grid solution-grid--3col">
-                <div class="solution-card">
-                    <div style="text-align: center; margin-bottom: 20px;">⚖️</div>
-                    <h3 class="solution-card__title" style="text-align: center; font-size: var(--font-size-m);">혁신적인 비용
-                        절감<br>(Drastic Cost Reduction)</h3>
-                    <p class="solution-card__desc" style="font-size: var(--font-size-s);">데이터 수집, 정제, 가공, 인프라 운영에 소요되는
-                        내부 개발 인력 및 인프라 비용을 최소화합니다.</p>
-                </div>
-                <div class="solution-card">
-                    <div style="text-align: center; margin-bottom: 20px;">🏅</div>
-                    <h3 class="solution-card__title" style="text-align: center; font-size: var(--font-size-m);">검증된 데이터
-                        품질<br>(Guaranteed Data Quality)</h3>
-                    <p class="solution-card__desc" style="font-size: var(--font-size-s);">도메인 전문가가 검증하고 체계적으로 관리하는 고품질
-                        데이터 공급으로 서비스의 신뢰도를 확보합니다. 지속적인 데이터 업데이트 및 품질 관리를 통해 최신성을 유지합니다.</p>
-                </div>
-                <div class="solution-card">
-                    <div style="text-align: center; margin-bottom: 20px;">🧩</div>
-                    <h3 class="solution-card__title" style="text-align: center; font-size: var(--font-size-m);">미래를 위한
-                        유연성<br>(Future-Proof Flexibility)</h3>
-                    <p class="solution-card__desc" style="font-size: var(--font-size-s);">초기에는 핵심 모듈로 시작하여, 향후 서비스 확장에
-                        따라 필요한 데이터 모듈을 유연하게 추가할 수 있습니다. 고객사의 특정 비즈니스 로직에 맞춘 데이터 커스터마이징을 지원합니다.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 12: Roadmap (Image 1) -->
-        <section class="solution-section">
-            <div class="solution-section__header">
-                <h2 class="solution-section__title">성공적인 데이터 기반 서비스 런칭을 위한<br>3단계 협력 로드맵</h2>
-            </div>
-            <div class="solution-roadmap">
-                <div class="solution-roadmap__step">
-                    <div class="solution-roadmap__circle">1</div>
-                    <div class="solution-roadmap__card">
-                        <h4 class="solution-roadmap__title">요구사항 분석 및 PoC<br>(Requirement Analysis & PoC)</h4>
-                        <ul class="solution-card__desc" style="font-size: var(--font-size-xs); padding-left: 20px;">
-                            <li>고객사의 비즈니스 목표 및 데이터 요구사항 심층 분석</li>
-                            <li>핵심 데이터 샘플을 활용한 기술 검증(PoC) 및 효과 측정</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="solution-roadmap__step">
-                    <div class="solution-roadmap__circle">2</div>
-                    <div class="solution-roadmap__card">
-                        <h4 class="solution-roadmap__title">맞춤형 API 설계 및 계약<br>(Custom API Design & Agreement)</h4>
-                        <ul class="solution-card__desc" style="font-size: var(--font-size-xs); padding-left: 20px;">
-                            <li>PoC 결과를 바탕으로 고객사 서비스에 최적화된 데이터 API 설계</li>
-                            <li>데이터 공급 범위, SLA 등을 포함한 본 계약 체결</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="solution-roadmap__step">
-                    <div class="solution-roadmap__circle">3</div>
-                    <div class="solution-roadmap__card">
-                        <h4 class="solution-roadmap__title">서비스 런칭 및 운영 지원<br>(Launch & Operational Support)</h4>
-                        <ul class="solution-card__desc" style="font-size: var(--font-size-xs); padding-left: 20px;">
-                            <li>안정적인 데이터 연동 및 서비스 런칭 지원</li>
-                            <li>지속적인 데이터 품질 관리 및 운영 최적화 지원</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 13: Social Proof (Image 2) -->
-        <section class="solution-section solution-section--gray">
-            <div class="solution-section__header">
-                <h2 class="solution-section__title">이미 최고의 기업들이 빅밸류와 함께하고 있습니다</h2>
-            </div>
-            <div class="solution-logo-strip">
-                <span style="font-weight: 700; color: #64748b;">SHINHAN</span>
-                <span style="font-weight: 700; color: #64748b;">NH INVESTMENT</span>
-                <span style="font-weight: 700; color: #64748b;">KB BANK</span>
-                <span style="font-weight: 700; color: #64748b;">KAKAO</span>
-                <span style="font-weight: 700; color: #64748b;">TOSS</span>
-                <span style="font-weight: 700; color: #64748b;">NAVER</span>
-            </div>
-            <div class="solution-case-cols">
-                <div class="solution-case-box solution-case-box--green">
-                    <div class="solution-case-box__header">
-                        <span>🏢</span> <span>금융권 (Financial Sector)</span>
-                    </div>
-                    <p class="solution-card__desc" style="font-size: var(--font-size-s); margin-bottom: 15px;">
-                        <strong>고객사:</strong> 신한은행, 농협증권 등 대형 금융사
-                    </p>
-                    <div style="background: #f1f5f9; padding: 15px; border-radius: 8px;">
-                        <p
-                            style="color: #10b981; font-weight: 700; font-size: var(--font-size-xs); margin-bottom: 5px;">
-                            성과</p>
-                        <p class="solution-card__desc" style="font-size: var(--font-size-xs); line-height: 1.6;">기존 부동산
-                            플랫폼의 기능을 대폭 고도화하고, 비대면 자산관리 서비스의 경쟁력을 성공적으로 강화했습니다. AVM을 활용한 담보 가치 평가 정확도를 높여 리스크 관리에
-                            기여했습니다.</p>
-                    </div>
-                </div>
-                <div class="solution-case-box solution-case-box--green">
-                    <div class="solution-case-box__header">
-                        <span>🚀</span> <span>빅테크/스타트업</span>
-                    </div>
-                    <div style="background: #f1f5f9; padding: 15px; border-radius: 8px; margin-top: 35px;">
-                        <p
-                            style="color: #10b981; font-weight: 700; font-size: var(--font-size-xs); margin-bottom: 5px;">
-                            성과</p>
-                        <p class="solution-card__desc" style="font-size: var(--font-size-xs); line-height: 1.6;">데이터 수급
-                            및 가공에 필요한 리소스를 최소화하여 서비스 런칭 기간을 수개월 단축했습니다. 안정적인 데이터 수급을 통해 핵심 비즈니스 로직 개발에만 집중, 운영 효율화를
-                            달성했습니다.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final CTA -->
-        <section class="solution-section">
-            <div class="solution-cta">
-                <h2 class="solution-cta__title">콘텐츠 데이터 솔루션이 궁금하신가요?</h2>
-                <p class="solution-cta__desc">BigValue의 콘텐츠 전문가가 귀사의 콘텐츠 마케팅을 혁신할 솔루션을 제안해드립니다.</p>
-                <div class="solution-cta__buttons">
-                    <button class="btn">문의하기</button>
+                <div style="display: flex; gap: 20px; justify-content: center;">
+                    <a href="../../about/contact/index.html" class="sol-v2-hero__cta">전문가 상담 신청</a>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
-
     <script src="../../script.js"></script>
+    <script src="../../js/solution_visuals.js"></script>
 </body>
 
 </html>

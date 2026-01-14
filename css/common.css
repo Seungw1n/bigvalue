@@ -9,6 +9,31 @@
     --color-brand-primary-lighter: #8D8DFB;
     --color-brand-primary-lightest: #DCDBFD;
     --color-brand-primary-pale: #ECEBFC;
+    --color-brand-primary-dark: #3526C7;
+    --color-brand-primary-darker: #3025A0;
+    --color-brand-primary-darkest: #11086C;
+
+    /* Colors - Brand - Secondary */
+    --color-brand-secondary: #9E5DF9;
+    --color-brand-secondary-hover: #864FD4;
+    --color-brand-secondary-light: #AF7AFA;
+    --color-brand-secondary-lighter: #C299FB;
+    --color-brand-secondary-lightest: #E8D8FE;
+    --color-brand-secondary-pale: #F5EFFE;
+    --color-brand-secondary-dark: #864FD4;
+    --color-brand-secondary-darker: #7042B1;
+    --color-brand-secondary-darkest: #472A70;
+
+    /* Colors - Brand - Tetiary */
+    --color-brand-tertiary: #00E49B;
+    --color-brand-tertiary-hover: #00C284;
+    --color-brand-tertiary-light: #3CEEB5;
+    --color-brand-tertiary-lighter: #73F4CB;
+    --color-brand-tertiary-lightest: #D2FBEE;
+    --color-brand-tertiary-pale: #E6FCF5;
+    --color-brand-tertiary-dark: #00C284;
+    --color-brand-tertiary-darker: #00A26E;
+    --color-brand-tertiary-darkest: #006746;
 
     /* Colors - Neutral */
     --color-neutral-white: #ffffff;
@@ -91,49 +116,6 @@
     /* Component - Card */
     --card-padding: var(--spacing-2xl);
     --card-border-radius: var(--radius-l);
-
-    /* Missing Variables (누락된 변수 추가) */
-    --radius-full: 50%;
-    --color-border-light: #e2e8f0;
-    --color-neutral-lightest: #f8fafc;
-
-    /* Flow Page - Dark Theme Colors */
-    --color-flow-bg-dark: #0b0c10;
-    --color-flow-bg-soft: #1f2833;
-    --color-flow-primary: #66fcf1;
-    --color-flow-secondary: #45a29e;
-    --color-flow-accent: #b08dff;
-    --color-flow-text-muted: #c5c6c7;
-    --color-flow-hazard: #ff6b6b;
-
-    /* Flow Page - Transitions */
-    --transition-flow-smooth: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-
-    /* Data Product Page - Dark Theme Colors */
-    --color-data-bg-dark: #050a14;
-    --color-data-bg-soft: #101926;
-    --color-data-primary: #3b82f6;
-    --color-data-accent: #60a5fa;
-    --color-data-shield: #e2e8f0;
-    --color-data-alert: #ef4444;
-    --color-data-text-muted: #94a3b8;
-
-    /* Data Product Page - Transitions */
-    --transition-data-smooth: 0.3s ease;
-
-    /* Data API Page - Code Theme Colors (VS Code/Dracula inspired) */
-    --color-api-bg-dark: #1e1e1e;
-    --color-api-bg-soft: #252526;
-    --color-api-primary: #4ecdc4;
-    --color-api-accent: #ff6b6b;
-    --color-api-speed: #2ecc71;
-    --color-api-keyword: #569cd6;
-    --color-api-func: #dcdcaa;
-    --color-api-text-main: #d4d4d4;
-    --color-api-text-muted: #858585;
-
-    /* Data API Page - Transitions */
-    --transition-api-smooth: 0.3s ease;
 }
 
 /* ==========================================
@@ -457,8 +439,8 @@ ul {
 /* Hero System (재사용 가능한 히어로 컴포넌트) */
 .hero--gradient {
     background: linear-gradient(135deg,
-        var(--color-brand-primary) 0%,
-        var(--color-brand-primary-hover) 100%);
+            var(--color-brand-primary) 0%,
+            var(--color-brand-primary-hover) 100%);
     color: var(--color-neutral-white);
     min-height: var(--hero-min-height);
     display: flex;
@@ -911,6 +893,7 @@ ul {
 
 /* Grid Responsive Behavior */
 @media (max-width: 1024px) {
+
     .grid--2col,
     .grid--3col,
     .grid--4col {
@@ -919,6 +902,7 @@ ul {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+
     .grid--3col,
     .grid--4col {
         grid-template-columns: repeat(2, 1fr);
@@ -935,6 +919,7 @@ ul {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -968,10 +953,13 @@ ul {
 
 /* Pulse Animation (for AI effects) */
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
         opacity: 0.5;
     }
+
     50% {
         transform: scale(1.2);
         opacity: 0.8;
@@ -991,6 +979,7 @@ ul {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -1002,11 +991,9 @@ ul {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(
-        circle,
-        rgba(102, 252, 241, 0.05) 0%,
-        rgba(11, 12, 16, 1) 50%
-    );
+    background: radial-gradient(circle,
+            rgba(102, 252, 241, 0.05) 0%,
+            rgba(11, 12, 16, 1) 50%);
     animation: rotateBg 20s linear infinite;
     z-index: 0;
     pointer-events: none;
@@ -1014,9 +1001,12 @@ ul {
 
 /* Pulse Scale Animation (for Flow decision card) */
 @keyframes pulse-scale {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(0.95);
     }
+
     50% {
         transform: scale(1.05);
     }
@@ -1028,13 +1018,24 @@ ul {
 
 /* Shake Animation (for Flow bottleneck) */
 @keyframes shake {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(0);
     }
-    10%, 30%, 50%, 70%, 90% {
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
         transform: translateX(-2px);
     }
-    20%, 40%, 60%, 80% {
+
+    20%,
+    40%,
+    60%,
+    80% {
         transform: translateX(2px);
     }
 }
@@ -1045,11 +1046,9 @@ ul {
 
 /* Title Highlight - Flow Variants */
 .title__highlight--flow {
-    background: linear-gradient(
-        135deg,
-        var(--color-flow-primary),
-        var(--color-flow-accent)
-    );
+    background: linear-gradient(135deg,
+            var(--color-flow-primary),
+            var(--color-flow-accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1065,9 +1064,12 @@ ul {
 
 /* Floating Animation (for Core Cube) */
 @keyframes floating {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(-50%, -50%) translateY(0px);
     }
+
     50% {
         transform: translate(-50%, -50%) translateY(-15px);
     }
@@ -1079,10 +1081,13 @@ ul {
 
 /* Shield Pulse Animation */
 @keyframes shieldPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.3;
         transform: translate(-50%, -50%) scale(1);
     }
+
     50% {
         opacity: 0.6;
         transform: translate(-50%, -50%) scale(1.05);
@@ -1099,9 +1104,11 @@ ul {
         transform: translateX(-100px) translateY(-100px);
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         transform: translateX(0) translateY(0);
         opacity: 0;
@@ -1114,10 +1121,14 @@ ul {
 
 /* Pop Animation (for Error Popups) */
 @keyframes pop {
-    0%, 90%, 100% {
+
+    0%,
+    90%,
+    100% {
         transform: scale(0);
         opacity: 0;
     }
+
     50% {
         transform: scale(1);
         opacity: 1;
@@ -1133,6 +1144,7 @@ ul {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -1161,9 +1173,11 @@ ul {
     0% {
         width: 0%;
     }
+
     50% {
         width: 30%;
     }
+
     100% {
         width: 50%;
     }
@@ -1178,9 +1192,11 @@ ul {
     0% {
         width: 0%;
     }
+
     50% {
         width: 70%;
     }
+
     100% {
         width: 100%;
     }
@@ -1192,10 +1208,14 @@ ul {
 
 /* Pop City Animation (for Success Icon) */
 @keyframes popCity {
-    0%, 90%, 100% {
+
+    0%,
+    90%,
+    100% {
         transform: scale(0.8);
         opacity: 0.5;
     }
+
     50% {
         transform: scale(1.1);
         opacity: 1;
@@ -1222,6 +1242,7 @@ ul {
 
 /* Responsive Typography for Components */
 @media (max-width: 768px) {
+
     .hero__headline,
     .title--hero {
         font-size: 36px;
